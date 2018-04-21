@@ -84,6 +84,11 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="HealthBar" parent="UpperRight" index="0" instance=ExtResource( 3 )]
 
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 136.0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+
 [node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
 
 anchor_top = 1.0
