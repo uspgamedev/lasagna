@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://hud/status/status.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://hud/status/clock/clock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://hud/status/inventory/empty-book-box.png" type="Texture" id=5]
 [ext_resource path="res://hud/status/inventory/inventory.tscn" type="PackedScene" id=6]
+[ext_resource path="res://hud/status/wallet/wallet.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -126,5 +127,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
 
 margin_left = 66.0
 margin_right = 258.0
+
+[node name="Wallet" parent="Bottom" index="2" instance=ExtResource( 7 )]
 
 
