@@ -19,7 +19,7 @@
 [ ]     stash menu (DÁRIO)
 [ ]     necromonicon icon
 [X]     healthbar sprite
-[ ]     day/night sprites (WIL)
+[x]     day/night sprites
 [ ]     inventory cursor
 [ ]     moneyz counter
 [ ] art for ingredients 
