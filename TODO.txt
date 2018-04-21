@@ -16,10 +16,10 @@
 [ ] dia/noite
 [ ] moons
 [ ] ui/hud
-[ ]     stash menu (WIL)
+[ ]     stash menu (DÁRIO)
 [ ]     necromonicon icon
 [X]     healthbar sprite
-[ ]     day/night sprites
+[ ]     day/night sprites (WIL)
 [ ]     inventory cursor
 [ ]     moneyz counter
 
