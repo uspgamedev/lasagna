@@ -10,6 +10,9 @@ main
                 controller
             NPCs
             creatures
+		area
+		animation-player
+		AI
             plants
             props
     hud
