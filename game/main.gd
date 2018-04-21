@@ -1,5 +1,9 @@
 extends Node2D
 
+func _ready():
+	if has_node("Play"):
+		$Play._play()
+
 func get_db():
 	return get_node("/root/Database")
 

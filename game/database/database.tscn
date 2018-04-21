@@ -1,143 +1,150 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=1]
-[ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=2]
-[ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=3]
+[ext_resource path="res://test/frog.png" type="Texture" id=2]
+[ext_resource path="res://test/milk.png" type="Texture" id=3]
+[ext_resource path="res://test/ham.png" type="Texture" id=4]
+[ext_resource path="res://test/tomato.png" type="Texture" id=5]
+[ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=6]
+[ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=7]
 
-[node name="Database" type="Node" index="0"]
+[node name="Database" type="Node"]
 
 [node name="Items" type="Node" parent="." index="0"]
 
 [node name="Mercury" parent="Items" index="0" instance=ExtResource( 1 )]
 
-name = "Mercury"
+item_name = "Mercury"
 
-[node name="Water" parent="Items" index="1" instance=ExtResource( 1 )]
+[node name="Oil" parent="Items" index="1" instance=ExtResource( 1 )]
 
-name = "Water"
+item_name = "Oil"
 
-[node name="Salt" parent="Items" index="2" instance=ExtResource( 1 )]
+[node name="Water" parent="Items" index="2" instance=ExtResource( 1 )]
 
-name = "Salt"
+item_name = "Water"
 
-[node name="Sulfur" parent="Items" index="3" instance=ExtResource( 1 )]
+[node name="Salt" parent="Items" index="3" instance=ExtResource( 1 )]
 
-name = "Sulfur"
+item_name = "Salt"
 
-[node name="Frog" parent="Items" index="4" instance=ExtResource( 1 )]
+[node name="Sulfur" parent="Items" index="4" instance=ExtResource( 1 )]
 
-name = "Minced Frog Meat"
+item_name = "Sulfur"
 
-[node name="Mandrake" parent="Items" index="5" instance=ExtResource( 1 )]
+[node name="Frog" parent="Items" index="5" instance=ExtResource( 1 )]
 
-name = "Ground up Mandrake Root"
+icon = ExtResource( 2 )
+item_name = "Frog Mince Meat"
 
-[node name="Worms" parent="Items" index="6" instance=ExtResource( 1 )]
+[node name="Mandrake" parent="Items" index="6" instance=ExtResource( 1 )]
 
-name = "Worms"
+item_name = "Mandrake Root"
 
-[node name="FleaEyes" parent="Items" index="7" instance=ExtResource( 1 )]
+[node name="Worms" parent="Items" index="7" instance=ExtResource( 1 )]
 
-name = "FleaEyes"
+item_name = "Handful of Worms"
 
-[node name="Hair" parent="Items" index="8" instance=ExtResource( 1 )]
+[node name="FleaEyes" parent="Items" index="8" instance=ExtResource( 1 )]
 
-name = "Hair"
+item_name = "Flea Eyes Paste"
 
-[node name="Grasshopper" parent="Items" index="9" instance=ExtResource( 1 )]
+[node name="Hair" parent="Items" index="9" instance=ExtResource( 1 )]
 
-name = "Grasshopper Legs"
+item_name = "Lock of Hair"
 
-[node name="DollsEyes" parent="Items" index="10" instance=ExtResource( 1 )]
+[node name="Grasshopper" parent="Items" index="10" instance=ExtResource( 1 )]
 
-name = "DollsEyes"
+item_name = "Legs of Grasshopper"
 
-[node name="Fungus" parent="Items" index="11" instance=ExtResource( 1 )]
+[node name="DollsEyes" parent="Items" index="11" instance=ExtResource( 1 )]
 
-name = "BleedingToothFungus"
+item_name = "Doll's Eyes"
 
-[node name="RaHaj" parent="Items" index="12" instance=ExtResource( 1 )]
+[node name="Fungus" parent="Items" index="12" instance=ExtResource( 1 )]
 
-name = "Ra'Haj"
+item_name = "Bleeding Tooth Fungus"
 
-[node name="XucTu" parent="Items" index="13" instance=ExtResource( 1 )]
+[node name="RaHaj" parent="Items" index="13" instance=ExtResource( 1 )]
 
-name = "Xúc'Tu"
+item_name = "Ra'Haj Seed"
 
-[node name="Fleece" parent="Items" index="14" instance=ExtResource( 1 )]
+[node name="XucTu" parent="Items" index="14" instance=ExtResource( 1 )]
 
-name = "Fleece"
+item_name = "Xuc'Tu Seed"
 
-[node name="Milk" parent="Items" index="15" instance=ExtResource( 1 )]
+[node name="Fleece" parent="Items" index="15" instance=ExtResource( 1 )]
 
-name = "Sabbath Goat's Milk"
+item_name = "Fleece Seed"
 
-[node name="Venom" parent="Items" index="16" instance=ExtResource( 1 )]
+[node name="Milk" parent="Items" index="16" instance=ExtResource( 1 )]
 
-name = "Snake Venom"
+icon = ExtResource( 3 )
+item_name = "Sabbath Goat's Milk"
 
-[node name="LasagnaPack" parent="Items" index="17" instance=ExtResource( 1 )]
+[node name="Venom" parent="Items" index="17" instance=ExtResource( 1 )]
 
-name = "Insta Food Lasagna Pack"
+item_name = "Snake Venom"
 
-[node name="Fish" parent="Items" index="18" instance=ExtResource( 1 )]
+[node name="LasagnaPack" parent="Items" index="18" instance=ExtResource( 1 )]
 
-name = "Blob Fish Jam"
+item_name = "Yummy Lasagna Pack"
 
-[node name="Ham" parent="Items" index="19" instance=ExtResource( 1 )]
+[node name="Fish" parent="Items" index="19" instance=ExtResource( 1 )]
 
-name = "Turtle Ham"
+item_name = "Blob Fish Jelly"
 
-[node name="TomatoSauce" parent="Items" index="20" instance=ExtResource( 1 )]
+[node name="Ham" parent="Items" index="20" instance=ExtResource( 1 )]
 
-name = "Tomato Sauce"
+icon = ExtResource( 4 )
+item_name = "Turtle Ham"
 
-[node name="Onion" parent="Items" index="21" instance=ExtResource( 1 )]
+[node name="TomatoSauce" parent="Items" index="21" instance=ExtResource( 1 )]
 
-name = "Onion"
+icon = ExtResource( 5 )
+item_name = "Tomato Sauce"
 
-[node name="Mushroom" parent="Items" index="22" instance=ExtResource( 1 )]
+[node name="Onion" parent="Items" index="22" instance=ExtResource( 1 )]
 
-name = "Mushroom"
+item_name = "Onion"
 
-[node name="Tomato" parent="Items" index="23" instance=ExtResource( 1 )]
+[node name="Mushroom" parent="Items" index="23" instance=ExtResource( 1 )]
 
-name = "Mushroom"
+item_name = "Shimeji"
 
 [node name="VegSauce" parent="Items" index="24" instance=ExtResource( 1 )]
 
-name = "Mushroom"
+item_name = "Vegetable Sauce"
 
-[node name="Recepies" type="Node" parent="." index="1"]
+[node name="Recipies" type="Node" parent="." index="1"]
 
-[node name="LaaZahna" parent="Recepies" index="0" instance=ExtResource( 2 )]
+[node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 6 )]
 
-editor/display_folded = true
 yields = "LAA’ZAHNA"
 craft_on = "Oven"
 
-[node name="Frog" parent="Recepies/LaaZahna" index="0" instance=ExtResource( 3 )]
+[node name="Frog" parent="Recipies/LaaZahna" index="0" instance=ExtResource( 7 )]
 
-[node name="Milk" parent="Recepies/LaaZahna" index="1" instance=ExtResource( 3 )]
+[node name="Milk" parent="Recipies/LaaZahna" index="1" instance=ExtResource( 7 )]
 
-[node name="Ham" parent="Recepies/LaaZahna" index="2" instance=ExtResource( 3 )]
+[node name="Ham" parent="Recipies/LaaZahna" index="2" instance=ExtResource( 7 )]
 
-[node name="TomatoSauce" parent="Recepies/LaaZahna" index="3" instance=ExtResource( 3 )]
+[node name="TomatoSauce" parent="Recipies/LaaZahna" index="3" instance=ExtResource( 7 )]
 
-[node name="YakiSobath" parent="Recepies" index="1" instance=ExtResource( 2 )]
+[node name="YakiSobath" parent="Recipies" index="1" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 yields = "YAKI'SOBATH"
 craft_on = "Oven"
 
-[node name="Onion" parent="Recepies/YakiSobath" index="0" instance=ExtResource( 3 )]
+[node name="Onion" parent="Recipies/YakiSobath" index="0" instance=ExtResource( 7 )]
 
-[node name="Worms" parent="Recepies/YakiSobath" index="1" instance=ExtResource( 3 )]
+[node name="Worms" parent="Recipies/YakiSobath" index="1" instance=ExtResource( 7 )]
 
-[node name="Mushroom" parent="Recepies/YakiSobath" index="2" instance=ExtResource( 3 )]
+[node name="Mushroom" parent="Recipies/YakiSobath" index="2" instance=ExtResource( 7 )]
 
-[node name="VegSauce" parent="Recepies/YakiSobath" index="3" instance=ExtResource( 3 )]
+[node name="VegSauce" parent="Recipies/YakiSobath" index="3" instance=ExtResource( 7 )]
 
-[node name="Tomato" parent="Recepies/YakiSobath" index="4" instance=ExtResource( 3 )]
+[node name="Tomato" parent="Recipies/YakiSobath" index="4" instance=ExtResource( 7 )]
 
 

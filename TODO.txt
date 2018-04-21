@@ -15,6 +15,9 @@
 [X] dormir
 [ ] dia/noite
 [ ] moons
+[ ] dano
+[ ] morte
+[ ] ending
 [ ] ui/hud
 [ ]     stash menu (DÁRIO)
 [ ]     necromonicon icon
