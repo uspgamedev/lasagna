@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=1]
+
+[node name="Database" type="Node" index="0"]
+
+[node name="Items" type="Node" parent="." index="0"]
+
+[node name="Mercury" parent="Items" index="0" instance=ExtResource( 1 )]
+
+name = "Mercury"
+unit = "Drop"
+unit_plural = "Drops"
+
+[node name="Water" parent="Items" index="1" instance=ExtResource( 1 )]
+
+name = "Water"
+unit = "Cup"
+unit_plural = "Cups"
+
+[node name="Salt" parent="Items" index="2" instance=ExtResource( 1 )]
+
+name = "Salt"
+unit = "Pinch"
+unit_plural = "Pinches"
+
+[node name="Sulfur" parent="Items" index="3" instance=ExtResource( 1 )]
+
+name = "Sulfur"
+unit = "Spoonful"
+unit_plural = "Spoonfuls"
+
+[node name="Frog" parent="Items" index="4" instance=ExtResource( 1 )]
+
+name = "Minced Frog Meat"
+unit = "Handful"
+unit_plural = "Handfuls"
+
+[node name="Mandrake" parent="Items" index="5" instance=ExtResource( 1 )]
+
+name = "Ground up Mandrake Root"
+unit = "Gram"
+unit_plural = "Grams"
+
+[node name="Worms" parent="Items" index="6" instance=ExtResource( 1 )]
+
+name = "Worms"
+unit = "Handful"
+unit_plural = "Handfuls"
+
+[node name="Grasshopper" parent="Items" index="7" instance=ExtResource( 1 )]
+
+name = "Grasshopper Legs"
+unit = "Pair"
+unit_plural = "Pairs"
+
+[node name="GoatMilk" parent="Items" index="8" instance=ExtResource( 1 )]
+
+name = "Spoilt Goat's Milk"
+unit = "Jug"
+unit_plural = "Jugs"
+
+[node name="SnakeVenom" parent="Items" index="9" instance=ExtResource( 1 )]
+
+name = "Snake Venom"
+unit = "Droplet"
+unit_plural = "Droplets"
+
+[node name="LasagnaPack" parent="Items" index="10" instance=ExtResource( 1 )]
+
+name = "Insta Food Lasagna Pack"
+unit = "Single"
+unit_plural = ""
+
+[node name="Recepies" type="Node" parent="." index="1"]
+
+
