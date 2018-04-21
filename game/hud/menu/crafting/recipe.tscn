@@ -3,7 +3,7 @@
 [ext_resource path="res://hud/menu/crafting/recipe.gd" type="Script" id=1]
 [ext_resource path="res://hud/menu/crafting/ingredient.tscn" type="PackedScene" id=2]
 
-[node name="Panel" type="Panel" index="0"]
+[node name="Panel" type="Panel"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -18,7 +18,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-ingred_num = 3
+recipe_name = null
 
 [node name="HBox" type="HBoxContainer" parent="." index="0"]
 

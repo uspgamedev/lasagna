@@ -8,3 +8,7 @@ func _set_amount(amount):
 	self.value = amount
 	var color = Color(.8, .1, .1).linear_interpolate(Color(.1, .8, .1), amount/100.0)
 	get_stylebox("fg", "").modulate_color = color
+
+func _process(delta):
+	get_stylebox("fg","").region_rect.position.x = int((1 - self.value/100.0)*128)
+	get_stylebox("fg","").region_rect.size.x = int(128*self.value/100.0)
