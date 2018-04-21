@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://hud/status/status.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interaction/dialogue/dialogue.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/BedPopup.gd" type="Script" id=3]
+[ext_resource path="res://hud/InventoryContainer.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -16,28 +17,219 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="DialogContainer" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="BedPopup" type="PopupMenu" parent="." index="2"]
+[node name="InventoryContainer" type="GridContainer" parent="." index="2"]
 
-pause_mode = 2
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 163.0
+margin_top = 176.0
+margin_right = 298.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 4
+script = ExtResource( 3 )
+
+[node name="MenuButton" type="MenuButton" parent="InventoryContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 87.0
+margin_bottom = 70.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-popup_exclusive = false
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "2"
+icon = ExtResource( 4 )
+flat = true
+align = 1
 items = [  ]
-hide_on_state_item_selection = false
-script = ExtResource( 3 )
-_sections_unfolded = [ "Pause", "Popup" ]
 
-[connection signal="popup_hide" from="BedPopup" to="BedPopup" method="_on_BedPopup_popup_hide"]
+[node name="MenuButton2" type="MenuButton" parent="InventoryContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 91.0
+margin_right = 103.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton3" type="MenuButton" parent="InventoryContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 107.0
+margin_right = 119.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton4" type="MenuButton" parent="InventoryContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_right = 135.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton5" type="MenuButton" parent="InventoryContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 74.0
+margin_right = 87.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton6" type="MenuButton" parent="InventoryContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 91.0
+margin_top = 74.0
+margin_right = 103.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton7" type="MenuButton" parent="InventoryContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 107.0
+margin_top = 74.0
+margin_right = 119.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton8" type="MenuButton" parent="InventoryContainer" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_top = 74.0
+margin_right = 135.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
 
 
