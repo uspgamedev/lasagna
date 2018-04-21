@@ -1,5 +1,5 @@
 [ ] menu de crafting (JOSÉ)
-[ ] dialog
+[X] dialog
 [x]   speech bubbles
 [ ]   prompt choices
 [X] database
@@ -10,7 +10,7 @@
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
-[ ] suporte a cutscene (JOÃO)
+[X] suporte a cutscene
 [ ] stash (DÁRIO)
 [ ] dormir
 [ ] dia/noite

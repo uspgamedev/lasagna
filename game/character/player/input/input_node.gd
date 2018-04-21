@@ -28,3 +28,6 @@ func _process(delta):
 			direction += DW
 		elif Input.is_action_pressed("ui_right"):
 			direction += RT
+
+func _unhandled_key_input(event):
+	
