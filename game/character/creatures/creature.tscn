@@ -234,6 +234,10 @@ tracks/0/keys = {
 [node name="Creature" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+friction = 0
+push_force = 0
+max_speed = 0
+max_health = 0
 
 [node name="OrientedSprite" parent="." index="0"]
 
