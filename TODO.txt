@@ -8,4 +8,11 @@ suporte a cutscene
 stash
 dormir
 dia/noite
+moons
+ui/hud
+    necromonicon icon
+    healthbar sprite
+    day/night sprites
+    inventory cursor
+    moneyz counter
 
