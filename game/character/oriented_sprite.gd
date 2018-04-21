@@ -1,12 +1,11 @@
 extends Sprite
 
-var direction
-var state
-var should_play
+var direction   = "up"
+var state       = "idle"
+var should_play =  true
 
 func _process(delta):
 	if should_play == true:
-		print("should have changed")
 		play()
 		should_play = false
 
