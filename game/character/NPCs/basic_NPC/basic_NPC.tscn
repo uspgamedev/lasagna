@@ -19,7 +19,7 @@ material = SubResource( 1 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 hframes = 1
-_sections_unfolded = [ "Material", "Transform" ]
+_sections_unfolded = [ "Animation", "Material", "Transform" ]
 
 [node name="Interaction" parent="." index="2"]
 

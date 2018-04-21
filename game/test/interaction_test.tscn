@@ -9,6 +9,6 @@
 
 [node name="NPC" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 200, 110 )
+position = Vector2( 97.5009, 97.9413 )
 
 
