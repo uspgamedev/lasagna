@@ -1,16 +1,17 @@
 main
-    background
-    foreground
-        player
-            area
-            camera
-            animation-player 
-            carried-object
-            controller
-        NPCs
-        creatures
-        plants
-        props
+    map
+        background
+        foreground
+            player
+                area
+                camera
+                animation-player 
+                carried-object
+                controller
+            NPCs
+            creatures
+            plants
+            props
     hud
         status
         dialogue
