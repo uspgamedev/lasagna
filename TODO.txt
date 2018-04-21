@@ -1,5 +1,5 @@
 [ ] menu de crafting (JOSÉ)
-[X] dialog
+[ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
 [X] database
@@ -61,5 +61,3 @@
 
 BUGLIST:
 
-- Durante a cena de teste ("interaction_test.tsc"), ao terminar de interagir com o NPC
-o diálogo começa de novo, se usando barra de espaço
