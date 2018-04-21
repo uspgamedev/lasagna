@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://character/creatures/creature.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Creature" index="0" instance=ExtResource( 1 )]
+
+friction = 0
+push_force = 0
+max_speed = 0
+max_health = 0
+
+[node name="AgroBox" type="Area2D" parent="." index="3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgroBox" index="0"]
+
+scale = Vector2( 4, 4 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="AgroBox" to="." method="_on_AgroBox_body_entered"]
+
+
