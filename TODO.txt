@@ -2,9 +2,9 @@
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
-[ ] database
-[ ]     items
-[ ]     recipes
+[X] database
+[X]     items
+[X]     recipes
 [ ] save files
 [ ]     inventário
 [ ]     dinheiro
