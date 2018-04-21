@@ -1,8 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://character/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/player/player.gd" type="Script" id=2]
-[ext_resource path="res://character/player/input/input_node.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://character/player/input/input_node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://character/player/AreaInteraction.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -235,9 +237,9 @@ tracks/0/keys = {
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-friction = 75.0
-push_force = 25.0
-max_speed = 100.0
+friction = 25.0
+push_force = 100.0
+max_speed = 300.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
 
@@ -266,8 +268,7 @@ editor_draw_drag_margin = false
 
 [node name="OrientedSprite" parent="." index="1"]
 
-hframes = 12
-frame = 3
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OrientedSprite" index="0"]
@@ -291,6 +292,24 @@ anims/walk-right = SubResource( 11 )
 anims/walk-up = SubResource( 12 )
 blend_times = [  ]
 
-[node name="InputNode" parent="." index="3" instance=ExtResource( 3 )]
+[node name="InputNode" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="AreaInteraction" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaInteraction" index="0"]
+
+rotation = -1.5708
+build_mode = 0
+polygon = PoolVector2Array( 30, -20, 70, -20, 70, 20, 30, 20, 30, -20 )
+_sections_unfolded = [ "Transform" ]
 
 

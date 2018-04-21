@@ -17,11 +17,11 @@ func _process(delta):
 		var angle = velocity.angle()
 		if    -PI/4 < angle and angle < PI/4:
 			$OrientedSprite.set_direction("right")
-		elif   PI/4 < angle and angle < 3*PI/4:
+		elif   -3*PI/4 < angle and angle < -PI/4:
 			$OrientedSprite.set_direction("up")
-		elif 3*PI/4 < angle and angle < 5*PI/4:
+		elif 3*PI/4 < angle or angle < -3*PI/4:
 			$OrientedSprite.set_direction("left")
-		elif 5*PI/4 < angle:
+		elif PI/4 < angle and angle < 3*PI/4:
 			$OrientedSprite.set_direction("down")
 	else:
 		$OrientedSprite.set_state("idle")

@@ -12,7 +12,8 @@ func _process(delta):
 func set_direction(new_direction):
 	if new_direction != direction:
 		should_play = true
-	direction = new_direction
+		direction = new_direction
+		get_node('../AreaInteraction').rotate_polygon_collision(direction)
 	
 func set_state(new_state):
 	if state != new_state:
