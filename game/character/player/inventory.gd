@@ -1,7 +1,7 @@
 extends Node
 
-var inventory_size = 6
-var max_stack_size = 256
+const INVENTORY_SIZE = 6
+const MAX_STACK_SIZE = 256
 
 export(int) var money
 
@@ -14,8 +14,8 @@ func _ready():
 
 func add_item_to_stash(item_name, number_of_items):
     if stash.has(item_name):
-        if (stash[item_name] + number_of_items) > max_stack_size:
-            stash[item_name] = max_stack_size
+        if (stash[item_name] + number_of_items) > MAX_STACK_SIZE:
+            stash[item_name] = MAX_STACK_SIZE
         else:
             stash[item_name] = stash[item_name] + number_of_items
     else:
@@ -38,7 +38,7 @@ func remove_item_from_stash(item_name, number_of_items):
         return error
         
 func init_inventory():
-    for i in range(inventory_size):
+    for i in range(INVENTORY_SIZE):
         inventory.append(["", 0])
         
 func add_to_inventory(item_name, number_of_items, inventory_position):

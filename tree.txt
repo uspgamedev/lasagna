@@ -13,8 +13,8 @@ main
 		area
 		animation-player
 		AI
-            plants
-            props
+        plants
+        props
     hud
         status
         dialogue
