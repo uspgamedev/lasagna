@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://hud/Dialogue.gd" type="Script" id=1]
+[ext_resource path="res://hud/dialogue.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
 
-[node name="Dialogue" type="Control" index="0"]
+[node name="Dialogue" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

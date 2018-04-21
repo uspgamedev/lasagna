@@ -10,6 +10,7 @@ var finishedNow = false
 func _ready():
 	display_text(["the quick brown fox jumped over the lazy dog",
 				  "second phrase that is suposely too big to fit here"])
+	
 
 func display_text(text_vec):
 	for text in text_vec:
