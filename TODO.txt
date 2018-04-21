@@ -1,4 +1,4 @@
-[ ] menu de crafting (JOSÉ)
+[ ] menu de crafting (JOSÉ) - FALTA INVETÁRIO ESTAR PRONTO
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
@@ -16,7 +16,7 @@
 [ ] dia/noite
 [ ] moons
 [X] dano
-        [ ] offensive creature (JOSÉ)
+        [X] offensive creature
 [X] morte
 [ ] ending
 [ ] ui/hud
