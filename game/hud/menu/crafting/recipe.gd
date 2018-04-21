@@ -8,6 +8,8 @@ func _ready():
 		get_node(nodename).visible = false
 	var database = get_node("/root/Main").get_db()
 	var my_recipe_data = database.get_node("Recipies/"+recipe_name)
+	$HBox/LabelMargin/Label.text = my_recipe_data.yields
+	
 	print(my_recipe_data.name)
 	var ingreds = my_recipe_data.get_children()
 	for i in range(ingreds.size()):

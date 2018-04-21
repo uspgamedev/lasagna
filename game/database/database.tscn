@@ -10,6 +10,8 @@
 
 [node name="Items" type="Node" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="Mercury" parent="Items" index="0" instance=ExtResource( 1 )]
 
 item_name = "Mercury"
@@ -113,6 +115,8 @@ item_name = "Shimeji"
 item_name = "Vegetable Sauce"
 
 [node name="Recipies" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 4 )]
 
