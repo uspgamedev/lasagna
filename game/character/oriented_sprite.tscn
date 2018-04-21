@@ -2,7 +2,7 @@
 
 [ext_resource path="res://character/oriented_sprite.gd" type="Script" id=1]
 
-[node name="oriented_sprite" type="Sprite" index="0"]
+[node name="OrientedSprite" type="Sprite" index="0"]
 
 script = ExtResource( 1 )
 
