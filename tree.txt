@@ -1,5 +1,6 @@
 main
-    tilemap
+    background
+    foreground
         player
             camera
             animation-player 
