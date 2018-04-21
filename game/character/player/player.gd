@@ -8,10 +8,11 @@ func _process(delta):
 func _on_InputNode_interact():
 	var area = get_node('AreaInteraction')
 	for body in area.get_overlapping_bodies():
-		for child in body.get_children():
-			if child.get_name() == 'Interaction':
-				child.interact()
-				return
+		if body != self:
+			for child in body.get_children():
+				if child.get_name() == 'Interaction':
+					child.interact()
+					return
 
 func damage(dmg_points):
 	hp -= dmg_points
