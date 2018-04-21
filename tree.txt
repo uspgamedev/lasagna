@@ -6,14 +6,14 @@ main
             carried-object
             controller
         NPCs
+        creatures
         plants
-        animals
         props
     hud
         status
         dialogue
         menus
 
-character -> player, animals, creatures
+character -> player, NPCs, creatures
 object -> props, plants
 
