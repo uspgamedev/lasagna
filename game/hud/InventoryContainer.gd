@@ -14,14 +14,14 @@ func item_selected(button):
     pass
     
 func render_inventory():
-    var inventory = get_tree().get_root().get_node("Inventory")
+    var inventory = get_node("/root/Main/Inventory")
     var stash_content = inventory.get_stash()
     var keys = stash_content.keys()
     
     for i in range(keys.size()):
         var button = get_child(i)
-        button.set_text(stash_content[keys[i]])
-        button.set_icon("res://icon.png")
+        button.set_text(var2str(stash_content[keys[i]]))
+        button.icon = load("res://icon.png")
 
 
 

@@ -13,7 +13,8 @@
 
 [node name="Object" parent="Map/Foreground" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 462.857, 223.448 )
+position = Vector2( 239.409, 180.477 )
 
 
+[editable path="HUD"]
 [editable path="Map"]

@@ -10,8 +10,11 @@ var inventory = []
 
 func _ready():
     init_inventory()
-    pass
-
+    add_item_to_stash("BLA", 4)
+    add_item_to_stash("TESTE", 3)
+    add_item_to_stash("JESUS", 1)
+    add_item_to_stash("EU", 9)
+    
 func add_item_to_stash(item_name, number_of_items):
     if stash.has(item_name):
         if (stash[item_name] + number_of_items) > MAX_STACK_SIZE:

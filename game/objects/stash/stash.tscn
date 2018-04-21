@@ -6,6 +6,9 @@
 
 [node name="Object" instance=ExtResource( 1 )]
 
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
+
 [node name="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
