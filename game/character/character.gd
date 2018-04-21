@@ -13,7 +13,7 @@ func push(direction):
 
 func look_at(orientation):
 	if velocity.length() > 0:
-		$oriented_sprite.set_is_walking(true)
+		$oriented_sprite.set_state("walk")
 		var angle = velocity.angle()
 		if    -PI/4 < angle and angle < PI/4:
 			$oriented_sprite.set_orientation("right")
@@ -24,7 +24,7 @@ func look_at(orientation):
 		elif 5*PI/4 < angle:
 			$oriented_sprite.set_orientation("down")
 	else:
-		$oriented_sprite.set_is_walking(false)
+		$oriented_sprite.set_state("idle")
 
 func _physics_process(delta):
 	var mv_return = move_and_collide(velocity*delta)
