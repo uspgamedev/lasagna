@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://character/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/NPCs/basic_NPC/basic_NPC.tscn" type="PackedScene" id=2]
-[ext_resource path="res://character/character.gd" type="Script" id=3]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -10,13 +9,6 @@
 
 [node name="NPC" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 97.5009, 97.9413 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 3 )
-push_force = null
-max_speed = null
+position = Vector2( 162.793, 84.4111 )
 
 
