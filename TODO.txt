@@ -1,4 +1,4 @@
-[ ] menu de crafting
+[ ] menu de crafting (JOSÉ)
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
