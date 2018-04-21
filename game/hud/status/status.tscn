@@ -1,8 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=1]
-[ext_resource path="res://hud/status/healthbar/healthbar.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/status/clock/clock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hud/status/status.gd" type="Script" id=1]
+[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
+[ext_resource path="res://hud/status/healthbar/healthbar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hud/status/clock/clock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hud/status/inventory/empty-book-box.png" type="Texture" id=5]
+[ext_resource path="res://hud/status/inventory/inventory.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 52, 52 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
 
 [node name="Status" type="Control" index="0"]
 
@@ -20,6 +42,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="Label" type="Label" parent="." index="0"]
@@ -36,14 +59,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "You hear a call from the depths"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
-[node name="Container" type="Container" parent="." index="1"]
+[node name="UpperRight" type="Container" parent="." index="1"]
 
 anchor_left = 0.75
 anchor_top = 0.0
@@ -58,13 +81,50 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="HealthBar" parent="Container" index="0" instance=ExtResource( 2 )]
+[node name="HealthBar" parent="UpperRight" index="0" instance=ExtResource( 3 )]
 
-[node name="Clock" parent="Container" index="1" instance=ExtResource( 3 )]
+[node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
 
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -24.0
 margin_bottom = -8.0
+
+[node name="Bottom" type="Container" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="BookSlot" type="PanelContainer" parent="Bottom" index="0"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_top = -52.0
+margin_right = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = SubResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
+
+[node name="Inventory" parent="Bottom" index="1" instance=ExtResource( 6 )]
+
+margin_left = 66.0
+margin_right = 258.0
 
 
