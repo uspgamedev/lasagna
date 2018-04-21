@@ -1,5 +1,5 @@
 [ ] menu de crafting (JOSÉ)
-[ ] dialog
+[X] dialog
 [x]   speech bubbles
 [ ]   prompt choices
 [X] database
@@ -10,13 +10,14 @@
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
-[ ] suporte a cutscene (JOÃO)
+[X] suporte a cutscene
 [ ] stash (DÁRIO)
 [X] dormir
 [ ] dia/noite
 [ ] moons
-[ ] dano
-[ ] morte
+[X] dano
+        [ ] offensive creature (JOSÉ)
+[X] morte
 [ ] ending
 [ ] ui/hud
 [ ]     stash menu (DÁRIO)
@@ -24,7 +25,7 @@
 [X]     healthbar sprite
 [x]     day/night sprites
 [ ]     inventory cursor
-[ ]     moneyz counter
+[X]     moneyz counter
 [ ] art for ingredients 
         (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)
         WE ARE ONLY SURE TO USE THE ONES WITH * BY THEIR NAME. OTHERS MAY NOT GET IN THE GAME, DON'T SWEAT IT
@@ -60,5 +61,5 @@
 
 BUGLIST:
 
-- Durante a cena de teste ("interaction_test.tsc"), ao interagir pela 2a vez com o
-NPC, as mensagens que o NPC imprime na tela começam a se sobrescrever
+- Durante a cena de teste ("interaction_test.tsc"), ao terminar de interagir com o NPC
+o diálogo começa de novo, se usando barra de espaço

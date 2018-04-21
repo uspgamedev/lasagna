@@ -17,6 +17,7 @@ main
         status
         dialogue
         menus
+    inventory
 
 character -> player, NPCs, creatures
 object -> props, plants

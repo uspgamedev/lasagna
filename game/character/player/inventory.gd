@@ -52,3 +52,5 @@ func remove_from_inventory(inventory_position):
 func get_money():
     return money
 
+func get_stash():
+    return stash
