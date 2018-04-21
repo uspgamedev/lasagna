@@ -9,6 +9,8 @@ func _ready():
 	hud.add_check_item("Don't Sleep")
 
 func interact():
-	hud.popup_centered(Vector2(100, 100))
-	get_tree().paused = true
+	if $Timer.is_stopped():
+		$Timer.start()
+		hud.popup_centered(Vector2(100, 100))
+		get_tree().paused = true
 	
