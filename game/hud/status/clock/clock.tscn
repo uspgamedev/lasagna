@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://hud/status/clock/clock.gd" type="Script" id=1]
-[ext_resource path="res://hud/status/clock/clockface.png" type="Texture" id=2]
-[ext_resource path="res://hud/status/clock/minutehand.png" type="Texture" id=3]
-[ext_resource path="res://hud/status/clock/hourhand.png" type="Texture" id=4]
 
-[node name="Clock" type="Control"]
+[node name="Clock" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -20,7 +17,6 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 minute_frames = 12
-hour_frames = 144
 
 [node name="Timer" type="Timer" parent="." index="0"]
 
@@ -29,33 +25,37 @@ wait_time = 24.0
 one_shot = true
 autostart = true
 
-[node name="Clockface" type="Sprite" parent="." index="1"]
+[node name="DayNightBar" type="ProgressBar" parent="." index="1"]
 
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Animation" ]
-__meta__ = {
-"_edit_lock_": true
-}
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 300.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Percent", "custom_styles" ]
 
-[node name="MinuteHand" type="Sprite" parent="." index="2"]
+[node name="Tween" type="Tween" parent="DayNightBar" index="0"]
 
-texture = ExtResource( 3 )
-flip_h = true
-hframes = 12
-_sections_unfolded = [ "Animation", "Offset" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="HourHand" type="Sprite" parent="." index="3"]
-
-texture = ExtResource( 4 )
-flip_h = true
-vframes = 12
-hframes = 12
-_sections_unfolded = [ "Animation", "Offset" ]
-__meta__ = {
-"_edit_lock_": true
-}
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 
