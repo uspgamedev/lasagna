@@ -15,8 +15,9 @@
 [X] dormir
 [ ] dia/noite
 [ ] moons
-[ ] dano
-[ ] morte
+[X] dano
+        [ ] offensive creature (JOSÉ)
+[X] morte
 [ ] ending
 [ ] ui/hud
 [ ]     stash menu (DÁRIO)
