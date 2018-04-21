@@ -7,21 +7,17 @@
 [ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=5]
 [ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=6]
 
-<<<<<<< HEAD
 [node name="Main" index="0" instance=ExtResource( 1 )]
-=======
-[node name="Main" type="Node2D"]
->>>>>>> 6397e4b415ecdd5978082fc06792aa09cbec9745
 
 [node name="Map" parent="." index="2" instance=ExtResource( 2 )]
 
 [node name="Player" parent="Map/Foreground" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 243.767, 261.496 )
+position = Vector2( 206.094, 279.224 )
 
 [node name="Basic_NPC" parent="Map/Foreground" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 431.025, 267.036 )
+position = Vector2( 452.078, 247.091 )
 
 [node name="Basic" parent="Map/Cutscenes" index="0" instance=ExtResource( 5 )]
 
@@ -29,18 +25,18 @@ other = "Basic_NPC"
 
 [node name="CutsceneNode" parent="Map/Cutscenes/Basic" index="0" instance=ExtResource( 6 )]
 
-actor = "Basic_NPC"
-text = "Put the first line of text here"
+actor = "Player"
+text = "First phrase of player"
 
 [node name="CutsceneNode2" parent="Map/Cutscenes/Basic" index="1" instance=ExtResource( 6 )]
 
-actor = "Player"
-text = "Put the second line of text here"
+actor = "Basic_NPC"
+text = "First phrase of NPC"
 
 [node name="CutsceneNode3" parent="Map/Cutscenes/Basic" index="2" instance=ExtResource( 6 )]
 
-actor = "Basic_NPC"
-text = "Put the third line of text here"
+actor = "Player"
+text = "Second phrase of Player"
 
 
 [editable path="Map"]
