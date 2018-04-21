@@ -16,3 +16,10 @@ ui/hud
     inventory cursor
     moneyz counter
 
+
+---------------------
+
+BUGLIST:
+
+- Durante a cena de teste ("interaction_test.tsc"), ao interagir pela 2a vez com o
+NPC, as mensagens que o NPC imprime na tela começam a se sobrescrever
