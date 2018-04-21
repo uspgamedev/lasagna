@@ -1,0 +1,10 @@
+menu de crafting
+save files
+    inventário
+    dinheiro
+    matriz de plantas
+    flags
+suporte a cutscene
+dano
+    morte
+
