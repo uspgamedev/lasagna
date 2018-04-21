@@ -1,15 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://character/character.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
+[ext_resource path="res://character/oriented_sprite.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
 
-[node name="character" type="KinematicBody2D"]
+[node name="character" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -20,9 +19,7 @@ friction = null
 push_force = null
 max_speed = null
 
-[node name="sprite" type="Sprite" parent="." index="0"]
-
-texture = ExtResource( 2 )
+[node name="oriented_sprite" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="collision_box" type="CollisionShape2D" parent="." index="1"]
 

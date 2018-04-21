@@ -12,11 +12,22 @@ func push(direction):
 		velocity = velocity.normalized()*max_speed
 
 func look_at(orientation):
-	#NEED TO IMPLEMENT
-	pass
+	if velocity.length() > 0:
+		$oriented_sprite.set_is_walking(true)
+		var angle = velocity.angle()
+		if    -PI/4 < angle and angle < PI/4:
+			$oriented_sprite.set_orientation("right")
+		elif   PI/4 < angle and angle < 3*PI/4:
+			$oriented_sprite.set_orientation("up")
+		elif 3*PI/4 < angle and angle < 5*PI/4:
+			$oriented_sprite.set_orientation("left")
+		elif 5*PI/4 < angle:
+			$oriented_sprite.set_orientation("down")
+	else:
+		$oriented_sprite.set_is_walking(false)
 
 func _physics_process(delta):
-	var mv_return = move_and_collide(velocity)
+	var mv_return = move_and_collide(velocity*delta)
 	if mv_return != null:
 		velocity = 	mv_return.get_remainder()
 	velocity-= min(friction, velocity.length()) * velocity.normalized()  
