@@ -3,7 +3,7 @@
 [ext_resource path="res://settings/settings.tscn" type="PackedScene" id=1]
 [ext_resource path="res://hud/hud.tscn" type="PackedScene" id=2]
 
-[node name="Main" type="Node2D" index="0"]
+[node name="Main" type="Node2D"]
 
 [node name="Settings" parent="." index="0" instance=ExtResource( 1 )]
 
