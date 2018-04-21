@@ -1,31 +1,65 @@
-[ ] menu de crafting
-[ ] dialog
+[ ] menu de crafting (JOSÉ)
+[X] dialog
 [x]   speech bubbles
 [ ]   prompt choices
-[ ] database
-[ ]     items
-[ ]     recipes
+[X] database
+[X]     items
+[X]     recipes
 [ ] save files
 [ ]     inventário
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
-[ ] suporte a cutscene
-[ ] stash
-[ ] dormir
+[X] suporte a cutscene
+[ ] stash (DÁRIO)
+[X] dormir
 [ ] dia/noite
 [ ] moons
+[X] dano
+        [ ] offensive creature (JOSÉ)
+[X] morte
+[ ] ending
 [ ] ui/hud
+[ ]     stash menu (DÁRIO)
 [ ]     necromonicon icon
-[ ]     healthbar sprite
-[ ]     day/night sprites
+[X]     healthbar sprite
+[x]     day/night sprites
 [ ]     inventory cursor
-[ ]     moneyz counter
+[X]     moneyz counter
+[ ] art for ingredients 
+        (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)
+        WE ARE ONLY SURE TO USE THE ONES WITH * BY THEIR NAME. OTHERS MAY NOT GET IN THE GAME, DON'T SWEAT IT
+[ ]     mercury
+[ ]    *water
+[ ]     sulfur
+[ ]     salt
+[ ]    *minced frog meat
+[ ]     mandrake root
+[ ]    *bunch of worms
+[ ]     flea eyes, a whole load of them
+[ ]    *locks of hair 
+[ ]     grasshopper
+[ ]     dolls eyes
+[ ]     bleeding fungus
+[ ]    *minyak (seed)
+[ ]    *raHaj  (seed)
+[ ]    *xucTu  (seed)
+[ ]    *fleece (seed)
+[ ]    *goat milk
+[ ]     snake poison flask
+[ ]    *lasagna pack
+[ ]    *oil
+[ ]    *blob fish Jam/Jelly
+[ ]    *turtle ham
+[ ]    *tomato sauce
+[ ]    *onion
+[ ]    *shimeji / mushroom
+[ ]    *vegetable sauce
 
 
 ---------------------
 
 BUGLIST:
 
-- Durante a cena de teste ("interaction_test.tsc"), ao interagir pela 2a vez com o
-NPC, as mensagens que o NPC imprime na tela começam a se sobrescrever
+- Durante a cena de teste ("interaction_test.tsc"), ao terminar de interagir com o NPC
+o diálogo começa de novo, se usando barra de espaço
