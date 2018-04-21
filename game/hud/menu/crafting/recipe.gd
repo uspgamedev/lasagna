@@ -1,18 +1,32 @@
 extends Panel
 
-export (int) var ingred_num = 1
+export (String) var recipe_name
 
 func _ready():
-	for x in range(ingred_num, 6):
+	for x in range(6):
 		var nodename = "HBox/Ingredient"+str(x)
 		get_node(nodename).visible = false
-	pass
+	var database = get_node("/root/Main").get_db()
+	var my_recipe_data = database.get_node("Recipies/"+recipe_name)
+	print(my_recipe_data.name)
+	var ingreds = my_recipe_data.get_children()
+	for i in range(ingreds.size()):
+		print(ingreds[i].name)
+		var ingred_data = database.get_node("Items/"+ingreds[i].name)
+		if ingred_data != null:
+			var nodename = "HBox/Ingredient"+str(i)
+			var current_ingred = get_node(nodename)
+			current_ingred.ingred_texture = ingred_data.icon
+			if ingred_data.icon != null:
+				print(ingred_data.icon.resource_name)
+			current_ingred.visible = true
 
 func _process(delta):
 	var can_craft = true
-	for x in range(0,ingred_num):
-		var nodename = "HBox/Ingredient"+str(x)
-		can_craft = can_craft and get_node(nodename).has_enough()
+	var array = $HBox.get_children()
+	for index in range(1,array.size()):
+		var ingred_slot = array[index]
+		can_craft = can_craft and ingred_slot.has_enough()
 		if !can_craft:
 			break
 	if can_craft:

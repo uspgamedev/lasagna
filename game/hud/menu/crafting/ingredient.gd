@@ -1,6 +1,5 @@
 extends Control
 
-export (String)  var ingred_name
 export (Texture) var ingred_texture
 export (int)     var amount
 
@@ -13,6 +12,8 @@ func has_enough():
 	pass
 
 func _process(delta):
+	if ingred_texture != $Button.icon:
+		$Button.icon   = ingred_texture
 	if has_enough() == 1:
 		$Button.disabled = false
 	else:
