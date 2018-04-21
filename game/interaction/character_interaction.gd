@@ -1,8 +1,10 @@
 extends "res://interaction/interaction.gd"
 
+signal finished_text
+
 onready var Dialogue = preload("res://interaction/dialogue/dialogue.tscn")
 
-func interact(text_vec):
+func say(text_vec):
 	var dial_box = Dialogue.instance()
 	var dialogues = get_node("../Dialogues")
 	var par = get_parent()
@@ -16,12 +18,11 @@ func interact(text_vec):
 		pos += Vector2(-label_size.x/2, 50)
 	else:
 		pos -= Vector2(label_size.x/2, label_size.y + 20)
-	print(pos)
 	dialogues.set_position(pos)
 
-	#par.add_child(dial_box)
 	get_node("../Dialogues").add_child(dial_box)
 	dial_box.display_text(text_vec)
 	yield(dial_box, "finished")
 	dial_box.queue_free()
+	emit_signal("finished_text")
 

@@ -10,7 +10,6 @@ func _ready():
 	randomize()
 	timer.wait_time = rand_range(1, 2)
 
-
 func _on_Timer_timeout():
 	dir = dir_vec[randi()%6]
 	timer.get_node("../Timer").wait_time = rand_range(1, 2)

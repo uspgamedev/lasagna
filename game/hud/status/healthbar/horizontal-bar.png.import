@@ -10,7 +10,7 @@ source_file="res://hud/status/healthbar/horizontal-bar.png"
 source_md5="9497cfc22b76e2075207a2e816068251"
 
 dest_files=[ "res://.import/horizontal-bar.png-0554864bc0a68a9bcc65d2bec8c07b74.stex" ]
-dest_md5="b9b14d533b7bc1358cb76e3f5d50dae4"
+dest_md5="ace1aed582e43526402229a28ce4fced"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
