@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/clockface.png-14c51eef93c1b4987d7654ca57957928.stex"
+path="res://.import/clockface.png-71cb7e6e967f5b2c5fc16fb76a598ba8.stex"
 
 [deps]
 
-source_file="res://clock/clockface.png"
+source_file="res://hud/status/clock/clockface.png"
 source_md5="a8667e1e9b8279c56f1196d47efc73fc"
 
-dest_files=[ "res://.import/clockface.png-14c51eef93c1b4987d7654ca57957928.stex" ]
+dest_files=[ "res://.import/clockface.png-71cb7e6e967f5b2c5fc16fb76a598ba8.stex" ]
 dest_md5="62ee750958a1566ba2526221c963f6d4"
 
 [params]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hourhand.png-899a7d0daff7111f8d3b632935e51684.stex"
+path="res://.import/minutehand.png-5768272e687fd4a18bbc92a26c1692b6.stex"
 
 [deps]
 
-source_file="res://clock/hourhand.png"
-source_md5="99396d427fcc9c0f8570b39cdd43d4d9"
+source_file="res://hud/status/clock/minutehand.png"
+source_md5="91001d86d2d149c2e16bf18a116b9416"
 
-dest_files=[ "res://.import/hourhand.png-899a7d0daff7111f8d3b632935e51684.stex" ]
-dest_md5="3060601ed2edf0201b4b180f930c461a"
+dest_files=[ "res://.import/minutehand.png-5768272e687fd4a18bbc92a26c1692b6.stex" ]
+dest_md5="471a46b6b5e2cc24adaea7df28077744"
 
 [params]
 

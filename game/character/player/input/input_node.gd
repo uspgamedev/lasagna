@@ -1,6 +1,7 @@
 extends Node2D
 
 var direction = Vector2(0,0)
+signal interact
 
 const UP = Vector2(+0, -1)
 const DW = Vector2(+0, +1)
@@ -12,7 +13,9 @@ func current_direction():
 
 func _process(delta):
 	direction = Vector2(0, 0)
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_interact"):
+		emit_signal('interact')
+	elif Input.is_action_pressed("ui_up"):
 		direction += UP
 	elif Input.is_action_pressed("ui_left"):
 		direction += LF
