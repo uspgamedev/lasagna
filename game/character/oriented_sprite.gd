@@ -6,6 +6,7 @@ var should_play
 
 func _process(delta):
 	if should_play == true:
+		print("should have changed")
 		play()
 		should_play = false
 
