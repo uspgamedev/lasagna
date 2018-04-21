@@ -1,7 +1,7 @@
 extends ProgressBar
 
-func change(amount):
-	$Tween.interpolate_method(self, "_set_amount", self.value, self.value + amount, 3, Tween.TRANS_QUAD, Tween.EASE_OUT)
+func change(target):
+	$Tween.interpolate_method(self, "_set_amount", self.value, target, 3, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$Tween.start()
 
 func _set_amount(amount):
@@ -10,5 +10,9 @@ func _set_amount(amount):
 	get_stylebox("fg", "").modulate_color = color
 
 func _process(delta):
+	if has_node("/root/Main"):
+		var player = get_node("/root/Main").get_player()
+		if player != null:
+			change(100*player.hp/4)
 	get_stylebox("fg","").region_rect.position.x = int((1 - self.value/100.0)*128)
 	get_stylebox("fg","").region_rect.size.x = int(128*self.value/100.0)
