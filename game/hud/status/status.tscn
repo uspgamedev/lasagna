@@ -49,7 +49,7 @@ anchor_left = 0.75
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-margin_bottom = 80.0
+margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -62,7 +62,9 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="Clock" parent="Container" index="1" instance=ExtResource( 3 )]
 
-margin_top = 40.0
-margin_bottom = 56.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -24.0
+margin_bottom = -8.0
 
 
