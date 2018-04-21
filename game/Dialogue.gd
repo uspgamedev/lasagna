@@ -5,9 +5,11 @@ signal finished
 
 var isPressed = false
 var wasPressed = false
+var finishedNow = false
 
 func _ready():
-	display_text(["the quick brown fox jumped over the lazy dog"])
+	display_text(["the quick brown fox jumped over the lazy dog",
+				  "second phrase that is suposely too big to fit here"])
 
 func display_text(text_vec):
 	for text in text_vec:
@@ -15,11 +17,12 @@ func display_text(text_vec):
 			$Text.add_text(text[i])
 			$Timer.start()
 			yield($Timer, "timeout")
-			if Input.is_action_pressed("ui_accept"):
+			if Input.is_action_pressed("ui_accept") and not finishedNow:
 				$Text.add_text(text.substr(i+1, len(text)-i-1))
 				break
 		yield(self, "pressed")
 		$Text.clear()
+		finishedNow = true
 	emit_signal("finished")
 
 func _input(event):
@@ -30,4 +33,5 @@ func _input(event):
 		wasPressed = true
 	if (event.is_action_released("ui_accept")):
 		isPressed = false
+		finishedNow = false
 		wasPressed = false

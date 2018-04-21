@@ -12,7 +12,9 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Dialogue" parent="." index="0" instance=ExtResource( 1 )]
 
-margin_left = -1.0
-margin_right = 39.0
+margin_left = 1.0
+margin_top = 444.0
+margin_right = 41.0
+margin_bottom = 484.0
 
 
