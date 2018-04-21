@@ -16,13 +16,6 @@
 [node name="Bed" parent="Map/Foreground/props" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 179.25, 126.457 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 
 
 [editable path="Map"]
