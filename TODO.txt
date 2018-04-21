@@ -16,7 +16,7 @@
 [ ] dia/noite
 [ ] moons
 [X] dano
-        [ ] offensive creature
+        [ ] offensive creature (JOSÉ)
 [X] morte
 [ ] ending
 [ ] ui/hud
