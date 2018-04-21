@@ -1,4 +1,8 @@
 menu de crafting
+dialog
+database
+    items
+    recipes
 save files
     inventário
     dinheiro
@@ -15,4 +19,3 @@ ui/hud
     day/night sprites
     inventory cursor
     moneyz counter
-
