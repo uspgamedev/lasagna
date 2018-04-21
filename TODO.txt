@@ -12,7 +12,7 @@
 [ ]     flags
 [ ] suporte a cutscene (JOÃO)
 [ ] stash (DÁRIO)
-[ ] dormir
+[X] dormir
 [ ] dia/noite
 [ ] moons
 [ ] ui/hud

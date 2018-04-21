@@ -28,6 +28,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
@@ -37,6 +38,8 @@ items = [  ]
 hide_on_state_item_selection = false
 script = ExtResource( 3 )
 _sections_unfolded = [ "Pause", "Popup" ]
+
+[connection signal="id_pressed" from="BedPopup" to="BedPopup" method="_on_BedPopup_id_pressed"]
 
 [connection signal="popup_hide" from="BedPopup" to="BedPopup" method="_on_BedPopup_popup_hide"]
 
