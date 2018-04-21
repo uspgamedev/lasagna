@@ -10,14 +10,15 @@
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
-[ ] suporte a cutscene
-[ ] stash
+[ ] suporte a cutscene (JOÃO)
+[ ] stash (DÁRIO)
 [ ] dormir
 [ ] dia/noite
 [ ] moons
 [ ] ui/hud
+[ ]     stash menu (WIL)
 [ ]     necromonicon icon
-[ ]     healthbar sprite
+[X]     healthbar sprite
 [ ]     day/night sprites
 [ ]     inventory cursor
 [ ]     moneyz counter
