@@ -18,7 +18,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-ingred_num = 1
+ingred_num = 3
 
 [node name="HBox" type="HBoxContainer" parent="." index="0"]
 
