@@ -8,7 +8,8 @@ script/source = "
 extends Node
 
 func _ready():
-	get_parent().get_node(\"HUD/Status\").health_bar.change(30)
+	get_parent().get_node(\"HUD/Status\").health_bar._set_amount(0)
+	get_parent().get_node(\"HUD/Status\").health_bar.change(100)
 "
 
 [node name="Main" index="0" instance=ExtResource( 1 )]

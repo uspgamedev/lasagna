@@ -10,11 +10,9 @@ main
                 controller
             NPCs
             creatures
-		area
-		animation-player
-		AI
-        plants
-        props
+		        AI
+            plants
+            props
     hud
         status
         dialogue

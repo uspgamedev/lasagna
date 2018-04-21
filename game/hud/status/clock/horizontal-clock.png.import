@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/horizontal-bar.png-0554864bc0a68a9bcc65d2bec8c07b74.stex"
+path="res://.import/horizontal-clock.png-79ad5a01f7856b2b439f2c9f6d3eb79b.stex"
 
 [deps]
 
-source_file="res://hud/status/healthbar/horizontal-bar.png"
-source_md5="9497cfc22b76e2075207a2e816068251"
+source_file="res://hud/status/clock/horizontal-clock.png"
+source_md5="8a4483db4a3d7a92ed24eed89d9e927e"
 
-dest_files=[ "res://.import/horizontal-bar.png-0554864bc0a68a9bcc65d2bec8c07b74.stex" ]
-dest_md5="ace1aed582e43526402229a28ce4fced"
+dest_files=[ "res://.import/horizontal-clock.png-79ad5a01f7856b2b439f2c9f6d3eb79b.stex" ]
+dest_md5="abf76b907d4fc75c6725a12794d382cd"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -1,20 +1,27 @@
-menu de crafting
-save files
-    inventário
-    dinheiro
-    matriz de plantas
-    flags
-suporte a cutscene
-stash
-dormir
-dia/noite
-moons
-ui/hud
-    necromonicon icon
-    healthbar sprite
-    day/night sprites
-    inventory cursor
-    moneyz counter
+[ ] menu de crafting (JOSÉ)
+[ ] dialog
+[x]   speech bubbles
+[ ]   prompt choices
+[X] database
+[X]     items
+[X]     recipes
+[ ] save files
+[ ]     inventário
+[ ]     dinheiro
+[ ]     matriz de plantas
+[ ]     flags
+[ ] suporte a cutscene (JOÃO)
+[ ] stash (DÁRIO)
+[ ] dormir
+[ ] dia/noite
+[ ] moons
+[ ] ui/hud
+[ ]     stash menu (DÁRIO)
+[ ]     necromonicon icon
+[X]     healthbar sprite
+[ ]     day/night sprites (WIL)
+[ ]     inventory cursor
+[ ]     moneyz counter
 
 
 ---------------------

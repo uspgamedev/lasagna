@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://hud/status/status.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://hud/status/clock/clock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://hud/status/inventory/empty-book-box.png" type="Texture" id=5]
 [ext_resource path="res://hud/status/inventory/inventory.tscn" type="PackedScene" id=6]
+[ext_resource path="res://hud/status/wallet/wallet.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -26,7 +27,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Status" type="Control" index="0"]
+[node name="Status" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -83,6 +84,11 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="HealthBar" parent="UpperRight" index="0" instance=ExtResource( 3 )]
 
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 136.0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+
 [node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
 
 anchor_top = 1.0
@@ -126,5 +132,7 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
 
 margin_left = 66.0
 margin_right = 258.0
+
+[node name="Wallet" parent="Bottom" index="2" instance=ExtResource( 7 )]
 
 

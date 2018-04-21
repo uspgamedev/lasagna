@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/horizontal-bar.png-0554864bc0a68a9bcc65d2bec8c07b74.stex"
+path="res://.import/money-box.png-25b18220cab27bbe75f23bb50298b206.stex"
 
 [deps]
 
-source_file="res://hud/status/healthbar/horizontal-bar.png"
-source_md5="9497cfc22b76e2075207a2e816068251"
+source_file="res://hud/status/wallet/money-box.png"
+source_md5="6a45f53bf83d3b603138df1c66cd6823"
 
-dest_files=[ "res://.import/horizontal-bar.png-0554864bc0a68a9bcc65d2bec8c07b74.stex" ]
-dest_md5="ace1aed582e43526402229a28ce4fced"
+dest_files=[ "res://.import/money-box.png-25b18220cab27bbe75f23bb50298b206.stex" ]
+dest_md5="8615473e477b254b3872e74c63a8e4b1"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

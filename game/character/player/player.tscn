@@ -238,6 +238,7 @@ tracks/0/keys = {
 [node name="Player" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+_sections_unfolded = [ "Pause" ]
 friction = 25.0
 push_force = 100.0
 max_speed = 300.0
