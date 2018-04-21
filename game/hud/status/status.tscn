@@ -4,7 +4,7 @@
 [ext_resource path="res://hud/status/healthbar/healthbar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/status/clock/clock.tscn" type="PackedScene" id=3]
 
-[node name="Status" type="Control"]
+[node name="Status" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -43,16 +43,26 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
-[node name="HealthBar" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Container" type="Container" parent="." index="1"]
 
-[node name="Clock" parent="." index="2" instance=ExtResource( 3 )]
-
-anchor_left = 1.0
+anchor_left = 0.75
+anchor_top = 0.0
 anchor_right = 1.0
-margin_left = -32.0
-margin_top = 32.0
-margin_right = -32.0
-margin_bottom = 32.0
-_sections_unfolded = [ "Anchor", "Margin", "Transform" ]
+anchor_bottom = 0.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="HealthBar" parent="Container" index="0" instance=ExtResource( 2 )]
+
+[node name="Clock" parent="Container" index="1" instance=ExtResource( 3 )]
+
+margin_top = 40.0
+margin_bottom = 56.0
 
 
