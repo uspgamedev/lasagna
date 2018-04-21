@@ -13,7 +13,7 @@ func current_direction():
 
 func _process(delta):
 	direction = Vector2(0, 0)
-	if Input.is_action_pressed("ui_interact"):
+	if Input.is_action_just_pressed("ui_interact"):
 		emit_signal('interact')
 	elif Input.is_action_pressed("ui_up"):
 		direction += UP
