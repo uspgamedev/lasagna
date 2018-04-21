@@ -34,7 +34,7 @@
 [ ]     sulfur
 [ ]     salt
 [ ]    *minced frog meat
-[ ]     mandrake root
+[ ]    *mandrake root
 [ ]    *bunch of worms
 [ ]     flea eyes, a whole load of them
 [ ]    *locks of hair 
