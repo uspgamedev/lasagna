@@ -1,0 +1,19 @@
+main
+    tilemap
+        player
+            camera
+            animation-player 
+            carried-object
+            controller
+        NPCs
+        plants
+        animals
+        props
+    hud
+        status
+        dialogue
+        menus
+
+character -> player, animals, creatures
+object -> props, plants
+
