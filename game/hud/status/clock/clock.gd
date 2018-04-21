@@ -11,7 +11,7 @@ func end_night():
 func _process(delta):
 	var ratio = $Timer.time_left/$Timer.wait_time
 	var bar   = $DayNightBar
-	bar.value = bar.max_value*ratio 
+	bar.value = bar.max_value*ratio
 	
 	if ratio == 1:
 		emit_signal("midnight_strikes")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://hud/status/clock/clock.gd" type="Script" id=1]
 [ext_resource path="res://hud/status/clock/horizontal-clock.png" type="Texture" id=2]
+[ext_resource path="res://hud/status/bar_border.tscn" type="PackedScene" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -18,7 +19,7 @@ content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 texture = SubResource( 1 )
-region_rect = Rect2( 0, 0, 1, 1 )
+region_rect = Rect2( 0, 0, 128, 24 )
 margin_left = 0.0
 margin_right = 0.0
 margin_top = 0.0
@@ -45,7 +46,7 @@ content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 texture = SubResource( 3 )
-region_rect = Rect2( 0, 0, 1, 1 )
+region_rect = Rect2( 0, 0, 128, 24 )
 margin_left = 0.0
 margin_right = 0.0
 margin_top = 0.0
@@ -103,20 +104,13 @@ custom_styles/bg = SubResource( 4 )
 min_value = 0.0
 max_value = 100.0
 step = 1.0
-page = 50.0
+page = 0.0
 value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = false
 _sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_styles" ]
 
-[node name="Tween" type="Tween" parent="DayNightBar" index="0"]
-
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
+[node name="TextureRect" parent="DayNightBar" index="0" instance=ExtResource( 3 )]
 
 
