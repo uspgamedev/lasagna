@@ -92,8 +92,10 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", 
 [node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
 
 anchor_top = 1.0
+anchor_right = 0.0
 anchor_bottom = 1.0
 margin_top = -24.0
+margin_right = 136.0
 margin_bottom = -8.0
 
 [node name="Bottom" type="Container" parent="." index="2"]
