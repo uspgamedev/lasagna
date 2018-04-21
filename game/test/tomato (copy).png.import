@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tomato.png-c763eec3614fa81942f95c0aa77496da.stex"
+path="res://.import/tomato (copy).png-be595bf0b9185691366238c348bd7e93.stex"
 
 [deps]
 
-source_file="res://test/tomato.png"
+source_file="res://test/tomato (copy).png"
 source_md5="b2b2388d914bbe92a385a206f06d2bcb"
 
-dest_files=[ "res://.import/tomato.png-c763eec3614fa81942f95c0aa77496da.stex" ]
+dest_files=[ "res://.import/tomato (copy).png-be595bf0b9185691366238c348bd7e93.stex" ]
 dest_md5="6bda57396b13284e8e31a8ff8ff7a808"
 
 [params]

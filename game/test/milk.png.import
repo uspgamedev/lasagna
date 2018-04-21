@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tomato.png-c763eec3614fa81942f95c0aa77496da.stex"
+path="res://.import/milk.png-6768716ed7ee590976daae062b0a1f41.stex"
 
 [deps]
 
-source_file="res://test/tomato.png"
-source_md5="b2b2388d914bbe92a385a206f06d2bcb"
+source_file="res://test/milk.png"
+source_md5="4f761b7ef723581e766dfef93bdd366e"
 
-dest_files=[ "res://.import/tomato.png-c763eec3614fa81942f95c0aa77496da.stex" ]
-dest_md5="6bda57396b13284e8e31a8ff8ff7a808"
+dest_files=[ "res://.import/milk.png-6768716ed7ee590976daae062b0a1f41.stex" ]
+dest_md5="bebf3adcc0d9dff664ff6c8207d2aff6"
 
 [params]
 
