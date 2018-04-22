@@ -14,7 +14,10 @@ func _ready():
 	add_item_to_stash("TESTE", 3)
 	add_item_to_stash("JESUS", 1)
 	add_item_to_stash("EU", 9)
-   
+
+func get_item_at(index):
+	return inventory[index].duplicate()
+
 func how_many_of_item(item_name):
 	var count = 0
 	for pair in inventory:

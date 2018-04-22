@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://character/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/player/player.gd" type="Script" id=2]
@@ -310,6 +310,11 @@ tracks/3/keys = {
 custom_solver_bias = 0.0
 radius = 20.0
 
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12, 16 )
+
 [node name="Player" groups=[
 "player",
 ] instance=ExtResource( 1 )]
@@ -381,6 +386,7 @@ shape = SubResource( 9 )
 
 [node name="AreaInteraction" type="Area2D" parent="." index="4"]
 
+position = Vector2( 32, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -391,11 +397,10 @@ audio_bus_name = "Master"
 script = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaInteraction" index="0"]
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="AreaInteraction" index="0"]
 
 rotation = -1.5708
-build_mode = 0
-polygon = PoolVector2Array( 36.0001, -15.9999, 35.9999, 16.0001, 11.9999, 16, 12.0001, -16 )
+shape = SubResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Interaction" type="Node" parent="." index="5"]

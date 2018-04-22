@@ -1,7 +1,7 @@
 tool
 extends StaticBody2D
 
-export(String) var item_id = "paper"
+export(String) var item_id = "Paper"
 export(int) var stack = 1
 
 func _picked():
