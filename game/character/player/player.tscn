@@ -278,6 +278,7 @@ _sections_unfolded = [ "Limit" ]
 
 [node name="OrientedSprite" parent="." index="1"]
 
+editor/display_folded = true
 texture = ExtResource( 3 )
 offset = Vector2( 0, -24 )
 _sections_unfolded = [ "Animation", "Offset" ]
@@ -311,6 +312,7 @@ shape = SubResource( 13 )
 
 [node name="AreaInteraction" type="Area2D" parent="." index="4"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
