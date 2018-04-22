@@ -27,7 +27,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Status" type="Control"]
+[node name="Status" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -84,9 +84,10 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="HealthBar" parent="UpperRight" index="0" instance=ExtResource( 3 )]
 
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 136.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 152.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
@@ -94,9 +95,10 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", 
 anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
-margin_top = -24.0
-margin_right = 136.0
-margin_bottom = -8.0
+margin_left = 24.0
+margin_top = -64.0
+margin_right = 152.0
+margin_bottom = -48.0
 
 [node name="Bottom" type="Container" parent="." index="2"]
 
@@ -119,8 +121,10 @@ anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
-margin_top = -52.0
-margin_right = 52.0
+margin_left = -2.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 2.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -132,8 +136,8 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
 
 [node name="Inventory" parent="Bottom" index="1" instance=ExtResource( 6 )]
 
-margin_left = 66.0
-margin_right = 258.0
+margin_left = 64.0
+margin_right = 256.0
 
 [node name="Wallet" parent="Bottom" index="2" instance=ExtResource( 7 )]
 
