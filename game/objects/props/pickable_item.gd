@@ -6,10 +6,7 @@ export(int) var stack = 1
 
 func _ready():
 	var tex = get_node("/root/Main").get_db().get_item_texture(self.item_id)
-	print($Sprite.texture)
-	$Sprite.texture = null
 	$Sprite.texture = tex
-	print($Sprite.texture)
 
 func _picked():
 	var inv = get_node("/root/Main").get_inventory()
