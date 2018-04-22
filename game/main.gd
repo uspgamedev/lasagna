@@ -1,5 +1,7 @@
 extends Node2D
 
+signal ended_night
+
 func _ready():
 	if has_node("Play"):
 		$Play._play()
@@ -38,3 +40,4 @@ func execute_cutscene(name):
 
 func end_night():
 	$HUD/Status/UpperRight/Clock.end_night()
+	emit_signal("ended_night")

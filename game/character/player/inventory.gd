@@ -10,10 +10,6 @@ var inventory = []
 
 func _ready():
 	init_inventory()
-	add_item_to_stash("BLA", 4)
-	add_item_to_stash("TESTE", 3)
-	add_item_to_stash("JESUS", 1)
-	add_item_to_stash("EU", 9)
 
 func get_item_at(index):
 	return inventory[index].duplicate()
