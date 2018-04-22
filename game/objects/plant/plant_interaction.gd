@@ -1,22 +1,8 @@
 extends "res://interaction/interaction.gd"
 
-export (int) var growth_steps
-export (int) var anim_length
-
-var growth_level
-
-func _process(delta):
-	anim_player = get_node("../Sprite/AnimationPlayer")
-	if !anim_player.is_playing():
-		anim_player.play("tree-animation-"+growth_level)
-
-func grow():
-	if growth_level < growth_steps:
-		growth_level += 1
-
 func interact():
-	if growth_level == growth_steps:
-		growth_level-= 1
+	var par = get_parent()
+	if par.growth_level == par.growth_steps:
 		get_node("../Sprite/AnimationPlayer").play("harvest")
 		#HARVEST CODE
 		#...
