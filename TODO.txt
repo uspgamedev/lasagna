@@ -1,3 +1,6 @@
+DOCS
+https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
+
 [X] menu de crafting
 [ ] dialog
 [x]   speech bubbles
