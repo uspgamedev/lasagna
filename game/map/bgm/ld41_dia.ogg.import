@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ld41_dia.ogg-4a175726e35d94550975e186c067ab1c.oggstr"
+
+[deps]
+
+source_file="res://map/bgm/ld41_dia.ogg"
+source_md5="fb44281965736b24a706ab30a63251d8"
+
+dest_files=[ "res://.import/ld41_dia.ogg-4a175726e35d94550975e186c067ab1c.oggstr" ]
+dest_md5="3c86f89d767aef0a0d5f62a15241b2df"
+
+[params]
+
+loop=true
+loop_offset=0

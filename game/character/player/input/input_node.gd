@@ -33,5 +33,3 @@ func _process(delta):
 			direction += DW
 		elif Input.is_action_pressed("ui_right"):
 			direction += RT
-
-	

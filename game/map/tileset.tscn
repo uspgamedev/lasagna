@@ -26,7 +26,15 @@ region_enabled = true
 region_rect = Rect2( 32, 0, 32, 24 )
 _sections_unfolded = [ "Region" ]
 
-[node name="03-WoodWall" type="Sprite" parent="." index="2"]
+[node name="03-Seeded" type="Sprite" parent="." index="2"]
+
+position = Vector2( 64, 48 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 24, 32, 24 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="04-WoodFloor" type="Sprite" parent="." index="3"]
 
 position = Vector2( 96, 24 )
 texture = ExtResource( 1 )
@@ -34,8 +42,9 @@ region_enabled = true
 region_rect = Rect2( 64, 0, 32, 24 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="04-Wall" type="Sprite" parent="." index="3"]
+[node name="05-Wall" type="Sprite" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 128, 48 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -48 )
@@ -43,7 +52,7 @@ region_enabled = true
 region_rect = Rect2( 0, 24, 32, 72 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="04-Wall" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="05-Wall" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -53,28 +62,44 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="04-Wall/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="05-Wall/StaticBody2D" index="0"]
 
 build_mode = 0
 polygon = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 
-[node name="05-LowerWall" type="Sprite" parent="." index="4"]
+[node name="06-TopWoodFloor" type="Sprite" parent="." index="5"]
 
-position = Vector2( 192, 24 )
+position = Vector2( 160, 24 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 128, 0, 32, 24 )
-_sections_unfolded = [ "Offset", "Region" ]
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="055-dummy" type="Sprite" parent="." index="5"]
+[node name="07-ShadowWoodFloor" type="Sprite" parent="." index="6"]
 
-position = Vector2( 256, 24 )
+position = Vector2( 160, 48 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 128, 0, 32, 24 )
-_sections_unfolded = [ "Region" ]
+region_rect = Rect2( 128, 24, 32, 24 )
+_sections_unfolded = [ "Region", "Transform" ]
 
-[node name="06-CeilCornerTopLeft" type="Sprite" parent="." index="6"]
+[node name="08-LeftGlass" type="Sprite" parent="." index="7"]
+
+position = Vector2( 192, 12 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 48, 32, 48 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="09-RightGlass" type="Sprite" parent="." index="8"]
+
+position = Vector2( 224, 12 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 48, 32, 48 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="10-CeilCornerTopLeft" type="Sprite" parent="." index="9"]
 
 position = Vector2( 32, 72 )
 texture = ExtResource( 2 )
@@ -82,7 +107,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="07-CeilBorderTop" type="Sprite" parent="." index="7"]
+[node name="11-CeilBorderTop" type="Sprite" parent="." index="10"]
 
 position = Vector2( 64, 72 )
 texture = ExtResource( 2 )
@@ -90,7 +115,7 @@ region_enabled = true
 region_rect = Rect2( 16, 0, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="08-CeilCornerTopRight" type="Sprite" parent="." index="8"]
+[node name="12-CeilCornerTopRight" type="Sprite" parent="." index="11"]
 
 position = Vector2( 96, 72 )
 texture = ExtResource( 2 )
@@ -98,15 +123,16 @@ region_enabled = true
 region_rect = Rect2( 32, 0, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="09-CeilBorderLeft" type="Sprite" parent="." index="9"]
+[node name="13-CeilBorderLeft" type="Sprite" parent="." index="12"]
 
+editor/display_folded = true
 position = Vector2( 32, 96 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 12, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="09-CeilBorderLeft" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="13-CeilBorderLeft" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -119,14 +145,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="09-CeilBorderLeft/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="13-CeilBorderLeft/StaticBody2D" index="0"]
 
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="10-CeilCenter" type="Sprite" parent="." index="10"]
+[node name="14-CeilCenter" type="Sprite" parent="." index="13"]
 
 position = Vector2( 64, 96 )
 texture = ExtResource( 2 )
@@ -134,15 +160,16 @@ region_enabled = true
 region_rect = Rect2( 16, 12, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="11-CeilBorderRight" type="Sprite" parent="." index="11"]
+[node name="15-CeilBorderRight" type="Sprite" parent="." index="14"]
 
+editor/display_folded = true
 position = Vector2( 96, 96 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 32, 12, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="11-CeilBorderRight" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="15-CeilBorderRight" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -156,14 +183,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="11-CeilBorderRight/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="15-CeilBorderRight/StaticBody2D" index="0"]
 
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="12-CeilBorderBottomLeft" type="Sprite" parent="." index="12"]
+[node name="16-CeilBorderBottomLeft" type="Sprite" parent="." index="15"]
 
 position = Vector2( 32, 120 )
 texture = ExtResource( 2 )
@@ -171,7 +198,7 @@ region_enabled = true
 region_rect = Rect2( 0, 24, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="13-CeilBorderBottom" type="Sprite" parent="." index="13"]
+[node name="17-CeilBorderBottom" type="Sprite" parent="." index="16"]
 
 position = Vector2( 64, 120 )
 texture = ExtResource( 2 )
@@ -179,7 +206,7 @@ region_enabled = true
 region_rect = Rect2( 16, 24, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="14-CeilBorderBottomRight" type="Sprite" parent="." index="14"]
+[node name="18-CeilBorderBottomRight" type="Sprite" parent="." index="17"]
 
 position = Vector2( 96, 120 )
 texture = ExtResource( 2 )
@@ -187,7 +214,7 @@ region_enabled = true
 region_rect = Rect2( 32, 24, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="15-CeilBorderInnerTopLeft" type="Sprite" parent="." index="15"]
+[node name="19-CeilBorderInnerTopLeft" type="Sprite" parent="." index="18"]
 
 position = Vector2( 32, 144 )
 texture = ExtResource( 2 )
@@ -195,7 +222,7 @@ region_enabled = true
 region_rect = Rect2( 0, 36, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="16-CeilBorderInnerTop" type="Sprite" parent="." index="16"]
+[node name="20-CeilBorderInnerTop" type="Sprite" parent="." index="19"]
 
 position = Vector2( 64, 144 )
 texture = ExtResource( 2 )
@@ -203,7 +230,7 @@ region_enabled = true
 region_rect = Rect2( 16, 36, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="17-CeilBorderInnerTopRight" type="Sprite" parent="." index="17"]
+[node name="21-CeilBorderInnerTopRight" type="Sprite" parent="." index="20"]
 
 position = Vector2( 96, 144 )
 texture = ExtResource( 2 )
@@ -211,7 +238,7 @@ region_enabled = true
 region_rect = Rect2( 32, 36, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="18-CeilBorderInnerBottomLeft" type="Sprite" parent="." index="18"]
+[node name="22-CeilBorderInnerBottomLeft" type="Sprite" parent="." index="21"]
 
 position = Vector2( 32, 168 )
 texture = ExtResource( 2 )
@@ -219,7 +246,7 @@ region_enabled = true
 region_rect = Rect2( 0, 48, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="19-CeilBorderInnerBottom" type="Sprite" parent="." index="19"]
+[node name="23-CeilBorderInnerBottom" type="Sprite" parent="." index="22"]
 
 position = Vector2( 64, 168 )
 texture = ExtResource( 2 )
@@ -227,7 +254,7 @@ region_enabled = true
 region_rect = Rect2( 16, 48, 16, 12 )
 _sections_unfolded = [ "Region" ]
 
-[node name="20-CeilBorderInnerBottomRight" type="Sprite" parent="." index="20"]
+[node name="24-CeilBorderInnerBottomRight" type="Sprite" parent="." index="23"]
 
 position = Vector2( 96, 168 )
 texture = ExtResource( 2 )
