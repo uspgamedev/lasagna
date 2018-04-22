@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/prop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/props/pickable_item.gd" type="Script" id=2]
 [ext_resource path="res://objects/props/props.png" type="Texture" id=3]
 [ext_resource path="res://interaction/interaction.tscn" type="PackedScene" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+
+flags = 0
+atlas = ExtResource( 3 )
+region = Rect2( 102, 4, 20, 20 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
 
 [node name="Object" instance=ExtResource( 1 )]
 
@@ -13,9 +21,8 @@ stack = 1
 
 [node name="Sprite" parent="." index="0"]
 
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 102, 4, 20, 20 )
+texture = SubResource( 1 )
+region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
 [node name="CollisionPolygon2D" parent="." index="1"]
