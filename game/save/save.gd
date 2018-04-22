@@ -30,6 +30,8 @@ func load_game():
 	var data = parse_json(save_file.get_as_text())
 	
 	self.flags.set_day(int(data["day"]))
+	self.flags.set_moon(int(data["moon"]))
+	self.flags.set_blood_prob(int(data["blood_prob"]))
 	
 	inventory.money = data["money"]
 	inventory.stash = data["stash"]
@@ -41,6 +43,8 @@ func serialize():
 	# Inventory
 	var data = {}
 	data["day"] = flags.get_day()
+	data["moon"] = flags.get_moon()
+	data["blood_prob"] = flags.get_blood_prob()
 	data["money"] = inventory.money
 	data["stash"] = inventory.stash.duplicate()
 	data["inventory"] = inventory.inventory.duplicate()

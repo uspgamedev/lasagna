@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/plant/plant.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/plant/kepala/kepala.gd" type="Script" id=2]
+
+[node name="Kepala" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+growth_steps = 4
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="animation_finished" from="Sprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
