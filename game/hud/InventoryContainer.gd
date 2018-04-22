@@ -37,9 +37,17 @@ func move_highlighted_slot(new_slot):
 		inventory.get_node(str('Slot' + var2str(new_slot - 8))).add_child(sprite)
 	actual_slot = new_slot
 
+func move_item():
+	if (actual_slot <= 8 and actual_slot >= 1):
+		print(get_node(str('MenuButton' + var2str(actual_slot))).get_name())
+	else:
+		print(inventory.get_node(str('Slot' + var2str(actual_slot - 8))).get_name())
+
 func _input(event):
 	if (self.is_visible_in_tree()):
-		if event.is_action_pressed('ui_right') and actual_slot != 4 and actual_slot != 8 and actual_slot != 14:
+		if event.is_action_pressed('ui_accept'):
+			move_item()
+		elif event.is_action_pressed('ui_right') and actual_slot != 4 and actual_slot != 8 and actual_slot != 14:
 			move_highlighted_slot(actual_slot + 1)
 		elif event.is_action_pressed('ui_left') and actual_slot != 1 and actual_slot != 5 and actual_slot != 9:
 			move_highlighted_slot(actual_slot - 1)
