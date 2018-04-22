@@ -1,4 +1,4 @@
-[ ] menu de crafting (JOSÉ) - needs better test scene
+[ ] menu de crafting (JOSÉ) - Isn't working yet. Not sure why
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
