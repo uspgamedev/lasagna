@@ -1,13 +1,15 @@
 extends Node
 
-var save_path = "user://game.save"
+const SAVE_PATH = "user://game.save"
+
+onready var inventory = get_node("../Inventory")
 
 func _ready():
 	pass
 
 func save_game():
 	var save_file = File.new()
-	save_file.open(save_path, File.WRITE)
+	save_file.open(SAVE_PATH, File.WRITE)
 	
 	var data = serialize()
 	
@@ -18,13 +20,13 @@ func save_game():
 
 func load_game():
 	var save_file = File.new()
-	if not save_file.file_exists(save_path):
+	if not save_file.file_exists(SAVE_PATH):
 		return # Nothing to load
 	
-	save_file.open(save_path, File.READ)
+	save_file.open(SAVE_PATH, File.READ)
 	
 	var inventory_data = parse_json(save_file.get_line())
-	var inventory = $Inventory
+	var inventory = get_node("../Inventory")
 	
 	inventory.money = inventory_data["money"]
 	inventory.stash = inventory_data["stash"]
@@ -34,7 +36,6 @@ func serialize():
 	var data = []
 	
 	# Inventory
-	var inventory = $Inventory
 	var inventory_data = {}
 	inventory_data["name"] = "inventory"
 	inventory_data["money"] = inventory.money
