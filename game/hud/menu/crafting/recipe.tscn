@@ -4,7 +4,7 @@
 [ext_resource path="res://hud/menu/crafting/ingredient.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/menu/crafting/craft_button.gd" type="Script" id=3]
 
-[node name="Panel" type="Panel" index="0"]
+[node name="Panel" type="Panel"]
 
 anchor_left = 0.0
 anchor_top = 0.0
