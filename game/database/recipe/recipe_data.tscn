@@ -5,5 +5,8 @@
 [node name="RecipeData" type="Node" index="0"]
 
 script = ExtResource( 1 )
+yields = "Melancia no Barranco"
+craft_on = "Forninho"
+moon_phase = "Any"
 
 
