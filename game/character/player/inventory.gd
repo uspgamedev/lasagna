@@ -14,7 +14,10 @@ func _ready():
     add_item_to_stash("TESTE", 3)
     add_item_to_stash("JESUS", 1)
     add_item_to_stash("EU", 9)
-    
+   
+func how_many_of_item(item_name):
+	return inventory.count(item_name)
+	
 func add_item_to_stash(item_name, number_of_items):
     if stash.has(item_name):
         if (stash[item_name] + number_of_items) > MAX_STACK_SIZE:
