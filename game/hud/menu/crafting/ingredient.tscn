@@ -3,7 +3,7 @@
 [ext_resource path="res://hud/menu/crafting/ingredient.gd" type="Script" id=1]
 [ext_resource path="res://hud/menu/crafting/empy-slot.png" type="Texture" id=2]
 
-[node name="Ingredient" type="Control"]
+[node name="Ingredient" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
