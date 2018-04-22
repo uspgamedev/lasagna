@@ -7,7 +7,11 @@
 [ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=5]
 [ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=6]
 
-[node name="Main" index="0" instance=ExtResource( 1 )]
+[node name="Main" instance=ExtResource( 1 )]
+
+[node name="Inventory" parent="." index="1"]
+
+money = 10000
 
 [node name="Map" parent="." index="2" instance=ExtResource( 2 )]
 
