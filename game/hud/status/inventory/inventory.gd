@@ -8,6 +8,9 @@ func _ready():
 		slots.append(slot)
 	get_child(0).focus()
 
+func get_equipped_item():
+	return get_node("/root/Main").get_inventory().get_item_at(self.focused)
+
 func _process(delta):
 	for i in range(get_child_count()):
 		var slot = get_child(i)
@@ -19,7 +22,10 @@ func _process(delta):
 
 func _input(event):
 	var n = get_child_count()
-	if event.is_action_pressed("shoulder_right"):
+	if event.is_action_pressed("use_item"):
+		var player = get_node("/root/Main").get_player()
+		player.interact(get_equipped_item())
+	elif event.is_action_pressed("shoulder_right"):
 		slots[focused].unfocus()
 		focused = (focused + 1)%n
 		slots[focused].focus()

@@ -3,7 +3,7 @@
 [ext_resource path="res://hud/status/inventory/inventory.gd" type="Script" id=1]
 [ext_resource path="res://hud/status/inventory/slot.tscn" type="PackedScene" id=2]
 
-[node name="Inventory" type="Container" index="0"]
+[node name="Inventory" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 1.0
