@@ -25,7 +25,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" index="0"]
 
 pause_mode = 2
 layer = 1
@@ -58,6 +58,7 @@ script = ExtResource( 2 )
 
 [node name="MenuButton" type="MenuButton" parent="InventoryContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -83,6 +84,7 @@ items = [  ]
 
 [node name="Sprite" type="Sprite" parent="InventoryContainer/MenuButton" index="1"]
 
+editor/display_folded = true
 texture = ExtResource( 4 )
 hframes = 2
 frame = 1
@@ -292,6 +294,7 @@ popup_exclusive = false
 items = [  ]
 hide_on_state_item_selection = false
 script = ExtResource( 5 )
+_sections_unfolded = [ "Material" ]
 
 [connection signal="id_pressed" from="BedPopup" to="BedPopup" method="_on_BedPopup_id_pressed"]
 
