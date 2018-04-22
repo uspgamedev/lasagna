@@ -1,9 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://interaction/dialogue/dialogue.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
 
-[node name="Dialogue" type="Container"]
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.0881535, 0.0830841, 0.175781, 0.872941 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
+[node name="Dialogue" type="PanelContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -17,17 +46,45 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Hint", "Margin", "Rect", "Theme" ]
+_sections_unfolded = [ "Anchor", "Hint", "Margin", "Rect", "Theme", "custom_constants", "custom_styles" ]
 
-[node name="Text" type="RichTextLabel" parent="." index="0"]
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
+[node name="Margin" type="Container" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 4.0
+margin_right = -8.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Text" type="RichTextLabel" parent="Margin" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 300.0
-margin_bottom = 90.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 293.0
+margin_bottom = 83.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -47,16 +104,9 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Timer" type="Timer" parent="." index="1"]
-
-process_mode = 1
-wait_time = 0.1
-one_shot = false
-autostart = false
 
 
