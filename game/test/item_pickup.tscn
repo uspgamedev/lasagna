@@ -9,10 +9,5 @@
 
 position = Vector2( 415, 230 )
 
-[node name="LowerRight" parent="Map/Limits" index="1"]
-
-position = Vector2( 640, 480 )
-_sections_unfolded = [ "Transform" ]
-
 
 [editable path="Map"]

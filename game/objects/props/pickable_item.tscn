@@ -8,7 +8,7 @@
 [node name="Object" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-item_id = "paper"
+item_id = "Paper"
 stack = 1
 
 [node name="Sprite" parent="." index="0"]
