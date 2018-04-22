@@ -16,5 +16,4 @@
 position = Vector2( 239.409, 180.477 )
 
 
-[editable path="HUD"]
 [editable path="Map"]
