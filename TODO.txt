@@ -12,6 +12,7 @@
 [ ]     matriz de plantas
 [ ]     flags
 [x]     day count
+[ ] newgame/continue
 [X] suporte a cutscene
 [x] inventory
 [ ] stash (DÁRIO)
