@@ -6,7 +6,7 @@
 
 [sub_resource type="AtlasTexture" id=1]
 
-flags = 4
+flags = 0
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 128, 24 )
 margin = Rect2( 0, 0, 0, 0 )
@@ -33,7 +33,7 @@ draw_center = true
 
 [sub_resource type="AtlasTexture" id=3]
 
-flags = 4
+flags = 0
 atlas = ExtResource( 2 )
 region = Rect2( 128, 0, 128, 24 )
 margin = Rect2( 0, 0, 0, 0 )
