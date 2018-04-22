@@ -37,6 +37,16 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Status" parent="." index="0" instance=ExtResource( 1 )]
 
+editor/display_folded = true
+
+[node name="UpperRight" parent="Status" index="1"]
+
+editor/display_folded = true
+
+[node name="Wallet" parent="Status/Bottom" index="2"]
+
+editor/display_folded = true
+
 [node name="InventoryContainer" type="GridContainer" parent="." index="1"]
 
 visible = false
@@ -314,3 +324,5 @@ _sections_unfolded = [ "Material" ]
 [connection signal="popup_hide" from="BedPopup" to="BedPopup" method="_on_BedPopup_popup_hide"]
 
 
+[editable path="Status"]
+[editable path="Status/Bottom/Inventory"]
