@@ -2,7 +2,7 @@
 
 [ext_resource path="res://save/flags.gd" type="Script" id=1]
 
-[node name="Flags" type="Node" index="0"]
+[node name="Flags" type="Node"]
 
 script = ExtResource( 1 )
 day = 1

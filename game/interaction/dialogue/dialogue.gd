@@ -7,6 +7,8 @@ var isPressed = false
 var wasPressed = false
 var finishedNow = false
 
+onready var text_node = $Margin/Text
+
 func _ready():
 	if Input.is_action_pressed("ui_accept"):
 		finishedNow = true
@@ -15,14 +17,14 @@ func _ready():
 
 func say(text):
 	for i in range(len(text)):
-		$Text.add_text(text[i])
+		text_node.add_text(text[i])
 		$Timer.start()
 		yield($Timer, "timeout")
 		if Input.is_action_pressed("ui_accept") and not finishedNow:
-			$Text.add_text(text.substr(i+1, len(text)-i-1))
+			text_node.add_text(text.substr(i+1, len(text)-i-1))
 			break
 	yield(self, "pressed")
-	$Text.clear()
+	text_node.clear()
 	finishedNow = true
 	emit_signal("finished")
 

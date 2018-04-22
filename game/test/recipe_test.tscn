@@ -6,6 +6,10 @@
 
 [node name="Main" index="0" instance=ExtResource( 1 )]
 
+[node name="Inventory" parent="." index="1"]
+
+money = 10000
+
 [node name="Panel" parent="." index="2" instance=ExtResource( 2 )]
 
 margin_left = 119.0

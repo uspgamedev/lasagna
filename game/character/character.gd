@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(float) var friction   = 0
 export(float) var push_force = 0
 export(float) var max_speed  = 0
-export(int)   var max_health = 0
+export(int)   var max_health = 100
 
 var velocity = Vector2(0,0)
 var hp = 1
