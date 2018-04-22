@@ -19,6 +19,10 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [x] newgame/continue
 [X] suporte a cutscene
 [ ] crop field
+[ ]     sow equipped seed
+[ ]     water target crop
+[ ]     grow over night
+[ ]     turn into monster at night
 [x] inventory
 [ ] stash (DÁRIO)
 [X] dormir
