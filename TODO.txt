@@ -1,20 +1,26 @@
-[ ] menu de crafting (JOSÉ) - FALTA INVETÁRIO ESTAR PRONTO
+[ ] menu de crafting (JOSÉ) - Isn't working yet. Not sure why
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
 [X] database
 [X]     items
 [X]     recipes
+[ ] char animation only has left/right dirs
 [ ] save files
 [ ]     inventário
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
+[x]     day count
+[ ] newgame/continue
 [X] suporte a cutscene
+[x] inventory
 [ ] stash (DÁRIO)
 [X] dormir
 [ ] dia/noite
 [ ] moons
+[ ] limitar câmera
+[ ] interaction icon (qnd tem algo para interagir)
 [X] dano
         [X] offensive creature
 [X] morte
@@ -26,9 +32,10 @@
 [x]     day/night sprites
 [ ]     inventory cursor
 [X]     moneyz counter
-[ ] art for ingredients 
+[ ] arts 
         (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)
         WE ARE ONLY SURE TO USE THE ONES WITH * BY THEIR NAME. OTHERS MAY NOT GET IN THE GAME, DON'T SWEAT IT
+[ ]     necromonicon icon
 [ ]     mercury
 [x]    *water
 [ ]     sulfur

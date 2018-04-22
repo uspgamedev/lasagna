@@ -16,14 +16,22 @@ func get_db():
 func get_hud():
 	return get_node("HUD")
 
-func execute_cutscene(name):
-	get_node("Map/Cutscenes").execute_cutscene(name)
+func get_flags():
+	return $Flags
 
 func get_daytime():
 	return $HUD/Status/UpperRight/Clock.get_daytime()
 
 func get_day():
 	return $HUD/Status/UpperRight/Clock.get_day()
+
+func sleep_and_save():
+	if has_node("Play"):
+		get_flags().spend_day()
+		$Play.save_game()
+
+func execute_cutscene(name):
+	get_node("Map/Cutscenes").execute_cutscene(name)
 
 func end_night():
 	$HUD/Status/UpperRight/Clock.end_night()

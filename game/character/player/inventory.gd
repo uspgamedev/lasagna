@@ -14,7 +14,39 @@ func _ready():
     add_item_to_stash("TESTE", 3)
     add_item_to_stash("JESUS", 1)
     add_item_to_stash("EU", 9)
-    
+   
+func how_many_of_item(item_name):
+	var count = 0
+	for pair in inventory:
+		if pair[0] == item_name:
+			count += pair[1]
+
+func consume_n_items(item_name, amount):
+	if how_many_of_item(item_name) >= amount:
+		var remainder = amount
+		for pair in inventory:
+			if remainder == 0:
+				break
+			if pair[0] == item_name:
+				if pair[1] > remainder:
+					pair[1] -= remainder
+					remainder = 0
+				else:
+					remainder -= pair[1]
+					pair[1] = 0
+					pair[0] = ""
+
+func give_items(item_name, amount):
+	for pair in inventory:
+		if pair[0] == item_name:
+			pair[1]+= amount
+			return true
+	for pair in inventory:
+		if pair[0] == "":
+			pair[1] = amount
+			return true
+	return false
+
 func add_item_to_stash(item_name, number_of_items):
     if stash.has(item_name):
         if (stash[item_name] + number_of_items) > MAX_STACK_SIZE:
