@@ -28,9 +28,10 @@
 [x]     day/night sprites
 [ ]     inventory cursor
 [X]     moneyz counter
-[ ] art for ingredients 
+[ ] arts 
         (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)
         WE ARE ONLY SURE TO USE THE ONES WITH * BY THEIR NAME. OTHERS MAY NOT GET IN THE GAME, DON'T SWEAT IT
+[ ]     necromonicon icon
 [ ]     mercury
 [x]    *water
 [ ]     sulfur
