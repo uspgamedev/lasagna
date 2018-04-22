@@ -1,4 +1,4 @@
-[ ] menu de crafting (JOSÉ) - FALTA INVETÁRIO ESTAR PRONTO
+[ ] menu de crafting (JOSÉ) - needs better test scene
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
