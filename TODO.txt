@@ -1,4 +1,4 @@
-[ ] menu de crafting (JOSÉ) - Isn't working yet. Not sure why
+[X] menu de crafting
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
