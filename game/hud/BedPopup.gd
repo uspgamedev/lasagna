@@ -7,4 +7,4 @@ func _on_BedPopup_popup_hide():
 
 func _on_BedPopup_id_pressed(ID):
 	if ID == SLEEP:
-		get_tree().change_scene('main.tscn')
+		get_node("/root/Main").end_night()

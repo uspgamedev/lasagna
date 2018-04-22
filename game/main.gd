@@ -18,3 +18,12 @@ func get_hud():
 
 func execute_cutscene(name):
 	get_node("Map/Cutscenes").execute_cutscene(name)
+
+func get_daytime():
+	return $HUD/Status/UpperRight/Clock.get_daytime()
+
+func get_day():
+	return $HUD/Status/UpperRight/Clock.get_day()
+
+func end_night():
+	$HUD/Status/UpperRight/Clock.end_night()
