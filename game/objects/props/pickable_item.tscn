@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://objects/prop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/props/pickable_item.gd" type="Script" id=2]
+[ext_resource path="res://objects/props/props.png" type="Texture" id=3]
+[ext_resource path="res://interaction/interaction.tscn" type="PackedScene" id=4]
+
+[node name="Object" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+item_id = "Paper"
+stack = 1
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 102, 4, 20, 20 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+
+polygon = PoolVector2Array( -16, -12, 16, -12, 16, 12, -16, 12 )
+
+[node name="Interaction" parent="." index="2" instance=ExtResource( 4 )]
+
+[connection signal="interacted" from="Interaction" to="." method="_picked"]
+
+

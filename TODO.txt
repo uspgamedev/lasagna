@@ -5,7 +5,7 @@
 [X] database
 [X]     items
 [X]     recipes
-[ ] char animation only has left/right dirs
+[X] char animation only has left/right dirs
 [ ] save files
 [ ]     inventário
 [ ]     dinheiro
@@ -20,7 +20,7 @@
 [ ] dia/noite
 [ ] moons
 [ ] limitar câmera
-[ ] interaction icon (qnd tem algo para interagir)
+[X] interaction icon (qnd tem algo para interagir)
 [X] dano
         [X] offensive creature
 [X] morte

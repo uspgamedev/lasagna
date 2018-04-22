@@ -10,6 +10,9 @@ func get_player():
 		return null
 	return players[0]
 
+func get_inventory():
+	return $Inventory
+
 func get_db():
 	return get_node("/root/Database")
 

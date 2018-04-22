@@ -5,6 +5,6 @@
 [node name="Inventory" type="Node"]
 
 script = ExtResource( 1 )
-money = null
+money = 10000
 
 

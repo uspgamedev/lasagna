@@ -9,6 +9,10 @@
 
 [node name="Main" index="0" instance=ExtResource( 1 )]
 
+[node name="Inventory" parent="." index="1"]
+
+money = 10000
+
 [node name="Map" parent="." index="2" instance=ExtResource( 2 )]
 
 [node name="Player" parent="Map/Foreground" index="0" instance=ExtResource( 3 )]
@@ -18,6 +22,11 @@ position = Vector2( 206.094, 279.224 )
 [node name="Basic_NPC" parent="Map/Foreground" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 452.078, 247.091 )
+
+[node name="LowerRight" parent="Map/Limits" index="1"]
+
+position = Vector2( 640, 480 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Basic" parent="Map/Cutscenes" index="0" instance=ExtResource( 5 )]
 

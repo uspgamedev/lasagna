@@ -3,22 +3,29 @@ extends KinematicBody2D
 export(float) var friction   = 0
 export(float) var push_force = 0
 export(float) var max_speed  = 0
-export(int)   var max_health = 0
+export(int)   var max_health = 100
 
 var velocity = Vector2(0,0)
 var hp = 1
+var dir = Vector2(1, 0)
 
 func _ready():
 	hp = max_health
 
 func damage(dmg_points):
 	if $Timer.is_stopped():
+		knockback()
 		$Timer.start()
 		hp -= dmg_points
 		if hp <= 0:
 			death()
 
+func knockback():
+	var pos = get_position()
+	set_position(pos - dir * 10)
+
 func push(direction):
+	dir = direction
 	velocity = direction*push_force
 	if velocity.length() >= max_speed:
 		velocity = velocity.normalized()*max_speed
