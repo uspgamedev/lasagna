@@ -12,14 +12,14 @@
 [ ]     matriz de plantas
 [ ]     flags
 [x]     day count
-[ ] newgame/continue
+[x] newgame/continue
 [X] suporte a cutscene
 [x] inventory
 [ ] stash (DÁRIO)
 [X] dormir
 [ ] dia/noite
 [ ] moons
-[ ] limitar câmera
+[x] limitar câmera
 [X] interaction icon (qnd tem algo para interagir)
 [X] dano
         [X] offensive creature
@@ -30,7 +30,7 @@
 [ ]     necromonicon icon
 [X]     healthbar sprite
 [x]     day/night sprites
-[ ]     inventory cursor
+[x]     inventory cursor
 [X]     moneyz counter
 [ ] arts 
         (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)

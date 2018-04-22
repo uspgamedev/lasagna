@@ -10,7 +10,7 @@ source_file="res://hud/status/clock/horizontal-clock.png"
 source_md5="8a4483db4a3d7a92ed24eed89d9e927e"
 
 dest_files=[ "res://.import/horizontal-clock.png-79ad5a01f7856b2b439f2c9f6d3eb79b.stex" ]
-dest_md5="abf76b907d4fc75c6725a12794d382cd"
+dest_md5="a88b8061f520d43742734479e3e7297f"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

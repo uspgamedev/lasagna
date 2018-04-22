@@ -1,13 +1,50 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://map/bgm/ld41.ogg" type="AudioStream" id=1]
+[ext_resource path="res://map/bgm/bgm.gd" type="Script" id=2]
 
-[node name="BGM" type="AudioStreamPlayer"]
+[node name="BGM" type="AudioStreamPlayer" index="0"]
 
 stream = ExtResource( 1 )
 volume_db = 0.0
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Master"
+script = ExtResource( 2 )
+
+[node name="fade_in" type="Tween" parent="." index="0"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="fade_out" type="Tween" parent="." index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="tmp_player" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="cross_fade_out" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 
