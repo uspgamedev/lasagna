@@ -53,6 +53,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label" type="Label" parent="." index="0"]
 
