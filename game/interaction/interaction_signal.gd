@@ -1,6 +1,6 @@
 extends Node2D
 
-signal interacted
+signal interacted(item)
 
-func interact():
-	emit_signal("interacted")
+func interact(item):
+	emit_signal("interacted", item)

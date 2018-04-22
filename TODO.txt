@@ -1,4 +1,7 @@
-[ ] menu de crafting (JOSÉ) - Isn't working yet. Not sure why
+DOCS
+https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
+
+[X] menu de crafting
 [ ] dialog
 [x]   speech bubbles
 [ ]   prompt choices
@@ -7,17 +10,25 @@
 [X]     recipes
 [X] char animation only has left/right dirs
 [ ] save files
-[ ]     inventário
-[ ]     dinheiro
+[x]     inventário
+[ ]     stash
+[x]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
 [x]     day count
 [x] newgame/continue
 [X] suporte a cutscene
+[ ] crop field
+[ ]     sow equipped seed
+[ ]     water target crop
+[ ]     grow over night
+[ ]     turn into monster at night
 [x] inventory
-[ ] stash (DÁRIO)
+[X] stash
 [X] dormir
 [ ] dia/noite
+[ ]     transição (Tui)
+[ ]     mudar sprite/ligar filtro
 [ ] moons
 [x] limitar câmera
 [X] interaction icon (qnd tem algo para interagir)
@@ -26,12 +37,25 @@
 [X] morte
 [ ] ending
 [ ] ui/hud
-[ ]     stash menu (DÁRIO)
-[ ]     necromonicon icon
+[X]     stash menu
+[ ]     necronomicon icon
 [X]     healthbar sprite
 [x]     day/night sprites
 [x]     inventory cursor
 [X]     moneyz counter
+[ ] mapas
+[ ]     house
+[ ]       layout
+[x]       bedroom
+[ ]       oven
+[ ]       satanic pot
+[ ]       stash
+[ ]     frontdoor
+[ ]     yard
+[ ]       crop matrix
+[ ]       well
+[ ] cutscenes
+[ ]     ???
 [ ] arts 
         (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)
         WE ARE ONLY SURE TO USE THE ONES WITH * BY THEIR NAME. OTHERS MAY NOT GET IN THE GAME, DON'T SWEAT IT

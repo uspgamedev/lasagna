@@ -20,6 +20,10 @@ func prevent_input(b):
 		yield(Time, "timeout")
 	prev_input = b
 
+func get_equipped_item():
+	var inv = get_node("/root/Main").get_inventory()
+	
+
 func _process(delta):
 	direction = Vector2(0, 0)
 	if not prev_input:

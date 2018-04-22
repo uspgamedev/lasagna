@@ -11,12 +11,22 @@ enum MOON {
 export(int) var day = 1
 export(int) var moon = 1
 
+var flags = Dictionary()
 var blood_moon_prob = 0
 
 # Blood moon probability constants
 const MIN_PROB = 0
 const MAX_PROB = .5
 const PROB_STEP = .1
+
+func get_flag(flag_name):
+	if flags.has(flag_name):
+		return flags[flag_name]
+	else:
+		return false
+
+func set_flag(flag_name, value):
+	flags[flag_name] = value
 
 func spend_day():
 	day += 1

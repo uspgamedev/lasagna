@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://test/base_test.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/props/bed.tscn" type="PackedScene" id=2]
-[ext_resource path="res://objects/plant/plant.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/plant/plant.tscn" type="PackedScene" id=4]
 
 [node name="Main" index="0" instance=ExtResource( 1 )]
 
@@ -24,7 +25,12 @@ position = Vector2( 330, 240 )
 position = Vector2( 200, 240 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Plant" parent="Map/Ceiling" index="0" instance=ExtResource( 3 )]
+[node name="Seed" parent="Map/Foreground" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 288, 288 )
+item_id = "Tier1SeedA"
+
+[node name="Plant" parent="Map/Foreground" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 432, 204 )
 _sections_unfolded = [ "Transform" ]

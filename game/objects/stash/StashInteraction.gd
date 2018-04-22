@@ -11,7 +11,7 @@ func _input(event):
 		if container.actual_slot >= 9:
 			inventory.get_node(str('Slot' + var2str(container.actual_slot - 8) + '/Sprite')).visible = false
 
-func interact():
+func interact(unused):
 	var hud = get_node("/root/Main").get_hud()
 	var container = hud.get_node("InventoryContainer")
 	var inventory = hud.get_node('Status/Bottom/Inventory')

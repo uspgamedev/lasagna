@@ -1,6 +1,6 @@
 extends Sprite
 
-var direction   = "up"
+var direction   = "right"
 var anim_direction = "right"
 var state       = "idle"
 var should_play =  true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://database/database.gd" type="Script" id=1]
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=2]
@@ -7,14 +7,23 @@
 [ext_resource path="res://test/assets/ham.png" type="Texture" id=5]
 [ext_resource path="res://test/assets/tomato.png" type="Texture" id=6]
 [ext_resource path="res://objects/props/props.png" type="Texture" id=7]
-[ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=8]
-[ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=9]
+[ext_resource path="res://objects/props/SEMENTES.png" type="Texture" id=8]
+[ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=9]
+[ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 
 flags = 0
 atlas = ExtResource( 7 )
 region = Rect2( 96, 0, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=2]
+
+flags = 0
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
@@ -133,109 +142,114 @@ item_name = "Vegetable Sauce"
 icon = SubResource( 1 )
 item_name = "Paper"
 
+[node name="Tier1SeedA" parent="Items" index="26" instance=ExtResource( 2 )]
+
+icon = SubResource( 2 )
+item_name = "Tier1SeedA"
+
 [node name="Recipies" type="Node" parent="." index="1"]
 
-[node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 8 )]
+[node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "LAA’ZAHNA"
 craft_on = "Oven"
 
-[node name="Frog" parent="Recipies/LaaZahna" index="0" instance=ExtResource( 9 )]
+[node name="Frog" parent="Recipies/LaaZahna" index="0" instance=ExtResource( 10 )]
 
-[node name="Milk" parent="Recipies/LaaZahna" index="1" instance=ExtResource( 9 )]
+[node name="Milk" parent="Recipies/LaaZahna" index="1" instance=ExtResource( 10 )]
 
-[node name="Ham" parent="Recipies/LaaZahna" index="2" instance=ExtResource( 9 )]
+[node name="Ham" parent="Recipies/LaaZahna" index="2" instance=ExtResource( 10 )]
 
-[node name="TomatoSauce" parent="Recipies/LaaZahna" index="3" instance=ExtResource( 9 )]
+[node name="TomatoSauce" parent="Recipies/LaaZahna" index="3" instance=ExtResource( 10 )]
 
-[node name="YakiSobath" parent="Recipies" index="1" instance=ExtResource( 8 )]
+[node name="YakiSobath" parent="Recipies" index="1" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "YAKI'SOBATH"
 craft_on = "Oven"
 
-[node name="Onion" parent="Recipies/YakiSobath" index="0" instance=ExtResource( 9 )]
+[node name="Onion" parent="Recipies/YakiSobath" index="0" instance=ExtResource( 10 )]
 
-[node name="Worms" parent="Recipies/YakiSobath" index="1" instance=ExtResource( 9 )]
+[node name="Worms" parent="Recipies/YakiSobath" index="1" instance=ExtResource( 10 )]
 
-[node name="Mushroom" parent="Recipies/YakiSobath" index="2" instance=ExtResource( 9 )]
+[node name="Mushroom" parent="Recipies/YakiSobath" index="2" instance=ExtResource( 10 )]
 
-[node name="VegSauce" parent="Recipies/YakiSobath" index="3" instance=ExtResource( 9 )]
+[node name="VegSauce" parent="Recipies/YakiSobath" index="3" instance=ExtResource( 10 )]
 
-[node name="Tomato" parent="Recipies/YakiSobath" index="4" instance=ExtResource( 9 )]
+[node name="Tomato" parent="Recipies/YakiSobath" index="4" instance=ExtResource( 10 )]
 
-[node name="BlobStew" parent="Recipies" index="2" instance=ExtResource( 8 )]
+[node name="BlobStew" parent="Recipies" index="2" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "Jelly Stew"
 craft_on = "Oven"
 
-[node name="Fish" parent="Recipies/BlobStew" index="0" instance=ExtResource( 9 )]
+[node name="Fish" parent="Recipies/BlobStew" index="0" instance=ExtResource( 10 )]
 
-[node name="Hair" parent="Recipies/BlobStew" index="1" instance=ExtResource( 9 )]
+[node name="Hair" parent="Recipies/BlobStew" index="1" instance=ExtResource( 10 )]
 
-[node name="FleeceRoot" parent="Recipies/BlobStew" index="2" instance=ExtResource( 9 )]
+[node name="FleeceRoot" parent="Recipies/BlobStew" index="2" instance=ExtResource( 10 )]
 
-[node name="Water" parent="Recipies/BlobStew" index="3" instance=ExtResource( 9 )]
+[node name="Water" parent="Recipies/BlobStew" index="3" instance=ExtResource( 10 )]
 
-[node name="WormRoll" parent="Recipies" index="3" instance=ExtResource( 8 )]
+[node name="WormRoll" parent="Recipies" index="3" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "Worm Roll"
 craft_on = "Oven"
 
-[node name="Worms" parent="Recipies/WormRoll" index="0" instance=ExtResource( 9 )]
+[node name="Worms" parent="Recipies/WormRoll" index="0" instance=ExtResource( 10 )]
 
-[node name="Oil" parent="Recipies/WormRoll" index="1" instance=ExtResource( 9 )]
+[node name="Oil" parent="Recipies/WormRoll" index="1" instance=ExtResource( 10 )]
 
-[node name="Onion" parent="Recipies/WormRoll" index="2" instance=ExtResource( 9 )]
+[node name="Onion" parent="Recipies/WormRoll" index="2" instance=ExtResource( 10 )]
 
-[node name="Milk" parent="Recipies/WormRoll" index="3" instance=ExtResource( 9 )]
+[node name="Milk" parent="Recipies/WormRoll" index="3" instance=ExtResource( 10 )]
 
-[node name="HalfLifeGUD" parent="Recipies" index="4" instance=ExtResource( 8 )]
+[node name="HalfLifeGUD" parent="Recipies" index="4" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "Half Life (+)"
 craft_on = "Oven"
 moon_phase = "New"
 
-[node name="Worms" parent="Recipies/HalfLifeGUD" index="0" instance=ExtResource( 9 )]
+[node name="Worms" parent="Recipies/HalfLifeGUD" index="0" instance=ExtResource( 10 )]
 
-[node name="Oil" parent="Recipies/HalfLifeGUD" index="1" instance=ExtResource( 9 )]
+[node name="Oil" parent="Recipies/HalfLifeGUD" index="1" instance=ExtResource( 10 )]
 
-[node name="Onion" parent="Recipies/HalfLifeGUD" index="2" instance=ExtResource( 9 )]
+[node name="Onion" parent="Recipies/HalfLifeGUD" index="2" instance=ExtResource( 10 )]
 
-[node name="Milk" parent="Recipies/HalfLifeGUD" index="3" instance=ExtResource( 9 )]
+[node name="Milk" parent="Recipies/HalfLifeGUD" index="3" instance=ExtResource( 10 )]
 
-[node name="HalfLifeBAD" parent="Recipies" index="5" instance=ExtResource( 8 )]
+[node name="HalfLifeBAD" parent="Recipies" index="5" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "Half Life (-)"
 craft_on = "Oven"
 moon_phase = "Crescent"
 
-[node name="Worms" parent="Recipies/HalfLifeBAD" index="0" instance=ExtResource( 9 )]
+[node name="Worms" parent="Recipies/HalfLifeBAD" index="0" instance=ExtResource( 10 )]
 
-[node name="Oil" parent="Recipies/HalfLifeBAD" index="1" instance=ExtResource( 9 )]
+[node name="Oil" parent="Recipies/HalfLifeBAD" index="1" instance=ExtResource( 10 )]
 
-[node name="Onion" parent="Recipies/HalfLifeBAD" index="2" instance=ExtResource( 9 )]
+[node name="Onion" parent="Recipies/HalfLifeBAD" index="2" instance=ExtResource( 10 )]
 
-[node name="Milk" parent="Recipies/HalfLifeBAD" index="3" instance=ExtResource( 9 )]
+[node name="Milk" parent="Recipies/HalfLifeBAD" index="3" instance=ExtResource( 10 )]
 
-[node name="Fertilizer" parent="Recipies" index="6" instance=ExtResource( 8 )]
+[node name="Fertilizer" parent="Recipies" index="6" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 yields = "Fertilizer"
 craft_on = "Oven"
 moon_phase = "Full"
 
-[node name="Worms" parent="Recipies/Fertilizer" index="0" instance=ExtResource( 9 )]
+[node name="Worms" parent="Recipies/Fertilizer" index="0" instance=ExtResource( 10 )]
 
-[node name="Oil" parent="Recipies/Fertilizer" index="1" instance=ExtResource( 9 )]
+[node name="Oil" parent="Recipies/Fertilizer" index="1" instance=ExtResource( 10 )]
 
-[node name="Onion" parent="Recipies/Fertilizer" index="2" instance=ExtResource( 9 )]
+[node name="Onion" parent="Recipies/Fertilizer" index="2" instance=ExtResource( 10 )]
 
-[node name="Milk" parent="Recipies/Fertilizer" index="3" instance=ExtResource( 9 )]
+[node name="Milk" parent="Recipies/Fertilizer" index="3" instance=ExtResource( 10 )]
 
 
