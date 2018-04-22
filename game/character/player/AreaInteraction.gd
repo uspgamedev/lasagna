@@ -3,21 +3,17 @@ extends Area2D
 onready var player_sprite = get_node('../OrientedSprite')
 onready var polygon = get_node('CollisionPolygon2D')
 
-var dirs = [[Vector2(16, -12), Vector2(48, -12), Vector2(48, 12), Vector2(16, 12)],
-			[Vector2(-16, 12), Vector2(16, 12), Vector2(16, 36), Vector2(-16, 36)],
-			[Vector2(-48, -12), Vector2(-16, -12), Vector2(-16, 12), Vector2(-48, 12)],
-			[Vector2(-16, 36), Vector2(16, 36), Vector2(16, 12), Vector2(-16, 12)]]
+var dirs = [PoolVector2Array([Vector2(-12, 16), Vector2(-12, 48), Vector2(12, 48), Vector2(12, 16)]),
+			PoolVector2Array([Vector2(-36, -16), Vector2(-36, 16), Vector2(-12, 16), Vector2(-12, -16)]),
+			PoolVector2Array([Vector2(-12, -48), Vector2(-12, -16), Vector2(12, -16), Vector2(12, -48)]),
+			PoolVector2Array([Vector2(36, -16), Vector2(36, 16), Vector2(12, 16), Vector2(12, -16)])]
 
 func rotate_polygon_collision(direction):
 	if direction == 'up':
-		for i in range(4):
-			polygon.polygon.set(i, dirs[3][i])
+		polygon.polygon = dirs[3]
 	elif direction == 'down':
-		for i in range(4):
-			polygon.polygon.set(i, dirs[1][i])
+		polygon.polygon = dirs[1]
 	elif direction == 'left':
-		for i in range(4):
-			polygon.polygon.set(i, dirs[2][i])
+		polygon.polygon = dirs[2]
 	elif direction == 'right':
-		for i in range(4):
-			polygon.polygon.set(i, dirs[0][i])
+		polygon.polygon = dirs[0]

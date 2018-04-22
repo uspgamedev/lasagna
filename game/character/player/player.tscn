@@ -325,7 +325,7 @@ _sections_unfolded = [ "Transform" ]
 
 rotation = -1.5708
 build_mode = 0
-polygon = PoolVector2Array( 60.0001, -19.9998, 59.9999, 20.0002, 19.9999, 20.0001, 20.0001, -19.9999 )
+polygon = PoolVector2Array( 36.0001, -17.9999, 35.9999, 18.0001, 11.9999, 18, 12.0001, -18 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Interaction" type="Node" parent="." index="5"]
