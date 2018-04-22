@@ -24,7 +24,7 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [ ]     grow over night
 [ ]     turn into monster at night
 [x] inventory
-[ ] stash (DÁRIO)
+[X] stash
 [X] dormir
 [ ] dia/noite
 [ ]     transição (Tui)
@@ -37,8 +37,8 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [X] morte
 [ ] ending
 [ ] ui/hud
-[ ]     stash menu (DÁRIO)
-[ ]     necromonicon icon
+[X]     stash menu
+[ ]     necronomicon icon
 [X]     healthbar sprite
 [x]     day/night sprites
 [x]     inventory cursor
