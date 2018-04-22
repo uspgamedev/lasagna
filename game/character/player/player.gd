@@ -1,8 +1,8 @@
 extends "res://character/character.gd"
 
-
 func _process(delta):
 	push($InputNode.current_direction())
+	$Notifier.visible = has_interactive_node($AreaInteraction.get_overlapping_bodies())
 
 func _on_InputNode_interact():
 	var area = get_node('AreaInteraction')
@@ -13,6 +13,11 @@ func _on_InputNode_interact():
 					child.interact()
 					return
 
+func has_interactive_node(vec):
+	for node in vec:
+		if not node.is_in_group("player"):
+			return true
+	return false
 
 func death():
 	get_tree().change_scene('main.tscn')
