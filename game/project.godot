@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Database="*res://database/database.tscn"
+Settings="*res://settings/settings.tscn"
 
 [display]
 
