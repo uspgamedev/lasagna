@@ -26,5 +26,4 @@ func set_state(new_state):
 func play():
 	$AnimationPlayer.stop()
 	var anim = state+"-"+anim_direction
-	print(anim)
 	$AnimationPlayer.play(anim)
