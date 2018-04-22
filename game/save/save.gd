@@ -2,9 +2,12 @@ extends Node
 
 const SAVE_PATH = "user://game.save"
 
-onready var inventory = get_node("../Inventory")
+var inventory
+var flags
 
 func _play():
+	self.inventory = get_node("../Inventory")
+	self.flags = get_parent().get_flags()
 	load_game()
 
 func save_game():
@@ -26,6 +29,8 @@ func load_game():
 	
 	var data = parse_json(save_file.get_as_text())
 	
+	self.flags.set_day(int(data["day"]))
+	
 	inventory.money = data["money"]
 	inventory.stash = data["stash"]
 	inventory.inventory = data["inventory"]
@@ -35,6 +40,7 @@ func load_game():
 func serialize():
 	# Inventory
 	var data = {}
+	data["day"] = flags.get_day()
 	data["money"] = inventory.money
 	data["stash"] = inventory.stash.duplicate()
 	data["inventory"] = inventory.inventory.duplicate()

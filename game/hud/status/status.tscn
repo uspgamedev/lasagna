@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://hud/status/status.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
@@ -8,7 +8,15 @@
 [ext_resource path="res://hud/status/inventory/inventory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://hud/status/wallet/wallet.tscn" type="PackedScene" id=7]
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Label
+
+func _process(delta):
+	var day = get_node(\"/root/Main\").get_flags().get_day()
+	self.text = \"Day: %d\" % [day]"
+
+[sub_resource type="StyleBoxTexture" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -27,7 +35,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Status" type="Control"]
+[node name="Status" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -65,6 +73,7 @@ text = "You hear a call from the depths"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script = SubResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
 [node name="UpperRight" type="Container" parent="." index="1"]
@@ -127,7 +136,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
 
 [node name="Inventory" parent="Bottom" index="1" instance=ExtResource( 6 )]
