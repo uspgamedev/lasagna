@@ -17,6 +17,8 @@
 [X] dormir
 [ ] dia/noite
 [ ] moons
+[ ] limitar câmera
+[ ] interaction icon (qnd tem algo para interagir)
 [X] dano
         [X] offensive creature
 [X] morte
