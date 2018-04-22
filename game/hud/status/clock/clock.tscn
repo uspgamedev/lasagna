@@ -1,62 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://hud/status/clock/clock.gd" type="Script" id=1]
 [ext_resource path="res://hud/status/clock/horizontal-clock.png" type="Texture" id=2]
 [ext_resource path="res://hud/status/bar_border.tscn" type="PackedScene" id=3]
-
-[sub_resource type="AtlasTexture" id=1]
-
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 128, 24 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
-
-[sub_resource type="StyleBoxTexture" id=2]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-texture = SubResource( 1 )
-region_rect = Rect2( 0, 0, 128, 24 )
-margin_left = 0.0
-margin_right = 0.0
-margin_top = 0.0
-margin_bottom = 0.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
-
-[sub_resource type="AtlasTexture" id=3]
-
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 128, 0, 128, 24 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
-
-[sub_resource type="StyleBoxTexture" id=4]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-texture = SubResource( 3 )
-region_rect = Rect2( 0, 0, 128, 24 )
-margin_left = 0.0
-margin_right = 0.0
-margin_top = 0.0
-margin_bottom = 0.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [node name="Clock" type="Control"]
 
@@ -76,41 +22,31 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "Transform" ]
-minute_frames = 12
+day_duration = 10
 
 [node name="Timer" type="Timer" parent="." index="0"]
 
 process_mode = 1
-wait_time = 24.0
+wait_time = 1.0
 one_shot = true
 autostart = true
 
-[node name="DayNightBar" type="ProgressBar" parent="." index="1"]
+[node name="DayNightBar" type="Sprite" parent="." index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1.0
-margin_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_styles/fg = SubResource( 2 )
-custom_styles/bg = SubResource( 4 )
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-percent_visible = false
-_sections_unfolded = [ "Anchor", "Margin", "Percent", "custom_styles" ]
+position = Vector2( 64, 12 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 24 )
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="TextureRect" parent="DayNightBar" index="0" instance=ExtResource( 3 )]
+
+margin_left = -64.0
+margin_top = -12.0
+margin_right = 64.0
+margin_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 0
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect" ]
 
 
