@@ -25,7 +25,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 pause_mode = 2
 layer = 1
@@ -39,6 +39,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="InventoryContainer" type="GridContainer" parent="." index="1"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -56,9 +57,8 @@ size_flags_vertical = 1
 columns = 4
 script = ExtResource( 2 )
 
-[node name="MenuButton" type="MenuButton" parent="InventoryContainer" index="0"]
+[node name="MenuButton1" type="MenuButton" parent="InventoryContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -76,21 +76,22 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
-text = "2"
+text = "0"
 icon = ExtResource( 3 )
 flat = true
 align = 0
 items = [  ]
+_sections_unfolded = [ "Pause" ]
 
-[node name="Sprite" type="Sprite" parent="InventoryContainer/MenuButton" index="1"]
+[node name="Sprite" type="Sprite" parent="InventoryContainer/MenuButton1" index="1"]
 
-editor/display_folded = true
 texture = ExtResource( 4 )
+offset = Vector2( 22, 19 )
 hframes = 2
 frame = 1
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+_sections_unfolded = [ "Animation", "Offset" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InventoryContainer/MenuButton/Sprite" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InventoryContainer/MenuButton1/Sprite" index="0"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -108,7 +109,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 59.0
-margin_right = 79.0
+margin_right = 114.0
 margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -121,9 +122,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
-text = "3"
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="MenuButton3" type="MenuButton" parent="InventoryContainer" index="2"]
@@ -132,8 +134,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 83.0
-margin_right = 103.0
+margin_left = 118.0
+margin_right = 173.0
 margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -146,9 +148,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
-text = "5"
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="MenuButton4" type="MenuButton" parent="InventoryContainer" index="3"]
@@ -157,8 +160,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 107.0
-margin_right = 119.0
+margin_left = 177.0
+margin_right = 232.0
 margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -171,8 +174,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="MenuButton5" type="MenuButton" parent="InventoryContainer" index="4"]
@@ -183,7 +188,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 42.0
 margin_right = 55.0
-margin_bottom = 62.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -195,8 +200,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="MenuButton6" type="MenuButton" parent="InventoryContainer" index="5"]
@@ -207,8 +214,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 59.0
 margin_top = 42.0
-margin_right = 79.0
-margin_bottom = 62.0
+margin_right = 114.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -220,8 +227,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="MenuButton7" type="MenuButton" parent="InventoryContainer" index="6"]
@@ -230,10 +239,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 83.0
+margin_left = 118.0
 margin_top = 42.0
-margin_right = 103.0
-margin_bottom = 62.0
+margin_right = 173.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -245,8 +254,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="MenuButton8" type="MenuButton" parent="InventoryContainer" index="7"]
@@ -255,10 +266,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 107.0
+margin_left = 177.0
 margin_top = 42.0
-margin_right = 119.0
-margin_bottom = 62.0
+margin_right = 232.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -270,8 +281,10 @@ action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
+text = "0"
+icon = ExtResource( 3 )
 flat = true
-align = 1
+align = 0
 items = [  ]
 
 [node name="BedPopup" type="PopupMenu" parent="." index="2"]
