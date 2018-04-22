@@ -14,10 +14,13 @@
 [x]     day count
 [x] newgame/continue
 [X] suporte a cutscene
+[ ] crop field
 [x] inventory
 [ ] stash (DÁRIO)
 [X] dormir
 [ ] dia/noite
+[ ]     transição (Tui)
+[ ]     mudar sprite/ligar filtro
 [ ] moons
 [x] limitar câmera
 [X] interaction icon (qnd tem algo para interagir)
@@ -32,6 +35,19 @@
 [x]     day/night sprites
 [x]     inventory cursor
 [X]     moneyz counter
+[ ] mapas
+[ ]     house
+[ ]       layout
+[x]       bedroom
+[ ]       oven
+[ ]       satanic pot
+[ ]       stash
+[ ]     frontdoor
+[ ]     yard
+[ ]       crop matrix
+[ ]       well
+[ ] cutscenes
+[ ]     ???
 [ ] arts 
         (some references in https://docs.google.com/document/d/11uQ1nDFT_D1JhrxJl3hchvxQHh3lOUvp94w-D1CqguY/edit)
         WE ARE ONLY SURE TO USE THE ONES WITH * BY THEIR NAME. OTHERS MAY NOT GET IN THE GAME, DON'T SWEAT IT
