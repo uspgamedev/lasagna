@@ -11,10 +11,12 @@
 [node name="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
+offset = Vector2( 0, -32 )
+_sections_unfolded = [ "Offset" ]
 
 [node name="CollisionPolygon2D" parent="." index="1"]
 
-polygon = PoolVector2Array( -30, -30, 30, -30, 30, 30, -30, 30 )
+polygon = PoolVector2Array( -32, -24, 32, -24, 32, 0, -32, 0 )
 
 [node name="Interaction" type="Node2D" parent="." index="2"]
 
