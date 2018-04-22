@@ -11,6 +11,7 @@ func _on_InputNode_interact():
 		if body != self:
 			for child in body.get_children():
 				if child.get_name() == 'Interaction':
+					$SFX/Confirm.play()
 					child.interact()
 					return
 	
