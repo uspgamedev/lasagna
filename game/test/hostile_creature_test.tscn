@@ -26,6 +26,16 @@ position = Vector2( -102.628, 12.2176 )
 
 script = ExtResource( 5 )
 
+[node name="UpperLeft" parent="Map/Limits" index="0"]
+
+position = Vector2( -320, -240 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LowerRight" parent="Map/Limits" index="1"]
+
+position = Vector2( 320, 240 )
+_sections_unfolded = [ "Transform" ]
+
 
 [editable path="Map"]
 [editable path="Map/Foreground/HostileCreature"]

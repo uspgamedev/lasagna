@@ -310,7 +310,7 @@ tracks/3/keys = {
 custom_solver_bias = 0.0
 radius = 20.0
 
-[node name="Player" index="0" groups=[
+[node name="Player" groups=[
 "player",
 ] instance=ExtResource( 1 )]
 

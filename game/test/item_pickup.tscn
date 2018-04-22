@@ -8,8 +8,11 @@
 [node name="Object" parent="Map/Foreground" index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 415, 230 )
-item_id = "paper"
-stack = 1
+
+[node name="LowerRight" parent="Map/Limits" index="1"]
+
+position = Vector2( 640, 480 )
+_sections_unfolded = [ "Transform" ]
 
 
 [editable path="Map"]

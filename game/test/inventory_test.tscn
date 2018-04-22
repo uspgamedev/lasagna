@@ -5,7 +5,7 @@
 [ext_resource path="res://character/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/stash/stash.tscn" type="PackedScene" id=4]
 
-[node name="Main" instance=ExtResource( 1 )]
+[node name="Main" index="0" instance=ExtResource( 1 )]
 
 [node name="Inventory" parent="." index="1"]
 
@@ -19,9 +19,20 @@ editor/display_folded = false
 
 [node name="Player" parent="Map/Foreground" index="0" instance=ExtResource( 3 )]
 
+position = Vector2( 320, 200 )
+
 [node name="Object" parent="Map/Foreground" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 239.409, 180.477 )
+position = Vector2( 478.744, 266.904 )
+
+[node name="UpperLeft" parent="Map/Limits" index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="LowerRight" parent="Map/Limits" index="1"]
+
+position = Vector2( 640, 480 )
+_sections_unfolded = [ "Transform" ]
 
 
 [editable path="Map"]

@@ -13,6 +13,10 @@ money = 10000
 
 [node name="Map" parent="." index="2" instance=ExtResource( 2 )]
 
+[node name="Foreground" parent="Map" index="1"]
+
+editor/display_folded = false
+
 [node name="Player" parent="Map/Foreground" index="0" instance=ExtResource( 3 )]
 
 [node name="props" type="Node2D" parent="Map/Foreground" index="1"]
@@ -20,6 +24,16 @@ money = 10000
 [node name="Bed" parent="Map/Foreground/props" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 179.25, 126.457 )
+
+[node name="UpperLeft" parent="Map/Limits" index="0"]
+
+position = Vector2( -320, -240 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LowerRight" parent="Map/Limits" index="1"]
+
+position = Vector2( 320, 240 )
+_sections_unfolded = [ "Transform" ]
 
 
 [editable path="Map"]
