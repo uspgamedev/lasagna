@@ -23,6 +23,7 @@ func how_many_of_item(item_name):
 	for pair in inventory:
 		if pair[0] == item_name:
 			count += pair[1]
+	return count
 
 func consume_n_items(item_name, amount):
 	if how_many_of_item(item_name) >= amount:
@@ -46,6 +47,7 @@ func give_items(item_name, amount):
 			return true
 	for pair in inventory:
 		if pair[0] == "":
+			pair[0] = item_name
 			pair[1] = amount
 			return true
 	return false

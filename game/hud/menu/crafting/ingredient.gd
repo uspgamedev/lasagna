@@ -10,7 +10,7 @@ func _ready():
 	$Button/Amount.text = str(amount)+"x"
 
 func has_enough():
-	var inventory = get_node("/root/Main").get_node("Inventory")
+	var inventory = get_node("/root/Main/Inventory")
 	var owned = inventory.how_many_of_item(ingred_name)
 	if owned != null:
 		return owned >= amount
@@ -22,4 +22,4 @@ func _process(delta):
 	if has_enough():
 		$Button.disabled = false
 	else:
-		$Button.disabled = true		
+		$Button.disabled = true
