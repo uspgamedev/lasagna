@@ -5,12 +5,14 @@
 [X] database
 [X]     items
 [X]     recipes
+[ ] char animation only has left/right dirs
 [ ] save files
 [ ]     inventário
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
 [X] suporte a cutscene
+[x] inventory
 [ ] stash (DÁRIO)
 [X] dormir
 [ ] dia/noite
