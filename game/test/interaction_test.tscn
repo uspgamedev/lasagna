@@ -23,6 +23,11 @@ position = Vector2( 206.094, 279.224 )
 
 position = Vector2( 452.078, 247.091 )
 
+[node name="LowerRight" parent="Map/Limits" index="1"]
+
+position = Vector2( 640, 480 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="Basic" parent="Map/Cutscenes" index="0" instance=ExtResource( 5 )]
 
 other = "Basic_NPC"
