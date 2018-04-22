@@ -15,7 +15,7 @@ func _on_Timer_timeout():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# if anim_name == "attack":
-		# $Sprite/AnimationPlayer.play("size" + str(growth_level))
+		# $Sprite/AnimationPlayer.play("size-" + str(growth_level))
 		# $Timer.start()
 		# attacking = false
 	pass
