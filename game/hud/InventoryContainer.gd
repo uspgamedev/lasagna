@@ -8,6 +8,7 @@ func _ready():
     for i in range(get_child_count()):
         var button = get_child(i)
         button.connect("pressed", self, "item_selected", [button])
+    get_node("MenuButton/Sprite/AnimationPlayer").play("cursor")
 
 
 func item_selected(button):
@@ -21,7 +22,7 @@ func render_inventory():
     for i in range(keys.size()):
         var button = get_child(i)
         button.set_text(var2str(stash_content[keys[i]]))
-        button.icon = load("res://icon.png")
+        button.icon = load("res://test/empy-slot.png")
 
 
 
