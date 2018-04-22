@@ -26,6 +26,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
+
 [node name="HUD" type="CanvasLayer"]
 
 pause_mode = 2
@@ -38,9 +39,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Status" parent="." index="0" instance=ExtResource( 1 )]
 
-[node name="DialogContainer" parent="." index="1" instance=ExtResource( 2 )]
-
-[node name="InventoryContainer" type="GridContainer" parent="." index="2"]
+[node name="InventoryContainer" type="GridContainer" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -57,7 +56,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 4
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 
 [node name="MenuButton" type="MenuButton" parent="InventoryContainer" index="0"]
 
@@ -79,7 +78,7 @@ enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "2"
-icon = ExtResource( 4 )
+icon = ExtResource( 3 )
 flat = true
 align = 0
 items = [  ]
@@ -275,7 +274,7 @@ flat = true
 align = 1
 items = [  ]
 
-[node name="BedPopup" type="PopupMenu" parent="." index="3"]
+[node name="BedPopup" type="PopupMenu" parent="." index="2"]
 
 visible = false
 anchor_left = 0.0
@@ -295,6 +294,7 @@ popup_exclusive = false
 items = [  ]
 hide_on_state_item_selection = false
 script = ExtResource( 6 )
+
 
 [connection signal="id_pressed" from="BedPopup" to="BedPopup" method="_on_BedPopup_id_pressed"]
 
