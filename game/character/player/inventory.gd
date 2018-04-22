@@ -56,12 +56,13 @@ func add_item_to_stash(item_name, number_of_items):
 		stash[item_name] = number_of_items
 		
 func remove_item_from_stash(item_name, number_of_items):
-	var error = false
+	var error = null
 	if stash.has(item_name):
 		if number_of_items > stash[item_name]:
 			return error
 		elif number_of_items == stash[item_name]:
 			var removed_item = [item_name, stash[item_name]]
+			
 			stash.erase(item_name)
 			return removed_item
 		else: 
@@ -85,6 +86,8 @@ func add_to_inventory(item_name, number_of_items, inventory_position):
 	
 func remove_from_inventory(inventory_position):
 	var result = inventory[inventory_position]
+	if result  == ["", 0]:
+		return null
 	inventory[inventory_position] = ["", 0]
 	return result
 	

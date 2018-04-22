@@ -20,9 +20,15 @@ func render_inventory():
 	var keys = stash_content.keys()
 	
 	for i in range(keys.size()):
+		var sprite = Sprite.new()
+		sprite.name = "Item"
 		var button = get_child(i)
 		button.set_text(var2str(stash_content[keys[i]]))
-		button.icon = load("res://test/empy-slot.png")
+		if keys[i] != '':
+			var item = get_node(str('/root/Database/Items/' + keys[i]))
+			sprite.texture = item.icon
+			sprite.offset = Vector2(22, 19)
+			button.add_child(sprite)
 
 func move_highlighted_slot(new_slot):
 	if (actual_slot <= 8 and actual_slot >= 1):
@@ -38,10 +44,26 @@ func move_highlighted_slot(new_slot):
 	actual_slot = new_slot
 
 func move_item():
+	var moved
+	var inv = get_node('/root/Main/Inventory')
 	if (actual_slot <= 8 and actual_slot >= 1):
-		print(get_node(str('MenuButton' + var2str(actual_slot))).get_name())
+		var stash = inv.get_stash()
+		if  not stash.empty() and stash.size() >= actual_slot:
+			var button = get_node(str('MenuButton' + var2str(actual_slot)))
+			var keys = stash.keys()
+			moved = inv.remove_item_from_stash(keys[actual_slot - 1], 1)
+			if moved != null:
+				button.get_node('Item').queue_free()
+				button.text = var2str(str2var(button.text) - 1)
+				inv.add_to_inventory(moved[0], moved[1], inv.next_empty_slot())
+				render_inventory()
 	else:
-		print(inventory.get_node(str('Slot' + var2str(actual_slot - 8))).get_name())
+		moved = inv.remove_from_inventory(actual_slot - 9)
+		var slot = inventory.get_node(str('Slot' + var2str(actual_slot - 8)))
+		slot.set_icon(null)
+		if moved != null:
+			inv.add_item_to_stash(moved[0], moved[1])
+			render_inventory()
 
 func _input(event):
 	if (self.is_visible_in_tree()):
