@@ -9,7 +9,7 @@ func _ready():
 	get_child(0).focus()
 
 func get_equipped_item():
-	return get_node("/root/Main").get_inventory().get_item_at(self.focused)
+	return get_node("/root/Main").get_inventory().get_item_at(self.focused)[0]
 
 func _process(delta):
 	for i in range(get_child_count()):
