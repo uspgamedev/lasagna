@@ -249,7 +249,6 @@ _sections_unfolded = [ "Collision", "Pause", "collision" ]
 friction = 25.0
 push_force = 100.0
 max_speed = 300.0
-max_health = 0
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
 

@@ -3,12 +3,21 @@ extends Area2D
 onready var player_sprite = get_node('../OrientedSprite')
 onready var polygon = get_node('CollisionPolygon2D')
 
+var dirs = [[Vector2(16, -12), Vector2(48, -12), Vector2(48, 12), Vector2(16, 12)],
+			[Vector2(-16, 12), Vector2(16, 12), Vector2(16, 36), Vector2(-16, 36)],
+			[Vector2(-48, -12), Vector2(-16, -12), Vector2(-16, 12), Vector2(-48, 12)],
+			[Vector2(-16, 36), Vector2(16, 36), Vector2(16, 12), Vector2(-16, 12)]]
+
 func rotate_polygon_collision(direction):
 	if direction == 'up':
-		polygon.rotation_degrees = 270
+		for i in range(4):
+			polygon.polygon.set(i, dirs[3][i])
 	elif direction == 'down':
-		polygon.rotation_degrees = 90
+		for i in range(4):
+			polygon.polygon.set(i, dirs[1][i])
 	elif direction == 'left':
-		polygon.rotation_degrees = 180
+		for i in range(4):
+			polygon.polygon.set(i, dirs[2][i])
 	elif direction == 'right':
-		polygon.rotation_degrees = 0
+		for i in range(4):
+			polygon.polygon.set(i, dirs[0][i])
