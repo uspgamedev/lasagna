@@ -8,6 +8,7 @@
 [node name="Main" type="Node2D"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="HUD" parent="." index="0" instance=ExtResource( 2 )]
 
