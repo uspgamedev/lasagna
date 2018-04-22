@@ -11,6 +11,7 @@
 [ ]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
+[x]     day count
 [X] suporte a cutscene
 [x] inventory
 [ ] stash (DÁRIO)
