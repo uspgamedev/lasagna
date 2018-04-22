@@ -10,8 +10,9 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [X]     recipes
 [X] char animation only has left/right dirs
 [ ] save files
-[ ]     inventário
-[ ]     dinheiro
+[x]     inventário
+[ ]     stash
+[x]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags
 [x]     day count
