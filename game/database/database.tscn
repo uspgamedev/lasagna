@@ -23,7 +23,7 @@ filter_clip = false
 
 flags = 0
 atlas = ExtResource( 8 )
-region = Rect2( 224, 0, 32, 32 )
+region = Rect2( 0, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
