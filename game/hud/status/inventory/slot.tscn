@@ -42,7 +42,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="Slot1" type="PanelContainer"]
+[node name="Slot1" type="PanelContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
