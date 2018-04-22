@@ -20,6 +20,7 @@ func _on_InputNode_interact():
 	var cell = floor_tilemap.get_cellv(ft_pos)
 	
 	if cell == 1:
+		floor_tilemap.set_cellv(ft_pos, 2)
 		print("É HORA DA COLHEITA")
 
 func has_interactive_node(vec):
