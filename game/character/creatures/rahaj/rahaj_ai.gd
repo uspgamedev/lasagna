@@ -1,7 +1,9 @@
 extends Node
 
+var pacific = false
+
 func _on_Timer_timeout():
-	if get_parent().aggred:
+	if not pacific:
 		get_node("../OrientedSprite/AnimationPlayer").play("attack")
 		get_parent().attacking = true
 		get_parent().attacked = false
