@@ -426,6 +426,10 @@ script = ExtResource( 8 )
 
 [node name="Dialogues" type="Node2D" parent="." index="6"]
 
+z_index = 10
+z_as_relative = false
+_sections_unfolded = [ "Transform", "Z Index" ]
+
 [node name="DmgCooldown" parent="." index="7"]
 
 wait_time = 1.0
@@ -434,6 +438,9 @@ wait_time = 1.0
 
 visible = false
 position = Vector2( 0, -75 )
+z_index = 9
+z_as_relative = false
+_sections_unfolded = [ "Animation", "Transform", "Z Index" ]
 
 [node name="SFX" type="Node2D" parent="." index="9"]
 

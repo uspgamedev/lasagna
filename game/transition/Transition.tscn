@@ -100,7 +100,7 @@ tracks/2/keys = {
 [node name="Transition" type="CanvasLayer" index="0"]
 
 pause_mode = 2
-layer = 2
+layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
