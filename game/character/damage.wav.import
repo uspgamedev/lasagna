@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/damage.wav-91a71f1f59b595ca9404cb640fc2a3b8.sample"
+
+[deps]
+
+source_file="res://character/damage.wav"
+source_md5="3f356b81e17dd1b1156aba724bf35dfc"
+
+dest_files=[ "res://.import/damage.wav-91a71f1f59b595ca9404cb640fc2a3b8.sample" ]
+dest_md5="1ca10f8ce3fda6009d0a76d249d9f151"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
