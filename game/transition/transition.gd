@@ -5,8 +5,7 @@ export (int) var transition_duration = 2
 func _ready():
 	$Timer.set_wait_time(transition_duration)
 
-func play(is_morning):
-	get_scenery(is_morning)
+func play():
 	get_node("/root/Main").pause_clock()
 	$AnimationPlayer.play("transition_in")
 
@@ -21,8 +20,8 @@ func transition_out_ended():
 	get_node("/root/Main").unpause_clock()
 	queue_free()
 
-func get_scenery(is_morning):
-	if is_morning:
+func is_morning(morning):
+	if morning:
 		$Scenery.set_frame(5)
 		return
 	
