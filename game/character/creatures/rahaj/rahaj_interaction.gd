@@ -14,10 +14,5 @@ func interact(item):
 		if inv.next_empty_slot() != -1 or inv.how_many_of_item("Mushroom") != 0:
 			inv.give_items("Mushroom", 1)
 			kin_body.damage(1)
-			if kin_body.dead:
-				var anim = kin_body.get_node("Animation")
-				anim.play("DEATH")
-				yield(anim, "animation_finished")
-				kin_body.queue_free()
 		else:
 			print("Cannot execute action: Bag is full")
