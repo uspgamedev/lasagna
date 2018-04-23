@@ -4,8 +4,8 @@ var has_played = false
 
 func interact(unused):
 	var main = get_node("/root/Main")
-	if !main.get_flags().get_flag("GOT_INGREDS"):
-		main.get_flags().set_flag("GOT_INGREDS", true)
+	if !main.get_flags().get_flag("GOT_INGRED"):
+		main.get_flags().set_flag("GOT_INGRED", true)
 		main.execute_cutscene("cupboard_get_ingreds")
 		main.get_inventory().give_items("Frog",1)
 		main.get_inventory().give_items("Milk",1)
