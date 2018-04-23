@@ -15,8 +15,9 @@ func interact(item):
 		if body != self:
 			for child in body.get_children():
 				if child.get_name() == 'Interaction':
-					$SFX/Confirm.play()
-					child.interact(item)
+					var ok = child.interact(item)
+					if typeof(ok) != TYPE_BOOL or ok != false:
+						$SFX/Confirm.play()
 					return
 	
 	for field in area.get_overlapping_areas():
