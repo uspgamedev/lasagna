@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/outside_day.ogg-d752ba797c18afa4051a7d5e45deee41.oggstr"
+
+[deps]
+
+source_file="res://map/bgm/outside_day.ogg"
+source_md5="87a742f8ccad1e0d2307a369277031fa"
+
+dest_files=[ "res://.import/outside_day.ogg-d752ba797c18afa4051a7d5e45deee41.oggstr" ]
+dest_md5="3184a9e5ddb1617426b208eaa50cc822"
+
+[params]
+
+loop=true
+loop_offset=0

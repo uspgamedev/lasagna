@@ -29,11 +29,11 @@ func _process(delta):
 	if not prev_input:
 		if Input.is_action_just_pressed("ui_accept"):
 			emit_signal('interact')
-		elif Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("ui_up"):
 			direction += UP
-		elif Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("ui_left"):
 			direction += LF
-		elif Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("ui_down"):
 			direction += DW
-		elif Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("ui_right"):
 			direction += RT

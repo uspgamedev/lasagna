@@ -10,7 +10,7 @@ source_file="res://character/creatures/kepala/kepala_night.png"
 source_md5="ad0230da3a4f4c01ad3a85b6c9bb254c"
 
 dest_files=[ "res://.import/kepala_night.png-a852dcff9a34c5c57ea6930af6712128.stex" ]
-dest_md5="30c19fb63a3ab571e9f0006ecdb9a5a7"
+dest_md5="5c9f96f26fed27e35009b8306e0e6fd2"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

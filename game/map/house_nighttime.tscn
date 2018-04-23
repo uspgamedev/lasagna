@@ -11,7 +11,7 @@ region = Rect2( 32, 48, 64, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Map" index="0" instance=ExtResource( 1 )]
+[node name="Map" instance=ExtResource( 1 )]
 
 daytime = "res://map/house_daytime.tscn"
 
@@ -30,8 +30,21 @@ texture = SubResource( 1 )
 offset = Vector2( 0, -25 )
 _sections_unfolded = [ "Offset" ]
 
+[node name="BGM" parent="." index="4"]
+
+current_bgm = "home_night"
+
+[node name="cupboard_get_seeds" parent="Cutscenes" index="0"]
+
+other = null
+
+[node name="cupboard_already_got_seeds" parent="Cutscenes" index="1"]
+
+other = null
+
 
 [editable path="Foreground/Table/TableLeft"]
 [editable path="Foreground/Table/TableRight"]
 [editable path="Foreground/Table/Paper"]
 [editable path="Foreground/Door"]
+[editable path="Cutscenes"]

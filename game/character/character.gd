@@ -13,9 +13,9 @@ func _ready():
 	hp = max_health
 
 func damage(dmg_points):
-	if $Timer.is_stopped():
+	if $DmgCooldown.is_stopped():
 		knockback()
-		$Timer.start()
+		$DmgCooldown.start()
 		hp -= dmg_points
 		if hp <= 0:
 			death()
@@ -31,6 +31,10 @@ func push(direction):
 		velocity = velocity.normalized()*max_speed
 
 func _process(delta):
+	if !$DmgCooldown.is_stopped():
+		$OrientedSprite.blink()
+	else:
+		$OrientedSprite.visible = true
 	if velocity.length() > 0:
 		$OrientedSprite.set_state("walk")
 		var angle = velocity.angle()
@@ -49,4 +53,6 @@ func _physics_process(delta):
 	var mv_return = move_and_collide(velocity*delta)
 	if mv_return != null:
 		velocity = 	mv_return.get_remainder()
+		var normal = mv_return.get_normal()
+		move_and_slide(velocity/delta, normal)
 	velocity-= min(friction, velocity.length()) * velocity.normalized()  

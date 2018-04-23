@@ -50,13 +50,15 @@ func execute_cutscene(name):
 func end_night():
 	emit_signal("ended_night")
 	var transition = transition_scene.instance()
+	var map = $Map
 	add_child(transition)
+	map.get_node("BGM").fade_out()
 	transition.play("morning")
 	get_node('HUD/Shader').visible = false
 	yield(transition, "got_dark")
 	clock.end_night()
 	var new_map = preload("res://map/house_daytime.tscn").instance()
-	$Map.queue_free()
+	map.queue_free()
 	$CropMatrix.grow_all()
 	yield(get_tree(), "physics_frame")
 	add_child(new_map)
@@ -64,6 +66,7 @@ func end_night():
 func end_day():
 	var transition = transition_scene.instance()
 	var map = $Map
+	map.get_node("BGM").fade_out()
 	add_child(transition)
 	transition.play("night")
 	yield(transition, "got_dark")
@@ -87,8 +90,9 @@ func change_map(map_name):
 	var transition = transition_scene.instance()
 	add_child(transition)
 	var map = $Map
+	map.get_node("BGM").fade_out()
 	var new_map = load("res://map/" + map_name + ".tscn").instance()
-	transition.play("scene", 0)
+	transition.play("scene", 0.01)
 	yield(transition, "got_dark")
 	map.queue_free()
 	yield(get_tree(), "physics_frame")

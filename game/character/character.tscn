@@ -3,13 +3,14 @@
 [ext_resource path="res://character/character.gd" type="Script" id=1]
 [ext_resource path="res://character/oriented_sprite.tscn" type="PackedScene" id=2]
 
-[node name="Character" type="KinematicBody2D"]
+[node name="Character" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 friction = 0
 push_force = 0
 max_speed = 0
@@ -17,12 +18,9 @@ max_health = 100
 
 [node name="OrientedSprite" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="CollisionBox" type="CollisionPolygon2D" parent="." index="1"]
+[node name="CollisionBox" type="CollisionShape2D" parent="." index="1"]
 
-build_mode = 0
-polygon = PoolVector2Array( -20, -30, 20, -30, 20, 30, -20, 30 )
-
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="DmgCooldown" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 0.5

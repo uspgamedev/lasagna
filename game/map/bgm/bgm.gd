@@ -1,9 +1,11 @@
 extends AudioStreamPlayer
 
-var current_bgm = "home_day"
+export(String, "home_day", "home_night", "garden_day", "garden_night") var current_bgm = "home_day"
 var bgm_list = {
 	"home_day": "res://map/bgm/ld41_dia.ogg",
 	"home_night": "res://map/bgm/ld41.ogg",
+	"garden_day": "res://map/bgm/outside_day.ogg",
+	"garden_night": "res://map/bgm/outside_night.ogg",
 }
 
 var fade_duration = 3
