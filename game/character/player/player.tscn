@@ -309,7 +309,7 @@ tracks/3/keys = {
 [sub_resource type="CircleShape2D" id=9]
 
 custom_solver_bias = 0.0
-radius = 20.0
+radius = 14.0
 
 [sub_resource type="RectangleShape2D" id=10]
 
@@ -381,7 +381,9 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="CollisionBox" parent="." index="2"]
 
+position = Vector2( 0, 10 )
 shape = SubResource( 9 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="InputNode" parent="." index="3" instance=ExtResource( 5 )]
 
