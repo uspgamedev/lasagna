@@ -15,9 +15,10 @@ func _ready():
 	$OrientedSprite.material = null
 	hp = max_health
 
-func damage(dmg_points, from):
+func damage(dmg_points, from=false):
 	if $DmgCooldown.is_stopped():
-		knockback(from.get_position())
+		if from:
+			knockback(from.get_position())
 		$DmgCooldown.start()
 		hp -= dmg_points
 		if hp <= 0 and not dead:

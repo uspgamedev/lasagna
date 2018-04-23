@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://map/tiles.png" type="Texture" id=1]
 [ext_resource path="res://map/fence.png" type="Texture" id=2]
@@ -6,8 +6,17 @@
 [ext_resource path="res://map/ceilling.png" type="Texture" id=4]
 [ext_resource path="res://objects/props/door/door.png" type="Texture" id=5]
 [ext_resource path="res://map/fence-night.png" type="Texture" id=6]
+[ext_resource path="res://map/treewall.png" type="Texture" id=7]
+[ext_resource path="res://map/treewal_nightl.png" type="Texture" id=8]
+[ext_resource path="res://map/daytree.png" type="Texture" id=9]
+[ext_resource path="res://map/treenight.png" type="Texture" id=10]
 
-[node name="Tileset" type="Node2D" index="0"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 8 )
+
+[node name="Tileset" type="Node2D"]
 
 [node name="01-Grass" type="Sprite" parent="." index="0"]
 
@@ -865,5 +874,107 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 32, 96, 32, 24 )
 _sections_unfolded = [ "Offset", "Region" ]
+
+[node name="61-DayTreeWall" type="Sprite" parent="." index="60"]
+
+position = Vector2( 320, 88 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( -96, -90 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="collision2" type="StaticBody2D" parent="61-DayTreeWall" index="0"]
+
+position = Vector2( -80, -8 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="61-DayTreeWall/collision2" index="0"]
+
+position = Vector2( 104, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -120, 40, 72, 40, 72, 72, -120, 72 )
+
+[node name="62-NightTreeWall" type="Sprite" parent="." index="61"]
+
+position = Vector2( 512, 88 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -96, -90 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="collision3" type="StaticBody2D" parent="62-NightTreeWall" index="0"]
+
+position = Vector2( -272, -8 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="62-NightTreeWall/collision3" index="0"]
+
+position = Vector2( 296, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -120, 40, 72, 40, 72, 72, -120, 72 )
+
+[node name="63-DayTree" type="Sprite" parent="." index="62"]
+
+position = Vector2( 536, 320 )
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( -48, -144 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 96, 168 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="collision" type="StaticBody2D" parent="63-DayTree" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="63-DayTree/collision" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="64-NightTree" type="Sprite" parent="." index="63"]
+
+position = Vector2( 440, 320 )
+texture = ExtResource( 10 )
+centered = false
+offset = Vector2( -48, -144 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 96, 168 )
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+
+[node name="collision2" type="StaticBody2D" parent="64-NightTree" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="64-NightTree/collision2" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 

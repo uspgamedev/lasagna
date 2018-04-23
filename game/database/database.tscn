@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://database/database.gd" type="Script" id=1]
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=2]
@@ -15,16 +15,18 @@
 [ext_resource path="res://database/crop/cropdata.tscn" type="PackedScene" id=13]
 [ext_resource path="res://objects/plant/fleece/fleece.tscn" type="PackedScene" id=14]
 [ext_resource path="res://character/creatures/fleece/fleece.tscn" type="PackedScene" id=15]
-[ext_resource path="res://objects/plant/xuctu/xuctu.tscn" type="PackedScene" id=16]
-[ext_resource path="res://character/creatures/xuctu/xuctu.tscn" type="PackedScene" id=17]
-[ext_resource path="res://objects/plant/rahaj/rahaj.tscn" type="PackedScene" id=18]
-[ext_resource path="res://character/creatures/rahaj/rahaj.tscn" type="PackedScene" id=19]
+[ext_resource path="res://objects/plant/kepala/kepala.tscn" type="PackedScene" id=16]
+[ext_resource path="res://character/creatures/kepala/kepala.tscn" type="PackedScene" id=17]
+[ext_resource path="res://objects/plant/xuctu/xuctu.tscn" type="PackedScene" id=18]
+[ext_resource path="res://character/creatures/xuctu/xuctu.tscn" type="PackedScene" id=19]
+[ext_resource path="res://objects/plant/rahaj/rahaj.tscn" type="PackedScene" id=20]
+[ext_resource path="res://character/creatures/rahaj/rahaj.tscn" type="PackedScene" id=21]
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=1]
 
 flags = 0
 atlas = ExtResource( 5 )
-region = Rect2( 32, 32, 32, 32 )
+region = Rect2( 128, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
@@ -32,11 +34,19 @@ filter_clip = false
 
 flags = 0
 atlas = ExtResource( 5 )
-region = Rect2( 32, 160, 32, 32 )
+region = Rect2( 192, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
 [sub_resource type="AtlasTexture" id=2]
+
+flags = 0
+atlas = ExtResource( 5 )
+region = Rect2( 32, 160, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=3]
 
 flags = 0
 atlas = ExtResource( 9 )
@@ -44,7 +54,7 @@ region = Rect2( 96, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=4]
 
 flags = 0
 atlas = ExtResource( 5 )
@@ -52,7 +62,7 @@ region = Rect2( 0, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Database" type="Node" index="0"]
+[node name="Database" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -93,45 +103,50 @@ crop_seed = "RaHaj"
 
 [node name="XucTuSeed" parent="Items" index="14" instance=ExtResource( 2 )]
 
-icon = SubResource( 4 )
+icon = SubResource( 1 )
 crop_seed = "XucTu"
 
-[node name="FleeceSeed" parent="Items" index="15" instance=ExtResource( 2 )]
+[node name="KepalaSeed" parent="Items" index="15" instance=ExtResource( 2 )]
 
 icon = SubResource( 5 )
+crop_seed = "Kepala"
+
+[node name="FleeceSeed" parent="Items" index="16" instance=ExtResource( 2 )]
+
+icon = SubResource( 2 )
 crop_seed = "Fleece"
 
-[node name="Milk" parent="Items" index="16" instance=ExtResource( 2 )]
+[node name="Milk" parent="Items" index="17" instance=ExtResource( 2 )]
 
 icon = ExtResource( 6 )
 
-[node name="Venom" parent="Items" index="17" instance=ExtResource( 2 )]
+[node name="Venom" parent="Items" index="18" instance=ExtResource( 2 )]
 
-[node name="LasagnaPack" parent="Items" index="18" instance=ExtResource( 2 )]
+[node name="LasagnaPack" parent="Items" index="19" instance=ExtResource( 2 )]
 
-[node name="Fish" parent="Items" index="19" instance=ExtResource( 2 )]
+[node name="Fish" parent="Items" index="20" instance=ExtResource( 2 )]
 
-[node name="Ham" parent="Items" index="20" instance=ExtResource( 2 )]
+[node name="Ham" parent="Items" index="21" instance=ExtResource( 2 )]
 
 icon = ExtResource( 7 )
 
-[node name="TomatoSauce" parent="Items" index="21" instance=ExtResource( 2 )]
+[node name="TomatoSauce" parent="Items" index="22" instance=ExtResource( 2 )]
 
 icon = ExtResource( 8 )
 
-[node name="Onion" parent="Items" index="22" instance=ExtResource( 2 )]
+[node name="Onion" parent="Items" index="23" instance=ExtResource( 2 )]
 
-[node name="Mushroom" parent="Items" index="23" instance=ExtResource( 2 )]
+[node name="Mushroom" parent="Items" index="24" instance=ExtResource( 2 )]
 
-[node name="VegSauce" parent="Items" index="24" instance=ExtResource( 2 )]
+[node name="VegSauce" parent="Items" index="25" instance=ExtResource( 2 )]
 
-[node name="Paper" parent="Items" index="25" instance=ExtResource( 2 )]
-
-icon = SubResource( 2 )
-
-[node name="Tier1SeedA" parent="Items" index="26" instance=ExtResource( 2 )]
+[node name="Paper" parent="Items" index="26" instance=ExtResource( 2 )]
 
 icon = SubResource( 3 )
+
+[node name="Tier1SeedA" parent="Items" index="27" instance=ExtResource( 2 )]
+
+icon = SubResource( 4 )
 crop_seed = "Fleece"
 
 [node name="Recipies" type="Node" parent="." index="1"]
@@ -249,19 +264,23 @@ moon_phase = "Full"
 
 [node name="Fleece" parent="Crops" index="0" instance=ExtResource( 13 )]
 
-growth_limit = 2
 daytime_plant = ExtResource( 14 )
 nighttime_plant = ExtResource( 15 )
 
-[node name="XucTu" parent="Crops" index="1" instance=ExtResource( 13 )]
+[node name="Kepala" parent="Crops" index="1" instance=ExtResource( 13 )]
 
 daytime_plant = ExtResource( 16 )
 nighttime_plant = ExtResource( 17 )
 
-[node name="RaHaj" parent="Crops" index="2" instance=ExtResource( 13 )]
+[node name="XucTu" parent="Crops" index="2" instance=ExtResource( 13 )]
 
-growth_limit = 3
 daytime_plant = ExtResource( 18 )
 nighttime_plant = ExtResource( 19 )
+
+[node name="RaHaj" parent="Crops" index="3" instance=ExtResource( 13 )]
+
+growth_limit = 3
+daytime_plant = ExtResource( 20 )
+nighttime_plant = ExtResource( 21 )
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://character/creatures/creature.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/creatures/kepala/kepala.gd" type="Script" id=2]
 [ext_resource path="res://character/creatures/kepala/kepala_night.png" type="Texture" id=3]
 [ext_resource path="res://character/creatures/kepala/kepala_atk.png" type="Texture" id=4]
 [ext_resource path="res://character/creatures/kepala/kepala_ai.gd" type="Script" id=5]
+[ext_resource path="res://character/creatures/kepala/kepala_interaction.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -95,17 +96,19 @@ tracks/2/keys = {
 [sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
-radius = 15.0
+radius = 60.0
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-radius = 60.0
+extents = Vector2( 14, 11.4286 )
 
 [node name="Creature" index="0" instance=ExtResource( 1 )]
 
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "collision" ]
 max_health = 100
 
 [node name="OrientedSprite" parent="." index="0"]
@@ -114,7 +117,7 @@ position = Vector2( 2, -44 )
 texture = ExtResource( 3 )
 flip_h = true
 hframes = 2
-_sections_unfolded = [ "Animation", "Transform", "Visibility" ]
+_sections_unfolded = [ "Animation", "Material", "Transform", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OrientedSprite" index="0"]
 
@@ -130,7 +133,6 @@ blend_times = [  ]
 [node name="CollisionBox" parent="." index="1"]
 
 scale = Vector2( 1, 0.7 )
-shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
@@ -142,6 +144,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -149,7 +152,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 scale = Vector2( 1, 0.7 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -165,6 +168,27 @@ process_mode = 1
 wait_time = 5.0
 one_shot = false
 autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="7"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Interaction" type="Node" parent="StaticBody2D" index="1"]
+
+script = ExtResource( 6 )
 
 [connection signal="animation_finished" from="OrientedSprite/AnimationPlayer" to="AI" method="_on_AnimationPlayer_animation_finished"]
 

@@ -1,18 +1,76 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=1]
-[ext_resource path="res://hud/BedPopup.gd" type="Script" id=2]
+[ext_resource path="res://hud/basic-panel.tres" type="StyleBox" id=1]
+[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
+[ext_resource path="res://hud/popup.gd" type="Script" id=3]
 
-[node name="BedPopup" type="PopupMenu"]
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 0.359098 )
+draw_center = true
+border_width_left = 8
+border_width_top = 0
+border_width_right = 8
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = false
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Shadow" ]
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.394531, 0.237335, 0.237335, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Expand Margin" ]
+
+[node name="Popup" type="PopupMenu" index="0"]
 
 pause_mode = 2
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 20.0
-margin_bottom = 20.0
+margin_right = 32.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -20,15 +78,14 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/panel = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
 popup_exclusive = false
 items = [  ]
 hide_on_state_item_selection = false
-script = ExtResource( 2 )
-_sections_unfolded = [ "Material", "Pause", "custom_fonts" ]
-
-[connection signal="id_pressed" from="." to="." method="_on_BedPopup_id_pressed"]
-
-[connection signal="popup_hide" from="." to="." method="_on_BedPopup_popup_hide"]
+script = ExtResource( 3 )
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Pause", "Popup", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 

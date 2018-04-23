@@ -89,7 +89,9 @@ editor/display_folded = true
 pause_mode = 2
 _sections_unfolded = [ "Pause" ]
 
-[node name="BedPopup" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Popup" parent="." index="3" instance=ExtResource( 4 )]
+
+visible = false
 
 
 [editable path="Status"]
