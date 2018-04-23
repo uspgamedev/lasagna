@@ -22,7 +22,7 @@
 [ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=20]
 [ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=21]
 
-[node name="Map" instance=ExtResource( 1 )]
+[node name="Map" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -1, 1 )
 
@@ -105,7 +105,6 @@ position = Vector2( 320, 504 )
 
 [node name="Table" type="Node2D" parent="Foreground" index="4"]
 
-editor/display_folded = true
 position = Vector2( 230, 330 )
 _sections_unfolded = [ "Transform" ]
 
@@ -176,6 +175,13 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionPolygon2D" parent="Foreground/Table/NecronomiconProp" index="2"]
 
 polygon = PoolVector2Array( -11.8543, -6.61246, 10.7624, -11.9477, 14.7058, 3.71002, -8.60681, 9.50919 )
+
+[node name="Timer" type="Timer" parent="Foreground/Table/NecronomiconProp" index="3"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = true
 
 [node name="Door" parent="Foreground" index="5" instance=ExtResource( 13 )]
 
@@ -367,6 +373,8 @@ text = "She'll be happy to come back and have it ready for her."
 [connection signal="timeout" from="LookForIngredientsTrigger/Timer" to="LookForIngredientsTrigger" method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="Monolog01Trigger/Timer" to="Monolog01Trigger" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Foreground/Table/NecronomiconProp/Timer" to="Foreground/Table/NecronomiconProp/Interaction" method="_on_Timer_timeout"]
 
 [connection signal="finished" from="Cutscenes/cupboard_get_ingreds" to="LookForRecipeBookTrigger" method="_on_cupboard_get_ingreds_finished"]
 
