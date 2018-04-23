@@ -2,7 +2,7 @@
 
 [ext_resource path="res://map/cropmatrix.gd" type="Script" id=1]
 
-[node name="CropMatrix" type="Node"]
+[node name="CropMatrix" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

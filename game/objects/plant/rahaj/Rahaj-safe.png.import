@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Xuctu_leg-sheet.png-582bdf7667dff81cdae50452545c5fc1.stex"
+path="res://.import/Rahaj-safe.png-c39fb6cab4aa5e2256893c7d1f526a30.stex"
 
 [deps]
 
-source_file="res://character/creatures/xuctu/Xuctu_leg-sheet.png"
-source_md5="5ce0421f9c7e776176eacae697e2fbf9"
+source_file="res://objects/plant/rahaj/Rahaj-safe.png"
+source_md5="3a459149de6ab2a1d58089ec700ebc89"
 
-dest_files=[ "res://.import/Xuctu_leg-sheet.png-582bdf7667dff81cdae50452545c5fc1.stex" ]
-dest_md5="ed4c51efb3a52bf978b53a00eb32ee09"
+dest_files=[ "res://.import/Rahaj-safe.png-c39fb6cab4aa5e2256893c7d1f526a30.stex" ]
+dest_md5="6a3887205f93214195e9802eddf85d0b"
 
 [params]
 
