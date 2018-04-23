@@ -42,12 +42,12 @@ func fade_in(audio_key):
 	self.play()
 	
 	fade_in_tween.interpolate_property(self, 'volume_db',
-		-60.0, 0, fade_duration, Tween.TRANS_LINEAR, Tween.EASE_IN)
+		-80.0, 0, fade_duration, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	fade_in_tween.start()
 
 func fade_out():
 	fade_out_tween.interpolate_property(self, 'volume_db',
-		0, -60.0, fade_duration, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+		0, -80.0, fade_duration, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	fade_out_tween.start()
 
 func on_fade_out_complete(object, _key):

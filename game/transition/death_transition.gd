@@ -7,6 +7,7 @@ func _ready():
 								Tween.TRANS_QUAD, Tween.EASE_IN, 0)
 	$Tween.start()
 	get_tree().set_pause(true)
+	$SFX.play()
 
 func _on_Tween_tween_completed(object, key):
 	set_process(true)
