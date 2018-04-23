@@ -2,7 +2,7 @@
 
 [ext_resource path="res://database/crop/cropdata.gd" type="Script" id=1]
 
-[node name="CropData" type="Node"]
+[node name="CropData" type="Node" index="0"]
 
 script = ExtResource( 1 )
 growth_limit = 1
