@@ -8,7 +8,7 @@ func _input(event):
 		get_tree().paused = false
 		container.hide()
 		inventory.slots[inventory.focused].focus()
-		if container.actual_slot >= 9:
+		if container.actual_slot >= 13:
 			inventory.get_node(str('Slot' + var2str(container.actual_slot - 12) + '/Sprite')).visible = false
 
 func interact(unused):
@@ -18,7 +18,7 @@ func interact(unused):
 	container.render_inventory()
 	container.show()
 	inventory.slots[inventory.focused].unfocus()
-	if container.actual_slot >= 9:
+	if container.actual_slot >= 13:
 		inventory.get_node(str('Slot' + var2str(container.actual_slot - 12) + '/Sprite')).visible = true
 	container.move_highlighted_slot(1)
 	get_tree().paused = true
