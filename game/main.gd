@@ -62,6 +62,7 @@ func end_night():
 	$CropMatrix.grow_all()
 	yield(get_tree(), "physics_frame")
 	add_child(new_map)
+	prevent_player_input(true)
 
 func end_day():
 	var transition = transition_scene.instance()
@@ -75,6 +76,7 @@ func end_day():
 		map.queue_free()
 		yield(get_tree(), "physics_frame")
 		add_child(new_map)
+		prevent_player_input(true)
 		get_node('HUD/Shader').show()
 
 func pause_clock():
@@ -97,4 +99,8 @@ func change_map(map_name):
 	map.queue_free()
 	yield(get_tree(), "physics_frame")
 	add_child(new_map)
-	
+
+func prevent_player_input(b):
+	var player = get_player()
+	if player != null:
+		player.get_node("InputNode").prevent_input(b)

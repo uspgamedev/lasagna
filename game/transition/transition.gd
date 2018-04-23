@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal got_dark
+signal transition_finished
 
 var sfx = null
 
@@ -21,6 +22,7 @@ func play(type, duration=2.5):
 		"scene":
 			$Scenery.modulate = Color(0, 0, 0)
 	get_node("/root/Main").pause_clock()
+	get_node("/root/Main").prevent_player_input(true)
 	$AnimationPlayer.play("transition_in")
 
 func play_sfx():
@@ -38,5 +40,7 @@ func _on_Timer_timeout():
 	$AnimationPlayer.play("transition_out")
 
 func transition_out_ended():
+	emit_signal("transition_finished")
 	get_node("/root/Main").unpause_clock()
+	get_node("/root/Main").prevent_player_input(false)
 	queue_free()
