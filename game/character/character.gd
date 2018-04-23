@@ -49,4 +49,6 @@ func _physics_process(delta):
 	var mv_return = move_and_collide(velocity*delta)
 	if mv_return != null:
 		velocity = 	mv_return.get_remainder()
+		var normal = mv_return.get_normal()
+		move_and_slide(velocity/delta, normal)
 	velocity-= min(friction, velocity.length()) * velocity.normalized()  
