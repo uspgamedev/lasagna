@@ -7,6 +7,7 @@ var recipies = []
 var selected = false
 
 func _input(event):
+	print(selected)
 	if selected:
 		if event.is_action_pressed("ui_right"):
 			#ANIM BOOK FLIP
@@ -17,7 +18,7 @@ func _input(event):
 				current_recipe = recipies.size()-1
 			else:
 				current_recipe -= 1
-		elif event.is_action_pressed("ui_cancel" ):
+		elif event.is_action_pressed("ui_cancel"):
 			bye()
 			return
 		$Recipe.recipe_name = recipies[current_recipe].name
@@ -30,7 +31,7 @@ func bye():
 
 func hi():
 	selected = true
-	$Recipe.visible = true	
+	$Recipe.visible = true
 	get_tree().paused = true
 
 func _ready():
