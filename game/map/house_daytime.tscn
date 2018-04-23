@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://map/house.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map/tiles.png" type="Texture" id=2]
@@ -6,7 +6,37 @@
 [ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=4]
 [ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=5]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="StyleBoxFlat" id=1]
+
+resource_local_to_scene = true
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.207703, 0.209523, 0.324219, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="AtlasTexture" id=2]
 
 flags = 0
 atlas = ExtResource( 2 )
@@ -14,13 +44,21 @@ region = Rect2( 32, 48, 64, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Map" instance=ExtResource( 1 )]
+[node name="Map" index="0" instance=ExtResource( 1 )]
 
 nighttime = "res://map/house_nighttime.tscn"
 
 [node name="Oven" parent="Foreground" index="1"]
 
 editor/display_folded = true
+
+[node name="CraftButton" parent="Foreground/Oven/CraftingStation/CanvasLayer/Recipe" index="2"]
+
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
 
 [node name="NecronomiconProp" parent="Foreground/Table" index="3"]
 
@@ -29,7 +67,7 @@ editor/display_folded = true
 [node name="Window" type="Sprite" parent="Foreground" index="8"]
 
 position = Vector2( 320, 73 )
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 offset = Vector2( 0, -25 )
 _sections_unfolded = [ "Offset", "Z Index" ]
 
@@ -37,9 +75,9 @@ _sections_unfolded = [ "Offset", "Z Index" ]
 
 position = Vector2( -64, 384 )
 
-[node name="Cupboard" parent="Foreground" index="12"]
+[node name="OrientedSprite" parent="Foreground/Mercador" index="0"]
 
-position = Vector2( 381, 79 )
+editor/display_folded = true
 
 [node name="merchant_greet" parent="Cutscenes" index="3" instance=ExtResource( 4 )]
 
@@ -51,7 +89,77 @@ actor = "Mercador"
 text = "I have only the finest to offer,
 just the way gandma likes it."
 
-[node name="merchant_sell" parent="Cutscenes" index="4" instance=ExtResource( 4 )]
+[node name="merchant_introduce" parent="Cutscenes" index="4" instance=ExtResource( 4 )]
+
+other = "Mercador"
+
+[node name="CutsceneNode" parent="Cutscenes/merchant_introduce" index="0" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Good evening..."
+
+[node name="CutsceneNode2" parent="Cutscenes/merchant_introduce" index="1" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "What the..."
+
+[node name="CutsceneNode3" parent="Cutscenes/merchant_introduce" index="2" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "I am paying for the food you just prepared. Give it to me now."
+
+[node name="CutsceneNode4" parent="Cutscenes/merchant_introduce" index="3" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "B-but…"
+
+[node name="CutsceneNode5" parent="Cutscenes/merchant_introduce" index="4" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Alright. I hope it is as good as granny’s."
+
+[node name="CutsceneNode6" parent="Cutscenes/merchant_introduce" index="5" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "Oh wait, do you know my grandma? She left the house and didn’t come back yet…"
+
+[node name="CutsceneNode7" parent="Cutscenes/merchant_introduce" index="6" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "Do you have any idea of where she could be?"
+
+[node name="CutsceneNode8" parent="Cutscenes/merchant_introduce" index="7" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "Do you have any idea of where she could be?"
+
+[node name="CutsceneNode9" parent="Cutscenes/merchant_introduce" index="8" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Do not worry, she often disappears. Perhaps she went to buy something that is hard to find."
+
+[node name="CutsceneNode10" parent="Cutscenes/merchant_introduce" index="9" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "I promised her some special recipes, you see... "
+
+[node name="CutsceneNode11" parent="Cutscenes/merchant_introduce" index="10" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "As for you, uhm, just keep cooking."
+
+[node name="CutsceneNode12" parent="Cutscenes/merchant_introduce" index="11" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "But I don’t know how to cook! Also, grandma’s recipes book is way too hard to understand!
+"
+
+[node name="CutsceneNode13" parent="Cutscenes/merchant_introduce" index="12" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Here, have this catalog, it should help you out."
+
+[node name="merchant_sell" parent="Cutscenes" index="5" instance=ExtResource( 4 )]
 
 other = "Mercador"
 
@@ -63,10 +171,12 @@ text = "Would you like to sell me that?"
 
 [editable path="Foreground/Oven"]
 [editable path="Foreground/Oven/CraftingStation"]
+[editable path="Foreground/Oven/CraftingStation/CanvasLayer/Recipe"]
 [editable path="Foreground/Table/TableLeft"]
 [editable path="Foreground/Table/TableRight"]
 [editable path="Foreground/Table/Paper"]
 [editable path="Foreground/Table/NecronomiconProp"]
 [editable path="Foreground/Door"]
+[editable path="Foreground/Mercador"]
 [editable path="Foreground/Cupboard"]
 [editable path="Cutscenes"]

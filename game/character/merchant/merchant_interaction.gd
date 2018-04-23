@@ -37,6 +37,13 @@ func interact(item):
 	if lock:
 		return false
 	lock = true
+	var main = get_node("/root/Main")
+	if !main.get_flags().get_flag("MET_STRANGER"):
+		main.get_flags().set_flag("MET_STRANGER", true)
+		yield(_cutscene("merchant_introduce"), "finished")
+		
+		
+		
 	var inv = _main().get_inventory()
 	if item == null:
 		yield(_cutscene("merchant_greet"), "finished")
