@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
+const EPSILON = 4
+
 export(float) var friction   = 0
 export(float) var push_force = 0
 export(float) var max_speed  = 0
 export(int)   var max_health = 100
 
 var velocity = Vector2(0,0)
+var is_knockback = false
 var hp = 1
 var dir = Vector2(1, 0)
 var dead = false
@@ -16,7 +19,7 @@ func _ready():
 	hp = max_health
 
 func damage(dmg_points, from=false):
-	if $DmgCooldown.is_stopped():
+	if $DmgCooldown.is_stopped() and not dead:
 		if from:
 			knockback(from.get_position())
 		$DmgCooldown.start()
@@ -38,13 +41,14 @@ func knockback(from):
 		return
 	var pos = get_position()
 	var distvec = (pos - from).normalized()
-	set_position(pos + distvec * 32)
+	velocity += distvec * push_force * 16
+	is_knockback = true
 
 func push(direction):
 	dir = direction
-	velocity = direction*push_force
+	velocity += direction * push_force
 	if velocity.length() >= max_speed:
-		velocity = velocity.normalized()*max_speed
+		velocity = velocity.clamped(max_speed)
 
 func _process(delta):
 	if dead:
@@ -75,4 +79,6 @@ func _physics_process(delta):
 		velocity = 	mv_return.get_remainder()
 		var normal = mv_return.get_normal()
 		move_and_slide(velocity/delta, normal)
-	velocity-= min(friction, velocity.length()) * velocity.normalized()  
+	velocity *= 0.8
+	if velocity.length_squared() <= EPSILON:
+		velocity *= 0
