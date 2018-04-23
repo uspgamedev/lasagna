@@ -11,7 +11,13 @@ position = Vector2( -110, 0 )
 
 [node name="CraftStation" parent="Map/Foreground" index="1" instance=ExtResource( 2 )]
 
+editor/display_folded = true
+position = Vector2( 120, -30 )
 type = "Oven"
+
+[node name="props" parent="Map/Foreground" index="2"]
+
+position = Vector2( 40, 20 )
 
 
 [editable path="Map"]
