@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://map/map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map/cropfield/cropfield.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/props/door/hidden_door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=5]
 
 [node name="Map" index="0" instance=ExtResource( 1 )]
 
@@ -31,6 +32,11 @@ position = Vector2( 176, 516 )
 [node name="Interaction" parent="Foreground/Door" index="2"]
 
 destiny = "house"
+
+[node name="Object" parent="Foreground" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 256, 336 )
+item_id = "Tier1SeedA"
 
 [node name="Ceiling" parent="." index="2"]
 
