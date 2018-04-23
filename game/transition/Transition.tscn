@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://transition/transition.gd" type="Script" id=1]
 [ext_resource path="res://transition/nighttime_scenery.png" type="Texture" id=2]
-[ext_resource path="res://transition/black_pixel.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -118,7 +117,7 @@ hframes = 3
 region_rect = Rect2( 0, 0, 640, 480 )
 _sections_unfolded = [ "Animation", "Pause", "Region", "Visibility" ]
 
-[node name="Fade" type="TextureRect" parent="." index="1"]
+[node name="Fade" type="ColorRect" parent="." index="1"]
 
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
@@ -133,9 +132,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 0
+color = Color( 0, 0, 0, 1 )
 _sections_unfolded = [ "Material", "Rect", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
