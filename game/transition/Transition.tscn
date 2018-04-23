@@ -94,7 +94,7 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="Transition" type="CanvasLayer" index="0"]
+[node name="Transition" type="CanvasLayer"]
 
 pause_mode = 2
 layer = 2
