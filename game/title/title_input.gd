@@ -81,7 +81,6 @@ func _input(event):
 
 func set_selection(idx):
 	selection = idx
-	print(selection)
 	var i = 0
 	$AnimationPlayer.play(ANIMATION_NAMES[selection])
 	for button in buttons.get_children():
