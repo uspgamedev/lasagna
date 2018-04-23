@@ -67,7 +67,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Material", "Visibility" ]
 friction = 0
 push_force = 0
 max_speed = 0
@@ -75,7 +75,6 @@ max_health = 100
 
 [node name="OrientedSprite" parent="." index="0" instance=ExtResource( 2 )]
 
-material = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="CollisionBox" type="CollisionShape2D" parent="." index="1"]
@@ -99,9 +98,10 @@ blend_times = [  ]
 
 [node name="DeathSprite" type="Sprite" parent="." index="4"]
 
+visible = false
 texture = ExtResource( 4 )
 hframes = 12
-frame = 2
+frame = 11
 _sections_unfolded = [ "Animation", "Visibility" ]
 
 
