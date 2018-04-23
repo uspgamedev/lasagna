@@ -6,4 +6,4 @@ func _process(delta):
 	var bodies = $AgroBox.get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Player":
-			body.damage(dmg)
+			body.damage(dmg, self)

@@ -34,4 +34,9 @@ func has_interactive_node(vec):
 	return false
 
 func death():
+	if dead:
+		return
+	dead = true
+	$Animation.play("DEATH")
+	yield($Animation, "animation_finished")
 	get_tree().change_scene('play.tscn')

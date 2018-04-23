@@ -10,7 +10,7 @@ source_file="res://test/assets/tomato.png"
 source_md5="b2b2388d914bbe92a385a206f06d2bcb"
 
 dest_files=[ "res://.import/tomato.png-45656e908fbf232aaa535f9b59ecf939.stex" ]
-dest_md5="6bda57396b13284e8e31a8ff8ff7a808"
+dest_md5="a6ad54772c2ff695c65b974a2d750e7d"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
