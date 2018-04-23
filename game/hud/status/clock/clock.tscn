@@ -22,7 +22,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Transform" ]
-day_duration = 10
+day_duration = 15
 
 [node name="Timer" type="Timer" parent="." index="0"]
 
