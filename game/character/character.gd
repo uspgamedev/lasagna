@@ -14,6 +14,9 @@ var dir = Vector2(1, 0)
 var dead = false
 
 func _ready():
+	var main = get_node("/root/Main")
+	if !main.get_flags().get_flag("ATE_LASAGNA"):
+		self.queue_free()
 	$DeathSprite.hide()
 	$OrientedSprite.material = null
 	hp = max_health
