@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="InventoryContainer" type="GridContainer"]
+[node name="InventoryContainer" type="GridContainer" index="0"]
 
 visible = false
 anchor_left = 0.0

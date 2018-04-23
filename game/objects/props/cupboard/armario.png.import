@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goat.png-b06a83bc03ee5d4b52d137d504f4ff8e.stex"
+path="res://.import/armario.png-675cafd29797d2ec6f9be9ab98288155.stex"
 
 [deps]
 
-source_file="res://character/creatures/hostile_goat/goat.png"
-source_md5="c09c46669bedb1ab7c25616fc7b0d8ec"
+source_file="res://objects/props/cupboard/armario.png"
+source_md5="e81a95a8577d10466e562f6f8200a94d"
 
-dest_files=[ "res://.import/goat.png-b06a83bc03ee5d4b52d137d504f4ff8e.stex" ]
-dest_md5="2c5bea8ab672da7926f1743ec108414e"
+dest_files=[ "res://.import/armario.png-675cafd29797d2ec6f9be9ab98288155.stex" ]
+dest_md5="b47e044580abe4b5820cc6f80d6c82a0"
 
 [params]
 

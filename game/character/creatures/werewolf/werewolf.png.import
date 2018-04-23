@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goat.png-b06a83bc03ee5d4b52d137d504f4ff8e.stex"
+path="res://.import/werewolf.png-6f005626fbb9e4385f551fa6730a6874.stex"
 
 [deps]
 
-source_file="res://character/creatures/hostile_goat/goat.png"
-source_md5="c09c46669bedb1ab7c25616fc7b0d8ec"
+source_file="res://character/creatures/werewolf/werewolf.png"
+source_md5="7e351a6eccd6fd54b4ebd13688a8db3a"
 
-dest_files=[ "res://.import/goat.png-b06a83bc03ee5d4b52d137d504f4ff8e.stex" ]
-dest_md5="2c5bea8ab672da7926f1743ec108414e"
+dest_files=[ "res://.import/werewolf.png-6f005626fbb9e4385f551fa6730a6874.stex" ]
+dest_md5="4bc2d3f9d9b81ba195f1288283fdf49d"
 
 [params]
 

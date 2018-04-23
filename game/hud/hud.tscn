@@ -48,6 +48,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Shader" type="TextureRect" parent="." index="0"]
 
+pause_mode = 2
 visible = false
 material = SubResource( 2 )
 anchor_left = 0.0
@@ -65,11 +66,9 @@ size_flags_vertical = 1
 texture = ExtResource( 1 )
 stretch_mode = 0
 script = SubResource( 3 )
-_sections_unfolded = [ "Material", "Rect" ]
+_sections_unfolded = [ "Material", "Pause", "Rect" ]
 
 [node name="Status" parent="." index="1" instance=ExtResource( 2 )]
-
-editor/display_folded = true
 
 [node name="UpperRight" parent="Status" index="1"]
 

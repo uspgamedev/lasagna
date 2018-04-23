@@ -18,25 +18,13 @@ filter_clip = false
 
 nighttime = "res://map/house_nighttime.tscn"
 
-[node name="Foreground" parent="." index="1"]
-
-editor/display_folded = false
-
-[node name="Table" parent="Foreground" index="1"]
+[node name="Oven" parent="Foreground" index="1"]
 
 editor/display_folded = true
 
 [node name="NecronomiconProp" parent="Foreground/Table" index="3"]
 
 editor/display_folded = true
-
-[node name="Door" parent="Foreground" index="2"]
-
-editor/display_folded = true
-
-[node name="Cupboard" parent="Foreground" index="7"]
-
-position = Vector2( 400, 110 )
 
 [node name="Window" type="Sprite" parent="Foreground" index="8"]
 
@@ -48,6 +36,10 @@ _sections_unfolded = [ "Offset", "Z Index" ]
 [node name="Mercador" parent="Foreground" index="9" instance=ExtResource( 3 )]
 
 position = Vector2( -64, 384 )
+
+[node name="Cupboard" parent="Foreground" index="12"]
+
+position = Vector2( 381, 79 )
 
 [node name="merchant_greet" parent="Cutscenes" index="3" instance=ExtResource( 4 )]
 
@@ -69,6 +61,8 @@ actor = "Mercador"
 text = "Would you like to sell me that?"
 
 
+[editable path="Foreground/Oven"]
+[editable path="Foreground/Oven/CraftingStation"]
 [editable path="Foreground/Table/TableLeft"]
 [editable path="Foreground/Table/TableRight"]
 [editable path="Foreground/Table/Paper"]
