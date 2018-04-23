@@ -20,6 +20,7 @@ func _input(event):
 		elif event.is_action_pressed("ui_cancel"):
 			bye()
 			return
+		var main = get_node("/root/Main")
 		$CanvasLayer/Recipe.recipe_name = recipies[current_recipe].name
 		$CanvasLayer/Recipe.update_recipe()
 

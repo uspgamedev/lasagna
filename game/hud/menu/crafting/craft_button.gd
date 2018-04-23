@@ -11,3 +11,5 @@ func _pressed():
 	for ingred in ingreds:
 		inventory.consume_n_items(ingred.name, 1)
 	inventory.give_items(my_recipe_data.name, 1)
+	if my_recipe_data.name == "LaaZahna":
+		MAIN.get_flags().set_flag("CRAFTED_LASAGNA", true)
