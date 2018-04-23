@@ -3,7 +3,9 @@
 [ext_resource path="res://map/cropfield/cropfield.gd" type="Script" id=1]
 [ext_resource path="res://interaction/tile_interaction.tscn" type="PackedScene" id=2]
 
-[node name="CropField" type="Area2D"]
+[node name="CropField" type="Area2D" groups=[
+"fields",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
