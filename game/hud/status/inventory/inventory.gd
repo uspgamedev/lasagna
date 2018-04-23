@@ -8,8 +8,17 @@ func _ready():
 		slots.append(slot)
 	get_child(0).focus()
 
+func _inventory():
+	return get_node("/root/Main").get_inventory()
+
+func _db():
+	return get_node("/root/Main").get_db()
+
 func get_equipped_item():
-	return get_node("/root/Main").get_inventory().get_item_at(self.focused)[0]
+	var name = _inventory().get_item_at(self.focused)[0]
+	if name != "":
+		return _db().get_item_by_name(name)
+	return null
 
 func _process(delta):
 	for i in range(get_child_count()):
