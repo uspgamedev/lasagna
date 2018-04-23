@@ -39,10 +39,12 @@ func _input(event):
 		if item != null:
 			player.interact(get_equipped_item())
 	elif event.is_action_pressed("shoulder_right"):
+		$Slot1/SFX.play()
 		slots[focused].unfocus()
 		focused = (focused + 1)%n
 		slots[focused].focus()
 	elif event.is_action_pressed("shoulder_left"):
+		$Slot1/SFX.play()
 		slots[focused].unfocus()
 		focused = (focused + n - 1)%n
 		slots[focused].focus()

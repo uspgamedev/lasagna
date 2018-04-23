@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://hud/status/inventory/inventory.gd" type="Script" id=1]
 [ext_resource path="res://hud/status/inventory/slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://hud/status/inventory/move_selection.ogg" type="AudioStream" id=3]
 
 [node name="Inventory" type="Container"]
 
@@ -19,9 +20,17 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "custom_styles" ]
 
 [node name="Slot1" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Slot1" index="3"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [node name="Slot2" parent="." index="1" instance=ExtResource( 2 )]
 
