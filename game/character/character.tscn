@@ -61,7 +61,7 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
-[node name="Character" type="KinematicBody2D"]
+[node name="Character" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -105,14 +105,22 @@ hframes = 12
 frame = 11
 _sections_unfolded = [ "Animation", "Visibility" ]
 
-[node name="DamageSFX" type="AudioStreamPlayer2D" parent="." index="5"]
+[node name="SFX" type="Node2D" parent="." index="5"]
+
+[node name="Damage" type="AudioStreamPlayer" parent="SFX" index="0"]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
+
+[node name="Death" type="AudioStreamPlayer" parent="SFX" index="1"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plant_giggle.ogg-3a4e9477c1b016ce3b26beb0c041f94f.oggstr"
+
+[deps]
+
+source_file="res://character/creatures/plant_giggle.ogg"
+source_md5="68625ed3f9656422e3b669f658932481"
+
+dest_files=[ "res://.import/plant_giggle.ogg-3a4e9477c1b016ce3b26beb0c041f94f.oggstr" ]
+dest_md5="e978a2931ef8b9366d14c77b1dfdf70f"
+
+[params]
+
+loop=false
+loop_offset=0

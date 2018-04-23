@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plant_footstep.ogg-747912fe1aa5474d0bed3a530db633b8.oggstr"
+
+[deps]
+
+source_file="res://character/creatures/plant_footstep.ogg"
+source_md5="40e7a92964f82d9ad17369d3ce37ffcc"
+
+dest_files=[ "res://.import/plant_footstep.ogg-747912fe1aa5474d0bed3a530db633b8.oggstr" ]
+dest_md5="0d4951049ebeb9db9fdae9a6d1fc42b8"
+
+[params]
+
+loop=false
+loop_offset=0

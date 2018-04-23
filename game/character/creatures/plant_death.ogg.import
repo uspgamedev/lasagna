@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plant_death.ogg-1ec942894efafcbf261020cb31cbd07f.oggstr"
+
+[deps]
+
+source_file="res://character/creatures/plant_death.ogg"
+source_md5="14989c6e14051ff99741d6ceeb6622e4"
+
+dest_files=[ "res://.import/plant_death.ogg-1ec942894efafcbf261020cb31cbd07f.oggstr" ]
+dest_md5="ddc0eebc99d2f25080d225e22e0c624b"
+
+[params]
+
+loop=false
+loop_offset=0

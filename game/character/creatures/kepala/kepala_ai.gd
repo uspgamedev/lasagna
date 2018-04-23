@@ -2,6 +2,7 @@ extends Node
 
 func _on_Timer_timeout():
 	get_node("../OrientedSprite/AnimationPlayer").play("attack")
+	get_parent().get_node("SFX/Attack").play()
 	get_parent().attacking = true
 	get_parent().attacked = false
 

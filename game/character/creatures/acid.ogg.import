@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/acid.ogg-81ba3a3c750ec35000cc902a03b78baf.oggstr"
+
+[deps]
+
+source_file="res://character/creatures/acid.ogg"
+source_md5="3102942ac2202881967b4652d26488da"
+
+dest_files=[ "res://.import/acid.ogg-81ba3a3c750ec35000cc902a03b78baf.oggstr" ]
+dest_md5="b71c1c13a2ade4c3249f46b51f383836"
+
+[params]
+
+loop=false
+loop_offset=0
