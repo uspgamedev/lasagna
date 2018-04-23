@@ -17,3 +17,6 @@ func get_recipe_ingreds(recipe):
 	for ingred_req in recipe.get_children():
 		array.append(get_item_by_name(ingred_req.name))
 	return array
+
+func get_crop_by_name(name):
+	return $Crops.get_node(name)
