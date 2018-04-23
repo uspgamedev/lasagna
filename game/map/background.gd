@@ -8,6 +8,9 @@ func _cropmatrix():
 
 func _db():
 	return get_node("/root/Main").get_db()
+	
+func _is_day():
+	return get_node("/root/Main").is_daytime()
 
 func _process(delta):
 	for field in get_tree().get_nodes_in_group("fields"):
@@ -17,5 +20,8 @@ func _process(delta):
 				if crop != null:
 					var data = _db().get_crop_by_name(crop[0])
 					var tile = field.origin_tile + Vector2(i,j)
-					set_cellv(tile, SOWN_DAY)
+					if _is_day():
+						set_cellv(tile, SOWN_DAY)
+					else:
+						set_cellv(tile, SOWN_NIGHT)
 				

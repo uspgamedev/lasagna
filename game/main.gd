@@ -35,6 +35,9 @@ func get_flags():
 func get_cropmatrix():
 	return $CropMatrix
 
+func is_daytime():
+	return self.is_day
+
 func get_daytime():
 	clock.get_daytime()
 
