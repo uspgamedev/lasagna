@@ -94,6 +94,7 @@ func next_empty_slot():
 	for i in range(INVENTORY_SIZE):
 		if self.inventory[i][0] == "":
 			return i
+	return -1
 
 func add_to_inventory(item_name, number_of_items, inventory_position):
 	inventory[inventory_position] = [item_name, number_of_items]
