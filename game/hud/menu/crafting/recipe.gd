@@ -13,13 +13,10 @@ func _ready():
 	num_of_ingreds = ingreds.size()
 	for i in range(num_of_ingreds):
 		var ingred_data = ingreds[i]
-#		print(ingred_data.name)
 		var nodename = "HBox/Ingredient"+str(i)
 		var current_ingred = get_node(nodename)
 		current_ingred.ingred_name = ingred_data.name
 		current_ingred.ingred_texture = ingred_data.icon
-		if ingred_data.icon != null:
-			print(ingred_data.icon.resource_name)
 		current_ingred.visible = true
 
 func _process(delta):
@@ -32,6 +29,5 @@ func _process(delta):
 			ingred_slot.get_node("Button").disabled = false
 		else:
 			ingred_slot.get_node("Button").disabled = true
-			print("didnt have enough "+ingred_slot.ingred_name)
 		can_craft = can_craft and has_req
 	$CraftButton.disabled = !can_craft
