@@ -75,7 +75,7 @@ func end_day():
 		map.queue_free()
 		yield(get_tree(), "physics_frame")
 		add_child(new_map)
-		wget_node('HUD/Shader').visible = true
+		get_node('HUD/Shader').visible = true
 
 func pause_clock():
 	clock.pause()
