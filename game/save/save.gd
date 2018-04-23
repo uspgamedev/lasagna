@@ -34,6 +34,8 @@ func load_game():
 	self.flags.set_day(int(data["day"]))
 	self.flags.set_moon(int(data["moon"]))
 	self.flags.set_blood_prob(int(data["blood_prob"]))
+	self.flags.flags = data["flags"]
+	get_parent().get_player().hp = self.flags.get_flag('hp')
 	
 	self.cropmatrix.crops = data["cropmatrix"]
 	
@@ -49,14 +51,11 @@ func serialize():
 	data["day"] = flags.get_day()
 	data["moon"] = flags.get_moon()
 	data["blood_prob"] = flags.get_blood_prob()
+	data["flags"] = flags.flags
 	data["cropmatrix"] = cropmatrix.crops
 	data["money"] = inventory.money
 	data["stash"] = inventory.stash.duplicate()
 	data["inventory"] = inventory.inventory.duplicate()
 	
-	# TODO:
-	# 	Flags	
-	# 	Número de dias
-	# 	Matriz de plantas
 	
 	return data
