@@ -192,7 +192,7 @@ radius = 100.0
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 friction = 25.0
 push_force = 100.0
-max_speed = 200.0
+max_speed = 100.0
 max_health = 1
 
 [node name="OrientedSprite" parent="." index="0"]

@@ -7,10 +7,10 @@ path="res://.import/Fritz-night.png-09587e41e8b8d9ebdc6316b92dfeddb4.stex"
 [deps]
 
 source_file="res://character/creatures/moonlight_fritz/Fritz-night.png"
-source_md5="ae59fe2784486e7bd345d7219e624ec2"
+source_md5="2e455212c509451920dea43810429157"
 
 dest_files=[ "res://.import/Fritz-night.png-09587e41e8b8d9ebdc6316b92dfeddb4.stex" ]
-dest_md5="f009b0eb57f1ba19d49e20d99becdf33"
+dest_md5="4e83dec9d86561ea749cd2904fdf2e55"
 
 [params]
 
