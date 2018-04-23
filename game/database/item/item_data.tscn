@@ -6,7 +6,7 @@
 
 script = ExtResource( 1 )
 icon = null
-item_name = null
-is_seed = null
+crop_seed = ""
+buy_value = 100
 
 
