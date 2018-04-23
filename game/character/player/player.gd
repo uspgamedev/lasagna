@@ -42,4 +42,5 @@ func death():
 	dead = true
 	$Animation.play("DEATH")
 	yield($Animation, "animation_finished")
-	get_tree().change_scene('play.tscn')
+	var death_transition = load("res://transition/death_transition.tscn").instance()
+	add_child(death_transition)
