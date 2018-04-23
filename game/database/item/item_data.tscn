@@ -2,11 +2,12 @@
 
 [ext_resource path="res://database/item/item_data.gd" type="Script" id=1]
 
-[node name="ItemData" type="Node" index="0"]
+[node name="ItemData" type="Node"]
 
 script = ExtResource( 1 )
 icon = null
 crop_seed = ""
 buy_value = 100
+is_consumable = false
 
 
