@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_death.ogg-f0f6bf785fdd9f26963b7b06716a9cf8.oggstr"
+
+[deps]
+
+source_file="res://character/player/player_death.ogg"
+source_md5="d4ee7d756bacda625107acd5aa72c1ff"
+
+dest_files=[ "res://.import/player_death.ogg-f0f6bf785fdd9f26963b7b06716a9cf8.oggstr" ]
+dest_md5="d43aca66929922173a8cbd573181ebba"
+
+[params]
+
+loop=false
+loop_offset=0

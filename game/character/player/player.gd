@@ -43,6 +43,7 @@ func death():
 	dead = true
 	get_node("/root/Main/Map/BGM").fade_out()
 	$Animation.play("DEATH")
+	$SFX/Death.play()
 	yield($Animation, "animation_finished")
 	var death_transition = load("res://transition/death_transition.tscn").instance()
 	add_child(death_transition)
