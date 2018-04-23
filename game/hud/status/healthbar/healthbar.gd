@@ -1,8 +1,7 @@
 extends ProgressBar
 
 func change(target):
-	$Tween.interpolate_method(self, "_set_amount", self.value, target, 3, Tween.TRANS_QUAD, Tween.EASE_OUT)
-	$Tween.start()
+	_set_amount(target)
 
 func _set_amount(amount):
 	self.value = amount
