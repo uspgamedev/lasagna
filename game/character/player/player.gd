@@ -31,6 +31,22 @@ func interact(item):
 			field._interact(self, ft_pos, item)
 			return
 
+	if item != null:
+		var inv = get_node("/root/Main").get_inventory()
+		var index = get_node("/root/Main").get_hud().get_node("Status").get_node("Bottom").get_node("Inventory").focused
+		var stash_number = inv.get_item_at(index)[1]
+		
+		var pickable_item_scene = load("res://objects/props/pickable_item.tscn")
+		var pickable_item = pickable_item_scene.instance()
+		pickable_item.item_id = item.name
+		pickable_item.stack = stash_number
+
+		var tilemap = get_parent().get_parent().get_node("Foreground")
+		pickable_item.position = area.get_global_position()
+		tilemap.add_child(pickable_item)
+		
+		inv.consume_n_items(item.name, stash_number)
+
 func _on_InputNode_interact():
 	interact(null)
 
