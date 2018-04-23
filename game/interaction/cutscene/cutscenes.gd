@@ -1,4 +1,6 @@
 extends Node
 
 func execute_cutscene(name):
-	get_node(name).execute_cutscene()
+	var cutscene = get_node(name)
+	cutscene.execute_cutscene()
+	return cutscene

@@ -50,7 +50,7 @@ func sleep_and_save():
 		$Play.save_game()
 
 func execute_cutscene(name):
-	get_node("Map/Cutscenes").execute_cutscene(name)
+	return get_node("Map/Cutscenes").execute_cutscene(name)
 
 func end_night():
 	emit_signal("ended_night")
