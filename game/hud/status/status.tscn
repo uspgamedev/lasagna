@@ -96,9 +96,10 @@ _sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="HealthBar" parent="UpperRight" index="0" instance=ExtResource( 3 )]
 
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 136.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 152.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
@@ -106,10 +107,11 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", 
 anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
-margin_top = -24.0
-margin_right = 136.0
-margin_bottom = -8.0
-_sections_unfolded = [ "Anchor", "Margin", "Mouse", "Rect", "Size Flags", "Transform" ]
+margin_left = 24.0
+margin_top = -64.0
+margin_right = 152.0
+margin_bottom = -48.0
+_sections_unfolded = [ "Anchor", "Margin", "Mouse", "Pause", "Rect", "Size Flags", "Transform" ]
 
 [node name="Bottom" type="Container" parent="." index="2"]
 
