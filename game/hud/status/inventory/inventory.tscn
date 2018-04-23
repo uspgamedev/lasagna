@@ -2,7 +2,8 @@
 
 [ext_resource path="res://hud/status/inventory/inventory.gd" type="Script" id=1]
 [ext_resource path="res://hud/status/inventory/slot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/status/inventory/move_selection.ogg" type="AudioStream" id=3]
+[ext_resource path="res://hud/sfx/move_selection.ogg" type="AudioStream" id=3]
+
 
 [node name="Inventory" type="Container"]
 
