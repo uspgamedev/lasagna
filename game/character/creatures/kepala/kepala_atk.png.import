@@ -10,7 +10,7 @@ source_file="res://character/creatures/kepala/kepala_atk.png"
 source_md5="1d0f840351f7fc28fb2a0f376dc68ada"
 
 dest_files=[ "res://.import/kepala_atk.png-9898b6f70994b3ea8eb6198a821afcd2.stex" ]
-dest_md5="0e22f6109c96cd80ffd52fdbbd8e04d5"
+dest_md5="22389d67cbb9a71b74e1fe103fb16882"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
