@@ -1,77 +1,138 @@
-[gd_resource type="TileSet" load_steps=20 format=2]
+[gd_resource type="TileSet" load_steps=33 format=2]
 
 [ext_resource path="res://map/tiles.png" type="Texture" id=1]
 [ext_resource path="res://map/fence.png" type="Texture" id=2]
 [ext_resource path="res://map/tiles_night.png" type="Texture" id=3]
 [ext_resource path="res://map/ceilling.png" type="Texture" id=4]
 [ext_resource path="res://map/door.png" type="Texture" id=5]
+[ext_resource path="res://map/fence-night.png" type="Texture" id=6]
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
 [sub_resource type="ConvexPolygonShape2D" id=5]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
-
-[sub_resource type="ConvexPolygonShape2D" id=7]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
-
-[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, 7, 13, 7, 13, 12, -16, 12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, -12, -13, -12, -13, 12, -16, 12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 13, -12, 16, -12, 16, 12, 13, 12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, 12, -16, -12, -13, -12, -13, 7 )
 
-[sub_resource type="ConvexPolygonShape2D" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 16, 12, -16, 12, -13, 7, 16, 7 )
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, 12, -16, 7, 13, 7, 16, 12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 16, -12, 16, 12, 13, 7, 13, -12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -14, 7, 16, 7, 16, 12, -14, 12 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=14]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 13, 7, 13, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, -12, -13, -12, -13, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 13, -12, 16, -12, 16, 12, 13, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 12, -16, -12, -13, -12, -13, 7 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 12, -16, 12, -13, 7, 16, 7 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 12, -16, 7, 13, 7, 16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, -12, 16, 12, 13, 7, 13, -12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -14, 7, 16, 7, 16, 12, -14, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
@@ -143,7 +204,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 26 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 36 )
 } ]
 7/name = "08-LeftGlass"
@@ -256,7 +317,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 18/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 3 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 36 )
 } ]
 19/name = "20-LeftGlassNight"
@@ -441,7 +502,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 38/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 39/name = "40-FenceBorderTopLeft"
@@ -455,7 +516,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 39/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 6 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 40/name = "41-FenceBorderTopRight"
@@ -469,7 +530,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 40/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 7 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 41/name = "42-FenceBorderEndRight"
@@ -483,7 +544,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 41/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 8 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 42/name = "43-FenceBorderLeft"
@@ -497,7 +558,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 42/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 9 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 43/name = "44-FenceBorderRight"
@@ -511,7 +572,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 43/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 10 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 44/name = "45-FenceBorderTop"
@@ -525,7 +586,7 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 44/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 11 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 45/name = "46-FenceBorderBottomLeft"
@@ -539,12 +600,12 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 45/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 12 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 13 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 46/name = "47-FenceBorderBottomRight"
@@ -558,12 +619,12 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 46/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 14 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 15 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 47/name = "48-FenceBorderEndLeft"
@@ -577,7 +638,157 @@ points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
 47/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+48/name = "49-FenceBorderTopLeftNight"
+48/texture = ExtResource( 6 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 0, 0, 32, 24 )
+48/is_autotile = false
+48/occluder_offset = Vector2( 16, 12 )
+48/navigation_offset = Vector2( 16, 12 )
+48/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+49/name = "50-FenceBorderTopRightNight"
+49/texture = ExtResource( 6 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 64, 0, 32, 24 )
+49/is_autotile = false
+49/occluder_offset = Vector2( 16, 12 )
+49/navigation_offset = Vector2( 16, 12 )
+49/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+50/name = "51-FenceBorderEndRightNight"
+50/texture = ExtResource( 6 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 96, 0, 32, 24 )
+50/is_autotile = false
+50/occluder_offset = Vector2( 16, 12 )
+50/navigation_offset = Vector2( 16, 12 )
+50/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
 "shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+51/name = "52-FenceBorderLeftNight"
+51/texture = ExtResource( 6 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 0, 24, 32, 24 )
+51/is_autotile = false
+51/occluder_offset = Vector2( 16, 12 )
+51/navigation_offset = Vector2( 16, 12 )
+51/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+52/name = "53-FenceBorderRightNight"
+52/texture = ExtResource( 6 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 64, 24, 32, 24 )
+52/is_autotile = false
+52/occluder_offset = Vector2( 16, 12 )
+52/navigation_offset = Vector2( 16, 12 )
+52/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+53/name = "54-FenceBorderTopNight"
+53/texture = ExtResource( 6 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 32, 0, 32, 24 )
+53/is_autotile = false
+53/occluder_offset = Vector2( 16, 12 )
+53/navigation_offset = Vector2( 16, 12 )
+53/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+54/name = "55-FenceBorderBottomLeftNight"
+54/texture = ExtResource( 6 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 0, 48, 32, 24 )
+54/is_autotile = false
+54/occluder_offset = Vector2( 16, 12 )
+54/navigation_offset = Vector2( 16, 12 )
+54/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+55/name = "56-FenceBorderBottomRightNight"
+55/texture = ExtResource( 6 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 64, 48, 32, 24 )
+55/is_autotile = false
+55/occluder_offset = Vector2( 16, 12 )
+55/navigation_offset = Vector2( 16, 12 )
+55/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+56/name = "57-FenceBorderEndLeftNight"
+56/texture = ExtResource( 6 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 96, 24, 32, 24 )
+56/is_autotile = false
+56/occluder_offset = Vector2( 16, 12 )
+56/navigation_offset = Vector2( 16, 12 )
+56/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
+} ]
+57/name = "58-FenceDoorNight"
+57/texture = ExtResource( 6 )
+57/tex_offset = Vector2( 0, 0 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 32, 48, 32, 24 )
+57/is_autotile = false
+57/occluder_offset = Vector2( 16, 12 )
+57/navigation_offset = Vector2( 16, 12 )
+57/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 12 )
 } ]
 
