@@ -7,10 +7,10 @@ path="res://.import/myterious-buyer.png-2cfcb95aa15c984fe8655c60ea2241af.stex"
 [deps]
 
 source_file="res://character/merchant/myterious-buyer.png"
-source_md5="3897811694008585adc3b7246fdde2de"
+source_md5="25b35c9616a70806d2db9d9268be4eae"
 
 dest_files=[ "res://.import/myterious-buyer.png-2cfcb95aa15c984fe8655c60ea2241af.stex" ]
-dest_md5="a311790739c83ac262f87229543127f4"
+dest_md5="a9e663c7fa6ade324142676dcfe73acc"
 
 [params]
 
