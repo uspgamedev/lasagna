@@ -4,6 +4,9 @@ signal finished_text
 
 onready var Dialogue = preload("res://interaction/dialogue/dialogue.tscn")
 
+func _player():
+	return get_node("/root/Main").get_player()
+
 func say(text, reference="Player"):
 	var dial_box = Dialogue.instance()
 	var dialogues = get_node("../Dialogues")
@@ -11,7 +14,7 @@ func say(text, reference="Player"):
 	var ref = get_node("../../" + reference)
 	var ref_pos = ref.get_position()
 	var this_pos = par.get_position()
-	var cam_pos = par.get_node("Camera2D").get_camera_screen_center()
+	var cam_pos = _player().get_node("Camera2D").get_camera_screen_center()
 	var label_size = Vector2(300, 90)
 
 	var pos = Vector2()
@@ -20,9 +23,9 @@ func say(text, reference="Player"):
 	else:
 		pos.y = -64 - label_size.y
 	if ref_pos.x < cam_pos.x:
-		pos.x = 32
+		pos.x = 24
 	else:
-		pos.x = -32 - label_size.x
+		pos.x = -24 - label_size.x
 	dialogues.set_position(pos)
 
 	get_node("../Dialogues").add_child(dial_box)

@@ -1,4 +1,4 @@
-extends "res://interaction/interaction.gd"
+extends "res://interaction/character_interaction.gd"
 
 var my_product = "FleeceSeed"
 
