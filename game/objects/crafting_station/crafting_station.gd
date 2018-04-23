@@ -7,7 +7,6 @@ var recipies = []
 var selected = false
 
 func _input(event):
-	print(selected)
 	if selected:
 		if event.is_action_pressed("ui_right"):
 			#ANIM BOOK FLIP
@@ -21,21 +20,33 @@ func _input(event):
 		elif event.is_action_pressed("ui_cancel"):
 			bye()
 			return
-		$Recipe.recipe_name = recipies[current_recipe].name
-		$Recipe.update_recipe()
+		$CanvasLayer/Recipe.recipe_name = recipies[current_recipe].name
+		$CanvasLayer/Recipe.update_recipe()
 
 func bye():
 	selected = false
-	$Recipe.visible = false
+	$Tween.interpolate_property($CanvasLayer/necrobook, "position",
+			Vector2(0, 0), Vector2(0, 480), .4,
+			Tween.TRANS_BACK, Tween.EASE_IN, 0)
+	$Tween.start()
+	yield($Tween, "tween_completed")
+	$CanvasLayer/Recipe.visible = false
 	get_tree().paused = false
 
 func hi():
-	selected = true
-	$Recipe.visible = true
 	get_tree().paused = true
+	$Tween.interpolate_property($CanvasLayer/necrobook, "position",
+			Vector2(0, 480), Vector2(0, 0), .4,
+			Tween.TRANS_BACK, Tween.EASE_OUT, 0)
+	$Tween.start()
+	yield($Tween, "tween_completed")
+	selected = true
+	$CanvasLayer/Recipe.visible = true
 
 func _ready():
-	bye()
+	selected = false
+	$CanvasLayer/Recipe.visible = false
+	$CanvasLayer/necrobook.position = Vector2(0, 480)
 	var Main = get_node("/root/Main")
 	var DB = Main.get_db()
 	$Sprite.texture = DB.get_station_by_name(type).texture
@@ -43,7 +54,7 @@ func _ready():
 		if recipe_data.craft_on == type:
 			recipies.append( recipe_data )
 			print(recipe_data.name)
-	$Recipe.recipe_name = recipies[0].name
+	$CanvasLayer/Recipe.recipe_name = recipies[0].name
 
 func interact(unused):
 	hi()

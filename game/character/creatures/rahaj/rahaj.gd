@@ -2,7 +2,6 @@ extends "res://character/character.gd"
 
 var attacking = false
 var attacked = false
-var aggred = true
 
 func _process(delta):
 	if attacking and not attacked:

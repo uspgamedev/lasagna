@@ -6,6 +6,7 @@ signal transition_finished
 var sfx = null
 
 func play(type, duration=2.5):
+	get_tree().paused = true
 	$Timer.set_wait_time(duration)
 	match type:
 		"morning":
@@ -40,6 +41,7 @@ func _on_Timer_timeout():
 	$AnimationPlayer.play("transition_out")
 
 func transition_out_ended():
+	get_tree().paused = false
 	emit_signal("transition_finished")
 	get_node("/root/Main").unpause_clock()
 	get_node("/root/Main").prevent_player_input(false)

@@ -109,7 +109,7 @@ collision_layer = 0
 collision_mask = 0
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "collision" ]
-max_health = 100
+max_health = 1
 
 [node name="OrientedSprite" parent="." index="0"]
 
@@ -133,7 +133,7 @@ blend_times = [  ]
 [node name="CollisionBox" parent="." index="1"]
 
 scale = Vector2( 1, 0.7 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
@@ -144,7 +144,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }

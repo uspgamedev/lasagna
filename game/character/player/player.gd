@@ -15,8 +15,9 @@ func interact(item):
 		if body != self:
 			for child in body.get_children():
 				if child.get_name() == 'Interaction':
-					$SFX/Confirm.play()
-					child.interact(item)
+					var ok = child.interact(item)
+					if typeof(ok) != TYPE_BOOL or ok != false:
+						$SFX/Confirm.play()
 					return
 	
 	for field in area.get_overlapping_areas():
@@ -40,7 +41,9 @@ func death():
 	if dead:
 		return
 	dead = true
+	get_node("/root/Main/Map/BGM").fade_out()
 	$Animation.play("DEATH")
+	$SFX/Death.play()
 	yield($Animation, "animation_finished")
 	var death_transition = load("res://transition/death_transition.tscn").instance()
 	add_child(death_transition)

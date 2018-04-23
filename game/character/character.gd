@@ -21,11 +21,17 @@ func damage(dmg_points, from=false):
 			knockback(from.get_position())
 		$DmgCooldown.start()
 		hp -= dmg_points
+		$DamageSFX.play()
 		if hp <= 0 and not dead:
 			death()
 
 func death():
+	if dead:
+		return
 	dead = true
+	$Animation.play("DEATH")
+	yield($Animation, "animation_finished")
+	queue_free()
 
 func knockback(from):
 	if dead:

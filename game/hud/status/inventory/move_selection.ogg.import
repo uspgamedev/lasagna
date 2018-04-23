@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/move_selection.ogg-12fec578a4d62901b0236dc02b4fed7c.oggstr"
+
+[deps]
+
+source_file="res://hud/status/inventory/move_selection.ogg"
+source_md5="cab411dfbabb3d405f062c8d81e3856d"
+
+dest_files=[ "res://.import/move_selection.ogg-12fec578a4d62901b0236dc02b4fed7c.oggstr" ]
+dest_md5="144ac52c2aff8cf27bba7b5c8f830bba"
+
+[params]
+
+loop=false
+loop_offset=0
