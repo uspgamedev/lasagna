@@ -316,14 +316,14 @@ radius = 20.0
 custom_solver_bias = 0.0
 extents = Vector2( 12, 16 )
 
-[node name="Player" groups=[
+[node name="Player" index="0" groups=[
 "player",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Pause", "Transform", "collision" ]
 friction = 25.0
-push_force = 100.0
+push_force = 200.0
 max_speed = 300.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
