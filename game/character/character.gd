@@ -21,6 +21,7 @@ func damage(dmg_points, from=false):
 			knockback(from.get_position())
 		$DmgCooldown.start()
 		hp -= dmg_points
+		$DamageSFX.play()
 		if hp <= 0 and not dead:
 			death()
 

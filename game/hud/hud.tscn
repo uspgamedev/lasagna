@@ -37,7 +37,7 @@ func _process(delta):
 		focus.y = (-focus.y + self.rect_size.y/2)/self.rect_size.y
 	self.material.set_shader_param(\"focus\", focus)"
 
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -68,8 +68,6 @@ script = SubResource( 3 )
 _sections_unfolded = [ "Material", "Rect" ]
 
 [node name="Status" parent="." index="1" instance=ExtResource( 2 )]
-
-editor/display_folded = true
 
 [node name="UpperRight" parent="Status" index="1"]
 

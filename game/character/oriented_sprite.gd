@@ -19,7 +19,7 @@ func set_direction(new_direction):
 		direction = new_direction
 		if new_direction == "left" or new_direction == "right":
 			anim_direction = new_direction
-	
+
 func set_state(new_state):
 	if state != new_state:
 		should_play = true
