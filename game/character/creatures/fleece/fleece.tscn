@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://character/creatures/creature.tscn" type="PackedScene" id=1]
+[ext_resource path="res://character/creatures/fleece/Fleece-night.png" type="Texture" id=2]
+[ext_resource path="res://character/creatures/basic_AI/basic_AI.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=11]
+
+resource_name = "walk-left"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, -16 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+
+resource_name = "walk-right"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2, -16 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Fleece" index="0" instance=ExtResource( 1 )]
+
+_sections_unfolded = [ "Transform" ]
+friction = 25.0
+push_force = 150.0
+max_speed = 300.0
+max_health = 100
+
+[node name="OrientedSprite" parent="." index="0"]
+
+position = Vector2( -2, -16 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 2
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+
+[node name="AnimationPlayer" parent="OrientedSprite" index="0"]
+
+anims/walk-left = SubResource( 11 )
+anims/walk-right = SubResource( 10 )
+
+[node name="CollisionBox" parent="." index="1"]
+
+scale = Vector2( 1, 0.4 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" parent="." index="2"]
+
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="AI" parent="." index="3"]
+
+script = ExtResource( 3 )
+
+[connection signal="timeout" from="Timer" to="AI" method="_on_Timer_timeout"]
+
+
