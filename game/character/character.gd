@@ -31,6 +31,10 @@ func push(direction):
 		velocity = velocity.normalized()*max_speed
 
 func _process(delta):
+	if !$Timer.is_stopped():
+		$OrientedSprite.blink()
+	else:
+		$OrientedSprite.visible = true
 	if velocity.length() > 0:
 		$OrientedSprite.set_state("walk")
 		var angle = velocity.angle()

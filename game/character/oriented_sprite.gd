@@ -5,6 +5,9 @@ var anim_direction = "right"
 var state       = "idle"
 var should_play =  true
 
+func blink():
+	visible = !visible
+
 func _process(delta):
 	if should_play == true:
 		play()

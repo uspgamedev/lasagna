@@ -10,6 +10,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 friction = 0
 push_force = 0
 max_speed = 0
@@ -17,10 +18,9 @@ max_health = 100
 
 [node name="OrientedSprite" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="CollisionBox" type="CollisionPolygon2D" parent="." index="1"]
+visible = true
 
-build_mode = 0
-polygon = PoolVector2Array( -20, -30, 20, -30, 20, 30, -20, 30 )
+[node name="CollisionBox" type="CollisionShape2D" parent="." index="1"]
 
 [node name="Timer" type="Timer" parent="." index="2"]
 
