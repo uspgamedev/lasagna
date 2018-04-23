@@ -7,10 +7,10 @@ path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
 [deps]
 
 source_file="res://map/tiles_night.png"
-source_md5="2298128778ae2f96fc428bf7611fa3ba"
+source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
 
 dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="44fb0a2932a255a328ae7af845b5ef4f"
+dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
 
 [params]
 

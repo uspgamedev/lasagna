@@ -1,8 +1,30 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://map/house.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map/tiles_night.png" type="Texture" id=2]
 
-[node name="Map" index="0" instance=ExtResource( 1 )]
+[sub_resource type="AtlasTexture" id=1]
+
+flags = 0
+atlas = ExtResource( 2 )
+region = Rect2( 32, 48, 64, 48 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[node name="Map" instance=ExtResource( 1 )]
+
+daytime = "res://map/house_daytime.tscn"
+
+[node name="Interaction" parent="Foreground/Door" index="2"]
+
+destiny = "garden_nighttime"
+
+[node name="Window" type="Sprite" parent="Foreground" index="8"]
+
+position = Vector2( 320, 73 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -25 )
+_sections_unfolded = [ "Offset" ]
 
 
 [editable path="Foreground/Table/TableLeft"]

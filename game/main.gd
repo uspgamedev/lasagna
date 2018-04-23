@@ -54,6 +54,10 @@ func end_night():
 	transition.play("morning")
 	yield(transition, "got_dark")
 	clock.end_night()
+	var new_map = preload("res://map/house_daytime.tscn").instance()
+	$Map.queue_free()
+	yield(get_tree(), "physics_frame")
+	add_child(new_map)
 
 func end_day():
 	var transition = transition_scene.instance()
