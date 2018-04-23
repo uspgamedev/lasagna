@@ -22,7 +22,7 @@
 [ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=20]
 [ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=21]
 
-[node name="Map" instance=ExtResource( 1 )]
+[node name="Map" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -1, 1 )
 
@@ -282,7 +282,16 @@ other = "Player"
 actor = "Player"
 text = "Now all I need is grandma's recipebook!"
 
-[node name="needs_to_look_for_ingreds" parent="Cutscenes" index="3" instance=ExtResource( 20 )]
+[node name="cant_cook_without_recipebook" parent="Cutscenes" index="3" instance=ExtResource( 20 )]
+
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/cant_cook_without_recipebook" index="0" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "I don't know how to cook, I need a recipebook."
+
+[node name="needs_to_look_for_ingreds" parent="Cutscenes" index="4" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
@@ -297,7 +306,7 @@ text = "I still need the ingredients."
 actor = "Player"
 text = "Maybe I should check the cupboard"
 
-[node name="cupboard_already_got_ingreds" parent="Cutscenes" index="4" instance=ExtResource( 20 )]
+[node name="cupboard_already_got_ingreds" parent="Cutscenes" index="5" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
@@ -307,7 +316,7 @@ other = "Player"
 actor = "Player"
 text = "There's nothing left in here."
 
-[node name="sink_no_water" parent="Cutscenes" index="5" instance=ExtResource( 20 )]
+[node name="sink_no_water" parent="Cutscenes" index="6" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
@@ -317,7 +326,7 @@ other = "Player"
 actor = "Player"
 text = "Hmm... No water."
 
-[node name="fridge_empty" parent="Cutscenes" index="6" instance=ExtResource( 20 )]
+[node name="fridge_empty" parent="Cutscenes" index="7" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
@@ -327,7 +336,7 @@ other = "Player"
 actor = "Player"
 text = "Empty..."
 
-[node name="necronomicon_get" parent="Cutscenes" index="7" instance=ExtResource( 20 )]
+[node name="necronomicon_get" parent="Cutscenes" index="8" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
