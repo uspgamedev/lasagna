@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://character/creatures/hostile_creature/hostile_creature.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/creatures/hostile_goat/goat.png" type="Texture" id=2]
 [ext_resource path="res://character/creatures/basic_AI/basic_AI.gd" type="Script" id=3]
 
-[node name="HostileGoat" instance=ExtResource( 1 )]
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 13.1454
+
+[node name="HostileGoat" index="0" instance=ExtResource( 1 )]
 
 friction = 25.0
 push_force = 150.0
@@ -16,18 +21,13 @@ dmg = 10
 
 texture = ExtResource( 2 )
 hframes = 7
+_sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="CollisionBox" parent="." index="1"]
 
-position = Vector2( 0, 8 )
-polygon = PoolVector2Array( -10, 2, 10, 2, 10, 22, -10, 22 )
+position = Vector2( 0.387428, 33.7637 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="Timer" parent="." index="2"]
-
-wait_time = 1.0
-one_shot = false
-autostart = true
 
 [node name="CollisionPolygon2D" parent="AgroBox" index="0"]
 
@@ -37,6 +37,13 @@ polygon = PoolVector2Array( -70, -40, 70, -40, 70, 60, -70, 60 )
 
 script = ExtResource( 3 )
 
-[connection signal="timeout" from="Timer" to="AI" method="_on_Timer_timeout"]
+[node name="Timer" type="Timer" parent="AI" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="AI/Timer" to="AI" method="_on_Timer_timeout"]
 
 

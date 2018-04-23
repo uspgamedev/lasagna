@@ -13,9 +13,9 @@ func _ready():
 	hp = max_health
 
 func damage(dmg_points):
-	if $Timer.is_stopped():
+	if $DmgCooldown.is_stopped():
 		knockback()
-		$Timer.start()
+		$DmgCooldown.start()
 		hp -= dmg_points
 		if hp <= 0:
 			death()
@@ -31,7 +31,7 @@ func push(direction):
 		velocity = velocity.normalized()*max_speed
 
 func _process(delta):
-	if !$Timer.is_stopped():
+	if !$DmgCooldown.is_stopped():
 		$OrientedSprite.blink()
 	else:
 		$OrientedSprite.visible = true
