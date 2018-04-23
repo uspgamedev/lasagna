@@ -108,6 +108,7 @@ func change_map(map_name):
 	map.queue_free()
 	yield(get_tree(), "physics_frame")
 	add_child(new_map)
+	prevent_player_input(true)
 
 func prevent_player_input(b):
 	var player = get_player()
