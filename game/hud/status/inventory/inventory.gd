@@ -25,7 +25,7 @@ func _process(delta):
 		var slot = get_child(i)
 		var main = get_node("/root/Main")
 		var item = main.get_inventory().get_item_at(i)
-		if item[0] != "": # NOT an empty slot
+		if item[0] != null and item[0] != "": # NOT an empty slot
 			var icon = main.get_db().get_item_by_name(item[0]).icon
 			slot.set_icon(icon)
 			slot.get_node('Counter').visible = true
@@ -35,7 +35,9 @@ func _input(event):
 	var n = get_child_count()
 	if event.is_action_pressed("use_item"):
 		var player = get_node("/root/Main").get_player()
-		player.interact(get_equipped_item())
+		var item = get_equipped_item()
+		if item != null:
+			player.interact(get_equipped_item())
 	elif event.is_action_pressed("shoulder_right"):
 		slots[focused].unfocus()
 		focused = (focused + 1)%n

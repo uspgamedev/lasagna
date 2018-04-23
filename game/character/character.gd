@@ -25,7 +25,12 @@ func damage(dmg_points, from=false):
 			death()
 
 func death():
+	if dead:
+		return
 	dead = true
+	$Animation.play("DEATH")
+	yield($Animation, "animation_finished")
+	queue_free()
 
 func knockback(from):
 	if dead:

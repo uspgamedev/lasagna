@@ -93,21 +93,23 @@ tracks/2/keys = {
 "values": [ ExtResource( 4 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=3]
-
-custom_solver_bias = 0.0
-radius = 7.0
-
 [sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 45.0
 
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.2644, 5.68671 )
+
 [node name="Creature" index="0" instance=ExtResource( 1 )]
 
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-max_health = 100
+_sections_unfolded = [ "Collision", "Material", "Transform", "Visibility" ]
+max_health = 2
 
 [node name="OrientedSprite" parent="." index="0"]
 
@@ -116,7 +118,7 @@ offset = Vector2( 0, -7 )
 flip_h = true
 hframes = 5
 frame = 4
-_sections_unfolded = [ "Animation", "Offset", "Transform", "Visibility" ]
+_sections_unfolded = [ "Animation", "Material", "Offset", "Transform", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OrientedSprite" index="0"]
 
@@ -132,8 +134,7 @@ blend_times = [  ]
 [node name="CollisionBox" parent="." index="1"]
 
 scale = Vector2( 1, 0.7 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
@@ -144,6 +145,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -168,7 +170,21 @@ wait_time = 5.0
 one_shot = false
 autostart = true
 
-[node name="Interaction" type="Node" parent="." index="5"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="5"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+shape = SubResource( 5 )
+
+[node name="Interaction" type="Node" parent="StaticBody2D" index="1"]
 
 script = ExtResource( 6 )
 
