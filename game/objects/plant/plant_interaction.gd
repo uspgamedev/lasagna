@@ -1,11 +1,11 @@
 extends "res://interaction/interaction.gd"
 
+func _is_grown():
+	var addr = get_parent().address
+	return get_node("/root/Main").get_cropmatrix().is_grown(addr[0], addr[1], addr[2])
+
 func interact(item):
-	var par = get_parent()
-	if par.growth_level == par.growth_steps:
-		print("HARVEST OHM OHM OHM")
-		#get_node("../Sprite/AnimationPlayer").play("harvest")
-		#HARVEST CODE
-		#...
+	if _is_grown():
+		get_node("/root/Main").execute_cutscene("inspect_crop")
 	else:
 		print("tried to harvest non ripe tree")

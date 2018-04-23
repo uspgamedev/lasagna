@@ -55,6 +55,9 @@ var crops = [
 	],
 ]
 
+func _db():
+	return get_node("/root/Main").get_db()
+
 func sow(patch, i, j, cropname):
 	crops[patch][i][j] = [cropname, 0]
 
@@ -75,6 +78,11 @@ func remove(patch, i, j):
 func get_crop(k, i, j):
 	return self.crops[k][i][j]
 
+func is_grown(k, i, j):
+	var crop = get_crop(k, i, j)
+	var growth_limit = _db().get_crop_by_name(crop[0]).growth_limit
+	return crop[1] >= growth_limit
+
 func crop_at(i, j):
 	var k = 0
 	for patch_origin in get_tree().get_nodes_in_group("patch"):
@@ -94,12 +102,9 @@ func set_day_crops():
 	if not cropfields:
 		return
 	
-	var indexes = []
-	for field in cropfields:
-		indexes.append(field.field_index)
-	
 	var db = get_node("/root/Main").get_db()
-	for k in indexes:
+	for field in cropfields:
+		var k = field.field_index
 		for i in range(len(crops[k])):
 			for j in range(len(crops[k][i])):
 				if crops[k][i][j] != null:
@@ -108,7 +113,8 @@ func set_day_crops():
 					var current_growth = crops[k][i][j][1]
 					if current_growth >= crop_grow_limit:
 						var day_crop = crop_data.daytime_plant.instance()
-						var pos = cropfields[k].get_position()
+						day_crop.address = [k, i, j]
+						var pos = field.get_position()
 						pos.x += (i * 32) + 16
 						pos.y += (j * 24) + 12
 						day_crop.set_position(pos)

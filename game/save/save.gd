@@ -11,6 +11,7 @@ func _play():
 	self.flags = get_parent().get_flags()
 	self.cropmatrix = get_parent().get_cropmatrix()
 	load_game()
+	self.cropmatrix.grow_all()
 
 func save_game():
 	var save_file = File.new()

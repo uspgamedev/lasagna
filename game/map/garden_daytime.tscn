@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://map/garden.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/creatures/goat/goat.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=5]
 
-[node name="Map" instance=ExtResource( 1 )]
+[node name="Map" index="0" instance=ExtResource( 1 )]
 
 nighttime = "res://map/garden_nighttime.tscn"
 
@@ -24,6 +26,15 @@ position = Vector2( 672, 720 )
 [node name="BGM" parent="." index="4"]
 
 current_bgm = "garden_day"
+
+[node name="inspect_crop" parent="Cutscenes" index="0" instance=ExtResource( 4 )]
+
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/inspect_crop" index="0" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "Looks grown enough. Should be ripe by nightfall!"
 
 
 [editable path="Foreground/Door"]
