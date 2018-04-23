@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://hud/menu/crafting/ingredient.gd" type="Script" id=1]
-[ext_resource path="res://hud/menu/crafting/empy-slot.png" type="Texture" id=2]
+[ext_resource path="res://hud/status/inventory/empy-slot.png" type="Texture" id=2]
 
 [node name="Ingredient" type="Control"]
 
