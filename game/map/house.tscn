@@ -1,30 +1,67 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://map/map.tscn" type="PackedScene" id=1]
-[ext_resource path="res://objects/props/sofa/sofa.tscn" type="PackedScene" id=2]
-[ext_resource path="res://objects/props/oven/oven.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objects/props/fridge/fridge.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/props/bed/bed.tscn" type="PackedScene" id=5]
-[ext_resource path="res://objects/prop.tscn" type="PackedScene" id=6]
-[ext_resource path="res://objects/props/props.png" type="Texture" id=7]
-[ext_resource path="res://map/get_necronomicon.gd" type="Script" id=8]
-[ext_resource path="res://hud/status/necronomicon.png" type="Texture" id=9]
-[ext_resource path="res://objects/props/door/door.tscn" type="PackedScene" id=10]
-[ext_resource path="res://character/player/player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://objects/props/door/locked_door.tscn" type="PackedScene" id=12]
-[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=13]
-[ext_resource path="res://objects/stash/stash.tscn" type="PackedScene" id=14]
-[ext_resource path="res://objects/props/cupboard/cupboard.tscn" type="PackedScene" id=15]
-[ext_resource path="res://objects/props/sink/sink.tscn" type="PackedScene" id=16]
-[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=17]
-[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=18]
+[ext_resource path="res://map/LookForRecipeBookTrigger.gd" type="Script" id=2]
+[ext_resource path="res://map/LookForIngredientsTrigger.gd" type="Script" id=3]
+[ext_resource path="res://map/monolog_01_trigger.gd" type="Script" id=4]
+[ext_resource path="res://objects/props/sofa/sofa.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/props/oven/oven.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/props/fridge/fridge.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objects/props/bed/bed.tscn" type="PackedScene" id=8]
+[ext_resource path="res://objects/prop.tscn" type="PackedScene" id=9]
+[ext_resource path="res://objects/props/props.png" type="Texture" id=10]
+[ext_resource path="res://map/get_necronomicon.gd" type="Script" id=11]
+[ext_resource path="res://hud/status/necronomicon.png" type="Texture" id=12]
+[ext_resource path="res://objects/props/door/door.tscn" type="PackedScene" id=13]
+[ext_resource path="res://character/player/player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://objects/props/door/locked_door.tscn" type="PackedScene" id=15]
+[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=16]
+[ext_resource path="res://objects/stash/stash.tscn" type="PackedScene" id=17]
+[ext_resource path="res://objects/props/cupboard/cupboard.tscn" type="PackedScene" id=18]
+[ext_resource path="res://objects/props/sink/sink.tscn" type="PackedScene" id=19]
+[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=20]
+[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=21]
 
 [node name="Map" instance=ExtResource( 1 )]
 
 position = Vector2( -1, 1 )
 
-[node name="Background" parent="." index="0"]
+[node name="LookForRecipeBookTrigger" type="Node" parent="." index="0"]
 
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="LookForRecipeBookTrigger" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="LookForIngredientsTrigger" type="Node" parent="." index="1"]
+
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="LookForIngredientsTrigger" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="Monolog01Trigger" type="Node" parent="." index="2"]
+
+script = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="Monolog01Trigger" index="0"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="Background" parent="." index="3"]
+
+editor/display_folded = true
 tile_data = PoolIntArray( 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 9, 0, 7, 9, 0, 8, 9, 0, 9, 9, 0, 10, 9, 0, 11, 9, 0, 12, 9, 0, 13, 9, 0, 14, 9, 0, 15, 9, 0, 16, 9, 0, 17, 9, 0, 18, 9, 0, 19, 9, 0, 65536, 9, 0, 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 65552, 9, 0, 65553, 9, 0, 65554, 9, 0, 65555, 9, 0, 131072, 9, 0, 131073, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 9, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 131082, 9, 0, 131083, 9, 0, 131084, 9, 0, 131085, 9, 0, 131086, 9, 0, 131087, 9, 0, 131088, 9, 0, 131089, 9, 0, 131090, 9, 0, 131091, 9, 0, 196608, 9, 0, 196609, 9, 0, 196610, 9, 0, 196611, 9, 0, 196612, 9, 0, 196613, 9, 0, 196614, 9, 0, 196615, 9, 0, 196616, 9, 0, 196617, 9, 0, 196618, 9, 0, 196619, 9, 0, 196620, 9, 0, 196621, 9, 0, 196622, 9, 0, 196623, 9, 0, 196624, 9, 0, 196625, 9, 0, 196626, 9, 0, 196627, 9, 0, 262144, 9, 0, 262145, 9, 0, 262146, 9, 0, 262147, 9, 0, 262148, 9, 0, 262149, 9, 0, 262150, 9, 0, 262151, 9, 0, 262152, 9, 0, 262153, 9, 0, 262154, 9, 0, 262155, 9, 0, 262156, 9, 0, 262157, 9, 0, 262158, 9, 0, 262159, 9, 0, 262160, 9, 0, 262161, 9, 0, 262162, 9, 0, 262163, 9, 0, 327680, 9, 0, 327681, 9, 0, 327682, 9, 0, 327683, 9, 0, 327684, 9, 0, 327685, 9, 0, 327686, 9, 0, 327687, 9, 0, 327688, 9, 0, 327689, 9, 0, 327690, 9, 0, 327691, 9, 0, 327692, 9, 0, 327693, 9, 0, 327694, 9, 0, 327695, 9, 0, 327696, 9, 0, 327697, 9, 0, 327698, 9, 0, 327699, 9, 0, 393216, 9, 0, 393217, 9, 0, 393218, 9, 0, 393219, 9, 0, 393220, 9, 0, 393221, 9, 0, 393222, 9, 0, 393223, 9, 0, 393224, 9, 0, 393225, 9, 0, 393226, 9, 0, 393227, 9, 0, 393228, 9, 0, 393229, 9, 0, 393230, 9, 0, 393231, 9, 0, 393232, 9, 0, 393233, 9, 0, 393234, 9, 0, 393235, 9, 0, 458752, 9, 0, 458753, 9, 0, 458754, 9, 0, 458755, 9, 0, 458756, 9, 0, 458757, 9, 0, 458758, 9, 0, 458759, 9, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 9, 0, 458764, 9, 0, 458765, 9, 0, 458766, 9, 0, 458767, 9, 0, 458768, 9, 0, 458769, 9, 0, 458770, 9, 0, 458771, 9, 0, 524288, 9, 0, 524289, 9, 0, 524290, 9, 0, 524291, 9, 0, 524292, 9, 0, 524293, 9, 0, 524294, 9, 0, 524295, 9, 0, 524296, 9, 0, 524297, 9, 0, 524298, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 9, 0, 524303, 9, 0, 524304, 9, 0, 524305, 9, 0, 524306, 9, 0, 524307, 9, 0, 589824, 9, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 9, 0, 589829, 9, 0, 589830, 9, 0, 589831, 9, 0, 589832, 9, 0, 589833, 9, 0, 589834, 9, 0, 589835, 9, 0, 589836, 9, 0, 589837, 9, 0, 589838, 9, 0, 589839, 9, 0, 589840, 9, 0, 589841, 9, 0, 589842, 9, 0, 589843, 9, 0, 655360, 9, 0, 655361, 9, 0, 655362, 9, 0, 655363, 9, 0, 655364, 9, 0, 655365, 9, 0, 655366, 9, 0, 655367, 9, 0, 655368, 9, 0, 655369, 9, 0, 655370, 9, 0, 655371, 9, 0, 655372, 9, 0, 655373, 9, 0, 655374, 9, 0, 655375, 9, 0, 655376, 9, 0, 655377, 9, 0, 655378, 9, 0, 655379, 9, 0, 786427, 2, 0, 786428, 2, 0, 786429, 2, 0, 786430, 2, 0, 786431, 2, 0, 720896, 9, 0, 720897, 9, 0, 720898, 9, 0, 720899, 9, 0, 720900, 9, 0, 720901, 9, 0, 720902, 9, 0, 720903, 9, 0, 720904, 9, 0, 720905, 9, 0, 720906, 9, 0, 720907, 9, 0, 720908, 9, 0, 720909, 9, 0, 720910, 9, 0, 720911, 9, 0, 720912, 9, 0, 720913, 9, 0, 720914, 9, 0, 720915, 9, 0, 851963, 2, 0, 851964, 2, 0, 851965, 2, 0, 851966, 2, 0, 851967, 2, 0, 786432, 9, 0, 786433, 9, 0, 786434, 9, 0, 786435, 9, 0, 786436, 9, 0, 786437, 9, 0, 786438, 9, 0, 786439, 9, 0, 786440, 9, 0, 786441, 9, 0, 786442, 9, 0, 786443, 9, 0, 786444, 9, 0, 786445, 9, 0, 786446, 9, 0, 786447, 9, 0, 786448, 9, 0, 786449, 9, 0, 786450, 9, 0, 786451, 9, 0, 917499, 2, 0, 917500, 2, 0, 917501, 2, 0, 917502, 2, 0, 917503, 2, 0, 851968, 9, 0, 851969, 9, 0, 851970, 9, 0, 851971, 9, 0, 851972, 9, 0, 851973, 9, 0, 851974, 9, 0, 851975, 9, 0, 851976, 9, 0, 851977, 9, 0, 851978, 9, 0, 851979, 9, 0, 851980, 9, 0, 851981, 9, 0, 851982, 9, 0, 851983, 9, 0, 851984, 9, 0, 851985, 9, 0, 851986, 9, 0, 851987, 9, 0, 983035, 2, 0, 983036, 2, 0, 983037, 2, 0, 983038, 2, 0, 983039, 2, 0, 917504, 9, 0, 917505, 9, 0, 917506, 9, 0, 917507, 9, 0, 917508, 9, 0, 917509, 9, 0, 917510, 9, 0, 917511, 9, 0, 917512, 9, 0, 917513, 9, 0, 917514, 9, 0, 917515, 9, 0, 917516, 9, 0, 917517, 9, 0, 917518, 9, 0, 917519, 9, 0, 917520, 9, 0, 917521, 9, 0, 917522, 9, 0, 917523, 9, 0, 1048571, 2, 0, 1048572, 2, 0, 1048573, 2, 0, 1048574, 2, 0, 1048575, 2, 0, 983040, 9, 0, 983041, 9, 0, 983042, 9, 0, 983043, 9, 0, 983044, 9, 0, 983045, 9, 0, 983046, 9, 0, 983047, 9, 0, 983048, 9, 0, 983049, 9, 0, 983050, 9, 0, 983051, 9, 0, 983052, 9, 0, 983053, 9, 0, 983054, 9, 0, 983055, 9, 0, 983056, 9, 0, 983057, 9, 0, 983058, 9, 0, 983059, 9, 0, 1114107, 2, 0, 1114108, 2, 0, 1114109, 2, 0, 1114110, 2, 0, 1114111, 2, 0, 1048576, 9, 0, 1048577, 9, 0, 1048578, 9, 0, 1048579, 9, 0, 1048580, 9, 0, 1048581, 9, 0, 1048582, 9, 0, 1048583, 9, 0, 1048584, 9, 0, 1048585, 9, 0, 1048586, 9, 0, 1048587, 9, 0, 1048588, 9, 0, 1048589, 9, 0, 1048590, 9, 0, 1048591, 9, 0, 1048592, 9, 0, 1048593, 9, 0, 1048594, 9, 0, 1048595, 9, 0, 1179643, 2, 0, 1179644, 2, 0, 1179645, 2, 0, 1179646, 2, 0, 1179647, 2, 0, 1114112, 9, 0, 1114113, 9, 0, 1114114, 9, 0, 1114115, 9, 0, 1114116, 9, 0, 1114117, 9, 0, 1114118, 9, 0, 1114119, 9, 0, 1114120, 9, 0, 1114121, 9, 0, 1114122, 9, 0, 1114123, 9, 0, 1114124, 9, 0, 1114125, 9, 0, 1114126, 9, 0, 1114127, 9, 0, 1114128, 9, 0, 1114129, 9, 0, 1114130, 9, 0, 1114131, 9, 0, 1245179, 2, 0, 1245180, 2, 0, 1245181, 2, 0, 1245182, 2, 0, 1245183, 2, 0, 1179648, 9, 0, 1179649, 9, 0, 1179650, 9, 0, 1179651, 9, 0, 1179652, 9, 0, 1179653, 9, 0, 1179654, 9, 0, 1179655, 9, 0, 1179656, 9, 0, 1179657, 9, 0, 1179658, 9, 0, 1179659, 9, 0, 1179660, 9, 0, 1179661, 9, 0, 1179662, 9, 0, 1179663, 9, 0, 1179664, 9, 0, 1179665, 9, 0, 1179666, 9, 0, 1179667, 9, 0, 1310715, 2, 0, 1310716, 2, 0, 1310717, 5, 0, 1310718, 5, 0, 1310719, 2, 0, 1245184, 9, 0, 1245185, 9, 0, 1245186, 9, 0, 1245187, 9, 0, 1245188, 9, 0, 1245189, 9, 0, 1245190, 9, 0, 1245191, 9, 0, 1245192, 9, 0, 1245193, 5, 0, 1245194, 5, 0, 1245195, 9, 0, 1245196, 9, 0, 1245197, 9, 0, 1245198, 9, 0, 1245199, 9, 0, 1245200, 9, 0, 1245201, 9, 0, 1245202, 9, 0, 1245203, 9, 0 )
 
 [node name="ExitBlock" type="StaticBody2D" parent="Background" index="0"]
@@ -42,35 +79,34 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( 0, 480, 0, 528, -128, 528, -128, 480 )
 
-[node name="Foreground" parent="." index="1"]
+[node name="Foreground" parent="." index="4"]
 
 editor/display_folded = false
 tile_data = PoolIntArray( 0, 0, 0, 131085, 18, 0, 196608, 6, 0, 196609, 6, 0, 196610, 6, 0, 196611, 6, 0, 196612, 6, 0, 196613, 6, 0, 196614, 6, 0, 196615, 6, 0, 196616, 6, 0, 196617, 6, 0, 196618, 6, 0, 196619, 6, 0, 196620, 6, 0, 196621, 18, 0, 196622, 6, 0, 196623, 6, 0, 196624, 6, 0, 196625, 6, 0, 196626, 6, 0, 196627, 6, 0, 262144, 6, 0, 262157, 18, 0, 262160, 6, 0, 262163, 6, 0, 327680, 6, 0, 327693, 18, 0, 327696, 6, 0, 327699, 6, 0, 393216, 6, 0, 393232, 18, 0, 393233, 18, 0, 393234, 18, 0, 393235, 6, 0, 458752, 6, 0, 458768, 18, 0, 458769, 18, 0, 458770, 18, 0, 458771, 6, 0, 524288, 6, 0, 524304, 18, 0, 524305, 18, 0, 524306, 18, 0, 524307, 6, 0, 589824, 6, 0, 589840, 18, 0, 589841, 18, 0, 589842, 18, 0, 589843, 6, 0, 655360, 6, 0, 655373, 18, 0, 655376, 18, 0, 655377, 18, 0, 655378, 18, 0, 655379, 18, 0, 786427, 6, 0, 786428, 6, 0, 786429, 6, 0, 786430, 6, 0, 786431, 6, 0, 720896, 6, 0, 720897, 18, 0, 720898, 18, 0, 720899, 18, 0, 720900, 18, 0, 720901, 18, 0, 720902, 18, 0, 720903, 18, 0, 720904, 18, 0, 720905, 18, 0, 720906, 18, 0, 720907, 18, 0, 720908, 18, 0, 720909, 18, 0, 720915, 6, 0, 851963, 6, 0, 786445, 18, 0, 786451, 6, 0, 917499, 6, 0, 851987, 6, 0, 983035, 6, 0, 917523, 6, 0, 1048571, 6, 0, 983059, 6, 0, 1114107, 6, 0, 1048595, 6, 0, 1179643, 6, 0, 1114125, 6, 0, 1114131, 6, 0, 1245179, 6, 0, 1179661, 6, 0, 1179667, 6, 0, 1310715, 6, 0, 1310716, 6, 0, 1310719, 6, 0, 1245184, 6, 0, 1245185, 6, 0, 1245186, 6, 0, 1245187, 6, 0, 1245188, 6, 0, 1245189, 6, 0, 1245190, 6, 0, 1245191, 6, 0, 1245192, 6, 0, 1245195, 6, 0, 1245196, 6, 0, 1245197, 6, 0, 1245198, 6, 0, 1245199, 6, 0, 1245200, 6, 0, 1245201, 6, 0, 1245202, 6, 0, 1245203, 6, 0 )
 
-[node name="Sofa" parent="Foreground" index="0" instance=ExtResource( 2 )]
+[node name="Sofa" parent="Foreground" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 230, 280 )
 
-[node name="Oven" parent="Foreground" index="1" instance=ExtResource( 3 )]
+[node name="Oven" parent="Foreground" index="1" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 200, 90 )
 
-[node name="Fridge" parent="Foreground" index="2" instance=ExtResource( 4 )]
+[node name="Fridge" parent="Foreground" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 90, 80 )
 
-[node name="Bed" parent="Foreground" index="3" instance=ExtResource( 5 )]
+[node name="Bed" parent="Foreground" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 320, 504 )
 
 [node name="Table" type="Node2D" parent="Foreground" index="4"]
 
-editor/display_folded = true
 position = Vector2( 230, 330 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="TableLeft" parent="Foreground/Table" index="0" instance=ExtResource( 6 )]
+[node name="TableLeft" parent="Foreground/Table" index="0" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( -16, 0 )
@@ -78,7 +114,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" parent="Foreground/Table/TableLeft" index="0"]
 
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 hframes = 7
 frame = 5
 _sections_unfolded = [ "Animation" ]
@@ -87,7 +123,7 @@ _sections_unfolded = [ "Animation" ]
 
 polygon = PoolVector2Array( -14, -10, 16, -10, 16, 10, -14, 10 )
 
-[node name="TableRight" parent="Foreground/Table" index="1" instance=ExtResource( 6 )]
+[node name="TableRight" parent="Foreground/Table" index="1" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 16, 0 )
@@ -95,7 +131,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" parent="Foreground/Table/TableRight" index="0"]
 
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 hframes = 7
 frame = 6
 _sections_unfolded = [ "Animation" ]
@@ -104,7 +140,7 @@ _sections_unfolded = [ "Animation" ]
 
 polygon = PoolVector2Array( -16, -10, 14, -10, 14, 10, -16, 10 )
 
-[node name="Paper" parent="Foreground/Table" index="2" instance=ExtResource( 6 )]
+[node name="Paper" parent="Foreground/Table" index="2" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 10, 0 )
@@ -112,7 +148,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" parent="Foreground/Table/Paper" index="0"]
 
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 hframes = 7
 frame = 3
 _sections_unfolded = [ "Animation" ]
@@ -121,24 +157,24 @@ _sections_unfolded = [ "Animation" ]
 
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 0, -10, 0 )
 
-[node name="NecronomiconProp" parent="Foreground/Table" index="3" instance=ExtResource( 6 )]
+[node name="NecronomiconProp" parent="Foreground/Table" index="3" instance=ExtResource( 9 )]
 
 [node name="Interaction" type="Node" parent="Foreground/Table/NecronomiconProp" index="0"]
 
-script = ExtResource( 8 )
+script = ExtResource( 11 )
 
 [node name="Sprite" parent="Foreground/Table/NecronomiconProp" index="1"]
 
 rotation = 1.3439
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" parent="Foreground/Table/NecronomiconProp" index="2"]
 
 polygon = PoolVector2Array( -11.8543, -6.61246, 10.7624, -11.9477, 14.7058, 3.71002, -8.60681, 9.50919 )
 
-[node name="Door" parent="Foreground" index="5" instance=ExtResource( 10 )]
+[node name="Door" parent="Foreground" index="5" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 240, 84 )
@@ -147,36 +183,35 @@ position = Vector2( 240, 84 )
 
 destiny = "garden_daytime"
 
-[node name="Player" parent="Foreground" index="6" instance=ExtResource( 11 )]
+[node name="Player" parent="Foreground" index="6" instance=ExtResource( 14 )]
 
 position = Vector2( 238, 114 )
 
-[node name="Door2" parent="Foreground" index="7" instance=ExtResource( 12 )]
+[node name="Door2" parent="Foreground" index="7" instance=ExtResource( 15 )]
 
 position = Vector2( 560, 252 )
 
-[node name="Notes" parent="Foreground" index="8" instance=ExtResource( 13 )]
+[node name="Notes" parent="Foreground" index="8" instance=ExtResource( 16 )]
 
 position = Vector2( 540, 330 )
 
-[node name="Stash" parent="Foreground" index="9" instance=ExtResource( 14 )]
+[node name="Stash" parent="Foreground" index="9" instance=ExtResource( 17 )]
 
 position = Vector2( 480, 100 )
 
-[node name="Cupboard" parent="Foreground" index="10" instance=ExtResource( 15 )]
+[node name="Cupboard" parent="Foreground" index="10" instance=ExtResource( 18 )]
 
-editor/display_folded = true
 position = Vector2( 390, 110 )
 
-[node name="Sink" parent="Foreground" index="11" instance=ExtResource( 16 )]
+[node name="Sink" parent="Foreground" index="11" instance=ExtResource( 19 )]
 
 position = Vector2( 150, 90 )
 
-[node name="Ceiling" parent="." index="2"]
+[node name="Ceiling" parent="." index="5"]
 
 tile_data = PoolIntArray( 65526, 30, 0, 65527, 31, 0, 65528, 31, 0, 65529, 31, 0, 65530, 31, 0, 65531, 31, 0, 65532, 31, 0, 65533, 31, 0, 65534, 31, 0, 65535, 31, 0, 0, 31, 0, 1, 28, 0, 2, 28, 0, 3, 28, 0, 4, 28, 0, 5, 28, 0, 6, 28, 0, 7, 28, 0, 8, 28, 0, 9, 28, 0, 10, 28, 0, 11, 28, 0, 12, 28, 0, 13, 28, 0, 14, 28, 0, 15, 28, 0, 16, 28, 0, 17, 28, 0, 18, 28, 0, 19, 28, 0, 20, 28, 0, 21, 28, 0, 22, 28, 0, 23, 28, 0, 24, 28, 0, 25, 28, 0, 26, 28, 0, 27, 28, 0, 28, 28, 0, 29, 28, 0, 30, 28, 0, 31, 28, 0, 32, 28, 0, 33, 28, 0, 34, 28, 0, 35, 28, 0, 36, 28, 0, 37, 28, 0, 38, 28, 0, 39, 32, 0, 131062, 26, 0, 131063, 25, 0, 131064, 25, 0, 131065, 25, 0, 131066, 25, 0, 131067, 25, 0, 131068, 25, 0, 131069, 25, 0, 131070, 25, 0, 131071, 25, 0, 65536, 25, 0, 65537, 21, 0, 65538, 34, 0, 65539, 34, 0, 65540, 34, 0, 65541, 34, 0, 65542, 34, 0, 65543, 34, 0, 65544, 34, 0, 65545, 34, 0, 65546, 34, 0, 65547, 34, 0, 65548, 34, 0, 65549, 34, 0, 65550, 34, 0, 65551, 34, 0, 65552, 34, 0, 65553, 34, 0, 65554, 34, 0, 65555, 34, 0, 65556, 34, 0, 65557, 34, 0, 65558, 34, 0, 65559, 34, 0, 65560, 34, 0, 65561, 34, 0, 65562, 23, 0, 65563, 21, 0, 65564, 34, 0, 65565, 34, 0, 65566, 34, 0, 65567, 34, 0, 65568, 23, 0, 65569, 25, 0, 65570, 25, 0, 65571, 25, 0, 65572, 25, 0, 65573, 25, 0, 65574, 25, 0, 65575, 24, 0, 196598, 26, 0, 196599, 25, 0, 196600, 25, 0, 196601, 25, 0, 196602, 25, 0, 196603, 25, 0, 196604, 25, 0, 196605, 25, 0, 196606, 25, 0, 196607, 25, 0, 131072, 25, 0, 131073, 24, 0, 131098, 26, 0, 131099, 24, 0, 131104, 26, 0, 131105, 25, 0, 131106, 25, 0, 131107, 25, 0, 131108, 25, 0, 131109, 25, 0, 131110, 25, 0, 131111, 24, 0, 262134, 26, 0, 262135, 25, 0, 262136, 25, 0, 262137, 25, 0, 262138, 25, 0, 262139, 25, 0, 262140, 25, 0, 262141, 25, 0, 262142, 25, 0, 262143, 25, 0, 196608, 25, 0, 196609, 24, 0, 196634, 26, 0, 196635, 24, 0, 196640, 26, 0, 196641, 25, 0, 196642, 25, 0, 196643, 25, 0, 196644, 25, 0, 196645, 25, 0, 196646, 25, 0, 196647, 24, 0, 327670, 26, 0, 327671, 25, 0, 327672, 25, 0, 327673, 25, 0, 327674, 25, 0, 327675, 25, 0, 327676, 25, 0, 327677, 25, 0, 327678, 25, 0, 327679, 25, 0, 262144, 25, 0, 262145, 24, 0, 262170, 26, 0, 262171, 24, 0, 262176, 26, 0, 262177, 25, 0, 262178, 25, 0, 262179, 25, 0, 262180, 25, 0, 262181, 25, 0, 262182, 25, 0, 262183, 24, 0, 393206, 26, 0, 393207, 25, 0, 393208, 25, 0, 393209, 25, 0, 393210, 25, 0, 393211, 25, 0, 393212, 25, 0, 393213, 25, 0, 393214, 25, 0, 393215, 25, 0, 327680, 25, 0, 327681, 24, 0, 327706, 33, 0, 327707, 35, 0, 327712, 26, 0, 327713, 25, 0, 327714, 25, 0, 327715, 25, 0, 327716, 25, 0, 327717, 25, 0, 327718, 25, 0, 327719, 24, 0, 458742, 26, 0, 458743, 25, 0, 458744, 25, 0, 458745, 25, 0, 458746, 25, 0, 458747, 25, 0, 458748, 25, 0, 458749, 25, 0, 458750, 25, 0, 458751, 25, 0, 393216, 25, 0, 393217, 24, 0, 393248, 26, 0, 393249, 25, 0, 393250, 25, 0, 393251, 25, 0, 393252, 25, 0, 393253, 25, 0, 393254, 25, 0, 393255, 24, 0, 524278, 26, 0, 524279, 25, 0, 524280, 25, 0, 524281, 25, 0, 524282, 25, 0, 524283, 25, 0, 524284, 25, 0, 524285, 25, 0, 524286, 25, 0, 524287, 25, 0, 458752, 25, 0, 458753, 24, 0, 458784, 26, 0, 458785, 25, 0, 458786, 25, 0, 458787, 25, 0, 458788, 25, 0, 458789, 25, 0, 458790, 25, 0, 458791, 24, 0, 589814, 26, 0, 589815, 25, 0, 589816, 25, 0, 589817, 25, 0, 589818, 25, 0, 589819, 25, 0, 589820, 25, 0, 589821, 25, 0, 589822, 25, 0, 589823, 25, 0, 524288, 25, 0, 524289, 24, 0, 524320, 26, 0, 524321, 25, 0, 524322, 25, 0, 524323, 25, 0, 524324, 25, 0, 524325, 25, 0, 524326, 25, 0, 524327, 24, 0, 655350, 26, 0, 655351, 25, 0, 655352, 25, 0, 655353, 25, 0, 655354, 25, 0, 655355, 25, 0, 655356, 25, 0, 655357, 25, 0, 655358, 25, 0, 655359, 25, 0, 589824, 25, 0, 589825, 24, 0, 589856, 26, 0, 589857, 25, 0, 589858, 25, 0, 589859, 25, 0, 589860, 25, 0, 589861, 25, 0, 589862, 25, 0, 589863, 24, 0, 720886, 26, 0, 720887, 25, 0, 720888, 25, 0, 720889, 25, 0, 720890, 25, 0, 720891, 25, 0, 720892, 25, 0, 720893, 25, 0, 720894, 25, 0, 720895, 25, 0, 655360, 25, 0, 655361, 24, 0, 655392, 26, 0, 655393, 25, 0, 655394, 25, 0, 655395, 25, 0, 655396, 25, 0, 655397, 25, 0, 655398, 25, 0, 655399, 24, 0, 786422, 26, 0, 786423, 25, 0, 786424, 25, 0, 786425, 25, 0, 786426, 25, 0, 786427, 25, 0, 786428, 25, 0, 786429, 25, 0, 786430, 25, 0, 786431, 25, 0, 720896, 25, 0, 720897, 24, 0, 720928, 26, 0, 720929, 25, 0, 720930, 25, 0, 720931, 25, 0, 720932, 25, 0, 720933, 25, 0, 720934, 25, 0, 720935, 24, 0, 851958, 26, 0, 851959, 25, 0, 851960, 25, 0, 851961, 25, 0, 851962, 25, 0, 851963, 25, 0, 851964, 25, 0, 851965, 25, 0, 851966, 25, 0, 851967, 25, 0, 786432, 25, 0, 786433, 24, 0, 786464, 26, 0, 786465, 25, 0, 786466, 25, 0, 786467, 25, 0, 786468, 25, 0, 786469, 25, 0, 786470, 25, 0, 786471, 24, 0, 917494, 26, 0, 917495, 25, 0, 917496, 25, 0, 917497, 25, 0, 917498, 25, 0, 917499, 25, 0, 917500, 25, 0, 917501, 25, 0, 917502, 25, 0, 917503, 25, 0, 851968, 25, 0, 851969, 24, 0, 852000, 26, 0, 852001, 25, 0, 852002, 25, 0, 852003, 25, 0, 852004, 25, 0, 852005, 25, 0, 852006, 25, 0, 852007, 24, 0, 983030, 26, 0, 983031, 25, 0, 983032, 25, 0, 983033, 25, 0, 983034, 25, 0, 983035, 25, 0, 983036, 25, 0, 983037, 25, 0, 983038, 25, 0, 983039, 25, 0, 917504, 25, 0, 917505, 24, 0, 917530, 30, 0, 917531, 32, 0, 917536, 26, 0, 917537, 25, 0, 917538, 25, 0, 917539, 25, 0, 917540, 25, 0, 917541, 25, 0, 917542, 25, 0, 917543, 24, 0, 1048566, 26, 0, 1048567, 25, 0, 1048568, 25, 0, 1048569, 25, 0, 1048570, 25, 0, 1048571, 25, 0, 1048572, 25, 0, 1048573, 25, 0, 1048574, 25, 0, 1048575, 25, 0, 983040, 25, 0, 983041, 24, 0, 983066, 26, 0, 983067, 24, 0, 983072, 33, 0, 983073, 22, 0, 983074, 22, 0, 983075, 22, 0, 983076, 22, 0, 983077, 22, 0, 983078, 23, 0, 983079, 24, 0, 1114102, 26, 0, 1114103, 25, 0, 1114104, 25, 0, 1114105, 25, 0, 1114106, 25, 0, 1114107, 25, 0, 1114108, 25, 0, 1114109, 25, 0, 1114110, 25, 0, 1114111, 25, 0, 1048576, 25, 0, 1048577, 27, 0, 1048578, 28, 0, 1048579, 28, 0, 1048580, 28, 0, 1048581, 28, 0, 1048582, 28, 0, 1048583, 28, 0, 1048584, 28, 0, 1048585, 28, 0, 1048586, 28, 0, 1048587, 28, 0, 1048588, 28, 0, 1048589, 28, 0, 1048590, 28, 0, 1048591, 28, 0, 1048592, 28, 0, 1048593, 28, 0, 1048594, 28, 0, 1048595, 28, 0, 1048596, 28, 0, 1048597, 28, 0, 1048598, 28, 0, 1048599, 28, 0, 1048600, 28, 0, 1048601, 28, 0, 1048602, 29, 0, 1048603, 24, 0, 1048614, 26, 0, 1048615, 24, 0, 1179638, 26, 0, 1179639, 21, 0, 1179640, 22, 0, 1179641, 22, 0, 1179642, 22, 0, 1179643, 22, 0, 1179644, 22, 0, 1179645, 22, 0, 1179646, 22, 0, 1179647, 22, 0, 1114112, 22, 0, 1114113, 22, 0, 1114114, 22, 0, 1114115, 22, 0, 1114116, 22, 0, 1114117, 22, 0, 1114118, 22, 0, 1114119, 22, 0, 1114120, 22, 0, 1114121, 22, 0, 1114122, 22, 0, 1114123, 22, 0, 1114124, 22, 0, 1114125, 22, 0, 1114126, 22, 0, 1114127, 22, 0, 1114128, 22, 0, 1114129, 22, 0, 1114130, 22, 0, 1114131, 22, 0, 1114132, 22, 0, 1114133, 22, 0, 1114134, 22, 0, 1114135, 22, 0, 1114136, 22, 0, 1114137, 22, 0, 1114138, 23, 0, 1114139, 24, 0, 1114150, 26, 0, 1114151, 24, 0, 1245174, 26, 0, 1245175, 24, 0, 1179674, 26, 0, 1179675, 24, 0, 1179686, 26, 0, 1179687, 24, 0, 1310710, 26, 0, 1310711, 24, 0, 1245210, 33, 0, 1245211, 35, 0, 1245222, 26, 0, 1245223, 24, 0, 1376246, 26, 0, 1376247, 24, 0, 1310758, 26, 0, 1310759, 24, 0, 1441782, 26, 0, 1441783, 24, 0, 1376294, 26, 0, 1376295, 24, 0, 1507318, 26, 0, 1507319, 24, 0, 1441830, 26, 0, 1441831, 24, 0, 1572854, 26, 0, 1572855, 24, 0, 1507366, 26, 0, 1507367, 24, 0, 1638390, 26, 0, 1638391, 24, 0, 1572902, 26, 0, 1572903, 24, 0, 1703926, 26, 0, 1703927, 24, 0, 1638438, 26, 0, 1638439, 24, 0, 1769462, 26, 0, 1769463, 24, 0, 1703974, 26, 0, 1703975, 24, 0, 1834998, 26, 0, 1834999, 24, 0, 1769510, 26, 0, 1769511, 24, 0, 1900534, 26, 0, 1900535, 24, 0, 1835034, 30, 0, 1835035, 32, 0, 1835046, 26, 0, 1835047, 24, 0, 1966070, 26, 0, 1966071, 24, 0, 1900570, 26, 0, 1900571, 24, 0, 1900582, 26, 0, 1900583, 24, 0, 2031606, 26, 0, 2031607, 24, 0, 1966106, 26, 0, 1966107, 24, 0, 1966118, 26, 0, 1966119, 24, 0, 2097142, 26, 0, 2097143, 24, 0, 2031642, 26, 0, 2031643, 24, 0, 2031654, 26, 0, 2031655, 24, 0, 2162678, 26, 0, 2162679, 27, 0, 2162680, 31, 0, 2162681, 32, 0, 2162686, 30, 0, 2162687, 31, 0, 2097152, 31, 0, 2097153, 31, 0, 2097154, 31, 0, 2097155, 31, 0, 2097156, 31, 0, 2097157, 31, 0, 2097158, 31, 0, 2097159, 31, 0, 2097160, 31, 0, 2097161, 31, 0, 2097162, 31, 0, 2097163, 31, 0, 2097164, 31, 0, 2097165, 31, 0, 2097166, 31, 0, 2097167, 31, 0, 2097168, 31, 0, 2097169, 32, 0, 2097174, 30, 0, 2097175, 31, 0, 2097176, 31, 0, 2097177, 31, 0, 2097178, 29, 0, 2097179, 27, 0, 2097180, 31, 0, 2097181, 31, 0, 2097182, 31, 0, 2097183, 31, 0, 2097184, 31, 0, 2097185, 31, 0, 2097186, 31, 0, 2097187, 31, 0, 2097188, 31, 0, 2097189, 31, 0, 2097190, 29, 0, 2097191, 24, 0, 2228214, 33, 0, 2228215, 34, 0, 2228216, 34, 0, 2228217, 35, 0, 2228222, 33, 0, 2228223, 22, 0, 2162688, 22, 0, 2162689, 22, 0, 2162690, 22, 0, 2162691, 22, 0, 2162692, 22, 0, 2162693, 22, 0, 2162694, 22, 0, 2162695, 22, 0, 2162696, 22, 0, 2162697, 22, 0, 2162698, 22, 0, 2162699, 22, 0, 2162700, 22, 0, 2162701, 22, 0, 2162702, 22, 0, 2162703, 22, 0, 2162704, 22, 0, 2162705, 35, 0, 2162710, 33, 0, 2162711, 22, 0, 2162712, 22, 0, 2162713, 22, 0, 2162714, 22, 0, 2162715, 22, 0, 2162716, 22, 0, 2162717, 22, 0, 2162718, 22, 0, 2162719, 22, 0, 2162720, 22, 0, 2162721, 22, 0, 2162722, 22, 0, 2162723, 22, 0, 2162724, 22, 0, 2162725, 22, 0, 2162726, 22, 0, 2162727, 35, 0 )
 
-[node name="Limits" parent="." index="3"]
+[node name="Limits" parent="." index="6"]
 
 editor/display_folded = true
 
@@ -189,64 +224,134 @@ position = Vector2( -160, 0 )
 position = Vector2( 640, 480 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="cupboard_get_seeds" parent="Cutscenes" index="0" instance=ExtResource( 17 )]
+[node name="monolog_01" parent="Cutscenes" index="0" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
 
-[node name="CutsceneNode" parent="Cutscenes/cupboard_get_seeds" index="0" instance=ExtResource( 18 )]
+[node name="CutsceneNode" parent="Cutscenes/monolog_01" index="0" instance=ExtResource( 21 )]
 
 actor = "Player"
-text = "I found some seeds"
+text = "It's so relieving to know I still have my granny's to stay at."
 
-[node name="cupboard_already_got_seeds" parent="Cutscenes" index="1" instance=ExtResource( 17 )]
-
-editor/display_folded = true
-other = "Player"
-
-[node name="CutsceneNode" parent="Cutscenes/cupboard_already_got_seeds" index="0" instance=ExtResource( 18 )]
+[node name="CutsceneNode2" parent="Cutscenes/monolog_01" index="1" instance=ExtResource( 21 )]
 
 actor = "Player"
-text = "There are no seeds left"
+text = "I CAN'T wait to eat her Lasagna again!"
 
-[node name="sink_no_water" parent="Cutscenes" index="2" instance=ExtResource( 17 )]
+[node name="cupboard_get_ingreds" parent="Cutscenes" index="1" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
 
-[node name="CutsceneNode" parent="Cutscenes/sink_no_water" index="0" instance=ExtResource( 18 )]
+[node name="CutsceneNode" parent="Cutscenes/cupboard_get_ingreds" index="0" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "Grandma isn't around... She probably left in a hurry for whatever reason..."
+
+[node name="CutsceneNode2" parent="Cutscenes/cupboard_get_ingreds" index="1" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "She musn't have had the time to cook the Lasagna."
+
+[node name="CutsceneNode3" parent="Cutscenes/cupboard_get_ingreds" index="2" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "Perhaps I should... Prepare it for us."
+
+[node name="CutsceneNode4" parent="Cutscenes/cupboard_get_ingreds" index="3" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "This way we can eat it right away when she gets back!"
+
+[node name="CutsceneNode5" parent="Cutscenes/cupboard_get_ingreds" index="4" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "I think these might be the ingredients! "
+
+[node name="needs_to_look_for_recipebook" parent="Cutscenes" index="2" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/needs_to_look_for_recipebook" index="0" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "Now all I need is grandma's recipebook!"
+
+[node name="needs_to_look_for_ingreds" parent="Cutscenes" index="3" instance=ExtResource( 20 )]
+
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/needs_to_look_for_ingreds" index="0" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "I still need the ingredients."
+
+[node name="CutsceneNode2" parent="Cutscenes/needs_to_look_for_ingreds" index="1" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "Maybe I should check the cupboard"
+
+[node name="cupboard_already_got_ingreds" parent="Cutscenes" index="4" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/cupboard_already_got_ingreds" index="0" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "There's nothing left in here."
+
+[node name="sink_no_water" parent="Cutscenes" index="5" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/sink_no_water" index="0" instance=ExtResource( 21 )]
 
 actor = "Player"
 text = "Hmm... No water."
 
-[node name="fridge_empty" parent="Cutscenes" index="3" instance=ExtResource( 17 )]
-
-other = "Player"
-
-[node name="CutsceneNode" parent="Cutscenes/fridge_empty" index="0" instance=ExtResource( 18 )]
-
-actor = "Player"
-text = "Empty..."
-
-[node name="necronomicon_get" parent="Cutscenes" index="4" instance=ExtResource( 17 )]
+[node name="fridge_empty" parent="Cutscenes" index="6" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 other = "Player"
 
-[node name="CutsceneNode" parent="Cutscenes/necronomicon_get" index="0" instance=ExtResource( 18 )]
+[node name="CutsceneNode" parent="Cutscenes/fridge_empty" index="0" instance=ExtResource( 21 )]
+
+actor = "Player"
+text = "Empty..."
+
+[node name="necronomicon_get" parent="Cutscenes" index="7" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+other = "Player"
+
+[node name="CutsceneNode" parent="Cutscenes/necronomicon_get" index="0" instance=ExtResource( 21 )]
 
 actor = "Player"
 text = "Looks like grandma left her old cookbook lying on the table!"
 
-[node name="CutsceneNode2" parent="Cutscenes/necronomicon_get" index="1" instance=ExtResource( 18 )]
+[node name="CutsceneNode2" parent="Cutscenes/necronomicon_get" index="1" instance=ExtResource( 21 )]
 
 actor = "Player"
 text = "I better start cooking some Lasagna."
 
-[node name="CutsceneNode3" parent="Cutscenes/necronomicon_get" index="2" instance=ExtResource( 18 )]
+[node name="CutsceneNode3" parent="Cutscenes/necronomicon_get" index="2" instance=ExtResource( 21 )]
 
 actor = "Player"
 text = "She'll be happy to come back and have it ready for her."
+
+[connection signal="timeout" from="LookForRecipeBookTrigger/Timer" to="LookForRecipeBookTrigger" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="LookForIngredientsTrigger/Timer" to="LookForIngredientsTrigger" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Monolog01Trigger/Timer" to="Monolog01Trigger" method="_on_Timer_timeout"]
+
+[connection signal="finished" from="Cutscenes/cupboard_get_ingreds" to="LookForRecipeBookTrigger" method="_on_cupboard_get_ingreds_finished"]
+
+[connection signal="finished" from="Cutscenes/necronomicon_get" to="LookForIngredientsTrigger" method="_on_necronomicon_get_finished"]
 
 [connection signal="finished" from="Cutscenes/necronomicon_get" to="Foreground/Table/NecronomiconProp/Interaction" method="_on_necronomicon_get_finished"]
 
