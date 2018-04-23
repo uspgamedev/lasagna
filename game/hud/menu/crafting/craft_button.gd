@@ -10,4 +10,4 @@ func _pressed():
 	var inventory = MAIN.get_node("Inventory")
 	for ingred in ingreds:
 		inventory.consume_n_items(ingred.name, 1)
-	inventory.give_items(my_recipe_data.yields, 1)
+	inventory.give_items(my_recipe_data.name, 1)
