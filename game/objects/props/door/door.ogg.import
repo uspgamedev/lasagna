@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/door.ogg-0edd703c5ce14c52993d69207ca7d918.oggstr"
+
+[deps]
+
+source_file="res://objects/props/door/door.ogg"
+source_md5="0073414c8d0a4673747a67d8e0d04843"
+
+dest_files=[ "res://.import/door.ogg-0edd703c5ce14c52993d69207ca7d918.oggstr" ]
+dest_md5="bd3d936ccb66015cc3ead09de4ee6174"
+
+[params]
+
+loop=false
+loop_offset=0

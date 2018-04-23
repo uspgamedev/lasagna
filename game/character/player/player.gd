@@ -9,14 +9,17 @@ func _process(delta):
 	$Notifier.visible = has_interactive_node($AreaInteraction.get_overlapping_bodies())
 
 func interact(item):
-	var area = get_node('AreaInteraction')
+	var area = $AreaInteraction
 	
 	for body in area.get_overlapping_bodies():
 		if body != self:
 			for child in body.get_children():
-				if child.get_name() == 'Interaction':
+				if child.get_name() == "Interaction":
 					var ok = child.interact(item)
-					if typeof(ok) != TYPE_BOOL or ok != false:
+					var name = body.get_name()
+					if name == "Object" or name == "Notes":
+						$SFX/PickUp.play()
+					elif (typeof(ok) != TYPE_BOOL or ok != false) and (name != "Door"):
 						$SFX/Confirm.play()
 					return
 	
