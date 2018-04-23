@@ -8,4 +8,3 @@ func _ready():
 	cam.limit_right = lr.x
 	cam.limit_top = ul.y
 	cam.limit_left = ul.x
-

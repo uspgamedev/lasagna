@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://database/database.gd" type="Script" id=1]
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=9]
 [ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=10]
 [ext_resource path="res://database/crafting_stations/CraftingStationData.tscn" type="PackedScene" id=11]
+[ext_resource path="res://database/crop/cropdata.tscn" type="PackedScene" id=12]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -33,8 +34,6 @@ filter_clip = false
 script = ExtResource( 1 )
 
 [node name="Items" type="Node" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="Mercury" parent="Items" index="0" instance=ExtResource( 2 )]
 
@@ -148,9 +147,11 @@ crop_seed = ""
 [node name="Tier1SeedA" parent="Items" index="26" instance=ExtResource( 2 )]
 
 icon = SubResource( 2 )
-crop_seed = "Null"
+crop_seed = "Fleece"
 
 [node name="Recipies" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 9 )]
 
@@ -258,5 +259,9 @@ moon_phase = "Full"
 [node name="Stations" type="Node" parent="." index="2"]
 
 [node name="Oven" parent="Stations" index="0" instance=ExtResource( 11 )]
+
+[node name="Crops" type="Node" parent="." index="3"]
+
+[node name="Fleece" parent="Crops" index="0" instance=ExtResource( 12 )]
 
 

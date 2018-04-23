@@ -67,6 +67,9 @@ func grow_all():
 func remove(patch, i, j, cropname):
 	crops[patch][i][j] = null
 
+func get_crop(k, i, j):
+	return self.crops[k][i][j]
+
 func crop_at(i, j):
 	var k = 0
 	for patch_origin in get_tree().get_nodes_in_group("patch"):
