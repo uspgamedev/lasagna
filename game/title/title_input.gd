@@ -61,6 +61,7 @@ func _input(event):
 	elif event.is_action_pressed("ui_down"):
 		set_selection((selection + 1) % OPTION_COUNT)
 	elif event.is_action_pressed("ui_accept"):
+		set_process_input(false)
 		$SFX_confirm.play()
 		var new
 		match selection:

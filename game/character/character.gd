@@ -38,8 +38,6 @@ func death():
 	queue_free()
 
 func knockback(from):
-	if dead:
-		return
 	var pos = get_position()
 	var distvec = (pos - from).normalized()
 	velocity += distvec * push_force * 16
@@ -75,8 +73,6 @@ func _process(delta):
 		$OrientedSprite.set_state("idle")
 
 func _physics_process(delta):
-	if dead:
-		return
 	var mv_return = move_and_collide(velocity*delta)
 	if mv_return != null:
 		velocity = 	mv_return.get_remainder()
