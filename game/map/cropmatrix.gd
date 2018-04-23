@@ -69,7 +69,7 @@ func grow_all():
 					var current_growth = crops[k][i][j][1]
 					crops[k][i][j][1] = min(current_growth+1, crop_grow_limit) 
 
-func remove(patch, i, j, cropname):
+func remove(patch, i, j):
 	crops[patch][i][j] = null
 
 func get_crop(k, i, j):
@@ -88,3 +88,32 @@ func crop_at(i, j):
 				return null
 		k += 1
 	return null
+
+func set_day_crops():
+	var db = get_node("/root/Main").get_db()
+	for k in range(len(crops)):
+		for i in range(len(crops[k])):
+			for j in range(len(crops[k][i])):
+				if crops[k][i][j] != null:
+					var crop_data = db.get_crop_by_name(crops[k][i][j][0])
+					var crop_grow_limit = crop_data.growth_limit
+					var current_growth = crops[k][i][j][1]
+					if current_growth >= crop_grow_limit:
+						var day_crop = crop_data.daytime_plant.instance()
+						var pos = crop_at(i, j)
+						if pos:
+							day_crop.set_position(pos)
+							print("Pos = ", pos)
+							get_node("/root/Main/Map/Foreground").add_child(day_crop)
+
+func set_night_crops():
+	var db = get_node("/root/Main").get_db()
+	for k in range(len(crops)):
+		for i in range(len(crops[k])):
+			for j in range(len(crops[k][i])):
+				if crops[k][i][j] != null:
+					var crop_data = db.get_crop_by_name(crops[k][i][j][0])
+					var crop_grow_limit = crop_data.growth_limit
+					var current_growth = crops[k][i][j][1]
+					if current_growth >= crop_grow_limit:
+						remove(k, i, j)

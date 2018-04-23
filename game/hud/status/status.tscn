@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://hud/status/status.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
 [ext_resource path="res://hud/status/healthbar/healthbar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://hud/status/clock/clock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://hud/status/inventory/empty-book-box.png" type="Texture" id=5]
-[ext_resource path="res://hud/status/inventory/inventory.tscn" type="PackedScene" id=6]
-[ext_resource path="res://hud/status/wallet/wallet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://hud/status/necronomicon_put_in_slot.gd" type="Script" id=6]
+[ext_resource path="res://hud/status/necronomicon.png" type="Texture" id=7]
+[ext_resource path="res://hud/status/inventory/inventory.tscn" type="PackedScene" id=8]
+[ext_resource path="res://hud/status/wallet/wallet.tscn" type="PackedScene" id=9]
 
 [sub_resource type="GDScript" id=1]
 
@@ -35,7 +37,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Status" type="Control" index="0"]
+[node name="Status" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -144,14 +146,23 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_styles/panel = SubResource( 2 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_styles" ]
 
-[node name="Inventory" parent="Bottom" index="1" instance=ExtResource( 6 )]
+[node name="Sprite" type="Sprite" parent="Bottom/BookSlot" index="0"]
+
+position = Vector2( 4, -12 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( -1, 0 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Inventory" parent="Bottom" index="1" instance=ExtResource( 8 )]
 
 margin_left = 66.0
 margin_right = 258.0
 
-[node name="Wallet" parent="Bottom" index="2" instance=ExtResource( 7 )]
+[node name="Wallet" parent="Bottom" index="2" instance=ExtResource( 9 )]
 
 [node name="Label" type="Label" parent="Bottom/Wallet" index="0"]
 

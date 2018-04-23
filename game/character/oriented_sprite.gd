@@ -26,6 +26,7 @@ func set_state(new_state):
 	state = new_state
 	
 func play():
-	$AnimationPlayer.stop()
-	var anim = state+"-"+anim_direction
-	$AnimationPlayer.play(anim)
+	if has_node("AnimationPlayer"):
+		$AnimationPlayer.stop()
+		var anim = state+"-"+anim_direction
+		$AnimationPlayer.play(anim)

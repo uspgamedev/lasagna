@@ -2,7 +2,7 @@
 
 [ext_resource path="res://interaction/cutscene/cutscenes.gd" type="Script" id=1]
 
-[node name="Cutscenes" type="Node"]
+[node name="Cutscenes" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
