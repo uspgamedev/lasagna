@@ -1,180 +1,66 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://title/title_input.gd" type="Script" id=1]
 [ext_resource path="res://title/title.ogg" type="AudioStream" id=2]
-[ext_resource path="res://hud/fonts/MunroExtended/MunroExtended.ttf" type="DynamicFontData" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 64
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
+[ext_resource path="res://transition/nighttime_scenery.png" type="Texture" id=3]
+[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=4]
+[ext_resource path="res://title/title.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "base"
-length = 0.01
-loop = false
-step = 0.1
+resource_name = "load"
+length = 0.6
+loop = true
+step = 0.15
 tracks/0/type = "value"
-tracks/0/path = NodePath("New Game:custom_colors/font_color")
+tracks/0/path = NodePath("Buttons/Load Game:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 0, 0, 0, 0 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [ Vector2( -1, 32 ), Vector2( 0, 31 ), Vector2( 1, 32 ), Vector2( 0, 33 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Load Game:custom_colors/font_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "new"
+length = 0.6
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("Buttons/New Game:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 0, 0, 0, 0 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Load Game:rect_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 100 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("New Game:rect_position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -1, 0 ), Vector2( 0, -1 ), Vector2( 1, 0 ), Vector2( 0, 1 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 
-resource_name = "load"
-length = 1.0
+resource_name = "quit"
+length = 0.6
 loop = true
-step = 0.1
+step = 0.15
 tracks/0/type = "value"
-tracks/0/path = NodePath("New Game:rect_position")
+tracks/0/path = NodePath("Buttons/Quit Game:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 0, 0, 0, 0 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Load Game:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 100 ), Vector2( 20, 100 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("New Game:custom_colors/font_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Load Game:custom_colors/font_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.87451, 0.443137, 0.14902, 1 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-
-resource_name = "new"
-length = 1.0
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Load Game:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 100 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("New Game:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 20, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Load Game:custom_colors/font_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("New Game:custom_colors/font_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.87451, 0.443137, 0.14902, 1 ) ]
+"values": [ Vector2( -1, 64 ), Vector2( 0, 63 ), Vector2( 1, 64 ), Vector2( 0, 65 ) ]
 }
 
 [node name="Title" type="Control" index="0"]
@@ -201,16 +87,24 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Buttons" type="Control" parent="." index="1"]
+[node name="BG" type="Sprite" parent="." index="1"]
+
+position = Vector2( 320, 240 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 3
+_sections_unfolded = [ "Animation" ]
+
+[node name="Buttons" type="Control" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 220.0
-margin_top = 200.0
-margin_right = 260.0
-margin_bottom = 240.0
+margin_left = 192.0
+margin_top = 352.0
+margin_right = 448.0
+margin_bottom = 448.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -225,21 +119,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 184.0
-margin_bottom = 51.0
+margin_right = 256.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 6
 size_flags_vertical = 6
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "New Game"
+custom_fonts/font = ExtResource( 4 )
+text = "Start New Game"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Material", "Rect", "Size Flags", "Visibility", "custom_colors", "custom_fonts" ]
 
 [node name="Load Game" type="Label" parent="Buttons" index="1"]
 
@@ -247,33 +141,89 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 100.0
-margin_right = 188.0
-margin_bottom = 151.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 6
 size_flags_vertical = 6
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Load Game"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Size Flags", "custom_colors" ]
 
-[node name="ButtonAnim" type="AnimationPlayer" parent="Buttons" index="2"]
+[node name="Quit Game" type="Label" parent="Buttons" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1.0
+margin_top = 64.0
+margin_right = 255.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Quit"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Size Flags", "custom_colors" ]
+
+[node name="logo" type="Sprite" parent="." index="3"]
+
+position = Vector2( 320, 224 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="dropshadow" type="Sprite" parent="logo" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+position = Vector2( 8, 8 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="Tween" type="Tween" parent="." index="4"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Timer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
 
 root_node = NodePath("..")
-autoplay = "base"
+autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/base = SubResource( 2 )
-anims/load = SubResource( 3 )
-anims/new = SubResource( 4 )
+anims/load = SubResource( 2 )
+anims/new = SubResource( 1 )
+anims/quit = SubResource( 3 )
 blend_times = [  ]
 
 
