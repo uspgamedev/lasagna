@@ -11,15 +11,3 @@ var translate = {
 func _process(delta):
 	var dir = $AI.get_direction()
 	push(dir)
-	if dir == Vector2():
-		$OrientedSprite.set_direction("up")
-	else:
-		var angle = dir.angle()
-		if angle < PI/4 and angle >= -PI/4:
-			$OrientedSprite.set_direction("right")
-		elif angle < 3*PI/4 and angle >= PI/4:
-			$OrientedSprite.set_direction("up")
-		elif angle < -PI/4 and angle >= -3*PI/4:
-			$OrientedSprite.set_direction("down")
-		elif angle < -3*PI/4 or angle >= 3*PI/4:
-			$OrientedSprite.set_direction("left")
