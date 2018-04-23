@@ -5,7 +5,6 @@ func _process(delta):
 	$Notifier.visible = has_interactive_node($AreaInteraction.get_overlapping_bodies())
 
 func interact(item):
-	print("interacted with '", item, "'")
 	var area = get_node('AreaInteraction')
 	
 	for body in area.get_overlapping_bodies():
