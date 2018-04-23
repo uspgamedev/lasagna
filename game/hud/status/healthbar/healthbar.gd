@@ -1,5 +1,8 @@
 extends ProgressBar
 
+func _ready():
+	get_stylebox("fg", "").modulate_color = Color(0x88f684ff)
+
 func change(target):
 	_set_amount(target)
 
