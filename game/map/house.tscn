@@ -83,12 +83,11 @@ polygon = PoolVector2Array( -10, -10, 10, -10, 10, 0, -10, 0 )
 
 [node name="Door" parent="Foreground" index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 240, 84 )
 
 [node name="Interaction" parent="Foreground/Door" index="2"]
 
-destiny = "garden"
+destiny = "garden_daytime"
 
 [node name="Player" parent="Foreground" index="3" instance=ExtResource( 6 )]
 

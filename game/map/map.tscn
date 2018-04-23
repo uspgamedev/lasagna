@@ -9,6 +9,8 @@
 [node name="Map" type="Node2D"]
 
 script = ExtResource( 1 )
+nighttime = null
+daytime = null
 
 [node name="Background" type="TileMap" parent="." index="0"]
 
