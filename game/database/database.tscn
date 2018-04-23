@@ -27,7 +27,7 @@ region = Rect2( 0, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Database" type="Node"]
+[node name="Database" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -146,6 +146,7 @@ item_name = "Paper"
 
 icon = SubResource( 2 )
 item_name = "Tier1SeedA"
+is_seed = true
 
 [node name="Recipies" type="Node" parent="." index="1"]
 
