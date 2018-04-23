@@ -1,5 +1,8 @@
 extends "res://character/character.gd"
 
+func _ready():
+	self.hp = get_node("/root/Main").get_flags().get_flag('hp')
+
 func _process(delta):
 	get_node("/root/Main").get_flags().set_flag('hp', self.hp)
 	push($InputNode.current_direction())
