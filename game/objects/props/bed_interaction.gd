@@ -8,7 +8,7 @@ func _ready():
 	hud.add_check_item("Sleep")
 	hud.add_check_item("Don't Sleep")
 
-func interact():
+func interact(unused):
 	if $Timer.is_stopped():
 		$Timer.start()
 		hud.popup_centered(Vector2(100, 100))

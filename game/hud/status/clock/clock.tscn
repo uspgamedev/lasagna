@@ -4,7 +4,7 @@
 [ext_resource path="res://hud/status/clock/horizontal-clock.png" type="Texture" id=2]
 [ext_resource path="res://hud/status/bar_border.tscn" type="PackedScene" id=3]
 
-[node name="Clock" type="Control" index="0"]
+[node name="Clock" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -21,7 +21,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Margin", "Transform" ]
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Transform" ]
 day_duration = 10
 
 [node name="Timer" type="Timer" parent="." index="0"]
@@ -37,7 +37,7 @@ position = Vector2( 64, 12 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 128, 24 )
-_sections_unfolded = [ "Region", "Transform" ]
+_sections_unfolded = [ "Pause", "Region", "Transform" ]
 
 [node name="TextureRect" parent="DayNightBar" index="0" instance=ExtResource( 3 )]
 

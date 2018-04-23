@@ -21,6 +21,9 @@ func get_day():
 	return flags.get_day()
 
 func _process(delta):
+	update_bar()
+
+func update_bar():
 	var ratio = $Timer.time_left/$Timer.wait_time
 	var moon = flags.get_moon()
 	
@@ -30,3 +33,11 @@ func _process(delta):
 	
 	if ratio == 0:
 		emit_signal("midnight_strikes")
+
+func pause():
+	set_process(false)
+	$Timer.paused = true
+
+func unpause():
+	set_process(true)
+	$Timer.paused = false

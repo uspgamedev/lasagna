@@ -4,7 +4,7 @@ func _process(delta):
 	push($InputNode.current_direction())
 	$Notifier.visible = has_interactive_node($AreaInteraction.get_overlapping_bodies())
 
-func _on_InputNode_interact():
+func interact(item):
 	var area = get_node('AreaInteraction')
 	
 	for body in area.get_overlapping_bodies():
@@ -12,7 +12,7 @@ func _on_InputNode_interact():
 			for child in body.get_children():
 				if child.get_name() == 'Interaction':
 					$SFX/Confirm.play()
-					child.interact()
+					child.interact(item)
 					return
 	
 	var g_pos = area.get_global_position()
@@ -23,6 +23,9 @@ func _on_InputNode_interact():
 	if cell == 1:
 		floor_tilemap.set_cellv(ft_pos, 2)
 		print("É HORA DA COLHEITA")
+
+func _on_InputNode_interact():
+	interact(null)
 
 func has_interactive_node(vec):
 	for node in vec:

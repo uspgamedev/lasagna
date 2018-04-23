@@ -2,7 +2,11 @@ extends Node2D
 
 signal ended_night
 
+var clock
+var transition_scene = preload("res://transition/Transition.tscn")
+
 func _ready():
+	clock = $HUD/Status/UpperRight/Clock
 	if has_node("Play"):
 		$Play._play()
 
@@ -25,19 +29,31 @@ func get_flags():
 	return $Flags
 
 func get_daytime():
-	return $HUD/Status/UpperRight/Clock.get_daytime()
+	clock.get_daytime()
 
 func get_day():
-	return $HUD/Status/UpperRight/Clock.get_day()
+	clock.get_day()
 
 func sleep_and_save():
 	if has_node("Play"):
 		get_flags().spend_day()
 		$Play.save_game()
+		var transition = transition_scene.instance()
+		add_child(transition)
+		transition.play(true)
 
 func execute_cutscene(name):
 	get_node("Map/Cutscenes").execute_cutscene(name)
 
 func end_night():
-	$HUD/Status/UpperRight/Clock.end_night()
 	emit_signal("ended_night")
+	clock.end_night()
+
+func pause_clock():
+	clock.pause()
+
+func unpause_clock():
+	clock.unpause()
+
+func update_clock():
+	clock.update_bar()

@@ -55,9 +55,9 @@ func get_blood_prob():
 
 func get_moon_name():
 	match moon:
-		NEW: return "New"
-		CRESCENT: return "Crescent"
 		FULL: return "Full"
+		CRESCENT: return "Crescent"
+		NEW: return "New"
 		WANING: return "Waning"
 		BLOOD: return "Blood"
 
