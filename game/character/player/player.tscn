@@ -306,17 +306,18 @@ tracks/3/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=11]
 
 custom_solver_bias = 0.0
-radius = 14.0
+radius = 6.0
+height = 16.0
 
 [sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12, 16 )
 
-[node name="Player" index="0" groups=[
+[node name="Player" groups=[
 "player",
 ] instance=ExtResource( 1 )]
 
@@ -382,7 +383,8 @@ _sections_unfolded = [ "Playback Options" ]
 [node name="CollisionBox" parent="." index="2"]
 
 position = Vector2( 0, 10 )
-shape = SubResource( 9 )
+rotation = 1.5708
+shape = SubResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="InputNode" parent="." index="3" instance=ExtResource( 5 )]
