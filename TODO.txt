@@ -13,14 +13,13 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [x]     inventário
 [X]     stash
 [x]     dinheiro
-[ ]     matriz de plantas
+[x]     matriz de plantas
 [ ]     flags
 [x]     day count
 [x] newgame/continue
 [X] suporte a cutscene
 [ ] crop field
-[ ]     sow equipped seed
-[ ]     water target crop
+[x]     sow equipped seed
 [ ]     grow over night
 [ ]     turn into monster at night
 [x] inventory
@@ -29,7 +28,7 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [ ] dia/noite
 [ ]     transição (Tui)
 [ ]     mudar sprite/ligar filtro
-[ ] moons
+[x] moons
 [x] limitar câmera
 [X] interaction icon (qnd tem algo para interagir)
 [X] dano
@@ -49,11 +48,10 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [x]       bedroom
 [ ]       oven
 [ ]       satanic pot
-[ ]       stash
+[x]       stash
 [ ]     frontdoor
 [ ]     yard
-[ ]       crop matrix
-[ ]       well
+[x]       crop matrix
 [ ] cutscenes
 [ ]     ???
 [ ] arts 
