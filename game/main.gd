@@ -57,8 +57,15 @@ func end_night():
 
 func end_day():
 	var transition = transition_scene.instance()
+	var map = $Map
 	add_child(transition)
 	transition.play("night")
+	yield(transition, "got_dark")
+	if map.nighttime != null:
+		var new_map = load(map.nighttime).instance()
+		map.queue_free()
+		yield(get_tree(), "physics_frame")
+		add_child(new_map)
 
 func pause_clock():
 	clock.pause()
@@ -72,10 +79,11 @@ func update_clock():
 func change_map(map_name):
 	var transition = transition_scene.instance()
 	add_child(transition)
+	var map = $Map
 	var new_map = load("res://map/" + map_name + ".tscn").instance()
 	transition.play("scene", 0)
 	yield(transition, "got_dark")
-	actual_map.queue_free()
-	actual_map = new_map
+	map.queue_free()
+	yield(get_tree(), "physics_frame")
 	add_child(new_map)
 	

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://map/garden.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=2]
+
+[node name="Map" instance=ExtResource( 1 )]
+
+nighttime = "res://map/garden_nighttime.tscn"
+
+[node name="Object" parent="Foreground" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 288, 336 )
+item_id = "Tier1SeedA"
+
+
+[editable path="Foreground/Door"]
