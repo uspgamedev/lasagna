@@ -1,12 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://character/creatures/creature.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/creatures/hostile_creature/hostile_creature.gd" type="Script" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
 
 [node name="HostileCreature" instance=ExtResource( 1 )]
 
@@ -23,11 +18,10 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AgroBox" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AgroBox" index="0"]
 
-scale = Vector2( 4, 4 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
+build_mode = 0
+polygon = PoolVector2Array( -70, -60, 70, -60, 70, 60, -70, 60 )
 
 [connection signal="body_entered" from="AgroBox" to="." method="_on_AgroBox_body_entered"]
 

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://character/creatures/creature.tscn" type="PackedScene" id=1]
+[ext_resource path="res://character/creatures/goat/goat-safe.png" type="Texture" id=2]
+[ext_resource path="res://character/creatures/basic_AI/basic_AI.gd" type="Script" id=3]
+
+[node name="Goat" instance=ExtResource( 1 )]
+
+friction = 25.0
+push_force = 150.0
+max_speed = 300.0
+max_health = 100
+
+[node name="OrientedSprite" parent="." index="0"]
+
+position = Vector2( -2, -16 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 1
+
+[node name="CollisionBox" parent="." index="1"]
+
+position = Vector2( 0, -6 )
+polygon = PoolVector2Array( -20, -4, 20, -4, 20, 16, -20, 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" parent="." index="2"]
+
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="AI" parent="." index="3"]
+
+script = ExtResource( 3 )
+
+[connection signal="timeout" from="Timer" to="AI" method="_on_Timer_timeout"]
+
+
