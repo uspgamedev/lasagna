@@ -132,7 +132,16 @@ position = Vector2( 230, 280 )
 
 [node name="Oven" parent="Foreground" index="1" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 200, 90 )
+
+[node name="CraftingStation" parent="Foreground/Oven" index="2"]
+
+editor/display_folded = true
+
+[node name="CanvasLayer" parent="Foreground/Oven/CraftingStation" index="3"]
+
+editor/display_folded = true
 
 [node name="necrobook" parent="Foreground/Oven/CraftingStation/CanvasLayer" index="0"]
 
@@ -160,6 +169,7 @@ position = Vector2( 320, 504 )
 
 [node name="Table" type="Node2D" parent="Foreground" index="4"]
 
+editor/display_folded = true
 position = Vector2( 230, 330 )
 _sections_unfolded = [ "Transform" ]
 
@@ -265,7 +275,6 @@ position = Vector2( 480, 100 )
 
 [node name="Cupboard" parent="Foreground" index="10" instance=ExtResource( 19 )]
 
-editor/display_folded = true
 position = Vector2( 381, 79 )
 
 [node name="Sink" parent="Foreground" index="11" instance=ExtResource( 20 )]
@@ -453,9 +462,9 @@ text = "She'll be happy to come back and have it ready for her."
 
 [connection signal="finished" from="Cutscenes/cupboard_get_ingreds" to="LookForRecipeBookTrigger" method="_on_cupboard_get_ingreds_finished"]
 
-[connection signal="finished" from="Cutscenes/necronomicon_get" to="Foreground/Table/NecronomiconProp/Interaction" method="_on_necronomicon_get_finished"]
-
 [connection signal="finished" from="Cutscenes/necronomicon_get" to="LookForIngredientsTrigger" method="_on_necronomicon_get_finished"]
+
+[connection signal="finished" from="Cutscenes/necronomicon_get" to="Foreground/Table/NecronomiconProp/Interaction" method="_on_necronomicon_get_finished"]
 
 
 [editable path="Foreground/Oven"]
