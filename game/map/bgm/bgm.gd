@@ -40,10 +40,6 @@ func fade_in(audio_key):
 	self.stop()
 	self.stream = bgm
 	self.play()
-	
-	fade_in_tween.interpolate_property(self, 'volume_db',
-		-80.0, 0, fade_duration, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	fade_in_tween.start()
 
 func fade_out():
 	fade_out_tween.interpolate_property(self, 'volume_db',
