@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://hud/status/status.tscn" type="PackedScene" id=1]
 [ext_resource path="res://hud/stash_hud.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/BedPopup.gd" type="Script" id=3]
+[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=3]
+[ext_resource path="res://hud/BedPopup.gd" type="Script" id=4]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -50,11 +51,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
 popup_exclusive = false
 items = [  ]
 hide_on_state_item_selection = false
-script = ExtResource( 3 )
-_sections_unfolded = [ "Material", "Pause" ]
+script = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Pause", "custom_fonts" ]
 
 [connection signal="id_pressed" from="BedPopup" to="BedPopup" method="_on_BedPopup_id_pressed"]
 

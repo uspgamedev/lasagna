@@ -5,12 +5,13 @@ var player
 
 func _ready():
 	hud = get_node("/root/Main").get_hud().get_node("BedPopup")
-	hud.add_check_item("Sleep")
-	hud.add_check_item("Don't Sleep")
+	hud.clear()
+	hud.add_item("Sleep")
+	hud.add_item("Don't Sleep")
 
 func interact(unused):
 	if $Timer.is_stopped():
 		$Timer.start()
-		hud.popup_centered(Vector2(100, 100))
+		hud.popup_centered(Vector2(130, 80))
 		get_tree().paused = true
 	
