@@ -1,9 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://hud/menu/crafting/recipe.gd" type="Script" id=1]
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=2]
 [ext_resource path="res://hud/menu/crafting/ingredient.tscn" type="PackedScene" id=3]
-[ext_resource path="res://hud/menu/crafting/craft_button.gd" type="Script" id=4]
+[ext_resource path="res://hud/menu/crafting/craft-btn.tres" type="StyleBox" id=4]
+[ext_resource path="res://hud/menu/crafting/craft_button.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
 
 [node name="Panel" type="Panel"]
 
@@ -11,16 +40,18 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 430.0
-margin_bottom = 56.0
+margin_left = 104.0
+margin_right = 536.0
+margin_bottom = 112.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause", "Rect" ]
+_sections_unfolded = [ "Pause", "Rect", "custom_styles" ]
 recipe_name = "Null"
 
 [node name="LabelMargin" type="MarginContainer" parent="." index="0"]
@@ -29,8 +60,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 112.0
-margin_bottom = 56.0
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 128.0
+margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -69,9 +102,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 136.0
-margin_right = 336.0
-margin_bottom = 56.0
+margin_left = 48.0
+margin_top = 56.0
+margin_right = 392.0
+margin_bottom = 104.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -87,52 +121,51 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 0.0
-margin_bottom = 56.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Ingredient1" parent="HBox" index="1" instance=ExtResource( 3 )]
 
 visible = false
-margin_left = 133.0
+margin_left = 40.0
 margin_top = 0.0
-margin_right = 133.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Ingredient2" parent="HBox" index="2" instance=ExtResource( 3 )]
 
 visible = false
-margin_left = 133.0
+margin_left = 80.0
 margin_top = 0.0
-margin_right = 133.0
-margin_bottom = 40.0
+margin_right = 80.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Ingredient3" parent="HBox" index="3" instance=ExtResource( 3 )]
 
 visible = false
-margin_left = 133.0
+margin_left = 120.0
 margin_top = 0.0
-margin_right = 133.0
-margin_bottom = 40.0
+margin_right = 120.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Ingredient4" parent="HBox" index="4" instance=ExtResource( 3 )]
 
 visible = false
-margin_left = 133.0
+margin_left = 160.0
 margin_top = 0.0
-margin_right = 133.0
-margin_bottom = 40.0
+margin_right = 160.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Ingredient5" parent="HBox" index="5" instance=ExtResource( 3 )]
 
 visible = false
-margin_left = 133.0
+margin_left = 200.0
 margin_top = 0.0
-margin_right = 133.0
-margin_bottom = 40.0
+margin_right = 200.0
+margin_bottom = 48.0
 _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="CraftButton" type="Button" parent="." index="2"]
@@ -141,10 +174,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 352.0
-margin_top = 8.0
-margin_right = 424.0
-margin_bottom = 48.0
+margin_left = 344.0
+margin_top = 16.0
+margin_right = 416.0
+margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -152,6 +185,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -160,7 +198,7 @@ group = null
 text = "CRAFT"
 flat = false
 align = 1
-script = ExtResource( 4 )
-_sections_unfolded = [ "Grow Direction", "custom_fonts" ]
+script = ExtResource( 5 )
+_sections_unfolded = [ "Grow Direction", "custom_constants", "custom_fonts", "custom_styles" ]
 
 
