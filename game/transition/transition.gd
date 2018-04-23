@@ -2,12 +2,16 @@ extends CanvasLayer
 
 signal got_dark
 
-func play(type, duration=2):
+var sfx = null
+
+func play(type, duration=2.5):
 	$Timer.set_wait_time(duration)
 	match type:
 		"morning":
+			sfx = load("res://transition/morning_rooster.ogg")
 			$Scenery.set_frame(5)
 		"night":
+			sfx = load("res://transition/night_owl.ogg")
 			match get_node("/root/Main").get_flags().get_moon_name():
 				"Full": $Scenery.set_frame(0)
 				"Crescent": $Scenery.set_frame(1)
@@ -18,6 +22,11 @@ func play(type, duration=2):
 			$Scenery.modulate = Color(0, 0, 0)
 	get_node("/root/Main").pause_clock()
 	$AnimationPlayer.play("transition_in")
+
+func play_sfx():
+	if sfx != null:
+		$AudioStreamPlayer.set_stream(sfx)
+		$AudioStreamPlayer.play()
 
 func transition_in_ended():
 	$Timer.start()

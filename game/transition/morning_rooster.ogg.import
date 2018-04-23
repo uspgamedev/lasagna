@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/morning_rooster.ogg-7de090666444a22d0f9c313ab7fb34b6.oggstr"
+
+[deps]
+
+source_file="res://transition/morning_rooster.ogg"
+source_md5="ca4abb923e016de3353fe7b05978e99b"
+
+dest_files=[ "res://.import/morning_rooster.ogg-7de090666444a22d0f9c313ab7fb34b6.oggstr" ]
+dest_md5="46d1af7f2397f2cf1f3d7b02a6860d37"
+
+[params]
+
+loop=false
+loop_offset=0
