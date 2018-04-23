@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://hud/shader_filter.png" type="Texture" id=1]
 [ext_resource path="res://hud/status/status.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/stash_hud.tscn" type="PackedScene" id=3]
-[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=4]
-[ext_resource path="res://hud/BedPopup.gd" type="Script" id=5]
+[ext_resource path="res://hud/popup.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Shader" id=1]
 
@@ -76,33 +75,7 @@ editor/display_folded = true
 pause_mode = 2
 _sections_unfolded = [ "Pause" ]
 
-[node name="BedPopup" type="PopupMenu" parent="." index="3"]
-
-pause_mode = 2
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 20.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = ExtResource( 4 )
-popup_exclusive = false
-items = [  ]
-hide_on_state_item_selection = false
-script = ExtResource( 5 )
-_sections_unfolded = [ "Material", "Pause", "custom_fonts" ]
-
-[connection signal="id_pressed" from="BedPopup" to="BedPopup" method="_on_BedPopup_id_pressed"]
-
-[connection signal="popup_hide" from="BedPopup" to="BedPopup" method="_on_BedPopup_popup_hide"]
+[node name="BedPopup" parent="." index="3" instance=ExtResource( 4 )]
 
 
 [editable path="Status"]
