@@ -34,22 +34,22 @@ func render_inventory():
 			button.add_child(sprite)
 
 func move_highlighted_slot(new_slot):
-	if (actual_slot <= 8 and actual_slot >= 1):
+	if (actual_slot <= 12 and actual_slot >= 1):
 		get_node(str('MenuButton' + var2str(actual_slot))).remove_child(sprite)
 	else:
-		inventory.get_node(str('Slot' + var2str(actual_slot - 8))).remove_child(sprite)
-	if (new_slot <= 8 and new_slot >= 1):
+		inventory.get_node(str('Slot' + var2str(actual_slot - 12))).remove_child(sprite)
+	if (new_slot <= 12 and new_slot >= 1):
 		sprite.offset = Vector2(22, 19)
 		get_node(str('MenuButton' + var2str(new_slot))).add_child(sprite)
 	else:
 		sprite.offset = Vector2(16, 16)
-		inventory.get_node(str('Slot' + var2str(new_slot - 8))).add_child(sprite)
+		inventory.get_node(str('Slot' + var2str(new_slot - 12))).add_child(sprite)
 	actual_slot = new_slot
 
 func move_item():
 	var moved
 	var inv = get_node('/root/Main/Inventory')
-	if (actual_slot <= 8 and actual_slot >= 1):
+	if (actual_slot <= 12 and actual_slot >= 1):
 		var stash = inv.get_stash()
 		if  not stash.empty() and stash.size() >= actual_slot:
 			var keys = stash.keys()
@@ -65,8 +65,8 @@ func move_item():
 				slot.get_node('Counter/Label').text = var2str(str2var(slot.get_node('Counter/Label').text) + 1)
 				render_inventory()
 	else:
-		moved = inv.remove_from_inventory(actual_slot - 9)
-		var slot = inventory.get_node(str('Slot' + var2str(actual_slot - 8)))
+		moved = inv.remove_from_inventory(actual_slot - 13)
+		var slot = inventory.get_node(str('Slot' + var2str(actual_slot - 12)))
 		slot.set_icon(null)
 		if moved != null:
 			slot.get_node('Counter').visible = false
@@ -78,15 +78,15 @@ func _input(event):
 	if (self.is_visible_in_tree()):
 		if event.is_action_pressed('ui_accept'):
 			move_item()
-		elif event.is_action_pressed('ui_right') and actual_slot != 4 and actual_slot != 8 and actual_slot != 14:
+		elif event.is_action_pressed('ui_right') and not actual_slot in [4, 8, 12, 18]:
 			move_highlighted_slot(actual_slot + 1)
-		elif event.is_action_pressed('ui_left') and actual_slot != 1 and actual_slot != 5 and actual_slot != 9:
+		elif event.is_action_pressed('ui_left') and not actual_slot in [1, 5, 9, 13]:
 			move_highlighted_slot(actual_slot - 1)
 		elif event.is_action_pressed('ui_up'):
-			if actual_slot <= 12 and actual_slot >= 5:
+			if actual_slot <= 16 and actual_slot >= 5:
 				move_highlighted_slot(actual_slot - 4)
-			elif actual_slot == 13 or actual_slot == 14:
+			elif actual_slot == 17 or actual_slot == 18:
 				move_highlighted_slot(8)
 		elif event.is_action_pressed('ui_down'):
-			if actual_slot <= 8 and actual_slot >= 1:
+			if actual_slot <= 12 and actual_slot >= 1:
 				move_highlighted_slot(actual_slot + 4)

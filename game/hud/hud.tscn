@@ -20,10 +20,6 @@ _sections_unfolded = [ "Pause" ]
 
 editor/display_folded = true
 
-[node name="Clock" parent="Status/UpperRight" index="1"]
-
-day_duration = 10
-
 [node name="Wallet" parent="Status/Bottom" index="2"]
 
 editor/display_folded = true
