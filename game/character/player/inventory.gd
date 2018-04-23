@@ -30,8 +30,8 @@ func consume_n_items(item_name, amount):
 			slot = i
 	if how_many_of_item(item_name) >= amount:
 		slot = inv.get_node(str('Slot' + var2str(slot + 1)))
-		slot.get_node('Counter/Label').text = var2str(str2var(slot.get_node('Counter/Label').text) - 1)
-		if slot.get_node('Counter/Label').text == '0':
+		slot.get_node('Counter/Label').text = var2str(str2var(slot.get_node('Counter/Label').text) - amount)
+		if str2var(slot.get_node('Counter/Label').text) <= 0:
 			slot.get_node('Counter').visible = false
 			slot.set_icon(null)
 			hud.get_node('InventoryContainer').render_inventory()
