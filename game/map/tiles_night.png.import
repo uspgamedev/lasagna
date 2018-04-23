@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-024d1de3c00de2906c8545aa45f6bb2c.stex"
+path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
 
 [deps]
 
-source_file="res://map/tiles.png"
-source_md5="bd4ac3dfa3fd10747e6f0409d78d8f25"
+source_file="res://map/tiles_night.png"
+source_md5="2298128778ae2f96fc428bf7611fa3ba"
 
-dest_files=[ "res://.import/tiles.png-024d1de3c00de2906c8545aa45f6bb2c.stex" ]
-dest_md5="6d4a759522ee739b8c34c7980f647e7d"
+dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
+dest_md5="44fb0a2932a255a328ae7af845b5ef4f"
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-024d1de3c00de2906c8545aa45f6bb2c.stex"
+path="res://.import/door.png-ae05f58f13c7fca457d99951a4bb9635.stex"
 
 [deps]
 
-source_file="res://map/tiles.png"
-source_md5="bd4ac3dfa3fd10747e6f0409d78d8f25"
+source_file="res://map/door.png"
+source_md5="d4dc1d82655edf6d10e765c4a3bb6297"
 
-dest_files=[ "res://.import/tiles.png-024d1de3c00de2906c8545aa45f6bb2c.stex" ]
-dest_md5="6d4a759522ee739b8c34c7980f647e7d"
+dest_files=[ "res://.import/door.png-ae05f58f13c7fca457d99951a4bb9635.stex" ]
+dest_md5="74ef8f35183738b6af1b92b91ddad2b0"
 
 [params]
 

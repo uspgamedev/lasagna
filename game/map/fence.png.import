@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-024d1de3c00de2906c8545aa45f6bb2c.stex"
+path="res://.import/fence.png-561c9e9102b480ffcdee7c8d00447049.stex"
 
 [deps]
 
-source_file="res://map/tiles.png"
-source_md5="bd4ac3dfa3fd10747e6f0409d78d8f25"
+source_file="res://map/fence.png"
+source_md5="ca2b38aa959be644a7be73135e066381"
 
-dest_files=[ "res://.import/tiles.png-024d1de3c00de2906c8545aa45f6bb2c.stex" ]
-dest_md5="6d4a759522ee739b8c34c7980f647e7d"
+dest_files=[ "res://.import/fence.png-561c9e9102b480ffcdee7c8d00447049.stex" ]
+dest_md5="9ff683f36474912f96a327c1fba92c61"
 
 [params]
 

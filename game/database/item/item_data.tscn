@@ -2,10 +2,11 @@
 
 [ext_resource path="res://database/item/item_data.gd" type="Script" id=1]
 
-[node name="ItemData" type="Node"]
+[node name="ItemData" type="Node" index="0"]
 
 script = ExtResource( 1 )
 icon = null
 item_name = null
+is_seed = null
 
 
