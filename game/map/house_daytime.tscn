@@ -44,13 +44,9 @@ region = Rect2( 32, 48, 64, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Map" index="0" instance=ExtResource( 1 )]
+[node name="Map" instance=ExtResource( 1 )]
 
 nighttime = "res://map/house_nighttime.tscn"
-
-[node name="Oven" parent="Foreground" index="1"]
-
-editor/display_folded = true
 
 [node name="CraftButton" parent="Foreground/Oven/CraftingStation/CanvasLayer/Recipe" index="2"]
 
@@ -79,6 +75,10 @@ position = Vector2( -64, 384 )
 
 editor/display_folded = true
 
+[node name="Cutscenes" parent="." index="10"]
+
+editor/display_folded = false
+
 [node name="merchant_greet" parent="Cutscenes" index="3" instance=ExtResource( 4 )]
 
 other = "Mercador"
@@ -89,8 +89,18 @@ actor = "Mercador"
 text = "I have only the finest to offer,
 just the way gandma likes it."
 
-[node name="merchant_introduce" parent="Cutscenes" index="4" instance=ExtResource( 4 )]
+[node name="merchant_final_dialogue" parent="Cutscenes" index="4" instance=ExtResource( 4 )]
 
+other = "Mercador"
+
+[node name="CutsceneNode" parent="Cutscenes/merchant_final_dialogue" index="0" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "With this, you may find your granny again! Send my regards."
+
+[node name="merchant_introduce" parent="Cutscenes" index="5" instance=ExtResource( 4 )]
+
+editor/display_folded = true
 other = "Mercador"
 
 [node name="CutsceneNode" parent="Cutscenes/merchant_introduce" index="0" instance=ExtResource( 5 )]
@@ -159,7 +169,7 @@ text = "But I don’t know how to cook! Also, grandma’s recipes book is way to
 actor = "Mercador"
 text = "Here, have this catalog, it should help you out."
 
-[node name="merchant_sell" parent="Cutscenes" index="5" instance=ExtResource( 4 )]
+[node name="merchant_sell" parent="Cutscenes" index="6" instance=ExtResource( 4 )]
 
 other = "Mercador"
 

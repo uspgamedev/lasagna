@@ -214,7 +214,6 @@ craft_on = "Oven"
 
 [node name="BlobStew" parent="Recipies" index="2" instance=ExtResource( 12 )]
 
-editor/display_folded = true
 yields = "Jelly Stew"
 craft_on = "Oven"
 
@@ -228,17 +227,18 @@ craft_on = "Oven"
 
 [node name="WormRoll" parent="Recipies" index="3" instance=ExtResource( 12 )]
 
-editor/display_folded = true
 yields = "Worm Roll"
 craft_on = "Oven"
 
 [node name="Worms" parent="Recipies/WormRoll" index="0" instance=ExtResource( 13 )]
 
-[node name="Oil" parent="Recipies/WormRoll" index="1" instance=ExtResource( 13 )]
+[node name="Venom" parent="Recipies/WormRoll" index="1" instance=ExtResource( 13 )]
 
-[node name="Onion" parent="Recipies/WormRoll" index="2" instance=ExtResource( 13 )]
+[node name="Oil" parent="Recipies/WormRoll" index="2" instance=ExtResource( 13 )]
 
-[node name="Milk" parent="Recipies/WormRoll" index="3" instance=ExtResource( 13 )]
+[node name="Onion" parent="Recipies/WormRoll" index="3" instance=ExtResource( 13 )]
+
+[node name="Milk" parent="Recipies/WormRoll" index="4" instance=ExtResource( 13 )]
 
 [node name="HalfLifeGUD" parent="Recipies" index="4" instance=ExtResource( 12 )]
 

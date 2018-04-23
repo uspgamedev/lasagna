@@ -7,6 +7,12 @@ const PRODUCTS = [
 	"KepalaSeed"
 ]
 
+func _ready():
+	var main = get_node("/root/Main")
+	var HAD_FINAL_DIALOG = main.get_flags().get_flag("HAD_FINAL_DIALOG")
+	if HAD_FINAL_DIALOG:
+		PRODUCTS = ["FleeceSeed", "KepalaSeed", "Venom"]
+
 func _main():
 	return get_node("/root/Main")
 
@@ -41,11 +47,15 @@ func interact(item):
 	var YAKI = main.get_flags().get_flag("CRAFTED_YAKISOBATH")
 	var BLOB = main.get_flags().get_flag("CRAFTED_BLOBSTEW")
 	var MET  = main.get_flags().get_flag("MET_STRANGER")
+	var HAD_FINAL_DIALOG = main.get_flags().get_flag("HAD_FINAL_DIALOG")
 	if !MET:
 		main.get_flags().set_flag("MET_STRANGER", true)
 		yield(_cutscene("merchant_introduce"), "finished")
-	elif YAKI and BLOB:
-		main.get_flags().set_flag("FINAL_DIALOG", true)
+	elif YAKI and BLOB and !HAD_FINAL_DIALOG:
+		main.get_flags().set_flag("HAD_FINAL_DIALOG", true)
+		yield(_cutscene("merchant_final_dialogue"), "finished")
+		PRODUCTS.append("Venom")
+		
 	var inv = _main().get_inventory()
 	if item == null:
 		yield(_cutscene("merchant_greet"), "finished")
