@@ -39,7 +39,7 @@ func load_game():
 	
 	self.cropmatrix.crops = data["cropmatrix"]
 	
-	inventory.money = data["money"]
+	inventory.money = int(data["money"])
 	inventory.stash = data["stash"]
 	inventory.inventory = data["inventory"]
 	
