@@ -8,5 +8,6 @@ func _on_BedPopup_popup_hide():
 func _on_BedPopup_id_pressed(ID):
 	if ID == SLEEP:
 		var main = get_node("/root/Main")
+		main.get_player().hp = main.get_player().max_health
 		main.sleep_and_save()
 		main.end_night()
