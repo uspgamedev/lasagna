@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Ludum Dare 41"
+config/name="It's All About Lasagna"
 run/main_scene="res://title/title.tscn"
 config/icon="res://icon.png"
 
