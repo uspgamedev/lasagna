@@ -88,3 +88,4 @@ _sections_unfolded = [ "Cell" ]
 [node name="Cutscenes" parent="." index="5" instance=ExtResource( 5 )]
 
 
+[editable path="Cutscenes"]

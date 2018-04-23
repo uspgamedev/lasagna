@@ -37,7 +37,7 @@ region = Rect2( 0, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Database" type="Node" index="0"]
+[node name="Database" type="Node"]
 
 script = ExtResource( 1 )
 

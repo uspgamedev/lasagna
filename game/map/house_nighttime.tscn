@@ -30,8 +30,17 @@ texture = SubResource( 1 )
 offset = Vector2( 0, -25 )
 _sections_unfolded = [ "Offset" ]
 
+[node name="cupboard_get_seeds" parent="Cutscenes" index="0"]
+
+other = null
+
+[node name="cupboard_already_got_seeds" parent="Cutscenes" index="1"]
+
+other = null
+
 
 [editable path="Foreground/Table/TableLeft"]
 [editable path="Foreground/Table/TableRight"]
 [editable path="Foreground/Table/Paper"]
 [editable path="Foreground/Door"]
+[editable path="Cutscenes"]
