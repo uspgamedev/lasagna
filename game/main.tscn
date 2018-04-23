@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://hud/hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/player/inventory.tscn" type="PackedScene" id=3]
 [ext_resource path="res://save/flags.tscn" type="PackedScene" id=4]
+[ext_resource path="res://map/cropmatrix.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 
@@ -15,5 +16,7 @@ _sections_unfolded = [ "Pause" ]
 [node name="Inventory" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="Flags" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="CropMatrix" parent="." index="3" instance=ExtResource( 5 )]
 
 
