@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://objects/prop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/crafting_station/crafting_station.gd" type="Script" id=2]
+[ext_resource path="res://objects/crafting_station/Interaction.gd" type="Script" id=3]
+[ext_resource path="res://hud/menu/crafting/recipe.tscn" type="PackedScene" id=4]
+
+[node name="CraftingStation" instance=ExtResource( 1 )]
+
+pause_mode = 2
+script = ExtResource( 2 )
+_sections_unfolded = [ "Pause" ]
+type = null
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+
+polygon = PoolVector2Array( -27.5716, -33.0189, -43.7375, 1.10921, -16.1955, 35.836, 28.1111, 35.836, 49.6657, 5.89911, 43.6783, -39.0063, 4.16159, -47.9874 )
+
+[node name="Interaction" type="Node" parent="." index="2"]
+
+script = ExtResource( 3 )
+
+[node name="Recipe" parent="." index="3" instance=ExtResource( 4 )]
+
+recipe_name = "LaaZahna"
+
+

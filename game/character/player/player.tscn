@@ -306,24 +306,24 @@ tracks/3/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="CircleShape2D" id=11]
+[sub_resource type="CircleShape2D" id=9]
 
 custom_solver_bias = 0.0
-radius = 13.6081
+radius = 20.0
 
 [sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12, 16 )
 
-[node name="Player" groups=[
+[node name="Player" index="0" groups=[
 "player",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Pause", "Transform", "collision" ]
 friction = 25.0
-push_force = 100.0
+push_force = 200.0
 max_speed = 300.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
@@ -381,9 +381,7 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="CollisionBox" parent="." index="2"]
 
-position = Vector2( 0, 11.0358 )
-scale = Vector2( 1, 0.362399 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="InputNode" parent="." index="3" instance=ExtResource( 5 )]
 

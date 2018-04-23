@@ -4,9 +4,11 @@ signal ended_night
 
 var clock
 var transition_scene = preload("res://transition/Transition.tscn")
+var actual_map
 
 func _ready():
 	clock = $HUD/Status/UpperRight/Clock
+	actual_map = $Map
 	if has_node("Play"):
 		$Play._play()
 
@@ -28,6 +30,9 @@ func get_hud():
 func get_flags():
 	return $Flags
 
+func get_cropmatrix():
+	return $CropMatrix
+
 func get_daytime():
 	clock.get_daytime()
 
@@ -44,17 +49,16 @@ func execute_cutscene(name):
 
 func end_night():
 	emit_signal("ended_night")
-	clock.end_night()
 	var transition = transition_scene.instance()
 	add_child(transition)
-	transition.is_morning(true)
-	transition.play()
+	transition.play("morning")
+	yield(transition, "got_dark")
+	clock.end_night()
 
 func end_day():
 	var transition = transition_scene.instance()
 	add_child(transition)
-	transition.is_morning(false)
-	transition.play()
+	transition.play("night")
 
 func pause_clock():
 	clock.pause()
@@ -64,3 +68,14 @@ func unpause_clock():
 
 func update_clock():
 	clock.update_bar()
+
+func change_map(map_name):
+	var transition = transition_scene.instance()
+	add_child(transition)
+	var new_map = load("res://map/" + map_name + ".tscn").instance()
+	transition.play("scene", 0)
+	yield(transition, "got_dark")
+	actual_map.queue_free()
+	actual_map = new_map
+	add_child(new_map)
+	

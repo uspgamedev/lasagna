@@ -4,10 +4,12 @@ const SAVE_PATH = "user://game.save"
 
 var inventory
 var flags
+var cropmatrix
 
 func _play():
 	self.inventory = get_node("../Inventory")
 	self.flags = get_parent().get_flags()
+	self.cropmatrix = get_parent().get_cropmatrix()
 	load_game()
 
 func save_game():
@@ -33,6 +35,8 @@ func load_game():
 	self.flags.set_moon(int(data["moon"]))
 	self.flags.set_blood_prob(int(data["blood_prob"]))
 	
+	self.cropmatrix.crops = data["cropmatrix"]
+	
 	inventory.money = data["money"]
 	inventory.stash = data["stash"]
 	inventory.inventory = data["inventory"]
@@ -45,6 +49,7 @@ func serialize():
 	data["day"] = flags.get_day()
 	data["moon"] = flags.get_moon()
 	data["blood_prob"] = flags.get_blood_prob()
+	data["cropmatrix"] = cropmatrix.crops
 	data["money"] = inventory.money
 	data["stash"] = inventory.stash.duplicate()
 	data["inventory"] = inventory.inventory.duplicate()

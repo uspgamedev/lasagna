@@ -4,8 +4,9 @@
 [ext_resource path="res://map/fence.png" type="Texture" id=2]
 [ext_resource path="res://map/tiles_night.png" type="Texture" id=3]
 [ext_resource path="res://map/ceilling.png" type="Texture" id=4]
-[ext_resource path="res://map/door.png" type="Texture" id=5]
+[ext_resource path="res://objects/props/door/door.png" type="Texture" id=5]
 [ext_resource path="res://map/fence-night.png" type="Texture" id=6]
+
 
 [node name="Tileset" type="Node2D" index="0"]
 

@@ -14,7 +14,7 @@ script/source = "extends Label
 
 func _process(delta):
 	var day = get_node(\"/root/Main\").get_flags().get_day()
-	self.text = \"Day: %d\" % [day]"
+	self.text = \"Day: %02d\" % [day]"
 
 [sub_resource type="StyleBoxTexture" id=2]
 
@@ -35,7 +35,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[node name="Status" type="Control"]
+[node name="Status" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -57,14 +57,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="." index="0"]
+[node name="Day" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-margin_top = 32.0
-margin_bottom = 32.0
+margin_top = 46.0
+margin_bottom = 72.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -72,7 +72,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "You hear a call from the depths"
+text = "Day: %02d"
+align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -100,7 +101,7 @@ margin_left = 24.0
 margin_top = 24.0
 margin_right = 152.0
 margin_bottom = 48.0
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Percent", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Clock" parent="UpperRight" index="1" instance=ExtResource( 4 )]
 
