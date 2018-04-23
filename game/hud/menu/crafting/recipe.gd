@@ -5,6 +5,9 @@ export (String) var recipe_name
 var num_of_ingreds = 1
 
 func _ready():
+	update_recipe()
+
+func update_recipe():
 	var database = get_node("/root/Main").get_db()
 	var my_recipe_data = database.get_recipe_by_name(recipe_name)
 	$HBox/LabelMargin/Label.text = my_recipe_data.yields
