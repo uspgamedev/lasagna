@@ -4,8 +4,8 @@
 [ext_resource path="res://objects/props/bed/bed.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/prop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/props/props.png" type="Texture" id=4]
-[ext_resource path="res://hud/status/necronomicon.png" type="Texture" id=5]
-[ext_resource path="res://map/get_necronomicon.gd" type="Script" id=6]
+[ext_resource path="res://map/get_necronomicon.gd" type="Script" id=5]
+[ext_resource path="res://hud/status/necronomicon.png" type="Texture" id=6]
 [ext_resource path="res://objects/props/door/door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://character/player/player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://objects/props/door/locked_door.tscn" type="PackedScene" id=9]
@@ -87,26 +87,22 @@ _sections_unfolded = [ "Animation" ]
 
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 0, -10, 0 )
 
-[node name="Object" parent="Foreground/Table" index="3" instance=ExtResource( 3 )]
+[node name="NecronomiconProp" parent="Foreground/Table" index="3" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( 10, -10 )
+[node name="Interaction" type="Node" parent="Foreground/Table/NecronomiconProp" index="0"]
 
-[node name="Sprite" parent="Foreground/Table/Object" index="0"]
+script = ExtResource( 5 )
 
-position = Vector2( 3.99399, 3.57922 )
-rotation = -11.4755
-scale = Vector2( 0.333, 0.333 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Region", "Transform" ]
+[node name="Sprite" parent="Foreground/Table/NecronomiconProp" index="1"]
 
-[node name="CollisionPolygon2D" parent="Foreground/Table/Object" index="1"]
+rotation = 1.3439
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
 
-polygon = PoolVector2Array( -10, 0, 10, -10, 17.3536, 4.5766, -1.72754, 15.114 )
+[node name="CollisionPolygon2D" parent="Foreground/Table/NecronomiconProp" index="2"]
 
-[node name="Interaction" type="Node" parent="Foreground/Table/Object" index="2"]
-
-script = ExtResource( 6 )
+polygon = PoolVector2Array( -11.8543, -6.61246, 10.7624, -11.9477, 14.7058, 3.71002, -8.60681, 9.50919 )
 
 [node name="Door" parent="Foreground" index="2" instance=ExtResource( 7 )]
 
@@ -149,10 +145,6 @@ tile_data = PoolIntArray( 0, 30, 0, 1, 28, 0, 2, 28, 0, 3, 28, 0, 4, 28, 0, 5, 2
 position = Vector2( 640, 480 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="BGM" parent="." index="4"]
-
-current_bgm = "home_day"
-
 [node name="cupboard_get_seeds" parent="Cutscenes" index="0" instance=ExtResource( 14 )]
 
 other = "Player"
@@ -174,7 +166,12 @@ text = "Looks like grandma left her old cookbook lying on the table!"
 [node name="CutsceneNode2" parent="Cutscenes/necronomicon_get" index="1" instance=ExtResource( 15 )]
 
 actor = "Player"
-text = "I better start cooking some Lasagna, then. She'll be happy to come back and have it ready for her."
+text = "I better start cooking some Lasagna."
+
+[node name="CutsceneNode3" parent="Cutscenes/necronomicon_get" index="2" instance=ExtResource( 15 )]
+
+actor = "Player"
+text = "She'll be happy to come back and have it ready for her."
 
 [node name="cupboard_already_got_seeds" parent="Cutscenes" index="2" instance=ExtResource( 14 )]
 
@@ -185,10 +182,12 @@ other = "Player"
 actor = "Player"
 text = "There are no seeds left"
 
+[connection signal="finished" from="Cutscenes/necronomicon_get" to="Foreground/Table/NecronomiconProp/Interaction" method="_on_necronomicon_get_finished"]
+
 
 [editable path="Foreground/Table/TableLeft"]
 [editable path="Foreground/Table/TableRight"]
 [editable path="Foreground/Table/Paper"]
-[editable path="Foreground/Table/Object"]
+[editable path="Foreground/Table/NecronomiconProp"]
 [editable path="Foreground/Door"]
 [editable path="Cutscenes"]
