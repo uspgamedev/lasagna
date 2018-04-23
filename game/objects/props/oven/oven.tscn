@@ -18,5 +18,9 @@ polygon = PoolVector2Array( -12.2474, 18.716, 14.0974, 18.716, 13.71, -15.9584, 
 
 type = "Oven"
 
+[node name="CollisionPolygon2D" parent="CraftingStation" index="1"]
+
+polygon = PoolVector2Array( -20, -30, -20, 20, 20, 20, 20, -30 )
+
 
 [editable path="CraftingStation"]
