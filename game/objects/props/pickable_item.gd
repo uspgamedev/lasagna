@@ -10,5 +10,10 @@ func _ready():
 
 func _picked(unused):
 	var inv = get_node("/root/Main").get_inventory()
-	inv.add_to_inventory(self.item_id, self.stack, inv.next_empty_slot())
+	var slot = inv.next_empty_slot()
+	inv.add_to_inventory(self.item_id, self.stack, slot)
+	var hud_inv = get_node('/root/Main/HUD/Status/Bottom/Inventory/')
+	hud_inv.get_node(str('Slot' + var2str(slot + 1) + '/Counter')).visible = true
+	var counter_text = hud_inv.get_node(str('Slot' + var2str(slot + 1) + '/Counter/Label')).text
+	hud_inv.get_node(str('Slot' + var2str(slot + 1) + '/Counter/Label')).text = var2str(str2var(counter_text) + 1)
 	queue_free()

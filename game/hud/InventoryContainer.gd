@@ -52,20 +52,25 @@ func move_item():
 	if (actual_slot <= 8 and actual_slot >= 1):
 		var stash = inv.get_stash()
 		if  not stash.empty() and stash.size() >= actual_slot:
-			var button = get_node(str('MenuButton' + var2str(actual_slot)))
 			var keys = stash.keys()
 			moved = inv.remove_item_from_stash(keys[actual_slot - 1], 1)
 			if moved != null:
+				var button = get_node(str('MenuButton' + var2str(actual_slot)))
 				button.text = var2str(str2var(button.text) - 1)
 				if str2var(button.text) == 0:
 					button.get_node('Item').queue_free()
 				inv.give_items(moved[0], moved[1])
+				var slot = inventory.get_node(str('Slot' + var2str(actual_slot)))
+				slot.get_node('Counter').visible = true
+				slot.get_node('Counter/Label').text = var2str(str2var(slot.get_node('Counter/Label').text) + 1)
 				render_inventory()
 	else:
 		moved = inv.remove_from_inventory(actual_slot - 9)
 		var slot = inventory.get_node(str('Slot' + var2str(actual_slot - 8)))
 		slot.set_icon(null)
 		if moved != null:
+			slot.get_node('Counter').visible = false
+			slot.get_node('Counter/Label').text = '0'
 			inv.add_item_to_stash(moved[0], moved[1])
 			render_inventory()
 

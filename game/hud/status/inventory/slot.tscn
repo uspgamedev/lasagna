@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://hud/status/inventory/empy-slot.png" type="Texture" id=1]
 [ext_resource path="res://hud/status/inventory/slot.gd" type="Script" id=2]
 [ext_resource path="res://hud/status/inventory/selection-cursor.png" type="Texture" id=3]
+[ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -42,7 +43,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="Slot1" type="PanelContainer" index="0"]
+[node name="Slot1" type="PanelContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -93,5 +94,36 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/default = SubResource( 2 )
 blend_times = [  ]
+
+[node name="Counter" type="Node2D" parent="." index="2"]
+
+visible = false
+position = Vector2( 4, 9 )
+scale = Vector2( 0.8, 0.8 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Label" type="Label" parent="Counter" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 32.0
+margin_bottom = 29.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+align = 2
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 
