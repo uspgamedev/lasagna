@@ -1,7 +1,7 @@
 extends Node
 
 export (Texture) var icon
-export (String)  var item_name
+export (bool) var is_seed
 
 #export (String)  var unit
 #export (String)  var unit_plural

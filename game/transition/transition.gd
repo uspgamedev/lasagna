@@ -10,8 +10,10 @@ func play():
 	$AnimationPlayer.play("transition_in")
 
 func transition_in_ended():
-	get_node("/root/Main").update_clock()
 	$Timer.start()
+	
+	# Things to be changed behind the scenes should be done here
+	get_node("/root/Main").update_clock()
 
 func _on_Timer_timeout():
 	$AnimationPlayer.play("transition_out")
