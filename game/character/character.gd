@@ -8,21 +8,30 @@ export(int)   var max_health = 100
 var velocity = Vector2(0,0)
 var hp = 1
 var dir = Vector2(1, 0)
+var dead = false
 
 func _ready():
+	$DeathSprite.hide()
+	$OrientedSprite.material = null
 	hp = max_health
 
-func damage(dmg_points):
+func damage(dmg_points, from):
 	if $DmgCooldown.is_stopped():
-		knockback()
+		knockback(from.get_position())
 		$DmgCooldown.start()
 		hp -= dmg_points
-		if hp <= 0:
+		if hp <= 0 and not dead:
 			death()
 
-func knockback():
+func death():
+	dead = true
+
+func knockback(from):
+	if dead:
+		return
 	var pos = get_position()
-	set_position(pos - dir * 10)
+	var distvec = (pos - from).normalized()
+	set_position(pos + distvec * 32)
 
 func push(direction):
 	dir = direction
@@ -31,6 +40,8 @@ func push(direction):
 		velocity = velocity.normalized()*max_speed
 
 func _process(delta):
+	if dead:
+		return
 	if !$DmgCooldown.is_stopped():
 		$OrientedSprite.blink()
 	else:
@@ -50,6 +61,8 @@ func _process(delta):
 		$OrientedSprite.set_state("idle")
 
 func _physics_process(delta):
+	if dead:
+		return
 	var mv_return = move_and_collide(velocity*delta)
 	if mv_return != null:
 		velocity = 	mv_return.get_remainder()

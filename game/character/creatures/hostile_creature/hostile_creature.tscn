@@ -8,6 +8,12 @@
 script = ExtResource( 2 )
 dmg = 1
 
+[node name="OrientedSprite" parent="." index="0"]
+
+visible = false
+material = null
+_sections_unfolded = [ "Animation", "Material", "Visibility" ]
+
 [node name="AgroBox" type="Area2D" parent="." index="3"]
 
 input_pickable = true
@@ -23,6 +29,9 @@ audio_bus_name = "Master"
 build_mode = 0
 polygon = PoolVector2Array( -70, -60, 70, -60, 70, 60, -70, 60 )
 
-[connection signal="body_entered" from="AgroBox" to="." method="_on_AgroBox_body_entered"]
+[node name="DeathSprite" parent="." index="6"]
+
+visible = false
+frame = 11
 
 
