@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sofa.png-bcf8586f0deb15abd6b2c8c3b205ca4f.stex"
+path="res://.import/sofa.png-15ed6a364a85ba9ef1a8bbc7372033df.stex"
 
 [deps]
 
-source_file="res://objects/props/sofa.png"
+source_file="res://objects/props/sofa/sofa.png"
 source_md5="beaabf42628f18e3aa9257f83ee4d3b2"
 
-dest_files=[ "res://.import/sofa.png-bcf8586f0deb15abd6b2c8c3b205ca4f.stex" ]
+dest_files=[ "res://.import/sofa.png-15ed6a364a85ba9ef1a8bbc7372033df.stex" ]
 dest_md5="3f465bad323e2f2a7e69768e8b645042"
 
 [params]
