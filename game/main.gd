@@ -52,6 +52,7 @@ func end_night():
 	var transition = transition_scene.instance()
 	add_child(transition)
 	transition.play("morning")
+	get_node('HUD/Shader').visible = false
 	yield(transition, "got_dark")
 	clock.end_night()
 	var new_map = preload("res://map/house_daytime.tscn").instance()
@@ -71,6 +72,7 @@ func end_day():
 		map.queue_free()
 		yield(get_tree(), "physics_frame")
 		add_child(new_map)
+		wget_node('HUD/Shader').visible = true
 
 func pause_clock():
 	clock.pause()
