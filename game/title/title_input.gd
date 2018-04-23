@@ -1,6 +1,7 @@
 extends Control
 
 enum { OPTION_NEW, OPTION_LOAD, OPTION_QUIT, OPTION_COUNT }
+const ANIMATION_NAMES = ["new", "load", "quit"]
 
 onready var buttons = get_node("Buttons")
 
@@ -58,13 +59,7 @@ func set_selection(idx):
 	selection = idx
 	print(selection)
 	var i = 0
-	match selection:
-		OPTION_NEW:
-			$AnimationPlayer.play("new")
-		OPTION_LOAD:
-			$AnimationPlayer.play("load")
-		OPTION_QUIT:
-			$AnimationPlayer.play("quit")
+	$AnimationPlayer.play(ANIMATION_NAMES[selection])
 	for button in buttons.get_children():
 		if i == selection:
 			focus_item(button)
@@ -73,7 +68,7 @@ func set_selection(idx):
 		i = i + 1
 
 func focus_item(item):
-	item.modulate = Color(0xf1b22cff)
+	item.modulate = Color(0xfe776dff)
 
 func unfocus_item(item):
 	item.modulate = Color(0xffffffff)
