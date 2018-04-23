@@ -14,13 +14,11 @@ func _ready():
 func interact(unused):
 	if $Timer.is_stopped():
 		$Timer.start()
-		hud.popup_centered(Vector2(128, 64))
-		get_tree().paused = true
-		var id = yield(hud, "id_pressed")
+		hud.request_option(["Sleep & Save", "Not now"])
+		var id = yield(hud, "option_chosen")
 		if id == SLEEP:
 			var main = get_node("/root/Main")
 			main.get_player().hp = main.get_player().max_health
 			main.sleep_and_save()
 			main.end_night()
-		get_tree().paused = false
 	

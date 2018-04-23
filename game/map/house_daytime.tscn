@@ -49,15 +49,24 @@ _sections_unfolded = [ "Offset", "Z Index" ]
 
 position = Vector2( -64, 384 )
 
-[node name="merchant_buy" parent="Cutscenes" index="3" instance=ExtResource( 4 )]
+[node name="merchant_greet" parent="Cutscenes" index="3" instance=ExtResource( 4 )]
 
 other = "Mercador"
 
-[node name="CutsceneNode" parent="Cutscenes/merchant_buy" index="0" instance=ExtResource( 5 )]
+[node name="CutsceneNode" parent="Cutscenes/merchant_greet" index="0" instance=ExtResource( 5 )]
 
 actor = "Mercador"
 text = "I have only the finest to offer,
 just the way gandma likes it."
+
+[node name="merchant_sell" parent="Cutscenes" index="4" instance=ExtResource( 4 )]
+
+other = "Mercador"
+
+[node name="CutsceneNode" parent="Cutscenes/merchant_sell" index="0" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Would you like to sell me that?"
 
 
 [editable path="Foreground/Table/TableLeft"]
