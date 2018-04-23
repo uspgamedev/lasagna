@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="CraftStation" type="Node" index="0"]
+[node name="CraftStation" type="Node"]
 
 script = ExtResource( 1 )
 type = null
@@ -30,5 +30,11 @@ bounce = 0.0
 shape = SubResource( 1 )
 
 [node name="Recipe" parent="." index="2" instance=ExtResource( 2 )]
+
+margin_left = -214.0
+margin_top = -78.0
+margin_right = 216.0
+margin_bottom = -38.0
+recipe_name = "LaaZahna"
 
 
