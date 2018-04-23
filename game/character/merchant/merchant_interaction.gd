@@ -37,6 +37,15 @@ func interact(item):
 	if lock:
 		return false
 	lock = true
+	var main = get_node("/root/Main")
+	var YAKI = main.get_flags().get_flag("CRAFTED_YAKISOBATH")
+	var BLOB = main.get_flags().get_flag("CRAFTED_BLOBSTEW")
+	var MET  = main.get_flags().get_flag("MET_STRANGER")
+	if !MET:
+		main.get_flags().set_flag("MET_STRANGER", true)
+		yield(_cutscene("merchant_introduce"), "finished")
+	elif YAKI and BLOB:
+		main.get_flags().set_flag("FINAL_DIALOG", true)
 	var inv = _main().get_inventory()
 	if item == null:
 		yield(_cutscene("merchant_greet"), "finished")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://character/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://character/player/player.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://hud/sfx/bt_accepted.ogg" type="AudioStream" id=10]
 [ext_resource path="res://character/player/player_death.ogg" type="AudioStream" id=11]
 [ext_resource path="res://character/player/got_item.ogg" type="AudioStream" id=12]
+[ext_resource path="res://character/player/Consume.gd" type="Script" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -369,6 +370,7 @@ _sections_unfolded = [ "Limit", "Pause" ]
 
 [node name="OrientedSprite" parent="." index="1"]
 
+editor/display_folded = true
 texture = ExtResource( 3 )
 offset = Vector2( 0, -24 )
 flip_h = true
@@ -406,6 +408,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AreaInteraction" type="Area2D" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 32, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -445,7 +448,11 @@ z_index = 9
 z_as_relative = false
 _sections_unfolded = [ "Animation", "Transform", "Z Index" ]
 
-[node name="Confirm" type="AudioStreamPlayer" parent="SFX" index="1"]
+[node name="SFX" parent="." index="9"]
+
+editor/display_folded = true
+
+[node name="Confirm" type="AudioStreamPlayer" parent="SFX" index="0"]
 
 stream = ExtResource( 10 )
 volume_db = -10.0
@@ -453,21 +460,21 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Death" type="AudioStreamPlayer" parent="SFX" index="2"]
+[node name="Death" parent="SFX" index="1"]
 
 stream = ExtResource( 11 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
-[node name="PickUp" type="AudioStreamPlayer" parent="SFX" index="3"]
+[node name="PickUp" type="AudioStreamPlayer" parent="SFX" index="2"]
 
 stream = ExtResource( 12 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[node name="Consume" type="Node2D" parent="." index="13"]
+
+script = ExtResource( 13 )
 
 [connection signal="interact" from="InputNode" to="." method="_on_InputNode_interact"]
 

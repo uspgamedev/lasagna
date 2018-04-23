@@ -11,3 +11,4 @@ var translate = {
 func _process(delta):
 	var dir = $AI.get_direction()
 	push(dir)
+	

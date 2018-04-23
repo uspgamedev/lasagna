@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://character/NPCs/NPC.tscn" type="PackedScene" id=1]
-[ext_resource path="res://character/merchant/myterious-buyer.png" type="Texture" id=2]
-[ext_resource path="res://character/merchant/merchant_interaction.gd" type="Script" id=3]
+[ext_resource path="res://character/merchant/mercador_feliz.gd" type="Script" id=2]
+[ext_resource path="res://character/merchant/myterious-buyer.png" type="Texture" id=3]
+[ext_resource path="res://character/merchant/merchant_interaction.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -73,9 +74,11 @@ height = 8.0
 
 [node name="Mercador" index="0" instance=ExtResource( 1 )]
 
+script = ExtResource( 2 )
+
 [node name="OrientedSprite" parent="." index="0"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 offset = Vector2( 0, -32 )
 flip_h = true
 hframes = 6
@@ -100,6 +103,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Interaction" parent="." index="2"]
 
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 
