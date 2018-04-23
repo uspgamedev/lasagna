@@ -28,6 +28,9 @@ func get_hud():
 func get_flags():
 	return $Flags
 
+func get_cropmatrix():
+	return $CropMatrix
+
 func get_daytime():
 	clock.get_daytime()
 
