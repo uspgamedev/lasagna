@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goat-safe.png-959a3450c87e663452987579df186284.stex"
+path="res://.import/necronomicon.png-ba633f9376fba1f03813cbf467f1c3b7.stex"
 
 [deps]
 
-source_file="res://character/creatures/goat/goat-safe.png"
-source_md5="f80f551591940a2ca6ba3b4f21dd0e93"
+source_file="res://hud/status/necronomicon.png"
+source_md5="517af232d2f3483056d4f8c37cfd79e2"
 
-dest_files=[ "res://.import/goat-safe.png-959a3450c87e663452987579df186284.stex" ]
-dest_md5="52d8c1969484494747b5a5852d0366bc"
+dest_files=[ "res://.import/necronomicon.png-ba633f9376fba1f03813cbf467f1c3b7.stex" ]
+dest_md5="20af7f011332d41fd744016abf6bcbd6"
 
 [params]
 
