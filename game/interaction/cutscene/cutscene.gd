@@ -5,6 +5,7 @@ export(String) var other
 signal finished
 
 func execute_cutscene():
+	get_node("/root/Main").pause_clock()
 	var fg = get_node("../../Foreground")
 	var player = fg.get_node("Player")
 	var player_inp = player.get_node("InputNode")
@@ -18,3 +19,5 @@ func execute_cutscene():
 			actor.say(action.text)
 		yield(actor, "finished_text")
 	player_inp.prevent_input(false)
+	get_node("/root/Main").unpause_clock()
+	emit_signal("finished")

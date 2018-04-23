@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/night_owl.ogg-86409d323d27a1ddf2b46da17af31bfc.oggstr"
+
+[deps]
+
+source_file="res://transition/night_owl.ogg"
+source_md5="f13591e54cf106013e5109420d148faf"
+
+dest_files=[ "res://.import/night_owl.ogg-86409d323d27a1ddf2b46da17af31bfc.oggstr" ]
+dest_md5="42869f16cfa2e5a47aafabfd712fa5e9"
+
+[params]
+
+loop=false
+loop_offset=0
