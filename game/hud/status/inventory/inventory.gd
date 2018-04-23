@@ -28,6 +28,8 @@ func _process(delta):
 		if item[0] != "": # NOT an empty slot
 			var icon = main.get_db().get_item_by_name(item[0]).icon
 			slot.set_icon(icon)
+			slot.get_node('Counter').visible = true
+			slot.get_node('Counter/Label').text = var2str(int(item[1]))
 
 func _input(event):
 	var n = get_child_count()

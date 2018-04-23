@@ -4,7 +4,7 @@
 [ext_resource path="res://hud/stash_hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/BedPopup.gd" type="Script" id=3]
 
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
