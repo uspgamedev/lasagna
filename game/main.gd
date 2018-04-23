@@ -86,7 +86,7 @@ func change_map(map_name):
 	add_child(transition)
 	var map = $Map
 	var new_map = load("res://map/" + map_name + ".tscn").instance()
-	transition.play("scene", 0)
+	transition.play("scene", 0.01)
 	yield(transition, "got_dark")
 	map.queue_free()
 	yield(get_tree(), "physics_frame")
