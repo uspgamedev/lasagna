@@ -10,6 +10,11 @@ func _ready():
 		var button = get_child(i)
 		button.connect("pressed", self, "item_selected", [button])
 	sprite.get_node("AnimationPlayer").play("cursor")
+	for i in get_children():
+		var sprite = Sprite.new()
+		sprite.name = "Item"
+		sprite.offset = Vector2(22, 19)
+		i.add_child(sprite)
 
 func item_selected(button):
 	pass
@@ -18,20 +23,16 @@ func render_inventory():
 	var inventory = get_node("/root/Main/Inventory")
 	var stash_content = inventory.get_stash()
 	var keys = stash_content.keys()
-	
-	for i in range(keys.size()):
-		var sprite = Sprite.new()
-		sprite.name = "Item"
-		var button = get_child(i)
-		button.set_text(var2str(stash_content[keys[i]]))
-		if keys[i] != '':
-			var item = get_node(str('/root/Database/Items/' + keys[i]))
-			sprite.texture = item.icon
-			sprite.offset = Vector2(22, 19)
-			for i in button.get_children():
-				if i.get_name() == 'Item':
-					return
-			button.add_child(sprite)
+	var i = 0
+	for child in self.get_children():
+		if i < keys.size():
+			var icon = get_node(str('/root/Database/Items/' + keys[i])).icon
+			child.get_node('Item').texture = icon
+			child.text = var2str(stash_content[keys[i]])
+		else:
+			child.get_node('Item').texture = null
+			child.text = '0'
+		i += 1
 
 func move_highlighted_slot(new_slot):
 	if (actual_slot <= 12 and actual_slot >= 1):
@@ -55,13 +56,11 @@ func move_item():
 			var keys = stash.keys()
 			moved = inv.remove_item_from_stash(keys[actual_slot - 1], 1)
 			if moved != null:
+				var stash_content = inv.get_stash()
 				var button = get_node(str('MenuButton' + var2str(actual_slot)))
 				button.text = var2str(str2var(button.text) - 1)
-				if str2var(button.text) == 0:
-					button.get_node('Item').queue_free()
 				inv.give_items(moved[0], moved[1])
 				var slot = inventory.get_node(str('Slot' + var2str(actual_slot)))
-				slot.get_node('Counter').visible = true
 				slot.get_node('Counter/Label').text = var2str(str2var(slot.get_node('Counter/Label').text) + 1)
 				render_inventory()
 	else:
