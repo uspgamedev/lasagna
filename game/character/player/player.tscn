@@ -341,6 +341,7 @@ max_speed = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
 
+pause_mode = 2
 anchor_mode = 1
 rotating = false
 current = true
@@ -363,7 +364,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Limit" ]
+_sections_unfolded = [ "Limit", "Pause" ]
 
 [node name="OrientedSprite" parent="." index="1"]
 
