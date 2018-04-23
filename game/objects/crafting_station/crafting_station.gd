@@ -25,17 +25,29 @@ func _input(event):
 		$CanvasLayer/Recipe.update_recipe()
 
 func bye():
+	$Tween.interpolate_property($CanvasLayer/necrobook, "position",
+			Vector2(0, 0), Vector2(0, 480), .4,
+			Tween.TRANS_BACK, Tween.EASE_IN, 0)
+	$Tween.start()
+	yield($Tween, "tween_completed")
 	selected = false
 	$CanvasLayer/Recipe.visible = false
 	get_tree().paused = false
 
 func hi():
+	get_tree().paused = true
+	$Tween.interpolate_property($CanvasLayer/necrobook, "position",
+			Vector2(0, 480), Vector2(0, 0), .4,
+			Tween.TRANS_BACK, Tween.EASE_OUT, 0)
+	$Tween.start()
+	yield($Tween, "tween_completed")
 	selected = true
 	$CanvasLayer/Recipe.visible = true
-	get_tree().paused = true
 
 func _ready():
-	bye()
+	selected = false
+	$CanvasLayer/Recipe.visible = false
+	$CanvasLayer/necrobook.position = Vector2(0, 480)
 	var Main = get_node("/root/Main")
 	var DB = Main.get_db()
 	$Sprite.texture = DB.get_station_by_name(type).texture

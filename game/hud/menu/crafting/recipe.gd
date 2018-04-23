@@ -10,7 +10,7 @@ func _ready():
 func update_recipe():
 	var database = get_node("/root/Main").get_db()
 	var my_recipe_data = database.get_recipe_by_name(recipe_name)
-	$HBox/LabelMargin/Label.text = my_recipe_data.yields
+	$LabelMargin/Label.text = my_recipe_data.yields
 	
 	var ingreds = database.get_recipe_ingreds(my_recipe_data)
 	num_of_ingreds = ingreds.size()
