@@ -13,6 +13,6 @@ func _process(delta):
 	if has_node("/root/Main"):
 		var player = get_node("/root/Main").get_player()
 		if player != null:
-			change(100*player.hp/4)
+			change(100*player.hp/player.max_health)
 	get_stylebox("fg","").region_rect.position.x = int((1 - self.value/100.0)*128)
 	get_stylebox("fg","").region_rect.size.x = int(128*self.value/100.0)

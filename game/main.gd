@@ -56,6 +56,7 @@ func end_night():
 	clock.end_night()
 	var new_map = preload("res://map/house_daytime.tscn").instance()
 	$Map.queue_free()
+	$CropMatrix.grow_all()
 	yield(get_tree(), "physics_frame")
 	add_child(new_map)
 

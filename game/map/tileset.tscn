@@ -7,8 +7,7 @@
 [ext_resource path="res://objects/props/door/door.png" type="Texture" id=5]
 [ext_resource path="res://map/fence-night.png" type="Texture" id=6]
 
-
-[node name="Tileset" type="Node2D" index="0"]
+[node name="Tileset" type="Node2D"]
 
 [node name="01-Grass" type="Sprite" parent="." index="0"]
 
@@ -84,10 +83,7 @@ __meta__ = {
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="07-Wall/StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
-__meta__ = {
-"_edit_lock_": true
-}
+polygon = PoolVector2Array( -16, -12, -16, -54, 16, -54, 16, -12 )
 
 [node name="08-LeftGlass" type="Sprite" parent="." index="7"]
 
@@ -178,7 +174,6 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="19-WallNight" type="Sprite" parent="." index="18"]
 
-editor/display_folded = true
 position = Vector2( 129, 217 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, -48 )
@@ -199,7 +194,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="19-WallNight/StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
+polygon = PoolVector2Array( -16, -12, -16, -54, 16, -54, 16, -12 )
 
 [node name="20-LeftGlassNight" type="Sprite" parent="." index="19"]
 

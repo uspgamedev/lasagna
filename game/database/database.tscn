@@ -1,13 +1,13 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://database/database.gd" type="Script" id=1]
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=2]
 [ext_resource path="res://test/assets/frog.png" type="Texture" id=3]
-[ext_resource path="res://test/assets/milk.png" type="Texture" id=4]
-[ext_resource path="res://test/assets/ham.png" type="Texture" id=5]
-[ext_resource path="res://test/assets/tomato.png" type="Texture" id=6]
-[ext_resource path="res://objects/props/props.png" type="Texture" id=7]
-[ext_resource path="res://objects/props/SEMENTES.png" type="Texture" id=8]
+[ext_resource path="res://objects/props/SEMENTES.png" type="Texture" id=4]
+[ext_resource path="res://test/assets/milk.png" type="Texture" id=5]
+[ext_resource path="res://test/assets/ham.png" type="Texture" id=6]
+[ext_resource path="res://test/assets/tomato.png" type="Texture" id=7]
+[ext_resource path="res://objects/props/props.png" type="Texture" id=8]
 [ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=9]
 [ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=10]
 [ext_resource path="res://database/crafting_stations/CraftingStationData.tscn" type="PackedScene" id=11]
@@ -16,8 +16,8 @@
 [sub_resource type="AtlasTexture" id=1]
 
 flags = 0
-atlas = ExtResource( 7 )
-region = Rect2( 96, 0, 32, 32 )
+atlas = ExtResource( 4 )
+region = Rect2( 32, 160, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
@@ -25,11 +25,19 @@ filter_clip = false
 
 flags = 0
 atlas = ExtResource( 8 )
+region = Rect2( 96, 0, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=3]
+
+flags = 0
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Database" type="Node" index="0"]
+[node name="Database" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -69,11 +77,12 @@ icon = ExtResource( 3 )
 
 [node name="FleeceSeed" parent="Items" index="15" instance=ExtResource( 2 )]
 
+icon = SubResource( 1 )
 crop_seed = "Fleece"
 
 [node name="Milk" parent="Items" index="16" instance=ExtResource( 2 )]
 
-icon = ExtResource( 4 )
+icon = ExtResource( 5 )
 
 [node name="Venom" parent="Items" index="17" instance=ExtResource( 2 )]
 
@@ -83,11 +92,11 @@ icon = ExtResource( 4 )
 
 [node name="Ham" parent="Items" index="20" instance=ExtResource( 2 )]
 
-icon = ExtResource( 5 )
+icon = ExtResource( 6 )
 
 [node name="TomatoSauce" parent="Items" index="21" instance=ExtResource( 2 )]
 
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 
 [node name="Onion" parent="Items" index="22" instance=ExtResource( 2 )]
 
@@ -97,11 +106,11 @@ icon = ExtResource( 6 )
 
 [node name="Paper" parent="Items" index="25" instance=ExtResource( 2 )]
 
-icon = SubResource( 1 )
+icon = SubResource( 2 )
 
 [node name="Tier1SeedA" parent="Items" index="26" instance=ExtResource( 2 )]
 
-icon = SubResource( 2 )
+icon = SubResource( 3 )
 crop_seed = "Fleece"
 
 [node name="Recipies" type="Node" parent="." index="1"]

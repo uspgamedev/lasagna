@@ -1,12 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://character/character.gd" type="Script" id=1]
 [ext_resource path="res://character/oriented_sprite.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 9, 7 )
 
 [node name="Character" type="KinematicBody2D"]
 
@@ -22,9 +17,10 @@ max_health = 100
 
 [node name="OrientedSprite" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="CollisionBox" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionBox" type="CollisionPolygon2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+build_mode = 0
+polygon = PoolVector2Array( -20, -30, 20, -30, 20, 30, -20, 30 )
 
 [node name="Timer" type="Timer" parent="." index="2"]
 
