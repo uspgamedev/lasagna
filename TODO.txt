@@ -11,7 +11,7 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [X] char animation only has left/right dirs
 [ ] save files
 [x]     inventário
-[ ]     stash
+[X]     stash
 [x]     dinheiro
 [ ]     matriz de plantas
 [ ]     flags

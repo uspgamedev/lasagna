@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map/house.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/player/player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://save/save.gd" type="Script" id=4]
+[ext_resource path="res://objects/stash/stash.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=5]
+[ext_resource path="res://save/save.gd" type="Script" id=6]
 
 [node name="Main" instance=ExtResource( 1 )]
 
@@ -14,9 +16,17 @@
 position = Vector2( 313.573, 230.471 )
 push_force = 200.0
 
+[node name="Object" parent="Map/Foreground" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 179.598, 134.473 )
+
+[node name="Object2" parent="Map/Foreground" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 529.769, 328.511 )
+
 [node name="Play" type="Node" parent="." index="4"]
 
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 
 
 [editable path="Map"]

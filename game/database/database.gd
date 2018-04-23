@@ -9,6 +9,9 @@ func get_item_by_name(godot_name):
 func get_recipe_by_name(godot_name):
 	return $Recipies.get_node(godot_name)
 
+func get_item_texture(name):
+	return get_item_by_name(name).icon
+
 func get_recipe_ingreds(recipe):
 	var array = []
 	for ingred_req in recipe.get_children():

@@ -28,6 +28,9 @@ func render_inventory():
 			var item = get_node(str('/root/Database/Items/' + keys[i]))
 			sprite.texture = item.icon
 			sprite.offset = Vector2(22, 19)
+			for i in button.get_children():
+				if i.get_name() == 'Item':
+					return
 			button.add_child(sprite)
 
 func move_highlighted_slot(new_slot):
@@ -53,9 +56,10 @@ func move_item():
 			var keys = stash.keys()
 			moved = inv.remove_item_from_stash(keys[actual_slot - 1], 1)
 			if moved != null:
-				button.get_node('Item').queue_free()
 				button.text = var2str(str2var(button.text) - 1)
-				inv.add_to_inventory(moved[0], moved[1], inv.next_empty_slot())
+				if str2var(button.text) == 0:
+					button.get_node('Item').queue_free()
+				inv.give_items(moved[0], moved[1])
 				render_inventory()
 	else:
 		moved = inv.remove_from_inventory(actual_slot - 9)
