@@ -26,8 +26,8 @@ https://drive.google.com/open?id=1k7tpUaG3RgIHEYJsKXawavlvXGk-HR5p
 [X] stash
 [X] dormir
 [ ] dia/noite
-[ ]     transição (Tui)
-[ ]     mudar sprite/ligar filtro
+[x]     transição (Tui)
+[x]     mudar sprite/ligar filtro
 [x] moons
 [x] limitar câmera
 [X] interaction icon (qnd tem algo para interagir)
