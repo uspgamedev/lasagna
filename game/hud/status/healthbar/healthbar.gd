@@ -6,7 +6,7 @@ func change(target):
 
 func _set_amount(amount):
 	self.value = amount
-	var color = Color(.8, .1, .1).linear_interpolate(Color(.1, .8, .1), amount/100.0)
+	var color = Color(0xec5b4cff).linear_interpolate(Color(0x88f684ff), amount/100.0)
 	get_stylebox("fg", "").modulate_color = color
 
 func _process(delta):

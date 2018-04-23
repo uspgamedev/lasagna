@@ -77,7 +77,7 @@ exp_edit = false
 rounded = false
 percent_visible = false
 script = ExtResource( 3 )
-_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
 
 [node name="Tween" type="Tween" parent="." index="0"]
 
@@ -89,5 +89,7 @@ playback/repeat = false
 playback/speed = 1.0
 
 [node name="TextureRect" parent="." index="1" instance=ExtResource( 4 )]
+
+_sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 
