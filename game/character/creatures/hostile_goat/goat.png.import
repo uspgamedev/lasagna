@@ -10,7 +10,7 @@ source_file="res://character/creatures/hostile_goat/goat.png"
 source_md5="c09c46669bedb1ab7c25616fc7b0d8ec"
 
 dest_files=[ "res://.import/goat.png-b06a83bc03ee5d4b52d137d504f4ff8e.stex" ]
-dest_md5="0581c1e6b305f3e6866be970d3586326"
+dest_md5="2c5bea8ab672da7926f1743ec108414e"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
