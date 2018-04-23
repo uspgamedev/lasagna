@@ -7,7 +7,6 @@ var recipies = []
 var selected = false
 
 func _input(event):
-	print(selected)
 	if selected:
 		if event.is_action_pressed("ui_right"):
 			#ANIM BOOK FLIP
@@ -25,12 +24,12 @@ func _input(event):
 		$CanvasLayer/Recipe.update_recipe()
 
 func bye():
+	selected = false
 	$Tween.interpolate_property($CanvasLayer/necrobook, "position",
 			Vector2(0, 0), Vector2(0, 480), .4,
 			Tween.TRANS_BACK, Tween.EASE_IN, 0)
 	$Tween.start()
 	yield($Tween, "tween_completed")
-	selected = false
 	$CanvasLayer/Recipe.visible = false
 	get_tree().paused = false
 
