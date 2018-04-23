@@ -7,7 +7,7 @@
 [ext_resource path="res://objects/props/door/door.png" type="Texture" id=5]
 [ext_resource path="res://map/fence-night.png" type="Texture" id=6]
 
-[node name="Tileset" type="Node2D"]
+[node name="Tileset" type="Node2D" index="0"]
 
 [node name="01-Grass" type="Sprite" parent="." index="0"]
 
@@ -30,7 +30,7 @@ _sections_unfolded = [ "Region" ]
 position = Vector2( 96, 24 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 128, 0, 32, 24 )
+region_rect = Rect2( 64, 0, 32, 24 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="04-WetSoil" type="Sprite" parent="." index="3"]
@@ -54,7 +54,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 position = Vector2( 96, 48 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 128, 24, 32, 24 )
+region_rect = Rect2( 64, 24, 32, 24 )
 _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="07-Wall" type="Sprite" parent="." index="6"]
@@ -145,7 +145,7 @@ _sections_unfolded = [ "Region" ]
 position = Vector2( 97, 169 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 128, 0, 32, 24 )
+region_rect = Rect2( 64, 0, 32, 24 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="16-WetSoilNight" type="Sprite" parent="." index="15"]
@@ -169,7 +169,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 position = Vector2( 97, 193 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 128, 24, 32, 24 )
+region_rect = Rect2( 64, 24, 32, 24 )
 _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="19-WallNight" type="Sprite" parent="." index="18"]
@@ -849,5 +849,21 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="59-StonePath" type="Sprite" parent="." index="58"]
+
+position = Vector2( 32, 72 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 32, 24 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="60-NightStonePath" type="Sprite" parent="." index="59"]
+
+position = Vector2( 64, 72 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 32, 24 )
+_sections_unfolded = [ "Offset", "Region" ]
 
 
