@@ -5,6 +5,8 @@ signal ended_night
 var clock
 var transition_scene = preload("res://transition/Transition.tscn")
 var actual_map
+var is_day = true
+var crops_set = false
 
 func _ready():
 	clock = $HUD/Status/UpperRight/Clock
@@ -60,6 +62,8 @@ func end_night():
 	var new_map = preload("res://map/house_daytime.tscn").instance()
 	map.queue_free()
 	$CropMatrix.grow_all()
+	is_day = true
+	crops_set = false
 	yield(get_tree(), "physics_frame")
 	add_child(new_map)
 
@@ -73,6 +77,8 @@ func end_day():
 	if map.nighttime != null:
 		var new_map = load(map.nighttime).instance()
 		map.queue_free()
+		is_day = false
+		crops_set = false
 		yield(get_tree(), "physics_frame")
 		add_child(new_map)
 		get_node('HUD/Shader').show()

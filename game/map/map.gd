@@ -11,3 +11,9 @@ func _ready():
 	cam.limit_right = lr.x
 	cam.limit_top = ul.y
 	cam.limit_left = ul.x
+	if get_node("/root/Main").is_day:
+		if not get_node("/root/Main").crops_set:
+			get_node("/root/Main").get_cropmatrix().set_day_crops()
+	else:
+		if not get_node("/root/Main").crops_set:
+			get_node("/root/Main").get_cropmatrix().set_night_crops()
