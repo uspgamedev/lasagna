@@ -14,9 +14,13 @@ func _ready():
 func _cropmatrix():
 	return get_node("/root/Main").get_cropmatrix()
 
+func _inventory():
+	return get_node("/root/Main").get_inventory()
+
 func _interact(player, tile, item):
 	var cell = self.tilemap.get_cellv(tile)
 	if item != null and item.crop_seed != "" and cell == UNSOWN_PATCH:
 		var p = tile - self.origin_tile
 		_cropmatrix().sow(self.field_index, p.x, p.y, item.crop_seed)
+		_inventory().consume_n_items(item.name, 1)
 	#$TileInteraction.interact(self, item, ft_pos, cell)
