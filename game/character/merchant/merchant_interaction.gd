@@ -23,8 +23,8 @@ func _sell():
 		popup.add_item(" %s [%d $]" % [product, _price(product)])
 	get_tree().paused = true
 	popup.popup_centered(Vector2(256, len(PRODUCTS)*32))
-	popup.connect("popup_hide", self, "_on_cancel")
-	popup.connect("id_pressed", self, "_on_product_chosen")
+	popup.connect("popup_hide", self, "_on_cancel", [], CONNECT_ONESHOT)
+	popup.connect("id_pressed", self, "_on_product_chosen", [], CONNECT_ONESHOT)
 	var idx = yield(self, "product_chosen")
 	print(idx)
 	get_tree().paused = false
