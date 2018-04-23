@@ -4,9 +4,8 @@
 [ext_resource path="res://hud/stash_hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/BedPopup.gd" type="Script" id=3]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" index="0"]
 
-pause_mode = 2
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -20,14 +19,23 @@ _sections_unfolded = [ "Pause" ]
 
 editor/display_folded = true
 
+[node name="Bottom" parent="Status" index="2"]
+
+pause_mode = 2
+_sections_unfolded = [ "Anchor", "Margin", "Pause" ]
+
 [node name="Wallet" parent="Status/Bottom" index="2"]
 
 editor/display_folded = true
 
 [node name="InventoryContainer" parent="." index="1" instance=ExtResource( 2 )]
 
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
+
 [node name="BedPopup" type="PopupMenu" parent="." index="2"]
 
+pause_mode = 2
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -46,7 +54,7 @@ popup_exclusive = false
 items = [  ]
 hide_on_state_item_selection = false
 script = ExtResource( 3 )
-_sections_unfolded = [ "Material" ]
+_sections_unfolded = [ "Material", "Pause" ]
 
 [connection signal="id_pressed" from="BedPopup" to="BedPopup" method="_on_BedPopup_id_pressed"]
 
