@@ -10,7 +10,7 @@ source_file="res://character/creatures/goat/goat-safe.png"
 source_md5="f80f551591940a2ca6ba3b4f21dd0e93"
 
 dest_files=[ "res://.import/goat-safe.png-959a3450c87e663452987579df186284.stex" ]
-dest_md5="6c561e6db8e015d2ccd4bf91c58eb9f5"
+dest_md5="52d8c1969484494747b5a5852d0366bc"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
