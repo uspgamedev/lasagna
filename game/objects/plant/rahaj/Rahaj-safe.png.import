@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rahaj-nightatk.png-f00ee33da650f52be07e7e8f2e761168.stex"
+path="res://.import/Rahaj-safe.png-c39fb6cab4aa5e2256893c7d1f526a30.stex"
 
 [deps]
 
-source_file="res://character/creatures/rahaj/Rahaj-nightatk.png"
-source_md5="409fc328b8dad793577240e86ed975e1"
+source_file="res://objects/plant/rahaj/Rahaj-safe.png"
+source_md5="3a459149de6ab2a1d58089ec700ebc89"
 
-dest_files=[ "res://.import/Rahaj-nightatk.png-f00ee33da650f52be07e7e8f2e761168.stex" ]
-dest_md5="f8b9030a11785700d2c9f3cac2d09432"
+dest_files=[ "res://.import/Rahaj-safe.png-c39fb6cab4aa5e2256893c7d1f526a30.stex" ]
+dest_md5="6a3887205f93214195e9802eddf85d0b"
 
 [params]
 
