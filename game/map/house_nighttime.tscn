@@ -30,10 +30,6 @@ texture = SubResource( 1 )
 offset = Vector2( 0, -25 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Cupboard" parent="Foreground" index="11"]
-
-position = Vector2( 381, 79 )
-
 [node name="BGM" parent="." index="7"]
 
 current_bgm = "home_night"

@@ -23,7 +23,7 @@
 [ext_resource path="res://objects/plant/rahaj/rahaj.tscn" type="PackedScene" id=21]
 [ext_resource path="res://character/creatures/rahaj/rahaj.tscn" type="PackedScene" id=22]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=6]
 
 flags = 0
 atlas = ExtResource( 5 )
@@ -31,7 +31,7 @@ region = Rect2( 128, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=7]
 
 flags = 0
 atlas = ExtResource( 5 )
@@ -39,7 +39,7 @@ region = Rect2( 192, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=8]
 
 flags = 0
 atlas = ExtResource( 5 )
@@ -47,7 +47,7 @@ region = Rect2( 32, 160, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=9]
 
 flags = 0
 atlas = ExtResource( 9 )
@@ -104,17 +104,17 @@ crop_seed = "RaHaj"
 
 [node name="XucTuSeed" parent="Items" index="14" instance=ExtResource( 2 )]
 
-icon = SubResource( 1 )
+icon = SubResource( 6 )
 crop_seed = "XucTu"
 
 [node name="KepalaSeed" parent="Items" index="15" instance=ExtResource( 2 )]
 
-icon = SubResource( 2 )
+icon = SubResource( 7 )
 crop_seed = "Kepala"
 
 [node name="FleeceSeed" parent="Items" index="16" instance=ExtResource( 2 )]
 
-icon = SubResource( 3 )
+icon = SubResource( 8 )
 crop_seed = "Fleece"
 
 [node name="Milk" parent="Items" index="17" instance=ExtResource( 2 )]
@@ -143,7 +143,7 @@ icon = ExtResource( 8 )
 
 [node name="Paper" parent="Items" index="26" instance=ExtResource( 2 )]
 
-icon = SubResource( 4 )
+icon = SubResource( 9 )
 
 [node name="Tier1SeedA" parent="Items" index="27" instance=ExtResource( 2 )]
 
@@ -159,6 +159,7 @@ buy_value = 1000
 
 [node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 11 )]
 
+editor/display_folded = true
 yields = "LAA’ZAHNA"
 craft_on = "Oven"
 
@@ -172,7 +173,6 @@ craft_on = "Oven"
 
 [node name="YakiSobath" parent="Recipies" index="1" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 yields = "YAKI'SOBATH"
 craft_on = "Oven"
 
@@ -184,11 +184,8 @@ craft_on = "Oven"
 
 [node name="VegSauce" parent="Recipies/YakiSobath" index="3" instance=ExtResource( 12 )]
 
-[node name="Tomato" parent="Recipies/YakiSobath" index="4" instance=ExtResource( 12 )]
-
 [node name="BlobStew" parent="Recipies" index="2" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 yields = "Jelly Stew"
 craft_on = "Oven"
 
