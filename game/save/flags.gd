@@ -36,7 +36,7 @@ func spend_day():
 
 func try_blood_moon():
 	randomize()
-	if blood_moon_prob > randf(0, 1):
+	if blood_moon_prob > randf():
 		moon = BLOOD
 		blood_moon_prob = MIN_PROB
 		return true
