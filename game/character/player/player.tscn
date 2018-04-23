@@ -337,7 +337,7 @@ script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Material", "Pause", "Transform", "Visibility", "collision" ]
 friction = 25.0
 push_force = 200.0
-max_speed = 300.0
+max_speed = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
 

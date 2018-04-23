@@ -10,7 +10,7 @@ source_file="res://character/creatures/minyak/Minyak-night.png"
 source_md5="2fd613326f9f86e8ee77d44b385a679a"
 
 dest_files=[ "res://.import/Minyak-night.png-65daeac8ca6c4366b6d7acde03d3b22e.stex" ]
-dest_md5="3d0deb890d5e4dba24a8f8d2db55ee32"
+dest_md5="4f682856061dd466c880b2bf5a01a59a"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
