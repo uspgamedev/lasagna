@@ -30,9 +30,11 @@ script/source = "extends TextureRect
 
 func _process(delta):
 	var player = get_node(\"/root/Main\").get_player()
-	var focus = player.position - player.get_node(\"Camera2D\").get_camera_screen_center()
-	focus.x = (focus.x + self.rect_size.x/2)/self.rect_size.x
-	focus.y = (-focus.y + self.rect_size.y/2)/self.rect_size.y
+	var focus = Vector2()
+	if player != null:
+		focus = player.position - player.get_node(\"Camera2D\").get_camera_screen_center()
+		focus.x = (focus.x + self.rect_size.x/2)/self.rect_size.x
+		focus.y = (-focus.y + self.rect_size.y/2)/self.rect_size.y
 	self.material.set_shader_param(\"focus\", focus)"
 
 [node name="HUD" type="CanvasLayer" index="0"]
@@ -61,6 +63,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 1 )
+stretch_mode = 0
 script = SubResource( 3 )
 _sections_unfolded = [ "Material", "Rect" ]
 
