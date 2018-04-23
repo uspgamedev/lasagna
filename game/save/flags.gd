@@ -19,6 +19,9 @@ const MIN_PROB = 0
 const MAX_PROB = .5
 const PROB_STEP = .1
 
+func _init():
+	flags["hp"] = 100
+
 func get_flag(flag_name):
 	if flags.has(flag_name):
 		return flags[flag_name]

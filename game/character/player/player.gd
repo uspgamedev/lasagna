@@ -1,6 +1,7 @@
 extends "res://character/character.gd"
 
 func _process(delta):
+	get_node("/root/Main").get_flags().set_flag('hp', self.hp)
 	push($InputNode.current_direction())
 	$Notifier.visible = has_interactive_node($AreaInteraction.get_overlapping_bodies())
 
