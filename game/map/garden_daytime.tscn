@@ -8,6 +8,10 @@
 
 nighttime = "res://map/garden_nighttime.tscn"
 
+[node name="Interaction" parent="Foreground/Door" index="2"]
+
+destiny = "house_daytime"
+
 [node name="Object" parent="Foreground" index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 288, 336 )

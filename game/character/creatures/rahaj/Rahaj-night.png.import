@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/Rahaj-night.png-33759a2ab603fb6fc7965c2902156283.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://character/creatures/rahaj/Rahaj-night.png"
+source_md5="2b6e3d3df825028e19f130853b627dac"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/Rahaj-night.png-33759a2ab603fb6fc7965c2902156283.stex" ]
+dest_md5="9c987d07feea13fe20dbbfdd7dc142b2"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/kepala_night.png-a852dcff9a34c5c57ea6930af6712128.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://character/creatures/kepala/kepala_night.png"
+source_md5="ad0230da3a4f4c01ad3a85b6c9bb254c"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/kepala_night.png-a852dcff9a34c5c57ea6930af6712128.stex" ]
+dest_md5="30c19fb63a3ab571e9f0006ecdb9a5a7"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

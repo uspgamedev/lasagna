@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/Xuctu-night.png-bc9a6e3b02eab07d52279238869a803d.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://character/creatures/xuctu/Xuctu-night.png"
+source_md5="e26434d6c9cb3875b1723490a3bb7a57"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/Xuctu-night.png-bc9a6e3b02eab07d52279238869a803d.stex" ]
+dest_md5="3d63f000f7599b8898c519e9f9e03630"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

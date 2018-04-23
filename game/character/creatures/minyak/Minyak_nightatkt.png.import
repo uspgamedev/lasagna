@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/Minyak_nightatkt.png-35402beb36d6533ce7dc743b6f6070cb.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://character/creatures/minyak/Minyak_nightatkt.png"
+source_md5="c6d4d2146494bceb7668bd618e3062f9"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/Minyak_nightatkt.png-35402beb36d6533ce7dc743b6f6070cb.stex" ]
+dest_md5="c8565d99f8c7b8759d486d91a987bcaf"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

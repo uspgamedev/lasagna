@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/tristea_nightwalk.png-e5c432c46eace97960c20be4fc90d14a.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://character/creatures/tristea/tristea_nightwalk.png"
+source_md5="9091357cd9291e38f4788252d9f06e7f"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/tristea_nightwalk.png-e5c432c46eace97960c20be4fc90d14a.stex" ]
+dest_md5="f715b5137d09fa96c895bcd5d976356d"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

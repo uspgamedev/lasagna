@@ -59,10 +59,15 @@ func sow(patch, i, j, cropname):
 	crops[patch][i][j] = [cropname, 0]
 
 func grow_all():
+	var db = get_node("/root/Main").get_db()
 	for k in range(len(crops)):
 		for i in range(len(crops[k])):
 			for j in range(len(crops[k][i])):
-				crops[k][i][j][1] += 1
+				if crops[k][i][j] != null:
+					var crop_data = db.get_crop_by_name(crops[k][i][j][0])
+					var crop_grow_limit = crop_data.growth_limit
+					var current_growth = crops[k][i][j][1]
+					crops[k][i][j][1] = min(current_growth+1, crop_grow_limit) 
 
 func remove(patch, i, j, cropname):
 	crops[patch][i][j] = null

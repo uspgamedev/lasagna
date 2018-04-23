@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/Minyak-safe.png-a6e7f5b99b46a68d7a07cf17be1c3d95.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://objects/plant/minyak/Minyak-safe.png"
+source_md5="8563675975db02b69c7eae210f4ab5a2"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/Minyak-safe.png-a6e7f5b99b46a68d7a07cf17be1c3d95.stex" ]
+dest_md5="06e415275797f77bf6756bedb6300d44"
 
 [params]
 

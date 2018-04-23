@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/Xuctu-safe.png-57b66b934a855c45463bd6218c185887.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://objects/plant/xuctu/Xuctu-safe.png"
+source_md5="4ec16c8faecd000032ca67ec9789b894"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/Xuctu-safe.png-57b66b934a855c45463bd6218c185887.stex" ]
+dest_md5="35cd40fe0d377b713d688deeb32f2e66"
 
 [params]
 

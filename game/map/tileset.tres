@@ -7,11 +7,10 @@
 [ext_resource path="res://objects/props/door/door.png" type="Texture" id=5]
 [ext_resource path="res://map/fence-night.png" type="Texture" id=6]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
+points = PoolVector2Array( -16, -12, -16, -54, 16, -54, 16, -12 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
@@ -136,7 +135,7 @@ points = PoolVector2Array( -16, 7, 16, 7, 16, 12, -16, 12 )
 [sub_resource type="ConvexPolygonShape2D" id=26]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( -16, -12, -16, -36, 16, -36, 16, -12 )
+points = PoolVector2Array( -16, -12, -16, -54, 16, -54, 16, -12 )
 
 [resource]
 

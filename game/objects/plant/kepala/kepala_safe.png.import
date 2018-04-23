@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex"
+path="res://.import/kepala_safe.png-c95efbcf24d0c2f8834dc48631b8efb2.stex"
 
 [deps]
 
-source_file="res://map/tiles_night.png"
-source_md5="f45ac71d4e1324aead3c1fdb16f14ba4"
+source_file="res://objects/plant/kepala/kepala_safe.png"
+source_md5="4d5b493e133061ef2dd2c8cad1dc35af"
 
-dest_files=[ "res://.import/tiles_night.png-526c889f815dab31653f28621b037a47.stex" ]
-dest_md5="406a97cbb0c8f3979c31416320e9e7ce"
+dest_files=[ "res://.import/kepala_safe.png-c95efbcf24d0c2f8834dc48631b8efb2.stex" ]
+dest_md5="e2a0ea87d89a90945d37291a4e48227f"
 
 [params]
 
