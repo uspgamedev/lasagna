@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fogao.png-293c0b59c52f44dcab4feed772d529c6.stex"
+path="res://.import/fogao.png-83e0c0311b2d0ef436a7a6f0ae5fcd6e.stex"
 
 [deps]
 
-source_file="res://objects/props/fogao.png"
+source_file="res://objects/props/oven/fogao.png"
 source_md5="c47bed7ad804530826c9b4d0941bd439"
 
-dest_files=[ "res://.import/fogao.png-293c0b59c52f44dcab4feed772d529c6.stex" ]
+dest_files=[ "res://.import/fogao.png-83e0c0311b2d0ef436a7a6f0ae5fcd6e.stex" ]
 dest_md5="62a41017c540daf75047bf315bb3348e"
 
 [params]

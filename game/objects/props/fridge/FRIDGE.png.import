@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FRIDGE.png-cf46c6a005f6f600cc17e462275bbd98.stex"
+path="res://.import/FRIDGE.png-963473c813ada285bb7e88b8a85518ac.stex"
 
 [deps]
 
-source_file="res://objects/props/FRIDGE.png"
+source_file="res://objects/props/fridge/FRIDGE.png"
 source_md5="57c4230359d6717b0bc7d9ef5e7496a5"
 
-dest_files=[ "res://.import/FRIDGE.png-cf46c6a005f6f600cc17e462275bbd98.stex" ]
+dest_files=[ "res://.import/FRIDGE.png-963473c813ada285bb7e88b8a85518ac.stex" ]
 dest_md5="4e0b5b6bd11f21d41e0b505707b0315a"
 
 [params]

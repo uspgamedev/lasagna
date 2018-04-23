@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sink.png-ffb20d679ee615eb77827652b0ae6692.stex"
+path="res://.import/sink.png-1debd015e8280fbe16880c35f1d5ba73.stex"
 
 [deps]
 
-source_file="res://objects/props/sink.png"
+source_file="res://objects/props/sink/sink.png"
 source_md5="7a0002dbb1d820fca02f05c8f269b9cc"
 
-dest_files=[ "res://.import/sink.png-ffb20d679ee615eb77827652b0ae6692.stex" ]
+dest_files=[ "res://.import/sink.png-1debd015e8280fbe16880c35f1d5ba73.stex" ]
 dest_md5="c888eeeee4bb14887b1b99ef2f3f2603"
 
 [params]

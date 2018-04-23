@@ -21,17 +21,17 @@ func _input(event):
 		elif event.is_action_pressed("ui_cancel"):
 			bye()
 			return
-		$Recipe.recipe_name = recipies[current_recipe].name
-		$Recipe.update_recipe()
+		$CanvasLayer/Recipe.recipe_name = recipies[current_recipe].name
+		$CanvasLayer/Recipe.update_recipe()
 
 func bye():
 	selected = false
-	$Recipe.visible = false
+	$CanvasLayer/Recipe.visible = false
 	get_tree().paused = false
 
 func hi():
 	selected = true
-	$Recipe.visible = true
+	$CanvasLayer/Recipe.visible = true
 	get_tree().paused = true
 
 func _ready():
@@ -43,7 +43,7 @@ func _ready():
 		if recipe_data.craft_on == type:
 			recipies.append( recipe_data )
 			print(recipe_data.name)
-	$Recipe.recipe_name = recipies[0].name
+	$CanvasLayer/Recipe.recipe_name = recipies[0].name
 
 func interact(unused):
 	hi()

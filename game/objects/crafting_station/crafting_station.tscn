@@ -20,7 +20,15 @@ polygon = PoolVector2Array( -27.5716, -33.0189, -43.7375, 1.10921, -16.1955, 35.
 
 script = ExtResource( 3 )
 
-[node name="Recipe" parent="." index="3" instance=ExtResource( 4 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Recipe" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
 
 recipe_name = "LaaZahna"
 
