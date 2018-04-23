@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://map/house.tscn" type="PackedScene" id=1]
+
+[node name="Map" index="0" instance=ExtResource( 1 )]
+
+
+[editable path="Foreground/Table/TableLeft"]
+[editable path="Foreground/Table/TableRight"]
+[editable path="Foreground/Table/Paper"]
+[editable path="Foreground/Door"]
