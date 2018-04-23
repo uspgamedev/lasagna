@@ -10,7 +10,7 @@ source_file="res://map/ceilling.png"
 source_md5="23f4b12b3e6bfe04a2280ee4bf243b03"
 
 dest_files=[ "res://.import/ceilling.png-f8086b134f9dc3b84dda7c02c9c0e475.stex" ]
-dest_md5="fc59d0ab83ecdc4cc85bc5869c756ebf"
+dest_md5="4ebeebed2665c6fad213c77dcb2013d6"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
