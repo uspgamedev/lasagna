@@ -2,7 +2,8 @@ extends Node
 
 export (Texture) var icon
 export (String)  var crop_seed = ""
-export (int)     var buy_value = 100 
+export (int)     var buy_value = 100
+export (bool)    var is_consumable = false
 
 #export (String)  var unit
 #export (String)  var unit_plural

@@ -32,6 +32,10 @@ func interact(item):
 			return
 
 	if item != null:
+		if item.is_consumable:
+			$Consume.consume(item)
+			return
+
 		var inv = get_node("/root/Main").get_inventory()
 		var index = get_node("/root/Main").get_hud().get_node("Status").get_node("Bottom").get_node("Inventory").focused
 		var stash_number = inv.get_item_at(index)[1]
