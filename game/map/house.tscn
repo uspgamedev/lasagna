@@ -106,7 +106,7 @@ position = Vector2( 560, 252 )
 
 position = Vector2( 80, 340 )
 
-[node name="Object" parent="Foreground" index="6" instance=ExtResource( 9 )]
+[node name="Notes" parent="Foreground" index="6" instance=ExtResource( 9 )]
 
 position = Vector2( 540, 330 )
 
