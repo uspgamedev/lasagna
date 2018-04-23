@@ -38,9 +38,6 @@ func sleep_and_save():
 	if has_node("Play"):
 		get_flags().spend_day()
 		$Play.save_game()
-		var transition = transition_scene.instance()
-		add_child(transition)
-		transition.play(true)
 
 func execute_cutscene(name):
 	get_node("Map/Cutscenes").execute_cutscene(name)
@@ -48,6 +45,16 @@ func execute_cutscene(name):
 func end_night():
 	emit_signal("ended_night")
 	clock.end_night()
+	var transition = transition_scene.instance()
+	add_child(transition)
+	transition.is_morning(true)
+	transition.play()
+
+func end_day():
+	var transition = transition_scene.instance()
+	add_child(transition)
+	transition.is_morning(false)
+	transition.play()
 
 func pause_clock():
 	clock.pause()
