@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://database/database.gd" type="Script" id=1]
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=10]
 [ext_resource path="res://database/crafting_stations/CraftingStationData.tscn" type="PackedScene" id=11]
 [ext_resource path="res://database/crop/cropdata.tscn" type="PackedScene" id=12]
+[ext_resource path="res://objects/plant/fleece/fleece.tscn" type="PackedScene" id=13]
+[ext_resource path="res://character/creatures/fleece/fleece.tscn" type="PackedScene" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -227,5 +229,8 @@ moon_phase = "Full"
 [node name="Crops" type="Node" parent="." index="3"]
 
 [node name="Fleece" parent="Crops" index="0" instance=ExtResource( 12 )]
+
+daytime_plant = ExtResource( 13 )
+nighttime_plant = ExtResource( 14 )
 
 
