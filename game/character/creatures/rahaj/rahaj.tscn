@@ -93,12 +93,12 @@ tracks/2/keys = {
 "values": [ ExtResource( 4 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 45.0
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.2644, 5.68671 )
@@ -153,7 +153,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 scale = Vector2( 1, 0.7 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -182,11 +182,15 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="Interaction" type="Node" parent="StaticBody2D" index="1"]
 
 script = ExtResource( 6 )
+
+[node name="Death" parent="SFX" index="7"]
+
+stream = null
 
 [connection signal="animation_finished" from="OrientedSprite/AnimationPlayer" to="AI" method="_on_AnimationPlayer_animation_finished"]
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plant_crying.ogg-a781b1be7625da4d489d8df4f1ef6aa5.oggstr"
+
+[deps]
+
+source_file="res://character/creatures/plant_crying.ogg"
+source_md5="cd5ee012f6790dada0cfcc7f2af2a203"
+
+dest_files=[ "res://.import/plant_crying.ogg-a781b1be7625da4d489d8df4f1ef6aa5.oggstr" ]
+dest_md5="267569f88dbdeaf37324983497885d2a"
+
+[params]
+
+loop=false
+loop_offset=0

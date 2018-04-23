@@ -15,5 +15,6 @@ func _process(delta):
 				found_ham = true
 				ham = body
 			if body.name == "Player" and $Timer.is_stopped():
+				get_parent().get_node("SFX/Attack").play()
 				body.damage(10, get_parent())
 				$Timer.start()

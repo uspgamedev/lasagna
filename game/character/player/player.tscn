@@ -448,7 +448,7 @@ z_index = 9
 z_as_relative = false
 _sections_unfolded = [ "Animation", "Transform", "Z Index" ]
 
-[node name="SFX" type="Node2D" parent="." index="9"]
+[node name="SFX" parent="." index="9"]
 
 editor/display_folded = true
 
@@ -460,13 +460,9 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Death" type="AudioStreamPlayer" parent="SFX" index="1"]
+[node name="Death" parent="SFX" index="1"]
 
 stream = ExtResource( 11 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
 [node name="PickUp" type="AudioStreamPlayer" parent="SFX" index="2"]
 
