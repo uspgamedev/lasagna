@@ -33,4 +33,4 @@ func has_interactive_node(vec):
 	return false
 
 func death():
-	get_tree().change_scene('main.tscn')
+	get_tree().change_scene('play.tscn')
