@@ -15,4 +15,8 @@ func consume(item):
 			else:
 				player.hp += heal
 		"LaaZahna":
-			print("LasaLaaZahnagna")
+			var main = get_node("/root/Main")
+			main.get_flags().set_flag("ATE_LASAGNA", true)
+			main.execute_cutscene("eating_lasagna")
+		"WormRoll":
+			print("WormRoll")
