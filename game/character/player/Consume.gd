@@ -19,4 +19,4 @@ func consume(item):
 			main.get_flags().set_flag("ATE_LASAGNA", true)
 			main.execute_cutscene("eating_lasagna")
 		"WormRoll":
-			print("WormRoll")
+			get_tree().change_scene("res://credits/credits.tscn")
