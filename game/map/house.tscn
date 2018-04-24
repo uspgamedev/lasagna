@@ -300,7 +300,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="monolog_01" parent="Cutscenes" index="0" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/monolog_01" index="0" instance=ExtResource( 22 )]
@@ -315,37 +314,40 @@ text = "I CAN'T wait to eat her Lasagna again!"
 
 [node name="cupboard_get_ingreds" parent="Cutscenes" index="1" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/cupboard_get_ingreds" index="0" instance=ExtResource( 22 )]
 
 actor = "Player"
-text = "Grandma isn't around... She probably left in a hurry for whatever reason..."
+text = "Grandma isn't around..."
 
 [node name="CutsceneNode2" parent="Cutscenes/cupboard_get_ingreds" index="1" instance=ExtResource( 22 )]
 
 actor = "Player"
-text = "She musn't have had the time to cook the Lasagna."
+text = "She probably left in a hurry for whatever reason..."
 
 [node name="CutsceneNode3" parent="Cutscenes/cupboard_get_ingreds" index="2" instance=ExtResource( 22 )]
 
 actor = "Player"
-text = "Perhaps I should... Prepare it for us."
+text = "She musn't have had the time to cook the Lasagna."
 
 [node name="CutsceneNode4" parent="Cutscenes/cupboard_get_ingreds" index="3" instance=ExtResource( 22 )]
 
 actor = "Player"
-text = "This way we can eat it right away when she gets back!"
+text = "Perhaps I should... Prepare it for us."
 
 [node name="CutsceneNode5" parent="Cutscenes/cupboard_get_ingreds" index="4" instance=ExtResource( 22 )]
+
+actor = "Player"
+text = "This way we can eat it right away when she gets back!"
+
+[node name="CutsceneNode6" parent="Cutscenes/cupboard_get_ingreds" index="5" instance=ExtResource( 22 )]
 
 actor = "Player"
 text = "I think these might be the ingredients! "
 
 [node name="needs_to_look_for_recipebook" parent="Cutscenes" index="2" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/needs_to_look_for_recipebook" index="0" instance=ExtResource( 22 )]
@@ -355,7 +357,6 @@ text = "Now all I need is grandma's recipebook!"
 
 [node name="give_oven_hint" parent="Cutscenes" index="3" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/give_oven_hint" index="0" instance=ExtResource( 22 )]
@@ -365,7 +366,6 @@ text = "I should take these to the oven over in the kitchen"
 
 [node name="should_eat_alone" parent="Cutscenes" index="4" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/should_eat_alone" index="0" instance=ExtResource( 22 )]
@@ -375,7 +375,6 @@ text = "She's taking her time, maybe I should eat alone..."
 
 [node name="cant_cook_without_recipebook" parent="Cutscenes" index="5" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/cant_cook_without_recipebook" index="0" instance=ExtResource( 22 )]
@@ -385,7 +384,6 @@ text = "I don't know how to cook, I need a recipebook."
 
 [node name="needs_to_look_for_ingreds" parent="Cutscenes" index="6" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/needs_to_look_for_ingreds" index="0" instance=ExtResource( 22 )]
@@ -400,7 +398,6 @@ text = "Maybe I should check the cupboard"
 
 [node name="cupboard_already_got_ingreds" parent="Cutscenes" index="7" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/cupboard_already_got_ingreds" index="0" instance=ExtResource( 22 )]
@@ -410,7 +407,6 @@ text = "There's nothing left in here."
 
 [node name="sink_no_water" parent="Cutscenes" index="8" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/sink_no_water" index="0" instance=ExtResource( 22 )]
@@ -420,7 +416,6 @@ text = "Hmm... No water."
 
 [node name="fridge_empty" parent="Cutscenes" index="9" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/fridge_empty" index="0" instance=ExtResource( 22 )]
@@ -430,7 +425,6 @@ text = "Empty..."
 
 [node name="necronomicon_get" parent="Cutscenes" index="10" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 other = "Player"
 
 [node name="CutsceneNode" parent="Cutscenes/necronomicon_get" index="0" instance=ExtResource( 22 )]
