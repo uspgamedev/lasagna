@@ -4,14 +4,18 @@ var lock = false
 
 const PRODUCTS = [
 	"FleeceSeed",
-	"KepalaSeed"
+	"KepalaSeed",
+	"XucTuSeed",
+	"RaHajSeed",
+	"MoonlightSeed",
+	"MinyakSeed",
 ]
 
 func _ready():
 	var main = get_node("/root/Main")
 	var HAD_FINAL_DIALOG = main.get_flags().get_flag("HAD_FINAL_DIALOG")
 	if HAD_FINAL_DIALOG:
-		PRODUCTS = ["FleeceSeed", "KepalaSeed", "Venom"]
+		PRODUCTS = ["FleeceSeed", "KepalaSeed"]
 
 func _main():
 	return get_node("/root/Main")
@@ -54,7 +58,6 @@ func interact(item):
 	elif YAKI and BLOB and !HAD_FINAL_DIALOG:
 		main.get_flags().set_flag("HAD_FINAL_DIALOG", true)
 		yield(_cutscene("merchant_final_dialogue"), "finished")
-		PRODUCTS.append("Venom")
 		
 	var inv = _main().get_inventory()
 	if item == null:
