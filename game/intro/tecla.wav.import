@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tecla.wav-c15a99684452302acb8bff9711784b3a.sample"
+
+[deps]
+
+source_file="res://intro/tecla.wav"
+source_md5="e6069f38fa3b8ce197e381c45e50302d"
+
+dest_files=[ "res://.import/tecla.wav-c15a99684452302acb8bff9711784b3a.sample" ]
+dest_md5="67b6682a103b5fda1a0ea6c2363c8bd3"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
