@@ -10,8 +10,8 @@
 [ext_resource path="res://interaction/character_interaction.gd" type="Script" id=8]
 [ext_resource path="res://character/player/interaction/notifier.tscn" type="PackedScene" id=9]
 [ext_resource path="res://hud/sfx/bt_accepted.ogg" type="AudioStream" id=10]
-[ext_resource path="res://character/player/player_death.ogg" type="AudioStream" id=11]
-[ext_resource path="res://character/player/got_item.ogg" type="AudioStream" id=12]
+[ext_resource path="res://character/player/got_item.ogg" type="AudioStream" id=11]
+[ext_resource path="res://character/player/player_death.ogg" type="AudioStream" id=12]
 [ext_resource path="res://character/player/Consume.gd" type="Script" id=13]
 
 [sub_resource type="Animation" id=1]
@@ -331,7 +331,7 @@ radius = 10.0
 custom_solver_bias = 0.0
 extents = Vector2( 12, 16 )
 
-[node name="Player" index="0" groups=[
+[node name="Player" groups=[
 "player",
 ] instance=ExtResource( 1 )]
 
@@ -448,7 +448,7 @@ z_index = 9
 z_as_relative = false
 _sections_unfolded = [ "Animation", "Transform", "Z Index" ]
 
-[node name="SFX" parent="." index="9"]
+[node name="SFX" parent="." index="11"]
 
 editor/display_folded = true
 
@@ -460,19 +460,19 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Death" parent="SFX" index="1"]
-
-stream = ExtResource( 11 )
-
 [node name="PickUp" type="AudioStreamPlayer" parent="SFX" index="2"]
 
-stream = ExtResource( 12 )
+stream = ExtResource( 11 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Consume" type="Node2D" parent="." index="13"]
+[node name="Death" parent="SFX" index="3"]
+
+stream = ExtResource( 12 )
+
+[node name="Consume" type="Node2D" parent="." index="12"]
 
 script = ExtResource( 13 )
 
