@@ -4,7 +4,7 @@ func _ready():
 	var Flags = get_node("/root/Main").get_flags()
 	match Flags.get_moon():
 		Flags.MOON.FULL:
-			if randf() < .25:
+			if randf() < .75:
 				queue_free()
 		Flags.MOON.BLOOD:
 			pass
