@@ -372,30 +372,32 @@ polygon = PoolVector2Array( 16, -8, 16, 16, -16, 16, -16, -8 )
 
 [node name="portrait" type="Sprite" parent="Foreground" index="13"]
 
-position = Vector2( -55, 295 )
+position = Vector2( -59, 269 )
+z_as_relative = false
 texture = ExtResource( 24 )
-offset = Vector2( 0, -48 )
-_sections_unfolded = [ "Offset", "Transform" ]
+offset = Vector2( 0, -20 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="portrait2" type="Sprite" parent="Foreground" index="14"]
 
-position = Vector2( 41, 295 )
+position = Vector2( 51, 269 )
+z_as_relative = false
 texture = ExtResource( 25 )
-offset = Vector2( 0, -48 )
-_sections_unfolded = [ "Offset", "Transform" ]
+offset = Vector2( 0, -20 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="portrait3" type="Sprite" parent="Foreground" index="15"]
 
-position = Vector2( 273, 295 )
+position = Vector2( 271, 269 )
 texture = ExtResource( 26 )
-offset = Vector2( 0, -48 )
+offset = Vector2( 0, -20 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="portrait4" type="Sprite" parent="Foreground" index="16"]
 
-position = Vector2( 329, 295 )
+position = Vector2( 341, 269 )
 texture = ExtResource( 27 )
-offset = Vector2( 0, -48 )
+offset = Vector2( 0, -20 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="lamp" type="Sprite" parent="Foreground" index="17"]
