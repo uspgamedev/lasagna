@@ -44,4 +44,4 @@ func _on_Tween_tween_completed( object, key ):
 
 
 func _begin_game():
-	print("Fazer jogo começar aqui")
+	get_tree().change_scene("res://play.tscn")
