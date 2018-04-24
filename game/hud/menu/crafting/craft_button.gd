@@ -1,5 +1,10 @@
 extends Button
 
+
+func _input(event):
+	if get_parent().visible and not self.disabled and event.is_action("ui_accept"):
+		_pressed()
+
 func _pressed():
 	var greatgrandparent = get_parent().get_parent().get_parent()
 	var MAIN = get_node("/root/Main")
