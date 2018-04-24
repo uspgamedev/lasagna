@@ -23,12 +23,12 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 100.0
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 9.0
@@ -43,7 +43,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, -5 )
 hframes = 2
 frame = 1
-_sections_unfolded = [ "Animation", "Offset", "Visibility" ]
+_sections_unfolded = [ "Animation", "Material", "Offset", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OrientedSprite" index="0"]
 
@@ -68,12 +68,12 @@ audio_bus_name = "Master"
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="AttackArea" index="0"]
 
 scale = Vector2( 1, 0.7 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionBox" parent="." index="2"]
 
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AI" parent="." index="4"]
@@ -86,6 +86,10 @@ process_mode = 1
 wait_time = 5.0
 one_shot = false
 autostart = true
+
+[node name="Death" parent="SFX" index="7"]
+
+stream = null
 
 [connection signal="timeout" from="AI/Timer" to="AI" method="_on_Timer_timeout"]
 

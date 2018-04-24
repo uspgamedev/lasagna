@@ -14,9 +14,6 @@ var dir = Vector2(1, 0)
 var dead = false
 
 func _ready():
-	var main = get_node("/root/Main")
-	if !main.get_flags().get_flag("ATE_LASAGNA"):
-		self.queue_free()
 	$DeathSprite.hide()
 	$OrientedSprite.material = null
 	hp = max_health
@@ -27,7 +24,7 @@ func damage(dmg_points, from=false):
 			knockback(from.get_position())
 		$DmgCooldown.start()
 		hp -= dmg_points
-		$DamageSFX.play()
+		$SFX/Damage.play()
 		if hp <= 0 and not dead:
 			death()
 
@@ -36,12 +33,11 @@ func death():
 		return
 	dead = true
 	$Animation.play("DEATH")
+	$SFX/Death.play()
 	yield($Animation, "animation_finished")
 	queue_free()
 
 func knockback(from):
-	if dead:
-		return
 	var pos = get_position()
 	var distvec = (pos - from).normalized()
 	velocity += distvec * push_force * 16
@@ -71,12 +67,12 @@ func _process(delta):
 			$OrientedSprite.set_direction("left")
 		elif PI/4 < angle and angle < 3*PI/4:
 			$OrientedSprite.set_direction("down")
+		if (self.get_name() == "Fleece" or self.get_name() == "MoonlightFritz") and not $SFX/Steps.is_playing():
+			$SFX/Steps.play()
 	else:
 		$OrientedSprite.set_state("idle")
 
 func _physics_process(delta):
-	if dead:
-		return
 	var mv_return = move_and_collide(velocity*delta)
 	if mv_return != null:
 		velocity = 	mv_return.get_remainder()

@@ -6,7 +6,7 @@
 [ext_resource path="res://hud/menu/crafting/necrobook-inside.png" type="Texture" id=4]
 [ext_resource path="res://hud/menu/crafting/recipe.tscn" type="PackedScene" id=5]
 
-[node name="CraftingStation" index="0" instance=ExtResource( 1 )]
+[node name="CraftingStation" instance=ExtResource( 1 )]
 
 pause_mode = 2
 script = ExtResource( 2 )

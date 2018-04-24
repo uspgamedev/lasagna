@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plant_attack.ogg-36a433baa74243a5553f8e2fa0afa7b1.oggstr"
+
+[deps]
+
+source_file="res://character/creatures/plant_attack.ogg"
+source_md5="9fc5dbbf86171406363679b1a58610f5"
+
+dest_files=[ "res://.import/plant_attack.ogg-36a433baa74243a5553f8e2fa0afa7b1.oggstr" ]
+dest_md5="b8b2a37e02e54e9eb90d8b529ebf28f9"
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://map/map.gd" type="Script" id=1]
 [ext_resource path="res://map/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://map/background.gd" type="Script" id=3]
 [ext_resource path="res://map/bgm/bgm.tscn" type="PackedScene" id=4]
 [ext_resource path="res://interaction/cutscene/cutscenes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=7]
 
-[node name="Map" type="Node2D"]
+[node name="Map" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 nighttime = null
@@ -86,6 +88,20 @@ _sections_unfolded = [ "Cell" ]
 [node name="BGM" parent="." index="4" instance=ExtResource( 4 )]
 
 [node name="Cutscenes" parent="." index="5" instance=ExtResource( 5 )]
+
+[node name="eating_lasagna" parent="Cutscenes" index="0" instance=ExtResource( 6 )]
+
+other = "Player"
+
+[node name="CutsceneNode2" parent="Cutscenes/eating_lasagna" index="0" instance=ExtResource( 7 )]
+
+actor = "Player"
+text = "..."
+
+[node name="CutsceneNode" parent="Cutscenes/eating_lasagna" index="1" instance=ExtResource( 7 )]
+
+actor = "Player"
+text = "yuck"
 
 
 [editable path="Cutscenes"]

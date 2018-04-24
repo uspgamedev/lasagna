@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/black_pixel.png-6303f49dbf23608eb791b5611f961b62.stex"
+path="res://.import/icons.png-750796cf3b6ab3384541e8df1f7d4074.stex"
 
 [deps]
 
-source_file="res://transition/black_pixel.png"
-source_md5="cbb9ec8f17347c755c4fad0193b1099a"
+source_file="res://hud/icons.png"
+source_md5="1a7472bbf0037f403dfe797338657fdc"
 
-dest_files=[ "res://.import/black_pixel.png-6303f49dbf23608eb791b5611f961b62.stex" ]
-dest_md5="c0ec4677a5ad07b1beb88a788eabf320"
+dest_files=[ "res://.import/icons.png-750796cf3b6ab3384541e8df1f7d4074.stex" ]
+dest_md5="ddc93610bc0700e8d4111316bd917e1b"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

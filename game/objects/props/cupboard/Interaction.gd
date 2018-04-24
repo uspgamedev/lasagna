@@ -10,7 +10,7 @@ func interact(unused):
 		main.get_inventory().give_items("Frog",1)
 		main.get_inventory().give_items("Milk",1)
 		main.get_inventory().give_items("Ham",1)
+		main.get_inventory().give_items("TomatoSauce",1)
 		main.get_inventory().give_items("KepalaSeed",1)
-		main.get_inventory().give_items("MinyakSeed",1)
 	else:
 		get_node("/root/Main").execute_cutscene("cupboard_already_got_ingreds")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://map/map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map/cropfield/cropfield.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/props/door/hidden_door.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=5]
 
 [node name="Map" index="0" instance=ExtResource( 1 )]
 
@@ -81,11 +80,6 @@ bounce = 0.0
 
 build_mode = 0
 polygon = PoolVector2Array( 0, 120, 1312, 120, 1312, 888, 416, 888, 416, 504, 224, 504, 224, 528, 128, 528, 128, 504, 0, 504, 0, 144, -128, 120, -128, 960, 1472, 960, 1472, 0, -128, 0, -128, 96 )
-
-[node name="Object" parent="Foreground" index="3" instance=ExtResource( 5 )]
-
-position = Vector2( 353, 355 )
-item_id = "Ham"
 
 [node name="Ceiling" parent="." index="2"]
 
