@@ -64,11 +64,14 @@ func _input(event):
 		set_process_input(false)
 		$SFX_confirm.play()
 		var new
+		var next_scene
 		match selection:
 			OPTION_NEW:
 				new = true
+				next_scene = "res://intro/intro.tscn"
 			OPTION_LOAD:
 				new = false
+				next_scene = "res://play.tscn"
 			OPTION_QUIT:
 				get_tree().quit()
 				return
@@ -78,7 +81,7 @@ func _input(event):
 			dir.remove("user://game.save")
 		leave()
 		yield($Timer, "timeout")
-		get_tree().change_scene("res://play.tscn")
+		get_tree().change_scene(next_scene)
 
 func set_selection(idx):
 	selection = idx
