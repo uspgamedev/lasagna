@@ -19,6 +19,7 @@ func interact(unused):
 		if id == SLEEP:
 			var main = get_node("/root/Main")
 			main.get_player().hp = main.get_player().max_health
+			get_node("/root/Main").get_flags().set_flag('hp', get_node('/root/Main').get_player().hp)
 			main.sleep_and_save()
 			main.end_night()
 	

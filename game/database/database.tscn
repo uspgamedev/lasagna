@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://database/database.gd" type="Script" id=1]
 [ext_resource path="res://database/item/item_data.tscn" type="PackedScene" id=2]
@@ -168,48 +168,32 @@ region = Rect2( 64, 64, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="StreamTexture" id=25]
+[sub_resource type="StreamTexture" id=19]
 
 flags = 0
 load_path = "res://.import/SEMENTES.png-aa6b3b3d8fb9c7db99aae0380bb1b080.stex"
 
-[sub_resource type="AtlasTexture" id=26]
-
-flags = 0
-atlas = SubResource( 25 )
-region = Rect2( 224, 96, 32, 32 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
-
-[sub_resource type="AtlasTexture" id=27]
-
-flags = 0
-atlas = SubResource( 25 )
-region = Rect2( 128, 128, 32, 32 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
-
-[sub_resource type="AtlasTexture" id=28]
-
-flags = 0
-atlas = SubResource( 25 )
-region = Rect2( 224, 192, 32, 32 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
-
 [sub_resource type="AtlasTexture" id=20]
 
 flags = 0
-atlas = ExtResource( 3 )
-region = Rect2( 0, 160, 32, 32 )
+atlas = SubResource( 19 )
+region = Rect2( 224, 96, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
 [sub_resource type="AtlasTexture" id=21]
 
 flags = 0
-atlas = ExtResource( 6 )
-region = Rect2( 96, 0, 32, 32 )
+atlas = SubResource( 19 )
+region = Rect2( 128, 128, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=22]
+
+flags = 0
+atlas = SubResource( 19 )
+region = Rect2( 224, 192, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
@@ -217,15 +201,39 @@ filter_clip = false
 
 flags = 0
 atlas = ExtResource( 3 )
-region = Rect2( 64, 192, 32, 32 )
+region = Rect2( 0, 160, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
 [sub_resource type="AtlasTexture" id=24]
 
 flags = 0
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=25]
+
+flags = 0
+atlas = ExtResource( 3 )
+region = Rect2( 64, 192, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=26]
+
+flags = 0
 atlas = ExtResource( 7 )
 region = Rect2( 32, 0, 32, 32 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id=27]
+
+flags = 0
+atlas = ExtResource( 7 )
+region = Rect2( 64, 128, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
@@ -320,35 +328,40 @@ crop_seed = "Kepala"
 
 [node name="FleeceSeed" parent="Items" index="19" instance=ExtResource( 2 )]
 
-icon = SubResource( 26 )
+icon = SubResource( 20 )
 crop_seed = "Fleece"
 
 [node name="MoonlightSeed" parent="Items" index="20" instance=ExtResource( 2 )]
 
-icon = SubResource( 27 )
+icon = SubResource( 21 )
 crop_seed = "MoonlightFritz"
 
 [node name="MinyakSeed" parent="Items" index="21" instance=ExtResource( 2 )]
 
-icon = SubResource( 28 )
+icon = SubResource( 22 )
 crop_seed = "Minyak"
 
 [node name="LasagnaPack" parent="Items" index="22" instance=ExtResource( 2 )]
 
-icon = SubResource( 20 )
+icon = SubResource( 23 )
 
 [node name="Paper" parent="Items" index="23" instance=ExtResource( 2 )]
 
-icon = SubResource( 21 )
+icon = SubResource( 24 )
 
 [node name="WormRoll" parent="Items" index="24" instance=ExtResource( 2 )]
 
-icon = SubResource( 23 )
+icon = SubResource( 25 )
 buy_value = 1000
 
 [node name="HealPotion" parent="Items" index="25" instance=ExtResource( 2 )]
 
-icon = SubResource( 24 )
+icon = SubResource( 26 )
+is_consumable = true
+
+[node name="SweetPotato" parent="Items" index="26" instance=ExtResource( 2 )]
+
+icon = SubResource( 27 )
 is_consumable = true
 
 [node name="Recipies" type="Node" parent="." index="1"]
@@ -454,8 +467,6 @@ editor/display_folded = true
 [node name="Oven" parent="Stations" index="0" instance=ExtResource( 10 )]
 
 [node name="Crops" type="Node" parent="." index="3"]
-
-editor/display_folded = true
 
 [node name="Fleece" parent="Crops" index="0" instance=ExtResource( 11 )]
 
