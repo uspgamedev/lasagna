@@ -111,7 +111,7 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 16 )
+extents = Vector2( 32, 12 )
 
 [sub_resource type="Animation" id=8]
 
@@ -177,10 +177,10 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
 friction = 0
-push_force = 0
-max_speed = 0
+push_force = 100.0
+max_speed = 150.0
 max_health = 100
-dmg = 1
+dmg = 25
 
 [node name="OrientedSprite" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -219,7 +219,7 @@ audio_bus_name = "Master"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AgroBox" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 16, -32, 16 )
+polygon = PoolVector2Array( -32, -32, 32, -32, 48, 0, 32, 16, -32, 16, -48, 0 )
 
 [node name="DmgCooldown" type="Timer" parent="." index="3"]
 
@@ -231,6 +231,13 @@ autostart = false
 [node name="AI" type="Node" parent="." index="4"]
 
 script = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="AI" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [node name="Animation" type="AnimationPlayer" parent="." index="5"]
 
@@ -253,6 +260,10 @@ _sections_unfolded = [ "Animation", "Visibility" ]
 [node name="SFX" type="Node2D" parent="." index="7"]
 
 editor/display_folded = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Damage" type="AudioStreamPlayer" parent="SFX" index="0"]
 

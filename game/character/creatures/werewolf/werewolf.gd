@@ -10,4 +10,6 @@ func _ready():
 			pass
 		_:
 			queue_free()
-			
+
+func _exit_tree():
+	print("No werewolves tonight...")
