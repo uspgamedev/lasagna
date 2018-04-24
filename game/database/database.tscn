@@ -24,7 +24,7 @@
 [ext_resource path="res://objects/plant/minyak/minyak.tscn" type="PackedScene" id=22]
 [ext_resource path="res://character/creatures/minyak/minyak.tscn" type="PackedScene" id=23]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=28]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -32,7 +32,7 @@ region = Rect2( 0, 192, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=29]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -40,7 +40,7 @@ region = Rect2( 64, 96, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=30]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -48,7 +48,7 @@ region = Rect2( 64, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=31]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -56,7 +56,7 @@ region = Rect2( 32, 96, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=32]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -64,7 +64,7 @@ region = Rect2( 0, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=33]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -72,7 +72,7 @@ region = Rect2( 32, 192, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=34]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -80,7 +80,7 @@ region = Rect2( 32, 128, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=35]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -88,7 +88,7 @@ region = Rect2( 0, 128, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=36]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -96,7 +96,7 @@ region = Rect2( 32, 64, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=37]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -104,7 +104,7 @@ region = Rect2( 32, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=38]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -112,7 +112,7 @@ region = Rect2( 64, 160, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=39]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -120,7 +120,7 @@ region = Rect2( 0, 64, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=40]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -128,7 +128,7 @@ region = Rect2( 0, 96, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=41]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -136,7 +136,7 @@ region = Rect2( 64, 128, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=42]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -144,7 +144,7 @@ region = Rect2( 64, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=43]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -152,7 +152,7 @@ region = Rect2( 32, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=44]
 
 flags = 0
 atlas = ExtResource( 5 )
@@ -160,7 +160,7 @@ region = Rect2( 192, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=45]
 
 flags = 0
 atlas = ExtResource( 5 )
@@ -168,36 +168,36 @@ region = Rect2( 64, 64, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="StreamTexture" id=19]
+[sub_resource type="StreamTexture" id=46]
 
 flags = 0
 load_path = "res://.import/SEMENTES.png-aa6b3b3d8fb9c7db99aae0380bb1b080.stex"
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=47]
 
 flags = 0
-atlas = SubResource( 19 )
+atlas = SubResource( 46 )
 region = Rect2( 224, 96, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=48]
 
 flags = 0
-atlas = SubResource( 19 )
+atlas = SubResource( 46 )
 region = Rect2( 128, 128, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=49]
 
 flags = 0
-atlas = SubResource( 19 )
+atlas = SubResource( 46 )
 region = Rect2( 224, 192, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=50]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -205,7 +205,7 @@ region = Rect2( 0, 160, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=51]
 
 flags = 0
 atlas = ExtResource( 6 )
@@ -213,7 +213,7 @@ region = Rect2( 96, 0, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=52]
 
 flags = 0
 atlas = ExtResource( 3 )
@@ -221,7 +221,7 @@ region = Rect2( 64, 192, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=53]
 
 flags = 0
 atlas = ExtResource( 7 )
@@ -237,7 +237,7 @@ region = Rect2( 64, 128, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Database" type="Node"]
+[node name="Database" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -245,71 +245,75 @@ script = ExtResource( 1 )
 
 [node name="LaaZahna" parent="Items" index="0" instance=ExtResource( 2 )]
 
-icon = SubResource( 1 )
+icon = SubResource( 28 )
 buy_value = 1000
 is_consumable = true
 
 [node name="Frog" parent="Items" index="1" instance=ExtResource( 2 )]
 
-icon = SubResource( 2 )
+icon = SubResource( 29 )
 
 [node name="Milk" parent="Items" index="2" instance=ExtResource( 2 )]
 
-icon = SubResource( 3 )
+icon = SubResource( 30 )
+buy_value = 2000
 
 [node name="Ham" parent="Items" index="3" instance=ExtResource( 2 )]
 
-icon = SubResource( 4 )
+icon = SubResource( 31 )
 
 [node name="TomatoSauce" parent="Items" index="4" instance=ExtResource( 2 )]
 
-icon = SubResource( 5 )
+icon = SubResource( 32 )
 
 [node name="YakiSobath" parent="Items" index="5" instance=ExtResource( 2 )]
 
-icon = SubResource( 6 )
+icon = SubResource( 33 )
 buy_value = 1000
 
 [node name="Onion" parent="Items" index="6" instance=ExtResource( 2 )]
 
-icon = SubResource( 7 )
+icon = SubResource( 34 )
+buy_value = 2000
 
 [node name="Worms" parent="Items" index="7" instance=ExtResource( 2 )]
 
-icon = SubResource( 8 )
+icon = SubResource( 35 )
+buy_value = 2000
 
 [node name="Mushroom" parent="Items" index="8" instance=ExtResource( 2 )]
 
-icon = SubResource( 9 )
+icon = SubResource( 36 )
 
 [node name="VegSauce" parent="Items" index="9" instance=ExtResource( 2 )]
 
-icon = SubResource( 10 )
+icon = SubResource( 37 )
 
 [node name="BlobStew" parent="Items" index="10" instance=ExtResource( 2 )]
 
-icon = SubResource( 11 )
+icon = SubResource( 38 )
 buy_value = 1000
 
 [node name="BlobFishJam" parent="Items" index="11" instance=ExtResource( 2 )]
 
-icon = SubResource( 12 )
+icon = SubResource( 39 )
 
 [node name="Hair" parent="Items" index="12" instance=ExtResource( 2 )]
 
-icon = SubResource( 13 )
+icon = SubResource( 40 )
 
 [node name="FleeceRoot" parent="Items" index="13" instance=ExtResource( 2 )]
 
-icon = SubResource( 14 )
+icon = SubResource( 41 )
 
 [node name="Oil" parent="Items" index="14" instance=ExtResource( 2 )]
 
-icon = SubResource( 15 )
+icon = SubResource( 42 )
+buy_value = 2000
 
 [node name="Water" parent="Items" index="15" instance=ExtResource( 2 )]
 
-icon = SubResource( 16 )
+icon = SubResource( 43 )
 
 [node name="RaHajSeed" parent="Items" index="16" instance=ExtResource( 2 )]
 
@@ -318,45 +322,47 @@ crop_seed = "RaHaj"
 
 [node name="XucTuSeed" parent="Items" index="17" instance=ExtResource( 2 )]
 
-icon = SubResource( 17 )
+icon = SubResource( 44 )
 crop_seed = "XucTu"
 
 [node name="KepalaSeed" parent="Items" index="18" instance=ExtResource( 2 )]
 
-icon = SubResource( 18 )
+icon = SubResource( 45 )
 crop_seed = "Kepala"
 
 [node name="FleeceSeed" parent="Items" index="19" instance=ExtResource( 2 )]
 
-icon = SubResource( 20 )
+icon = SubResource( 47 )
 crop_seed = "Fleece"
 
 [node name="MoonlightSeed" parent="Items" index="20" instance=ExtResource( 2 )]
 
-icon = SubResource( 21 )
+icon = SubResource( 48 )
 crop_seed = "MoonlightFritz"
 
 [node name="MinyakSeed" parent="Items" index="21" instance=ExtResource( 2 )]
 
-icon = SubResource( 22 )
+icon = SubResource( 49 )
 crop_seed = "Minyak"
 
 [node name="LasagnaPack" parent="Items" index="22" instance=ExtResource( 2 )]
 
-icon = SubResource( 23 )
+icon = SubResource( 50 )
 
 [node name="Paper" parent="Items" index="23" instance=ExtResource( 2 )]
 
-icon = SubResource( 24 )
+icon = SubResource( 51 )
 
 [node name="WormRoll" parent="Items" index="24" instance=ExtResource( 2 )]
 
-icon = SubResource( 25 )
+icon = SubResource( 52 )
 buy_value = 1000
+is_consumable = true
 
 [node name="HealPotion" parent="Items" index="25" instance=ExtResource( 2 )]
 
-icon = SubResource( 26 )
+icon = SubResource( 53 )
+buy_value = 7000
 is_consumable = true
 
 [node name="SweetPotato" parent="Items" index="26" instance=ExtResource( 2 )]
@@ -366,10 +372,9 @@ is_consumable = true
 
 [node name="Recipies" type="Node" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="LaaZahna" parent="Recipies" index="0" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 yields = "LAA’ZAHNA"
 craft_on = "Oven"
 
@@ -383,6 +388,7 @@ craft_on = "Oven"
 
 [node name="YakiSobath" parent="Recipies" index="1" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 yields = "YAKI'SOBATH"
 craft_on = "Oven"
 
@@ -396,6 +402,7 @@ craft_on = "Oven"
 
 [node name="BlobStew" parent="Recipies" index="2" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 yields = "Jelly Stew"
 craft_on = "Oven"
 
@@ -420,6 +427,7 @@ craft_on = "Oven"
 
 [node name="HalfLifeGUD" parent="Recipies" index="4" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 yields = "Half Life (+)"
 craft_on = "Oven"
 moon_phase = "New"
@@ -434,6 +442,7 @@ moon_phase = "New"
 
 [node name="HalfLifeBAD" parent="Recipies" index="5" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 yields = "Half Life (-)"
 craft_on = "Oven"
 moon_phase = "Crescent"
@@ -448,6 +457,7 @@ moon_phase = "Crescent"
 
 [node name="Fertilizer" parent="Recipies" index="6" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 yields = "Fertilizer"
 craft_on = "Oven"
 moon_phase = "Full"
@@ -461,8 +471,6 @@ moon_phase = "Full"
 [node name="Milk" parent="Recipies/Fertilizer" index="3" instance=ExtResource( 9 )]
 
 [node name="Stations" type="Node" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="Oven" parent="Stations" index="0" instance=ExtResource( 10 )]
 

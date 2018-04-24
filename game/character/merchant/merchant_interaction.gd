@@ -9,6 +9,16 @@ const PRODUCTS = [
 	"RaHajSeed",
 	"MoonlightSeed",
 	"MinyakSeed",
+	"Milk",
+	"Ham",
+	"TomatoSauce",
+	"Onion",
+	"Worms",
+	"Mushroom",
+	"VegSauce",
+	"BlobStew",
+	"Oil",
+	"HealPotion"
 ]
 
 func _ready():
