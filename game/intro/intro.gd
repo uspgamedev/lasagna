@@ -1,8 +1,8 @@
 extends Node
 
 onready var count = 0
-onready var ini = 13
-onready var fin = 27
+onready var ini = 10
+onready var fin = 30
 onready var sfx_count_value = rand_range(ini, fin)
 
 func _ready():
@@ -42,6 +42,13 @@ func _on_Tween_tween_step( object, key, elapsed, value ):
 func _on_Tween_tween_completed( object, key ):
 	$"Begin-Game".start()
 
-
+#ignore the name plz
 func _begin_game():
+	var tween = $fadeout
+	tween.interpolate_property($block, "color", Color(0,0,0,0), Color(0,0,0,1), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+	
+
+#Actual begin game
+func _on_fadeout_tween_completed( object, key ):
 	get_tree().change_scene("res://play.tscn")
