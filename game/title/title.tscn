@@ -6,7 +6,7 @@
 [ext_resource path="res://hud/font-mid.tres" type="DynamicFont" id=4]
 [ext_resource path="res://title/title.png" type="Texture" id=5]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 
 resource_name = "load"
 length = 0.6
@@ -25,9 +25,8 @@ tracks/0/keys = {
 "values": [ Vector2( -1, 32 ), Vector2( 0, 31 ), Vector2( 1, 32 ), Vector2( 0, 33 ) ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 
-resource_name = "new"
 length = 0.6
 loop = true
 step = 0.15
@@ -63,7 +62,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1, 64 ), Vector2( 0, 63 ), Vector2( 1, 64 ), Vector2( 0, 65 ) ]
 }
 
-[node name="Title" type="Control" index="0"]
+[node name="Title" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -221,8 +220,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/load = SubResource( 2 )
-anims/new = SubResource( 1 )
+anims/load = SubResource( 1 )
+anims/new = SubResource( 2 )
 anims/quit = SubResource( 3 )
 blend_times = [  ]
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ending_scene.ogg-650051b1cb42da61653305c78a6c928f.oggstr"
+
+[deps]
+
+source_file="res://credits/ending_scene.ogg"
+source_md5="cab1a7336dcf6ea422d6951168e37b4e"
+
+dest_files=[ "res://.import/ending_scene.ogg-650051b1cb42da61653305c78a6c928f.oggstr" ]
+dest_md5="4b5fdf837a5be9849aa4a40deb92cb8f"
+
+[params]
+
+loop=true
+loop_offset=0
