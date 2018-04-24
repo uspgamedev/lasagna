@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://map/garden.tscn" type="PackedScene" id=1]
-[ext_resource path="res://objects/props/pickable_item.tscn" type="PackedScene" id=2]
-[ext_resource path="res://character/creatures/goat/goat.tscn" type="PackedScene" id=3]
-[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=5]
+[ext_resource path="res://character/creatures/goat/goat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=4]
 
 [node name="Map" index="0" instance=ExtResource( 1 )]
 
@@ -14,26 +13,21 @@ nighttime = "res://map/garden_nighttime.tscn"
 
 destiny = "house_daytime"
 
-[node name="Object" parent="Foreground" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 288, 336 )
-item_id = "Tier1SeedA"
-
-[node name="Goat" parent="Foreground" index="3" instance=ExtResource( 3 )]
+[node name="Goat" parent="Foreground" index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 672, 720 )
 
-[node name="Sprite" type="Sprite" parent="Foreground" index="4"]
+[node name="Sprite" type="Sprite" parent="Foreground" index="3"]
 
 [node name="BGM" parent="." index="4"]
 
 current_bgm = "garden_day"
 
-[node name="inspect_crop" parent="Cutscenes" index="0" instance=ExtResource( 4 )]
+[node name="inspect_crop" parent="Cutscenes" index="0" instance=ExtResource( 3 )]
 
 other = "Player"
 
-[node name="CutsceneNode" parent="Cutscenes/inspect_crop" index="0" instance=ExtResource( 5 )]
+[node name="CutsceneNode" parent="Cutscenes/inspect_crop" index="0" instance=ExtResource( 4 )]
 
 actor = "Player"
 text = "Looks grown enough. Should be ripe by nightfall!"
