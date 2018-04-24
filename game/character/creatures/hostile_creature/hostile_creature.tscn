@@ -11,8 +11,6 @@ dmg = 1
 [node name="OrientedSprite" parent="." index="0"]
 
 visible = false
-material = null
-_sections_unfolded = [ "Animation", "Material", "Visibility" ]
 
 [node name="AgroBox" type="Area2D" parent="." index="3"]
 
@@ -29,9 +27,8 @@ audio_bus_name = "Master"
 build_mode = 0
 polygon = PoolVector2Array( -70, -60, 70, -60, 70, 60, -70, 60 )
 
-[node name="DeathSprite" parent="." index="6"]
+[node name="Death" parent="SFX" index="7"]
 
-visible = false
-frame = 11
+stream = null
 
 
