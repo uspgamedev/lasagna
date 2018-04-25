@@ -1,0 +1,202 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=1]
+[ext_resource path="res://database/recipe/recipe_data.gd" type="Script" id=2]
+[ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=3]
+[ext_resource path="res://database/recipe/recipe_req_data.gd" type="Script" id=4]
+
+[node name="Recipes" type="Node"]
+
+editor/display_folded = true
+
+[node name="LaaZahna" type="Node" parent="." index="0" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+yields = "LAA’ZAHNA"
+craft_on = "Oven"
+moon_phase = "Any"
+
+[node name="Frog" type="Node" parent="LaaZahna" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Milk" type="Node" parent="LaaZahna" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Ham" type="Node" parent="LaaZahna" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="TomatoSauce" type="Node" parent="LaaZahna" index="3" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="YakiSobath" type="Node" parent="." index="1" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+yields = "YAKI'SOBATH"
+craft_on = "Oven"
+moon_phase = "Any"
+
+[node name="Onion" type="Node" parent="YakiSobath" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Worms" type="Node" parent="YakiSobath" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Mushroom" type="Node" parent="YakiSobath" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="VegSauce" type="Node" parent="YakiSobath" index="3" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="BlobStew" type="Node" parent="." index="2" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+yields = "Jelly Stew"
+craft_on = "Oven"
+moon_phase = "Any"
+
+[node name="BlobFishJam" type="Node" parent="BlobStew" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Hair" type="Node" parent="BlobStew" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="FleeceRoot" type="Node" parent="BlobStew" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="WormRoll" type="Node" parent="." index="3" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+yields = "Worm Roll"
+craft_on = "Oven"
+moon_phase = "Any"
+
+[node name="Worms" type="Node" parent="WormRoll" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Oil" type="Node" parent="WormRoll" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Onion" type="Node" parent="WormRoll" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Milk" type="Node" parent="WormRoll" index="3" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="HalfLifeGUD" type="Node" parent="." index="4" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+yields = "Half Life (+)"
+craft_on = "Oven"
+moon_phase = "New"
+
+[node name="Worms" type="Node" parent="HalfLifeGUD" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Oil" type="Node" parent="HalfLifeGUD" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Onion" type="Node" parent="HalfLifeGUD" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Milk" type="Node" parent="HalfLifeGUD" index="3" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="HalfLifeBAD" type="Node" parent="." index="5" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+yields = "Half Life (-)"
+craft_on = "Oven"
+moon_phase = "Crescent"
+
+[node name="Worms" type="Node" parent="HalfLifeBAD" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Oil" type="Node" parent="HalfLifeBAD" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Onion" type="Node" parent="HalfLifeBAD" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Milk" type="Node" parent="HalfLifeBAD" index="3" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Fertilizer" type="Node" parent="." index="6" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+yields = "Fertilizer"
+craft_on = "Oven"
+moon_phase = "Full"
+
+[node name="Worms" type="Node" parent="Fertilizer" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Oil" type="Node" parent="Fertilizer" index="1" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Onion" type="Node" parent="Fertilizer" index="2" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+[node name="Milk" type="Node" parent="Fertilizer" index="3" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+amount = 1
+
+
