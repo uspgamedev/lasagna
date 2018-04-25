@@ -61,7 +61,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Resource" ]
 
-[node name="Map" index="0" instance=ExtResource( 1 )]
+[node name="Map" instance=ExtResource( 1 )]
 
 position = Vector2( -1, 1 )
 
@@ -433,10 +433,6 @@ _sections_unfolded = [ "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
-
-[node name="fov" parent="Foreground" index="19"]
-
-visible = false
 
 [node name="Ceiling" parent="." index="7"]
 
