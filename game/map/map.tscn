@@ -1,12 +1,33 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://map/map.gd" type="Script" id=1]
 [ext_resource path="res://map/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://map/background.gd" type="Script" id=3]
-[ext_resource path="res://map/bgm/bgm.tscn" type="PackedScene" id=4]
-[ext_resource path="res://interaction/cutscene/cutscenes.tscn" type="PackedScene" id=5]
-[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=6]
-[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=7]
+[ext_resource path="res://hud/pixel.png" type="Texture" id=4]
+[ext_resource path="res://map/fov.gd" type="Script" id=5]
+[ext_resource path="res://map/bgm/bgm.tscn" type="PackedScene" id=6]
+[ext_resource path="res://interaction/cutscene/cutscenes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://interaction/cutscene/cutscene.tscn" type="PackedScene" id=8]
+[ext_resource path="res://interaction/cutscene/cutscene_node.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+
+void fragment() {
+	float VISIBLE = 96.0;
+	float HALF_SHADE = 160.0;
+	vec2 center = vec2(0, 0);
+	float dist = distance(center, UV);
+	float alpha = smoothstep(VISIBLE, HALF_SHADE, dist);
+	COLOR = COLOR * vec4(1, 1, 1, alpha);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
 
 [node name="Map" type="Node2D" index="0"]
 
@@ -38,7 +59,6 @@ _sections_unfolded = [ "Cell" ]
 
 [node name="Foreground" type="TileMap" parent="." index="1"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 24 )
@@ -57,6 +77,26 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray(  )
 _sections_unfolded = [ "Cell" ]
+
+[node name="fov" type="Polygon2D" parent="Foreground" index="0"]
+
+pause_mode = 2
+material = SubResource( 2 )
+z_index = 10
+polygon = PoolVector2Array( -640, -640, 640, -640, 640, 640, -640, 640 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0, 0, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = ExtResource( 4 )
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+script = ExtResource( 5 )
+_sections_unfolded = [ "Invert", "Material", "Pause", "Texture", "Z Index" ]
 
 [node name="Ceiling" type="TileMap" parent="." index="2"]
 
@@ -85,20 +125,20 @@ _sections_unfolded = [ "Cell" ]
 
 [node name="LowerRight" type="Node2D" parent="Limits" index="1"]
 
-[node name="BGM" parent="." index="4" instance=ExtResource( 4 )]
+[node name="BGM" parent="." index="4" instance=ExtResource( 6 )]
 
-[node name="Cutscenes" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Cutscenes" parent="." index="5" instance=ExtResource( 7 )]
 
-[node name="eating_lasagna" parent="Cutscenes" index="0" instance=ExtResource( 6 )]
+[node name="eating_lasagna" parent="Cutscenes" index="0" instance=ExtResource( 8 )]
 
 other = "Player"
 
-[node name="CutsceneNode2" parent="Cutscenes/eating_lasagna" index="0" instance=ExtResource( 7 )]
+[node name="CutsceneNode2" parent="Cutscenes/eating_lasagna" index="0" instance=ExtResource( 9 )]
 
 actor = "Player"
 text = "..."
 
-[node name="CutsceneNode" parent="Cutscenes/eating_lasagna" index="1" instance=ExtResource( 7 )]
+[node name="CutsceneNode" parent="Cutscenes/eating_lasagna" index="1" instance=ExtResource( 9 )]
 
 actor = "Player"
 text = "yuck"

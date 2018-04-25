@@ -331,7 +331,7 @@ radius = 10.0
 custom_solver_bias = 0.0
 extents = Vector2( 12, 16 )
 
-[node name="Player" groups=[
+[node name="Player" index="0" groups=[
 "player",
 ] instance=ExtResource( 1 )]
 
@@ -432,7 +432,7 @@ script = ExtResource( 8 )
 
 [node name="Dialogues" type="Node2D" parent="." index="6"]
 
-z_index = 10
+z_index = 20
 z_as_relative = false
 _sections_unfolded = [ "Transform", "Z Index" ]
 
