@@ -32,8 +32,9 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius" ]
 
-[node name="Dialogue" type="PanelContainer" index="0"]
+[node name="Dialogue" type="PanelContainer"]
 
+pause_mode = 2
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -48,7 +49,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Hint", "Margin", "Rect", "Theme", "custom_constants", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Hint", "Margin", "Pause", "Rect", "Theme", "custom_constants", "custom_styles" ]
 
 [node name="Timer" type="Timer" parent="." index="0"]
 

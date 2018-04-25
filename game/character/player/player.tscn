@@ -428,7 +428,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Interaction" type="Node" parent="." index="5"]
 
+pause_mode = 2
 script = ExtResource( 8 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="Dialogues" type="Node2D" parent="." index="6"]
 
