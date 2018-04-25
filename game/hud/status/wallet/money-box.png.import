@@ -10,7 +10,7 @@ source_file="res://hud/status/wallet/money-box.png"
 source_md5="6a45f53bf83d3b603138df1c66cd6823"
 
 dest_files=[ "res://.import/money-box.png-25b18220cab27bbe75f23bb50298b206.stex" ]
-dest_md5="8615473e477b254b3872e74c63a8e4b1"
+dest_md5="4a69e51c59164e0485bfc4032f59aea7"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
