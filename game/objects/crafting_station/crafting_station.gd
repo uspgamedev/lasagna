@@ -51,7 +51,7 @@ func _ready():
 	var Main = get_node("/root/Main")
 	var DB = Main.get_db()
 	$Sprite.texture = DB.get_station_by_name(type).texture
-	for recipe_data in DB.get_node("Recipies").get_children():
+	for recipe_data in DB.get_recipes():
 		if recipe_data.craft_on == type:
 			recipies.append( recipe_data )
 			print(recipe_data.name)
