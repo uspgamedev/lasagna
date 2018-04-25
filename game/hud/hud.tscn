@@ -1,43 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://hud/shader_filter.png" type="Texture" id=1]
-[ext_resource path="res://hud/status/status.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/stash_hud.tscn" type="PackedScene" id=3]
-[ext_resource path="res://hud/popup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hud/status/status.tscn" type="PackedScene" id=1]
+[ext_resource path="res://hud/stash_hud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://hud/popup.tscn" type="PackedScene" id=3]
 
-[sub_resource type="Shader" id=1]
-
-code = "shader_type canvas_item;
-
-uniform vec2 focus;
-
-void fragment() {
-	float dist = distance(focus, SCREEN_UV)/0.5;
-	COLOR = vec4(0.0, 0.0, 0.0, min(0.9, 2.0*dist*dist*dist));
-}"
-_sections_unfolded = [ "Resource" ]
-
-[sub_resource type="ShaderMaterial" id=2]
-
-render_priority = 0
-shader = SubResource( 1 )
-shader_param/focus = Vector2( 0.5, 0.5 )
-_sections_unfolded = [ "Resource", "shader_param" ]
-
-[sub_resource type="GDScript" id=3]
-
-script/source = "extends TextureRect
-
-func _process(delta):
-	var player = get_node(\"/root/Main\").get_player()
-	var focus = Vector2()
-	if player != null:
-		focus = player.position - player.get_node(\"Camera2D\").get_camera_screen_center()
-		focus.x = (focus.x + self.rect_size.x/2)/self.rect_size.x
-		focus.y = (-focus.y + self.rect_size.y/2)/self.rect_size.y
-	self.material.set_shader_param(\"focus\", focus)"
-
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -46,49 +13,44 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 _sections_unfolded = [ "Pause" ]
 
-[node name="Shader" type="TextureRect" parent="." index="0"]
+[node name="Status" parent="." index="0" instance=ExtResource( 1 )]
 
-pause_mode = 2
-visible = false
-material = SubResource( 2 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 640.0
-margin_bottom = 480.0
-rect_pivot_offset = Vector2( 0, 0 )
+editor/display_folded = true
 rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 1 )
-stretch_mode = 0
-script = SubResource( 3 )
-_sections_unfolded = [ "Material", "Pause", "Rect" ]
 
-[node name="Status" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Day" parent="Status" index="0"]
+
+rect_clip_content = false
 
 [node name="UpperRight" parent="Status" index="1"]
 
 editor/display_folded = true
+rect_clip_content = false
+
+[node name="HealthBar" parent="Status/UpperRight" index="0"]
+
+rect_clip_content = false
 
 [node name="Bottom" parent="Status" index="2"]
 
 pause_mode = 2
+rect_clip_content = false
 _sections_unfolded = [ "Anchor", "Margin", "Pause" ]
+
+[node name="BookSlot" parent="Status/Bottom" index="0"]
+
+rect_clip_content = false
 
 [node name="Wallet" parent="Status/Bottom" index="2"]
 
 editor/display_folded = true
 
-[node name="InventoryContainer" parent="." index="2" instance=ExtResource( 3 )]
+[node name="InventoryContainer" parent="." index="1" instance=ExtResource( 2 )]
 
 pause_mode = 2
 _sections_unfolded = [ "Pause" ]
 
-[node name="Popup" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Popup" parent="." index="2" instance=ExtResource( 3 )]
 
 visible = false
 

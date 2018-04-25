@@ -59,7 +59,6 @@ func end_night():
 	add_child(transition)
 	map.get_node("BGM").fade_out()
 	transition.play("morning")
-	get_node('HUD/Shader').hide()
 	yield(transition, "got_dark")
 	clock.end_night()
 	var new_map = preload("res://map/house_daytime.tscn").instance()
@@ -86,7 +85,6 @@ func end_day():
 		yield(get_tree(), "physics_frame")
 		add_child(new_map)
 		prevent_player_input(true)
-		get_node('HUD/Shader').show()
 
 func pause_clock():
 	clock.pause()
