@@ -8,7 +8,7 @@ func request_option(options, width = 128):
 	for option in options:
 		popup.add_item(" " + option)
 	get_tree().paused = true
-	popup.popup_centered(Vector2(width, len(options)*32))
+	popup.popup_centered(Vector2(width, len(options)*30))
 	popup.connect("popup_hide", self, "_on_cancel", [], CONNECT_ONESHOT)
 	popup.connect("id_pressed", self, "_on_option_chosen", [], CONNECT_ONESHOT)
 	var idx = yield(self, "option_chosen")

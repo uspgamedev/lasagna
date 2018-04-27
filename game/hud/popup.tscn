@@ -62,7 +62,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Expand Margin" ]
 
-[node name="Popup" type="PopupMenu" index="0"]
+[node name="Popup" type="PopupMenu"]
 
 pause_mode = 2
 anchor_left = 0.0

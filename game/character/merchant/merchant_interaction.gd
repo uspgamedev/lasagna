@@ -11,13 +11,13 @@ const PRODUCTS = [
 	"MinyakSeed",
 	"Milk",
 	"Ham",
+	"Frog",
 	"TomatoSauce",
 	"BlobFishJam",
 	"Water",
 	"Onion",
 	"Worms",
-	"Oil",
-	"HealPotion"
+	"Oil"
 ]
 
 func _ready():
@@ -84,7 +84,7 @@ func interact(item):
 	else:
 		yield(_cutscene("merchant_sell"), "finished")
 		var popup = _popup()
-		popup.request_option(["Sell for %d" % _price(item.name), "No, thanks"])
+		popup.request_option(["Sell for %d" % (_price(item.name)/2), "No, thanks"])
 		var option = yield(popup, "option_chosen")
 		if option == 0:
 			inv.consume_n_items(item.name, 1)

@@ -3,7 +3,7 @@
 [ext_resource path="res://database/recipe/recipe_data.tscn" type="PackedScene" id=1]
 [ext_resource path="res://database/recipe/recipe_req_data.tscn" type="PackedScene" id=2]
 
-[node name="Recipes" type="Node" index="0"]
+[node name="Recipes" type="Node"]
 
 [node name="LaaZahna" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -26,6 +26,8 @@ craft_on = "Oven"
 [node name="Onion" parent="YakiSobath" index="0" instance=ExtResource( 2 )]
 
 [node name="Worms" parent="YakiSobath" index="1" instance=ExtResource( 2 )]
+
+amount = 2
 
 [node name="Mushroom" parent="YakiSobath" index="2" instance=ExtResource( 2 )]
 
@@ -53,9 +55,13 @@ craft_on = "Oven"
 
 [node name="Worms" parent="WormRoll" index="0" instance=ExtResource( 2 )]
 
+amount = 8
+
 [node name="Oil" parent="WormRoll" index="1" instance=ExtResource( 2 )]
 
 [node name="Onion" parent="WormRoll" index="2" instance=ExtResource( 2 )]
+
+amount = 4
 
 [node name="Milk" parent="WormRoll" index="3" instance=ExtResource( 2 )]
 

@@ -28,6 +28,9 @@ func damage(dmg_points, from=false):
 		if hp <= 0 and not dead:
 			death()
 
+func is_alive():
+	return hp <= max_health
+
 func death():
 	if dead:
 		return
