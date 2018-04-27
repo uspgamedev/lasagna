@@ -139,5 +139,19 @@ text = "..."
 actor = "Player"
 text = "yuck"
 
+[node name="eating_wormroll" parent="Cutscenes" index="1" instance=ExtResource( 8 )]
+
+other = "Player"
+
+[node name="CutsceneNode3" parent="Cutscenes/eating_wormroll" index="0" instance=ExtResource( 9 )]
+
+actor = "Player"
+text = "I feel pulled in a nonexistant direction!"
+
+[node name="CutsceneNode4" parent="Cutscenes/eating_wormroll" index="1" instance=ExtResource( 9 )]
+
+actor = "Player"
+text = "Wait- is that you, Grandma!?"
+
 
 [editable path="Cutscenes"]
