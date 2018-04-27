@@ -44,7 +44,7 @@ region = Rect2( 32, 48, 64, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Map" instance=ExtResource( 1 )]
+[node name="Map" index="0" instance=ExtResource( 1 )]
 
 nighttime = "res://map/house_nighttime.tscn"
 
@@ -75,9 +75,9 @@ position = Vector2( -64, 384 )
 
 editor/display_folded = true
 
-[node name="Cutscenes" parent="." index="10"]
+[node name="cupboard_get_ingreds" parent="Cutscenes" index="1"]
 
-editor/display_folded = false
+editor/display_folded = true
 
 [node name="merchant_greet" parent="Cutscenes" index="3" instance=ExtResource( 4 )]
 
@@ -87,10 +87,11 @@ other = "Mercador"
 
 actor = "Mercador"
 text = "I have only the finest to offer,
-just the way gandma likes it."
+just the way grandma likes it."
 
 [node name="merchant_final_dialogue" parent="Cutscenes" index="4" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 other = "Mercador"
 
 [node name="CutsceneNode" parent="Cutscenes/merchant_final_dialogue" index="0" instance=ExtResource( 5 )]
@@ -100,7 +101,6 @@ text = "With this, you may find your granny again! Send my regards."
 
 [node name="merchant_introduce" parent="Cutscenes" index="5" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 other = "Mercador"
 
 [node name="CutsceneNode" parent="Cutscenes/merchant_introduce" index="0" instance=ExtResource( 5 )]
@@ -116,67 +116,86 @@ text = "What the..."
 [node name="CutsceneNode3" parent="Cutscenes/merchant_introduce" index="2" instance=ExtResource( 5 )]
 
 actor = "Mercador"
-text = "I am paying for the food you just prepared. Give it to me now."
+text = "I am paying for the food you just prepared."
 
-[node name="CutsceneNode4" parent="Cutscenes/merchant_introduce" index="3" instance=ExtResource( 5 )]
+[node name="CutsceneNode14" parent="Cutscenes/merchant_introduce" index="3" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Give it to me now."
+
+[node name="CutsceneNode4" parent="Cutscenes/merchant_introduce" index="4" instance=ExtResource( 5 )]
 
 actor = "Player"
 text = "B-but…"
 
-[node name="CutsceneNode5" parent="Cutscenes/merchant_introduce" index="4" instance=ExtResource( 5 )]
+[node name="CutsceneNode5" parent="Cutscenes/merchant_introduce" index="5" instance=ExtResource( 5 )]
 
 actor = "Mercador"
-text = "Alright. I hope it is as good as granny’s."
+text = "Alright. I hope it is as good as granny's."
 
-[node name="CutsceneNode6" parent="Cutscenes/merchant_introduce" index="5" instance=ExtResource( 5 )]
+[node name="CutsceneNode6" parent="Cutscenes/merchant_introduce" index="6" instance=ExtResource( 5 )]
 
 actor = "Player"
-text = "Oh wait, do you know my grandma? She left the house and didn’t come back yet…"
+text = "Oh wait, do you know my grandma?"
 
-[node name="CutsceneNode7" parent="Cutscenes/merchant_introduce" index="6" instance=ExtResource( 5 )]
+[node name="CutsceneNode15" parent="Cutscenes/merchant_introduce" index="7" instance=ExtResource( 5 )]
+
+actor = "Player"
+text = "She left the house and didn't come back yet…"
+
+[node name="CutsceneNode7" parent="Cutscenes/merchant_introduce" index="8" instance=ExtResource( 5 )]
 
 actor = "Player"
 text = "Do you have any idea of where she could be?"
 
-[node name="CutsceneNode8" parent="Cutscenes/merchant_introduce" index="7" instance=ExtResource( 5 )]
-
-actor = "Player"
-text = "Do you have any idea of where she could be?"
-
-[node name="CutsceneNode9" parent="Cutscenes/merchant_introduce" index="8" instance=ExtResource( 5 )]
+[node name="CutsceneNode9" parent="Cutscenes/merchant_introduce" index="9" instance=ExtResource( 5 )]
 
 actor = "Mercador"
-text = "Do not worry, she often disappears. Perhaps she went to buy something that is hard to find."
+text = "Do not worry, she often disappears."
 
-[node name="CutsceneNode10" parent="Cutscenes/merchant_introduce" index="9" instance=ExtResource( 5 )]
+[node name="CutsceneNode16" parent="Cutscenes/merchant_introduce" index="10" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "Perhaps she went to buy something that is hard to find."
+
+[node name="CutsceneNode10" parent="Cutscenes/merchant_introduce" index="11" instance=ExtResource( 5 )]
 
 actor = "Mercador"
 text = "I promised her some special recipes, you see... "
 
-[node name="CutsceneNode11" parent="Cutscenes/merchant_introduce" index="10" instance=ExtResource( 5 )]
+[node name="CutsceneNode11" parent="Cutscenes/merchant_introduce" index="12" instance=ExtResource( 5 )]
 
 actor = "Mercador"
 text = "As for you, uhm, just keep cooking."
 
-[node name="CutsceneNode12" parent="Cutscenes/merchant_introduce" index="11" instance=ExtResource( 5 )]
+[node name="CutsceneNode12" parent="Cutscenes/merchant_introduce" index="13" instance=ExtResource( 5 )]
 
 actor = "Player"
-text = "But I don’t know how to cook! Also, grandma’s recipes book is way too hard to understand!
-"
+text = "But I don't know have anything to cook with!"
 
-[node name="CutsceneNode13" parent="Cutscenes/merchant_introduce" index="12" instance=ExtResource( 5 )]
+[node name="CutsceneNode13" parent="Cutscenes/merchant_introduce" index="14" instance=ExtResource( 5 )]
 
 actor = "Mercador"
-text = "Here, have this catalog, it should help you out."
+text = "Here, I have some things that should help..."
+
+[node name="CutsceneNode17" parent="Cutscenes/merchant_introduce" index="15" instance=ExtResource( 5 )]
+
+actor = "Mercador"
+text = "...At a price, obviously."
 
 [node name="merchant_sell" parent="Cutscenes" index="6" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 other = "Mercador"
 
 [node name="CutsceneNode" parent="Cutscenes/merchant_sell" index="0" instance=ExtResource( 5 )]
 
 actor = "Mercador"
 text = "Would you like to sell me that?"
+
+[node name="eating_lasagna" parent="Cutscenes" index="15"]
+
+editor/display_folded = true
 
 
 [editable path="Foreground/Oven"]
