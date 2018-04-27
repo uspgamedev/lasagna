@@ -1,8 +1,6 @@
 
 extends Polygon2D
 
-onready var player = get_node("/root/Main").get_player()
-
 func _ready():
 	follow_player()
 	if get_node("/root/Main").is_day:
@@ -11,7 +9,7 @@ func _ready():
 		show()
 
 func follow_player():
-	set_global_position(player.get_global_position())
+	set_global_position(get_node("/root/Main").get_player().get_global_position())
 
 func _physics_process(dt):
 	follow_player()
