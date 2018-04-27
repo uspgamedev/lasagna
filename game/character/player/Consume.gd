@@ -14,6 +14,13 @@ func consume(item):
 				player.hp = player.max_health
 			else:
 				player.hp += heal
+		"BadPotion":
+			var player = get_node("/root/Main").get_player()
+			var heal = -50 # TODO: check value
+			if player.hp + heal < 0:
+				player.hp = 0
+			else:
+				player.hp += heal
 		"LaaZahna":
 			var main = get_node("/root/Main")
 			main.get_flags().set_flag("ATE_LASAGNA", true)

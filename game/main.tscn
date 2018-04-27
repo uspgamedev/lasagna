@@ -6,7 +6,7 @@
 [ext_resource path="res://save/flags.tscn" type="PackedScene" id=4]
 [ext_resource path="res://map/cropmatrix.tscn" type="PackedScene" id=5]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -14,6 +14,8 @@ _sections_unfolded = [ "Pause" ]
 [node name="HUD" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="Inventory" parent="." index="1" instance=ExtResource( 3 )]
+
+money = 1000
 
 [node name="Flags" parent="." index="2" instance=ExtResource( 4 )]
 

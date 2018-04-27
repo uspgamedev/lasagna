@@ -3,7 +3,7 @@ extends Node
 const INVENTORY_SIZE = 6
 const MAX_STACK_SIZE = 256
 
-export(int) var money = 10000
+export(int) var money = 1000
 
 var stash = {}
 var inventory = []

@@ -12,11 +12,10 @@ const PRODUCTS = [
 	"Milk",
 	"Ham",
 	"TomatoSauce",
+	"BlobFishJam",
+	"Water",
 	"Onion",
 	"Worms",
-	"Mushroom",
-	"VegSauce",
-	"BlobStew",
 	"Oil",
 	"HealPotion"
 ]
