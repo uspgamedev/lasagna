@@ -26,15 +26,13 @@ func damage(dmg_points, from=false):
 		hp -= dmg_points
 		$SFX/Damage.play()
 		if hp <= 0 and not dead:
+			dead = true
 			death()
 
 func is_alive():
-	return hp <= max_health
+	return not dead
 
 func death():
-	if dead:
-		return
-	dead = true
 	$Animation.play("DEATH")
 	$SFX/Death.play()
 	yield($Animation, "animation_finished")

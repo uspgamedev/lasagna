@@ -8,11 +8,8 @@ func interact(item):
 		if inv.next_empty_slot() != -1 or inv.how_many_of_item("Frog") == 1 or inv.how_many_of_item("Hair") != 0:
 			inv.consume_n_items("Frog", 1)
 			ai.pacific = true
-		else:
-			print("Cannot execute action: Bag is full")
-	elif ai.pacific:
-		if inv.next_empty_slot() != -1 or inv.how_many_of_item("Mushroom") != 0:
+	elif ai.pacific and not item:
+		if kin_body.is_alive() and kin_body.get_node("DmgCooldown").is_stopped() and \
+		   (inv.next_empty_slot() != -1 or inv.how_many_of_item("Mushroom") != 0):
 			inv.give_items("Mushroom", 1)
 			kin_body.damage(1)
-		else:
-			print("Cannot execute action: Bag is full")
