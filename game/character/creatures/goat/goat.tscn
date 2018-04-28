@@ -161,7 +161,6 @@ blend_times = [  ]
 
 [node name="CollisionBox" parent="." index="1"]
 
-position = Vector2( 0, 0 )
 shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 

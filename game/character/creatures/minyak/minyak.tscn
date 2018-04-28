@@ -208,10 +208,6 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Death" parent="SFX" index="7"]
-
-stream = null
-
 [connection signal="animation_finished" from="OrientedSprite/AnimationPlayer" to="AI" method="_on_AnimationPlayer_animation_finished"]
 
 [connection signal="timeout" from="AI/Timer" to="AI" method="_on_Timer_timeout"]

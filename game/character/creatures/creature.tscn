@@ -10,7 +10,7 @@
 [ext_resource path="res://character/creatures/plant_giggle.ogg" type="AudioStream" id=8]
 [ext_resource path="res://character/creatures/plant_footstep.ogg" type="AudioStream" id=9]
 
-[node name="Creature" instance=ExtResource( 1 )]
+[node name="Creature" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 max_health = 0
@@ -54,15 +54,9 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Death" type="AudioStreamPlayer2D" parent="SFX" index="4"]
+[node name="Death" parent="SFX" index="4"]
 
 stream = ExtResource( 7 )
-volume_db = 0.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
 
 [node name="Giggle" type="AudioStreamPlayer2D" parent="SFX" index="5"]
 
