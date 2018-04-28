@@ -187,7 +187,7 @@ radius = 10.0
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="Fleece" instance=ExtResource( 1 )]
+[node name="Fleece" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 friction = 25.0
@@ -275,10 +275,6 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
-
-[node name="Death" parent="SFX" index="7"]
-
-stream = null
 
 [connection signal="timeout" from="AI/Timer" to="AI" method="_on_Timer_timeout"]
 

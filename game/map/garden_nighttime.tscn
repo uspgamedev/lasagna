@@ -28,11 +28,11 @@ destiny = "house_nighttime"
 
 position = Vector2( 704, 672 )
 
-[node name="Werewolf" parent="Foreground" index="5" instance=ExtResource( 3 )]
+[node name="Werewolf" parent="Foreground" index="4" instance=ExtResource( 3 )]
 
 position = Vector2( 1152, 720 )
 
-[node name="BGM" parent="." index="4"]
+[node name="BGM" parent="." index="5"]
 
 current_bgm = "garden_night"
 

@@ -87,10 +87,6 @@ wait_time = 5.0
 one_shot = false
 autostart = true
 
-[node name="Death" parent="SFX" index="7"]
-
-stream = null
-
 [connection signal="timeout" from="AI/Timer" to="AI" method="_on_Timer_timeout"]
 
 

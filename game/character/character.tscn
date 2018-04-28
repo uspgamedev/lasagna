@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://character/character.gd" type="Script" id=1]
 [ext_resource path="res://character/oriented_sprite.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/death_shader.tres" type="Material" id=3]
 [ext_resource path="res://character/death.png" type="Texture" id=4]
 [ext_resource path="res://character/damage.wav" type="AudioStream" id=5]
+[ext_resource path="res://character/player/player_death.ogg" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -107,20 +108,24 @@ _sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="SFX" type="Node2D" parent="." index="5"]
 
-[node name="Damage" type="AudioStreamPlayer" parent="SFX" index="0"]
+[node name="Damage" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
 autoplay = false
-mix_target = 0
+max_distance = 2000.0
+attenuation = 1.0
 bus = "Master"
+area_mask = 1
 
-[node name="Death" type="AudioStreamPlayer" parent="SFX" index="1"]
+[node name="Death" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
-stream = null
+stream = ExtResource( 6 )
 volume_db = 0.0
 autoplay = false
-mix_target = 0
+max_distance = 2000.0
+attenuation = 1.0
 bus = "Master"
+area_mask = 1
 
 
